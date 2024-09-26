@@ -1,0 +1,15 @@
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:68:6:HAL_MspInit	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:92:6:HAL_CRC_MspInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:115:6:HAL_CRC_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:137:6:HAL_DMA2D_MspInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:163:6:HAL_DMA2D_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:188:6:HAL_DSI_MspInit	3
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:244:6:HAL_DSI_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:280:6:HAL_JPEG_MspInit	6
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:364:6:HAL_JPEG_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:393:6:HAL_LTDC_MspInit	3
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:437:6:HAL_LTDC_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:462:6:HAL_QSPI_MspInit	3
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:564:6:HAL_QSPI_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:756:6:HAL_SDRAM_MspInit	3
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/stm32h7xx_hal_msp.c:867:6:HAL_SDRAM_MspDeInit	2

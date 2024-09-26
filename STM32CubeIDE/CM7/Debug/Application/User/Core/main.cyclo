@@ -1,0 +1,5 @@
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/main.c:785:13:TouchGFX_Task	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/main.c:247:6:SystemClock_Config	4
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/main.c:113:5:main	28
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/main.c:875:6:HAL_TIM_PeriodElapsedCallback	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/main.c:892:6:Error_Handler	1
