@@ -1,0 +1,8 @@
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+DiagnoseView.cpp:13:6:virtual void DiagnoseView::tearDownScreen()	0	static
+DiagnoseView.hpp:11:13:DiagnoseView::~DiagnoseView()	8	static
+DiagnoseView.hpp:11:13:virtual DiagnoseView::~DiagnoseView()	8	static
+DiagnoseView.cpp:3:1:DiagnoseView::DiagnoseView()	8	static
+DiagnoseView.cpp:8:6:virtual void DiagnoseView::setupScreen()	0	static

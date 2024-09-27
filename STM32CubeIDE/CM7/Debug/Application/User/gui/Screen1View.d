@@ -47,12 +47,15 @@ Application/User/gui/Screen1View.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AnalogClock.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -100,9 +103,12 @@ Application/User/gui/Screen1View.o: \
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AnalogClock.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:

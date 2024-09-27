@@ -57,12 +57,33 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AnalogClock.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphWrapAndClear.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphElements.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp \
@@ -184,12 +205,33 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AnalogClock.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphWrapAndClear.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphElements.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp:

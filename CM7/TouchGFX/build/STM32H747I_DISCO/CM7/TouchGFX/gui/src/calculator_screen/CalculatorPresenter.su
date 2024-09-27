@@ -1,0 +1,5 @@
+CalculatorPresenter.hpp:28:13:CalculatorPresenter::~CalculatorPresenter()	0	static
+CalculatorPresenter.cpp:10:6:virtual void CalculatorPresenter::activate()	0	static
+CalculatorPresenter.hpp:28:13:virtual CalculatorPresenter::~CalculatorPresenter()	8	static
+CalculatorPresenter.hpp:28:13:virtual void* CalculatorPresenter::_ZThn4_N19CalculatorPresenterD1Ev()	0	static
+CalculatorPresenter.cpp:4:1:CalculatorPresenter::CalculatorPresenter(CalculatorView&)	8	static

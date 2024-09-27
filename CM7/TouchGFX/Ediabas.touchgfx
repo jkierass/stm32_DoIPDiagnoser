@@ -2,46 +2,871 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "MainScreen",
         "Components": [
           {
-            "Type": "AnalogClock",
-            "Name": "analogClock1",
-            "X": 274,
-            "Y": 100,
-            "Width": 240,
-            "Height": 240,
-            "FileNameBackground": "__generated\\alternate_theme_images_widgets_analogclock_backgrounds_small_plain_dark.png",
-            "RotationCenterX": 120,
-            "RotationCenterY": 120,
-            "Preset": "alternate_theme\\presets\\analogclock\\small_plain_dark.json",
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "ClockHands": [
-              {
-                "Type": "HourClockHand",
-                "FileNameHandImage": "__generated\\alternate_theme_images_widgets_analogclock_hands_small_hour_plain_dark.png",
-                "RotationCenterX": 9,
-                "RotationCenterY": 69
-              },
-              {
-                "Type": "MinuteClockHand",
-                "FileNameHandImage": "__generated\\alternate_theme_images_widgets_analogclock_hands_small_minute_plain_dark.png",
-                "RotationCenterX": 10,
-                "RotationCenterY": 87
-              },
-              {
-                "Type": "SecondClockHand",
-                "FileNameHandImage": "__generated\\alternate_theme_images_widgets_analogclock_hands_small_second_plain_dark.png",
-                "RotationCenterX": 2,
-                "RotationCenterY": 100
-              }
-            ],
+            "Type": "ScalableImage",
+            "Name": "DiagnoseIcon",
+            "X": 101,
+            "Y": 112,
+            "Width": 89,
+            "Height": 91,
+            "LockPosition": true,
+            "Filename": "logo_cropped.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "MainScreenClock",
+            "X": 529,
+            "Y": 12,
+            "Width": 256,
+            "Height": 72,
+            "LockPosition": true,
+            "TextColor": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_NI1A",
+            "DisplaySeconds": true,
+            "DisplayLeadingZeroForHourIndicator": true,
             "InitialHour": 10,
             "InitialMinute": 10
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Text_Diagnose",
+            "X": 87,
+            "Y": 214,
+            "Width": 114,
+            "Height": 26,
+            "TextId": "__SingleUse_6UML",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Text_Calculator",
+            "X": 226,
+            "Y": 214,
+            "Width": 114,
+            "Height": 26,
+            "TextId": "__SingleUse_10PZ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "MainTitle",
+            "Y": 12,
+            "Width": 566,
+            "Height": 69,
+            "LockPosition": true,
+            "TextId": "__SingleUse_HFBR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "SwitchToDiagnose",
+            "X": 95,
+            "Y": 107,
+            "Width": 100,
+            "Height": 100,
+            "LockPosition": true,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\small_outline_disabled.json"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "CalculatorIcon",
+            "X": 239,
+            "Y": 111,
+            "Width": 89,
+            "Height": 92,
+            "Filename": "calculator_logo.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Button",
+            "Name": "SwitchToCalculator",
+            "X": 233,
+            "Y": 107,
+            "Width": 100,
+            "Height": 100,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\small_outline_disabled.json"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "SwitchToDiagnose",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SwitchToDiagnose"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose"
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SwitchToCalculator"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Calculator"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Diagnose",
+        "CanvasBufferSize": 12000,
+        "Components": [
+          {
+            "Type": "DigitalClock",
+            "Name": "DiagnoseClock",
+            "X": 529,
+            "Y": 12,
+            "Width": 256,
+            "Height": 72,
+            "LockPosition": true,
+            "TextColor": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_RGBC",
+            "DisplaySeconds": true,
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 10,
+            "InitialMinute": 10
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DiagnoseTitile",
+            "Y": 12,
+            "Width": 800,
+            "Height": 62,
+            "LockPosition": true,
+            "TextId": "__SingleUse_HCE1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "HomeIcon",
+            "X": 23,
+            "Y": 16,
+            "Width": 55,
+            "Height": 55,
+            "LockPosition": true,
+            "Filename": "home_icon.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Clickable": true
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "dynamicGraph1",
+            "X": 400,
+            "Y": 90,
+            "Width": 320,
+            "Height": 240,
+            "DataSeed": 1180091041,
+            "NumberOfValues": 100,
+            "MaxY": 100.0,
+            "Precision": "1",
+            "LastIndex": 99,
+            "XAxisScale": 1.0,
+            "InsertRandomValues": true,
+            "GraphType": "GraphWrapClear",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "FileNameImage": "",
+                "Color": {
+                  "Red": 20,
+                  "Green": 151,
+                  "Blue": 197
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Button",
+            "Name": "HomeButton",
+            "X": 20,
+            "Y": 14,
+            "Width": 60,
+            "Height": 60,
+            "LockPosition": true,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ScrollableContainer",
+            "Name": "scrollableContainer1",
+            "Y": 80,
+            "Width": 307,
+            "Height": 400,
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisibleOnPressed": true,
+            "ScrollbarsAlpha": 255,
+            "Components": []
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Calculator",
+        "Components": [
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_0",
+            "X": 339,
+            "Y": 387,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_PMW2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Absolute",
+            "X": 538,
+            "Y": 387,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_VEC6",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_OpenParenthesis",
+            "X": 538,
+            "Y": 253,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_8MB0",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Clear",
+            "X": 538,
+            "Y": 185,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_action.png",
+            "TextId": "__SingleUse_Q0K8",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_action.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Delete",
+            "X": 472,
+            "Y": 185,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_action.png",
+            "TextId": "__SingleUse_15M7",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_action.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_CloseParenthesis",
+            "X": 538,
+            "Y": 321,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_EHMN",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Subtract",
+            "X": 472,
+            "Y": 321,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_35UA",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Add",
+            "X": 472,
+            "Y": 253,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_VQHH",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Root",
+            "X": 472,
+            "Y": 387,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_59UW",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Power",
+            "X": 202,
+            "Y": 387,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_U0TK",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Divide",
+            "X": 202,
+            "Y": 321,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_JGAL",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Multiply",
+            "X": 202,
+            "Y": 253,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_ICLN",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Modulo",
+            "X": 202,
+            "Y": 185,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_34SY",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "HomeIcon",
+            "X": 23,
+            "Y": 16,
+            "Width": 55,
+            "Height": 55,
+            "LockPosition": true,
+            "Filename": "home_icon.png",
+            "ScalingAlgorithm": "Nearest-neighbor",
+            "Clickable": true
+          },
+          {
+            "Type": "Button",
+            "Name": "HomeButton",
+            "X": 20,
+            "Y": 14,
+            "Width": 60,
+            "Height": 60,
+            "LockPosition": true,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_9",
+            "X": 269,
+            "Y": 185,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_NDJ5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_8",
+            "X": 339,
+            "Y": 185,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_RCFO",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_7",
+            "X": 406,
+            "Y": 185,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_2Q40",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_6",
+            "X": 269,
+            "Y": 253,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_ZM12",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_5",
+            "X": 339,
+            "Y": 253,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_NU4D",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_4",
+            "X": 406,
+            "Y": 253,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_AZFA",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_3",
+            "X": 269,
+            "Y": 321,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_8OXV",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_2",
+            "X": 339,
+            "Y": 321,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_M3YP",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_1",
+            "X": 406,
+            "Y": 321,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+            "TextId": "__SingleUse_G0GL",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Equals",
+            "X": 406,
+            "Y": 387,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_tiny_outline_action.png",
+            "TextId": "__SingleUse_RM9D",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "dark_theme\\presets\\button\\icon\\rounded\\tiny_outline_action.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "CalculatorButton_Comma",
+            "X": 269,
+            "Y": 387,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.png",
+            "TextId": "__SingleUse_149Y",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_active.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "TextResult",
+            "X": 202,
+            "Y": 102,
+            "Width": 396,
+            "Height": 57,
+            "TextId": "__SingleUse_QQGC",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainScreen"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -51,7 +876,7 @@
       "Height": 480
     },
     "SelectedColorDepth": 24,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "MainScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

@@ -9,8 +9,12 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD24bpp.hpp>
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/mainscreen_screen/MainScreenView.hpp>
+#include <gui/mainscreen_screen/MainScreenPresenter.hpp>
+#include <gui/diagnose_screen/DiagnoseView.hpp>
+#include <gui/diagnose_screen/DiagnosePresenter.hpp>
+#include <gui/calculator_screen/CalculatorView.hpp>
+#include <gui/calculator_screen/CalculatorPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -21,6 +25,7 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
       model(m)
 {
     touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_LANDSCAPE);
+    touchgfx::Texts::setLanguage(GB);
     reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
     reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableDecompressorL8_All();
     reinterpret_cast<touchgfx::LCD24bpp&>(touchgfx::HAL::lcd()).enableDecompressorRGB();
@@ -30,15 +35,41 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
  * Screen Transition Declarations
  */
 
-// Screen1
+// MainScreen
 
-void FrontendApplicationBase::gotoScreen1ScreenNoTransition()
+void FrontendApplicationBase::gotoMainScreenScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoMainScreenScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoMainScreenScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<MainScreenView, MainScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Diagnose
+
+void FrontendApplicationBase::gotoDiagnoseScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnoseScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDiagnoseScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<DiagnoseView, DiagnosePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Calculator
+
+void FrontendApplicationBase::gotoCalculatorScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoCalculatorScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoCalculatorScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<CalculatorView, CalculatorPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

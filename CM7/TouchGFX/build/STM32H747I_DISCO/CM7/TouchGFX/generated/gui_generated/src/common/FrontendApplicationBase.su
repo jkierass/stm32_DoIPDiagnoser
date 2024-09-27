@@ -19,7 +19,14 @@ Callback.hpp:424:8:virtual touchgfx::Callback<FrontendApplicationBase>::~Callbac
 Transition.hpp:89:18:virtual void touchgfx::Transition::invalidate()	8	static
 MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	8	static
 HAL.hpp:268:17:static touchgfx::LCD& touchgfx::HAL::lcd()	0	static
-FrontendApplicationBase.cpp:17:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	16	static
-FrontendApplicationBase.cpp:35:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransition()	0	static
-MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = Screen1View; PresenterType = Screen1Presenter; TransType = touchgfx::NoTransition; ModelType = Model]	32	static
-FrontendApplicationBase.cpp:41:6:void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()	16	static
+FrontendApplicationBase.cpp:21:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
+FrontendApplicationBase.cpp:40:6:void FrontendApplicationBase::gotoMainScreenScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:53:6:void FrontendApplicationBase::gotoDiagnoseScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:66:6:void FrontendApplicationBase::gotoCalculatorScreenNoTransition()	0	static
+AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	0	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainScreenView; PresenterType = MainScreenPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	32	static
+FrontendApplicationBase.cpp:46:6:void FrontendApplicationBase::gotoMainScreenScreenNoTransitionImpl()	16	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = DiagnoseView; PresenterType = DiagnosePresenter; TransType = touchgfx::NoTransition; ModelType = Model]	32	static
+FrontendApplicationBase.cpp:59:6:void FrontendApplicationBase::gotoDiagnoseScreenNoTransitionImpl()	16	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = CalculatorView; PresenterType = CalculatorPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	32	static
+FrontendApplicationBase.cpp:72:6:void FrontendApplicationBase::gotoCalculatorScreenNoTransitionImpl()	16	static

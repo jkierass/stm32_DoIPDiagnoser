@@ -597,24 +597,44 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/target/generated/tgfx_jpeg_utils.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/CalculatorPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/CalculatorView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/FrontendApplication.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/common/FrontendApplication.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/DiagnosePresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_screen/DiagnosePresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/DiagnoseView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/MainScreenPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/MainScreenView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/Model.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/model/Model.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/Screen1Presenter.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/Screen1View.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/screen1_screen/Screen1View.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
@@ -637,6 +657,16 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_10_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Font_verdana_17_4bpp_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_17_4bpp_0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Font_verdana_17_4bpp_4.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_17_4bpp_4.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Font_verdana_20_4bpp_0.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_20_4bpp_0.cpp</locationURI>
@@ -657,6 +687,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Kerning_verdana_17_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_17_4bpp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Kerning_verdana_20_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_20_4bpp.cpp</locationURI>
@@ -670,6 +705,11 @@
 			<name>Application/User/generated/Table_verdana_10_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Table_verdana_17_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_17_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Table_verdana_20_4bpp.cpp</name>
@@ -692,14 +732,24 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/VectorFontRendererBuffers.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/CalculatorViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/FrontendApplicationBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Screen1ViewBase.cpp</name>
+			<name>Application/User/generated/DiagnoseViewBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_screen/DiagnoseViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/MainScreenViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
@@ -712,24 +762,59 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_analogclock_backgrounds_small_plain_dark.cpp</name>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_analogclock_backgrounds_small_plain_dark.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_analogclock_hands_small_hour_plain_dark.cpp</name>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_action.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_analogclock_hands_small_hour_plain_dark.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_action.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_analogclock_hands_small_minute_plain_dark.cpp</name>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_analogclock_hands_small_minute_plain_dark.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_active.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_analogclock_hands_small_second_plain_dark.cpp</name>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_analogclock_hands_small_second_plain_dark.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dark_theme_images_widgets_button_icon_rounded_tiny_outline_action.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_button_icon_rounded_tiny_outline_action.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dark_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_calculator_logo.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_calculator_logo.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_home_icon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_home_icon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_logo.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_logo.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_logo_cropped.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/image_logo_cropped.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

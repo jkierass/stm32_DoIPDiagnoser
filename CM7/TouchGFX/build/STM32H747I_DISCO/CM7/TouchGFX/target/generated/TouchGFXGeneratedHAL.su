@@ -48,8 +48,8 @@ TouchGFXGeneratedHAL.hpp:30:7:TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	0	st
 DedicatedBufferVideoController.hpp:153:18:void DedicatedBufferController<no_streams, width, height, stride, output_format>::setVideoData(touchgfx::VideoController::Handle, touchgfx::VideoDataReader&) [with long unsigned int no_streams = 1; long unsigned int width = 800; long unsigned int height = 480; long unsigned int stride = 2400; touchgfx::Bitmap::BitmapFormat output_format = (touchgfx::Bitmap::BitmapFormat)1]	0	static
 DedicatedBufferVideoController.hpp:373:18:void DedicatedBufferController<no_streams, width, height, stride, output_format>::setVideoFrameRateCompensation(bool) [with long unsigned int no_streams = 1; long unsigned int width = 800; long unsigned int height = 480; long unsigned int stride = 2400; touchgfx::Bitmap::BitmapFormat output_format = (touchgfx::Bitmap::BitmapFormat)1]	0	static
 TouchGFXGeneratedHAL.hpp:30:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	8	static
-DedicatedBufferVideoController.hpp:49:7:virtual DedicatedBufferController<1, 800, 480, 2400, (touchgfx::Bitmap::BitmapFormat)1>::~DedicatedBufferController()	8	static
 CWRVectorRenderer.hpp:197:11:virtual touchgfx::CWRVectorRenderer::CanvasWidgetProxy::~CanvasWidgetProxy()	8	static
+DedicatedBufferVideoController.hpp:49:7:virtual DedicatedBufferController<1, 800, 480, 2400, (touchgfx::Bitmap::BitmapFormat)1>::~DedicatedBufferController()	8	static
 CWRVectorRenderer.hpp:334:7:virtual touchgfx::CWRVectorRendererRGB888::~CWRVectorRendererRGB888()	8	static
 HAL.hpp:720:18:virtual void touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)	8	static
 HAL.hpp:156:18:virtual void touchgfx::HAL::setFrameBufferSize(uint16_t, uint16_t)	8	static

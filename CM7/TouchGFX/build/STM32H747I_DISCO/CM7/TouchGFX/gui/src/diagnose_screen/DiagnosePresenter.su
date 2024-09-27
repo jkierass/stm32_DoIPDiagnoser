@@ -1,0 +1,5 @@
+DiagnosePresenter.hpp:28:13:DiagnosePresenter::~DiagnosePresenter()	0	static
+DiagnosePresenter.cpp:10:6:virtual void DiagnosePresenter::activate()	0	static
+DiagnosePresenter.hpp:28:13:virtual DiagnosePresenter::~DiagnosePresenter()	8	static
+DiagnosePresenter.hpp:28:13:virtual void* DiagnosePresenter::_ZThn4_N17DiagnosePresenterD1Ev()	0	static
+DiagnosePresenter.cpp:4:1:DiagnosePresenter::DiagnosePresenter(DiagnoseView&)	8	static

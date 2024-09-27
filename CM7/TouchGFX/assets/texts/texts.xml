@@ -5,10 +5,106 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_10PZ" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">Calculator</Translation>
+      </Text>
+      <Text Id="__SingleUse_QQGC" Alignment="Right" TypographyId="Large">
+        <Translation Language="GB">Result</Translation>
+      </Text>
+      <Text Id="__SingleUse_15M7" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">del</Translation>
+      </Text>
+      <Text Id="__SingleUse_VEC6" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">±</Translation>
+      </Text>
+      <Text Id="__SingleUse_EHMN" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">)</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q0K8" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">C</Translation>
+      </Text>
+      <Text Id="__SingleUse_PMW2" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_8MB0" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">(</Translation>
+      </Text>
+      <Text Id="__SingleUse_35UA" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_VQHH" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">+</Translation>
+      </Text>
+      <Text Id="__SingleUse_59UW" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">√</Translation>
+      </Text>
+      <Text Id="__SingleUse_U0TK" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">x²</Translation>
+      </Text>
+      <Text Id="__SingleUse_JGAL" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">/</Translation>
+      </Text>
+      <Text Id="__SingleUse_ICLN" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">X</Translation>
+      </Text>
+      <Text Id="__SingleUse_34SY" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">%</Translation>
+      </Text>
+      <Text Id="__SingleUse_149Y" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">,</Translation>
+      </Text>
+      <Text Id="__SingleUse_RM9D" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">=</Translation>
+      </Text>
+      <Text Id="__SingleUse_G0GL" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_M3YP" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_8OXV" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_AZFA" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_NU4D" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZM12" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_2Q40" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_RCFO" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_NDJ5" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_6UML" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">Diagnose</Translation>
+      </Text>
+      <Text Id="__SingleUse_HFBR" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Ediabas Diagnoser</Translation>
+      </Text>
+      <Text Id="__SingleUse_RGBC" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HCE1" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Diagnose</Translation>
+      </Text>
+      <Text Id="__SingleUse_NI1A" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>
