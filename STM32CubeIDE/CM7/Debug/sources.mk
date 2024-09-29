@@ -45,6 +45,7 @@ Application/User/Startup \
 Application/User/TouchGFX/App \
 Application/User/TouchGFX/target \
 Application/User/TouchGFX/target/generated \
+Application/User/calculator/src \
 Application/User/generated \
 Application/User/gui \
 Drivers/BSP/Components \

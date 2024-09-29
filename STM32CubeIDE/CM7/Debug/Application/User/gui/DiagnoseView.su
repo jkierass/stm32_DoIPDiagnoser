@@ -1,0 +1,8 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:13:6:virtual void DiagnoseView::tearDownScreen()	0	static
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:11:13:DiagnoseView::~DiagnoseView()	8	static
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:11:13:virtual DiagnoseView::~DiagnoseView()	8	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:3:1:DiagnoseView::DiagnoseView()	8	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:8:6:virtual void DiagnoseView::setupScreen()	0	static

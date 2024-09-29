@@ -1,0 +1,8 @@
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:13:6:virtual void CalculatorView::tearDownScreen()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:11:13:CalculatorView::~CalculatorView()	1
+../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:11:13:virtual CalculatorView::~CalculatorView()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:3:1:CalculatorView::CalculatorView()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:8:6:virtual void CalculatorView::setupScreen()	1
