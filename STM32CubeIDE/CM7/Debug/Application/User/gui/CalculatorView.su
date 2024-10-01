@@ -6,3 +6,25 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/ca
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:11:13:virtual CalculatorView::~CalculatorView()	8	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:3:1:CalculatorView::CalculatorView()	8	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:8:6:virtual void CalculatorView::setupScreen()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:18:6:bool CalculatorView::addChar(char)	56	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:56:6:virtual void CalculatorView::sendToCalculator_0()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:61:6:virtual void CalculatorView::sendToCalculator_1()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:66:6:virtual void CalculatorView::sendToCalculator_2()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:71:6:virtual void CalculatorView::sendToCalculator_3()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:76:6:virtual void CalculatorView::sendToCalculator_4()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:81:6:virtual void CalculatorView::sendToCalculator_5()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:86:6:virtual void CalculatorView::sendToCalculator_6()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:91:6:virtual void CalculatorView::sendToCalculator_7()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:96:6:virtual void CalculatorView::sendToCalculator_8()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:101:6:virtual void CalculatorView::sendToCalculator_9()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:106:6:virtual void CalculatorView::sendToCalculator_Add()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:121:6:virtual void CalculatorView::sendToCalculator_OpenParenthesis()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:126:6:virtual void CalculatorView::sendToCalculator_CloseParenthesis()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:131:6:virtual void CalculatorView::sendToCalculator_Subtract()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:136:6:virtual void CalculatorView::sendToCalculator_Multiply()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:141:6:virtual void CalculatorView::sendToCalculator_Divide()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:146:6:virtual void CalculatorView::sendToCalculator_Comma()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:33:6:bool CalculatorView::removeLastChar()	56	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:116:6:virtual void CalculatorView::sendToCalculator_Delete()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:48:6:void CalculatorView::clearText()	48	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:151:6:virtual void CalculatorView::sendToCalculator_Clear()	0	static

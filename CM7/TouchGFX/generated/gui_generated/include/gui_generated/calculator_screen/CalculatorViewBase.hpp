@@ -12,7 +12,7 @@
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class CalculatorViewBase : public touchgfx::View<CalculatorPresenter>
 {
@@ -20,6 +20,90 @@ public:
     CalculatorViewBase();
     virtual ~CalculatorViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void sendToCalculator_0()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_1()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_2()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_3()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_4()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_5()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_6()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_7()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_8()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_9()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Add()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Equals()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Delete()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_OpenParenthesis()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_CloseParenthesis()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Subtract()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Multiply()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Divide()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Comma()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Clear()
+    {
+        // Override and implement this function in Calculator
+    }
 
 protected:
     FrontendApplication& application() {
@@ -31,18 +115,14 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::ButtonWithLabel CalculatorButton_0;
-    touchgfx::ButtonWithLabel CalculatorButton_Absolute;
     touchgfx::ButtonWithLabel CalculatorButton_OpenParenthesis;
     touchgfx::ButtonWithLabel CalculatorButton_Clear;
     touchgfx::ButtonWithLabel CalculatorButton_Delete;
     touchgfx::ButtonWithLabel CalculatorButton_CloseParenthesis;
     touchgfx::ButtonWithLabel CalculatorButton_Subtract;
     touchgfx::ButtonWithLabel CalculatorButton_Add;
-    touchgfx::ButtonWithLabel CalculatorButton_Root;
-    touchgfx::ButtonWithLabel CalculatorButton_Power;
     touchgfx::ButtonWithLabel CalculatorButton_Divide;
     touchgfx::ButtonWithLabel CalculatorButton_Multiply;
-    touchgfx::ButtonWithLabel CalculatorButton_Modulo;
     touchgfx::ClickListener< touchgfx::ScalableImage > HomeIcon;
     touchgfx::Button HomeButton;
     touchgfx::ButtonWithLabel CalculatorButton_9;
@@ -56,7 +136,13 @@ protected:
     touchgfx::ButtonWithLabel CalculatorButton_1;
     touchgfx::ButtonWithLabel CalculatorButton_Equals;
     touchgfx::ButtonWithLabel CalculatorButton_Comma;
-    touchgfx::TextArea TextResult;
+    touchgfx::TextAreaWithOneWildcard TextResult;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTRESULT_SIZE = 17;
+    touchgfx::Unicode::UnicodeChar TextResultBuffer[TEXTRESULT_SIZE];
 
 private:
 
