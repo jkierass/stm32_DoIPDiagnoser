@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/target/generated/TouchGFXConfiguration.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

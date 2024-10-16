@@ -1,5 +1,5 @@
 Application/User/generated/FrontendApplicationBase.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp \

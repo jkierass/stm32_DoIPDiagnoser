@@ -1,5 +1,5 @@
 Application/User/Core/main.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/Core/Src/main.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/main.c \
  ../../../CM7/Core/Inc/main.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \

@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/STM32H7Instrumentation.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/target/STM32H7Instrumentation.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/target/STM32H7Instrumentation.cpp \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h \

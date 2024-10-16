@@ -1,5 +1,5 @@
 Application/User/gui/CalculatorPresenter.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

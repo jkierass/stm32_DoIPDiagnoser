@@ -80,7 +80,7 @@ CanvasWidget.hpp:72:21:virtual uint8_t touchgfx::CanvasWidget::getAlpha() const	
 CanvasWidget.hpp:118:18:virtual touchgfx::Rect touchgfx::CanvasWidget::getMinimalRect() const	8	static
 CanvasWidget.hpp:134:18:virtual touchgfx::Rect touchgfx::CanvasWidget::getSolidRect() const	0	static
 View.hpp:36:7:touchgfx::View<DiagnosePresenter>::~View()	0	static
-DiagnoseViewBase.cpp:162:6:virtual void DiagnoseViewBase::setupScreen()	0	static
+DiagnoseViewBase.cpp:167:6:virtual void DiagnoseViewBase::setupScreen()	0	static
 Callback.hpp:357:8:touchgfx::Callback<DiagnoseViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 GraphWrapAndClear.hpp:66:7:touchgfx::GraphWrapAndClear<100>::~GraphWrapAndClear()	0	static
 ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ScalableImage>::~ClickListener()	0	static
@@ -93,14 +93,14 @@ GraphWrapAndClear.hpp:66:7:virtual touchgfx::GraphWrapAndClear<100>::~GraphWrapA
 Callback.hpp:357:8:virtual touchgfx::Callback<DiagnoseViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 AbstractDataGraph.hpp:1591:17:virtual int touchgfx::DynamicDataGraph::indexToDataPointYScaled(int16_t) const	8	static
 AbstractDataGraph.hpp:1585:17:virtual int touchgfx::DynamicDataGraph::indexToDataPointXScaled(int16_t) const	8	static
-DiagnoseViewBase.cpp:157:1:DiagnoseViewBase::~DiagnoseViewBase()	8	static
-DiagnoseViewBase.cpp:157:1:virtual DiagnoseViewBase::~DiagnoseViewBase()	8	static
+DiagnoseViewBase.cpp:162:1:DiagnoseViewBase::~DiagnoseViewBase()	8	static
+DiagnoseViewBase.cpp:162:1:virtual DiagnoseViewBase::~DiagnoseViewBase()	8	static
 ClickListener.hpp:49:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ScalableImage]	16	static
-DiagnoseViewBase.cpp:167:6:void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+DiagnoseViewBase.cpp:172:6:void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	24	static
 CWRUtil.hpp:828:15:static touchgfx::CWRUtil::Q5 touchgfx::CWRUtil::muldiv_toQ5(int32_t, int32_t, int32_t)	24	static
 AbstractDataGraph.hpp:1282:25:virtual touchgfx::CWRUtil::Q5 touchgfx::AbstractDataGraph::valueToScreenYQ5(int) const	16	static
 AbstractDataGraph.hpp:1270:25:virtual touchgfx::CWRUtil::Q5 touchgfx::AbstractDataGraph::valueToScreenXQ5(int) const	16	static
 AbstractPainterRGB888.hpp:36:5:touchgfx::AbstractPainterRGB888::AbstractPainterRGB888()	16	static
-DiagnoseViewBase.cpp:10:1:DiagnoseViewBase::DiagnoseViewBase()	96	static
+DiagnoseViewBase.cpp:10:1:DiagnoseViewBase::DiagnoseViewBase()	104	static

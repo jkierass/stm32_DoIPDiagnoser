@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/queue.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/Middlewares/Third_Party/FreeRTOS/Source/queue.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/queue.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

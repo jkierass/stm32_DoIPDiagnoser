@@ -54,6 +54,7 @@ CM7/TouchGFX/build/STM32H747I_DISCO/CM7/TouchGFX/generated/gui_generated/src/cal
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
@@ -166,6 +167,8 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+
+CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 

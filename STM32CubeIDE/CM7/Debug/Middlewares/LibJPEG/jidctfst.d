@@ -1,5 +1,5 @@
 Middlewares/LibJPEG/jidctfst.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/Middlewares/Third_Party/LibJPEG/source/jidctfst.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/LibJPEG/source/jidctfst.c \
  ../../../Middlewares/Third_Party/LibJPEG/include/jinclude.h \
  ../../../CM7/LIBJPEG/Target/jconfig.h \
  ../../../CM7/LIBJPEG/Target/jdata_conf.h \

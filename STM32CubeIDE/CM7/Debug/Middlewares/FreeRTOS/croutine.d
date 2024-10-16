@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/croutine.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

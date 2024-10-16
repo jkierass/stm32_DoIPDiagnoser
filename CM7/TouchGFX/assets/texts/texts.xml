@@ -6,6 +6,12 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_CDWB" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">Manipulator</Translation>
+      </Text>
+      <Text Id="__SingleUse_EH0R" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">23°C</Translation>
+      </Text>
       <Text Id="__SingleUse_YKNQ" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
       </Text>
@@ -40,7 +46,7 @@
         <Translation Language="GB">/</Translation>
       </Text>
       <Text Id="__SingleUse_ICLN" Alignment="Center" TypographyId="Typography_00">
-        <Translation Language="GB">*&#10;*</Translation>
+        <Translation Language="GB">*</Translation>
       </Text>
       <Text Id="__SingleUse_149Y" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">,</Translation>
@@ -96,6 +102,7 @@
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="21" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

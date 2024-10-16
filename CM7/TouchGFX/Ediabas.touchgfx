@@ -7,22 +7,20 @@
           {
             "Type": "ScalableImage",
             "Name": "DiagnoseIcon",
-            "X": 101,
+            "X": 56,
             "Y": 112,
-            "Width": 89,
-            "Height": 91,
-            "LockPosition": true,
+            "Width": 164,
+            "Height": 164,
             "Filename": "logo_cropped.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "DigitalClock",
             "Name": "MainScreenClock",
-            "X": 529,
-            "Y": 12,
-            "Width": 256,
-            "Height": 72,
-            "LockPosition": true,
+            "X": 597,
+            "Y": 18,
+            "Width": 187,
+            "Height": 51,
             "TextColor": {
               "Red": 163,
               "Green": 186,
@@ -37,10 +35,10 @@
           {
             "Type": "TextArea",
             "Name": "Text_Diagnose",
-            "X": 87,
-            "Y": 214,
+            "X": 81,
+            "Y": 286,
             "Width": 114,
-            "Height": 26,
+            "Height": 33,
             "TextId": "__SingleUse_6UML",
             "TextRotation": "0",
             "Color": {
@@ -52,8 +50,8 @@
           {
             "Type": "TextArea",
             "Name": "Text_Calculator",
-            "X": 226,
-            "Y": 214,
+            "X": 317,
+            "Y": 289,
             "Width": 114,
             "Height": 26,
             "TextId": "__SingleUse_10PZ",
@@ -66,11 +64,26 @@
           },
           {
             "Type": "TextArea",
+            "Name": "Text_Manipulator",
+            "X": 530,
+            "Y": 289,
+            "Width": 134,
+            "Height": 26,
+            "TextId": "__SingleUse_CDWB",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
             "Name": "MainTitle",
-            "Y": 12,
-            "Width": 566,
-            "Height": 69,
-            "LockPosition": true,
+            "X": 47,
+            "Y": 18,
+            "Width": 384,
+            "Height": 51,
             "TextId": "__SingleUse_HFBR",
             "TextRotation": "0",
             "Color": {
@@ -82,35 +95,70 @@
           {
             "Type": "Button",
             "Name": "SwitchToDiagnose",
-            "X": 95,
+            "X": 50,
             "Y": 107,
-            "Width": 100,
-            "Height": 100,
-            "LockPosition": true,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
-            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\small_outline_disabled.json"
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_large_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_large_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\large_outline_disabled.json"
           },
           {
             "Type": "ScalableImage",
             "Name": "CalculatorIcon",
-            "X": 239,
-            "Y": 111,
-            "Width": 89,
-            "Height": 92,
+            "X": 289,
+            "Y": 112,
+            "Width": 164,
+            "Height": 164,
             "Filename": "calculator_logo.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "Button",
             "Name": "SwitchToCalculator",
-            "X": 233,
+            "X": 283,
             "Y": 107,
-            "Width": 100,
-            "Height": 100,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_small_outline_disabled.png",
-            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\small_outline_disabled.json"
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_large_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_large_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\large_outline_disabled.json"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "Text_Temperature",
+            "X": 463,
+            "Y": 18,
+            "Width": 101,
+            "Height": 51,
+            "TextId": "__SingleUse_EH0R",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "ManipulatorIcon",
+            "X": 513,
+            "Y": 112,
+            "Width": 169,
+            "Height": 164,
+            "Filename": "logo_manipulator.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Button",
+            "Name": "SwitchToManipulator",
+            "X": 509,
+            "Y": 107,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_large_outline_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_large_outline_disabled.png",
+            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\large_outline_disabled.json"
           }
         ],
         "Interactions": [
@@ -193,10 +241,10 @@
           {
             "Type": "DynamicGraph",
             "Name": "dynamicGraph1",
-            "X": 400,
-            "Y": 90,
-            "Width": 320,
-            "Height": 240,
+            "X": 391,
+            "Y": 133,
+            "Width": 322,
+            "Height": 264,
             "DataSeed": 1180091041,
             "NumberOfValues": 100,
             "MaxY": 100.0,
@@ -233,9 +281,9 @@
           {
             "Type": "ScrollableContainer",
             "Name": "scrollableContainer1",
-            "Y": 80,
+            "Y": 94,
             "Width": 307,
-            "Height": 400,
+            "Height": 386,
             "HorizontalScrollEnabled": true,
             "VerticalScrollEnabled": true,
             "ScrollbarsVisibleOnPressed": true,

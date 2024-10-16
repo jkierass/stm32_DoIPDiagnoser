@@ -14,11 +14,11 @@ MainScreenViewBase::MainScreenViewBase() :
     add(__background);
 
     DiagnoseIcon.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_CROPPED_ID));
-    DiagnoseIcon.setPosition(101, 112, 89, 91);
+    DiagnoseIcon.setPosition(56, 112, 164, 164);
     DiagnoseIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(DiagnoseIcon);
 
-    MainScreenClock.setPosition(529, 12, 256, 72);
+    MainScreenClock.setPosition(597, 18, 187, 51);
     MainScreenClock.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     MainScreenClock.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NI1A));
     MainScreenClock.displayLeadingZeroForHourIndicator(true);
@@ -26,38 +26,59 @@ MainScreenViewBase::MainScreenViewBase() :
     MainScreenClock.setTime24Hour(10, 10, 0);
     add(MainScreenClock);
 
-    Text_Diagnose.setPosition(87, 214, 114, 26);
+    Text_Diagnose.setPosition(81, 286, 114, 33);
     Text_Diagnose.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     Text_Diagnose.setLinespacing(0);
     Text_Diagnose.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6UML));
     add(Text_Diagnose);
 
-    Text_Calculator.setPosition(226, 214, 114, 26);
+    Text_Calculator.setPosition(317, 289, 114, 26);
     Text_Calculator.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     Text_Calculator.setLinespacing(0);
     Text_Calculator.setTypedText(touchgfx::TypedText(T___SINGLEUSE_10PZ));
     add(Text_Calculator);
 
-    MainTitle.setPosition(0, 12, 566, 69);
+    Text_Manipulator.setPosition(530, 289, 134, 26);
+    Text_Manipulator.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
+    Text_Manipulator.setLinespacing(0);
+    Text_Manipulator.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CDWB));
+    add(Text_Manipulator);
+
+    MainTitle.setPosition(47, 18, 384, 51);
     MainTitle.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     MainTitle.setLinespacing(0);
     MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HFBR));
     add(MainTitle);
 
-    SwitchToDiagnose.setXY(95, 107);
-    SwitchToDiagnose.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
+    SwitchToDiagnose.setXY(50, 107);
+    SwitchToDiagnose.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));
     SwitchToDiagnose.setAction(buttonCallback);
     add(SwitchToDiagnose);
 
     CalculatorIcon.setBitmap(touchgfx::Bitmap(BITMAP_CALCULATOR_LOGO_ID));
-    CalculatorIcon.setPosition(239, 111, 89, 92);
+    CalculatorIcon.setPosition(289, 112, 164, 164);
     CalculatorIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(CalculatorIcon);
 
-    SwitchToCalculator.setXY(233, 107);
-    SwitchToCalculator.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
+    SwitchToCalculator.setXY(283, 107);
+    SwitchToCalculator.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));
     SwitchToCalculator.setAction(buttonCallback);
     add(SwitchToCalculator);
+
+    Text_Temperature.setPosition(463, 18, 101, 51);
+    Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
+    Text_Temperature.setLinespacing(0);
+    Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EH0R));
+    add(Text_Temperature);
+
+    ManipulatorIcon.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_MANIPULATOR_ID));
+    ManipulatorIcon.setPosition(513, 112, 169, 164);
+    ManipulatorIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(ManipulatorIcon);
+
+    SwitchToManipulator.setXY(509, 107);
+    SwitchToManipulator.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));
+    add(SwitchToManipulator);
 }
 
 MainScreenViewBase::~MainScreenViewBase()

@@ -84,6 +84,7 @@ CM7/TouchGFX/build/STM32H747I_DISCO/CM7/TouchGFX/target/generated/TouchGFXGenera
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp \
  CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp \
  CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp \
@@ -323,6 +324,8 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
+
+CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:
 

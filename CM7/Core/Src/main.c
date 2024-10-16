@@ -77,6 +77,13 @@ const osThreadAttr_t videoTask_attributes = {
   .stack_size = 1000 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
+/* Definitions for Task_ASHandler */
+osThreadId_t Task_ASHandlerHandle;
+const osThreadAttr_t Task_ASHandler_attributes = {
+  .name = "Task_ASHandler",
+  .stack_size = 1028 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* USER CODE BEGIN PV */
 OTM8009A_Object_t OTM8009AObj;
 OTM8009A_IO_t IOCtx;
@@ -96,6 +103,7 @@ static void MX_CRC_Init(void);
 static void MX_JPEG_Init(void);
 void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
+void StartTask_ASHandler(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -215,6 +223,9 @@ Error_Handler();
 
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
+
+  /* creation of Task_ASHandler */
+  Task_ASHandlerHandle = osThreadNew(StartTask_ASHandler, NULL, &Task_ASHandler_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -791,6 +802,24 @@ __weak void TouchGFX_Task(void *argument)
     osDelay(1);
   }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_StartTask_ASHandler */
+/**
+* @brief Function implementing the Task_ASHandler thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask_ASHandler */
+__weak void StartTask_ASHandler(void *argument)
+{
+  /* USER CODE BEGIN StartTask_ASHandler */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTask_ASHandler */
 }
 
  /* MPU Configuration */

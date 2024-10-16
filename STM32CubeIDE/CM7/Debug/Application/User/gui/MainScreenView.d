@@ -1,5 +1,5 @@
 Application/User/gui/MainScreenView.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/mainscreen_screen/MainScreenView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

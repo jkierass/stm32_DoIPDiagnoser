@@ -19,22 +19,54 @@ Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 Image.hpp:118:18:virtual void touchgfx::Image::invalidateContent() const	8	static
+TextArea.hpp:48:18:virtual void touchgfx::TextArea::setWidth(int16_t)	32	static
+TextArea.hpp:54:18:virtual void touchgfx::TextArea::setHeight(int16_t)	32	static
+TextArea.hpp:60:18:virtual touchgfx::Rect touchgfx::TextArea::getSolidRect() const	0	static
+TextArea.hpp:89:18:virtual void touchgfx::TextArea::setAlpha(uint8_t)	0	static
+TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
+TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2() const	0	static
+TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
+TextAreaWithWildcard.hpp:84:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
+CalculatorViewBase.hpp:27:18:virtual void CalculatorViewBase::sendToCalculator_0()	0	static
+CalculatorViewBase.hpp:31:18:virtual void CalculatorViewBase::sendToCalculator_1()	0	static
+CalculatorViewBase.hpp:35:18:virtual void CalculatorViewBase::sendToCalculator_2()	0	static
+CalculatorViewBase.hpp:39:18:virtual void CalculatorViewBase::sendToCalculator_3()	0	static
+CalculatorViewBase.hpp:43:18:virtual void CalculatorViewBase::sendToCalculator_4()	0	static
+CalculatorViewBase.hpp:47:18:virtual void CalculatorViewBase::sendToCalculator_5()	0	static
+CalculatorViewBase.hpp:51:18:virtual void CalculatorViewBase::sendToCalculator_6()	0	static
+CalculatorViewBase.hpp:55:18:virtual void CalculatorViewBase::sendToCalculator_7()	0	static
+CalculatorViewBase.hpp:59:18:virtual void CalculatorViewBase::sendToCalculator_8()	0	static
+CalculatorViewBase.hpp:63:18:virtual void CalculatorViewBase::sendToCalculator_9()	0	static
+CalculatorViewBase.hpp:67:18:virtual void CalculatorViewBase::sendToCalculator_Add()	0	static
+CalculatorViewBase.hpp:71:18:virtual void CalculatorViewBase::sendToCalculator_Equals()	0	static
+CalculatorViewBase.hpp:75:18:virtual void CalculatorViewBase::sendToCalculator_Delete()	0	static
+CalculatorViewBase.hpp:79:18:virtual void CalculatorViewBase::sendToCalculator_OpenParenthesis()	0	static
+CalculatorViewBase.hpp:83:18:virtual void CalculatorViewBase::sendToCalculator_CloseParenthesis()	0	static
+CalculatorViewBase.hpp:87:18:virtual void CalculatorViewBase::sendToCalculator_Subtract()	0	static
+CalculatorViewBase.hpp:91:18:virtual void CalculatorViewBase::sendToCalculator_Multiply()	0	static
+CalculatorViewBase.hpp:95:18:virtual void CalculatorViewBase::sendToCalculator_Divide()	0	static
+CalculatorViewBase.hpp:99:18:virtual void CalculatorViewBase::sendToCalculator_Comma()	0	static
+CalculatorViewBase.hpp:103:18:virtual void CalculatorViewBase::sendToCalculator_Clear()	0	static
 View.hpp:36:7:touchgfx::View<CalculatorPresenter>::~View()	0	static
-CalculatorViewBase.cpp:201:1:CalculatorViewBase::~CalculatorViewBase()	0	static
-CalculatorViewBase.cpp:206:6:virtual void CalculatorViewBase::setupScreen()	0	static
+CalculatorViewBase.cpp:215:1:CalculatorViewBase::~CalculatorViewBase()	0	static
+CalculatorViewBase.cpp:220:6:virtual void CalculatorViewBase::setupScreen()	0	static
 Callback.hpp:357:8:touchgfx::Callback<CalculatorViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ScalableImage>::~ClickListener()	0	static
+TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = CalculatorViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = CalculatorViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 View.hpp:36:7:virtual touchgfx::View<CalculatorPresenter>::~View()	8	static
 ClickListener.hpp:33:7:virtual touchgfx::ClickListener<touchgfx::ScalableImage>::~ClickListener()	8	static
+TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 Callback.hpp:357:8:virtual touchgfx::Callback<CalculatorViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
-CalculatorViewBase.cpp:201:1:virtual CalculatorViewBase::~CalculatorViewBase()	8	static
+CalculatorViewBase.cpp:215:1:virtual CalculatorViewBase::~CalculatorViewBase()	8	static
+TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
+CalculatorViewBase.cpp:225:6:void CalculatorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ClickListener.hpp:49:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ScalableImage]	16	static
-CalculatorViewBase.cpp:211:6:void CalculatorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
-CalculatorViewBase.cpp:9:1:CalculatorViewBase::CalculatorViewBase()	184	static
+CalculatorViewBase.cpp:9:1:CalculatorViewBase::CalculatorViewBase()	160	static

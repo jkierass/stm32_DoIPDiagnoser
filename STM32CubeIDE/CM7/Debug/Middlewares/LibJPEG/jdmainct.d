@@ -1,5 +1,5 @@
 Middlewares/LibJPEG/jdmainct.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/Middlewares/Third_Party/LibJPEG/source/jdmainct.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/LibJPEG/source/jdmainct.c \
  ../../../Middlewares/Third_Party/LibJPEG/include/jinclude.h \
  ../../../CM7/LIBJPEG/Target/jconfig.h \
  ../../../CM7/LIBJPEG/Target/jdata_conf.h \

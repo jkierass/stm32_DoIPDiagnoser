@@ -221,7 +221,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc.o
- .debug_str     0x00000000      0x8ca CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc.o
+ .debug_str     0x00000000      0x8d3 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc.o
@@ -233,7 +233,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc_ex.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc_ex.o
- .debug_str     0x00000000      0x8cd CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc_ex.o
+ .debug_str     0x00000000      0x8d6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc_ex.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_crc_ex.o
@@ -281,7 +281,7 @@ Discarded input sections
                 0x00000000       0x98 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
  .debug_ranges  0x00000000       0xc0 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
  .debug_line    0x00000000     0x139a CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
- .debug_str     0x00000000     0x106a CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
+ .debug_str     0x00000000     0x1073 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
  .debug_frame   0x00000000      0x1c4 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.o
  .ARM.attributes
@@ -314,7 +314,7 @@ Discarded input sections
                 0x00000000       0x60 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
  .debug_ranges  0x00000000       0x50 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
  .debug_line    0x00000000      0x821 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
- .debug_str     0x00000000      0xead CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
+ .debug_str     0x00000000      0xeb6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
  .debug_frame   0x00000000      0x100 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.o
  .ARM.attributes
@@ -327,7 +327,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.o
- .debug_str     0x00000000      0x8cc CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.o
+ .debug_str     0x00000000      0x8d5 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma2d.o
@@ -339,7 +339,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dsi.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dsi.o
- .debug_str     0x00000000      0x8ca CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dsi.o
+ .debug_str     0x00000000      0x8d3 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dsi.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dsi.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dsi.o
@@ -371,7 +371,7 @@ Discarded input sections
                 0x00000000       0x60 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
  .debug_ranges  0x00000000       0x50 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
  .debug_line    0x00000000      0x4a2 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
- .debug_str     0x00000000      0xc74 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
+ .debug_str     0x00000000      0xc7d CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
  .debug_frame   0x00000000      0x100 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.o
  .ARM.attributes
@@ -414,7 +414,7 @@ Discarded input sections
                 0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
  .debug_ranges  0x00000000       0x70 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
  .debug_line    0x00000000      0x605 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
- .debug_str     0x00000000      0xc72 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
+ .debug_str     0x00000000      0xc7b CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
  .debug_frame   0x00000000      0x158 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.o
  .ARM.attributes
@@ -452,7 +452,7 @@ Discarded input sections
                 0x00000000       0x70 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
  .debug_ranges  0x00000000      0x140 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
  .debug_line    0x00000000      0x673 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
- .debug_str     0x00000000      0xf8d CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
+ .debug_str     0x00000000      0xf96 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
  .debug_frame   0x00000000      0x110 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.o
  .ARM.attributes
@@ -483,7 +483,7 @@ Discarded input sections
                 0x00000000       0x58 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
  .debug_ranges  0x00000000       0x60 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
  .debug_line    0x00000000      0x4c3 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
- .debug_str     0x00000000      0xe10 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
+ .debug_str     0x00000000      0xe19 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
  .debug_frame   0x00000000       0xd8 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.o
  .ARM.attributes
@@ -679,7 +679,7 @@ Discarded input sections
                 0x00000000      0x240 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
  .debug_ranges  0x00000000      0x2c8 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
  .debug_line    0x00000000     0x1ee4 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
- .debug_str     0x00000000     0x182a CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
+ .debug_str     0x00000000     0x1833 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
  .debug_frame   0x00000000      0x90c CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.o
  .ARM.attributes
@@ -706,7 +706,7 @@ Discarded input sections
                 0x00000000       0x48 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
  .debug_ranges  0x00000000       0x68 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
  .debug_line    0x00000000      0x427 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
- .debug_str     0x00000000     0x11d8 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
+ .debug_str     0x00000000     0x11e1 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
  .debug_frame   0x00000000       0x90 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.o
  .ARM.attributes
@@ -719,7 +719,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.o
- .debug_str     0x00000000      0x8cb CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.o
+ .debug_str     0x00000000      0x8d4 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc.o
@@ -731,7 +731,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.o
- .debug_str     0x00000000      0x8ce CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.o
+ .debug_str     0x00000000      0x8d7 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.o
@@ -785,7 +785,7 @@ Discarded input sections
                 0x00000000       0xb8 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
  .debug_ranges  0x00000000       0xa8 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
  .debug_line    0x00000000      0x7df CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
- .debug_str     0x00000000     0x10ca CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
+ .debug_str     0x00000000     0x10d3 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
  .debug_frame   0x00000000      0x200 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.o
  .ARM.attributes
@@ -834,7 +834,7 @@ Discarded input sections
                 0x00000000       0xa0 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
  .debug_ranges  0x00000000       0x90 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
  .debug_line    0x00000000      0x48e CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
- .debug_str     0x00000000      0xcad CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
+ .debug_str     0x00000000      0xcb6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
  .debug_frame   0x00000000      0x13c CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.o
  .ARM.attributes
@@ -932,7 +932,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
- .debug_str     0x00000000      0x8cb CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
+ .debug_str     0x00000000      0x8d4 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.o
@@ -1033,7 +1033,7 @@ Discarded input sections
                 0x00000000       0xe0 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
  .debug_ranges  0x00000000      0x100 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
  .debug_line    0x00000000      0x9a5 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
- .debug_str     0x00000000     0x1653 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
+ .debug_str     0x00000000     0x165c CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
  .debug_frame   0x00000000      0x284 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.o
  .ARM.attributes
@@ -1046,7 +1046,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.o
- .debug_str     0x00000000      0x8cc CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.o
+ .debug_str     0x00000000      0x8d5 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_sdram.o
@@ -1058,7 +1058,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
- .debug_str     0x00000000      0x8ca CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
+ .debug_str     0x00000000      0x8d3 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.o
@@ -1070,7 +1070,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
- .debug_str     0x00000000      0x8cd CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
+ .debug_str     0x00000000      0x8d6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.o
@@ -1082,7 +1082,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x18 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.o
  .debug_line    0x00000000      0x277 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.o
- .debug_str     0x00000000      0x8c9 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.o
+ .debug_str     0x00000000      0x8d2 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.o
  .ARM.attributes
                 0x00000000       0x39 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_fmc.o
@@ -1128,7 +1128,7 @@ Discarded input sections
                 0x00000000       0xa8 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
  .debug_ranges  0x00000000       0x98 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
  .debug_line    0x00000000      0x36e CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
- .debug_str     0x00000000      0x884 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
+ .debug_str     0x00000000      0x88d CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
  .debug_frame   0x00000000      0x190 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/syscalls.o
  .ARM.attributes
@@ -1146,7 +1146,7 @@ Discarded input sections
                 0x00000000       0x20 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
  .debug_ranges  0x00000000       0x10 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
  .debug_line    0x00000000      0x1bb CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
- .debug_str     0x00000000      0x69c CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
+ .debug_str     0x00000000      0x6a5 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
  .comment       0x00000000       0x80 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
  .debug_frame   0x00000000       0x28 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Core/sysmem.o
  .ARM.attributes
@@ -1821,27 +1821,27 @@ OUTPUT(CM4/TouchGFX/build/bin/target.elf elf32-littlearm)
  .debug_line    0x0000283a      0x32f CM4/TouchGFX/build/STM32H747I_DISCO/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o
  .debug_line    0x00002b69       0xa2 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Startup/startup_stm32h747xihx.o
 
-.debug_str      0x00000000     0x2f5a
- .debug_str     0x00000000     0x1c0c CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
-                               0x1d16 (size before relaxing)
- .debug_str     0x00001c0c      0x4f6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
-                               0x16cf (size before relaxing)
- .debug_str     0x00002102      0x1a6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.o
-                                0xa7d (size before relaxing)
- .debug_str     0x000022a8      0x5de CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
-                               0x1138 (size before relaxing)
- .debug_str     0x00002886      0x525 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
-                               0x10d7 (size before relaxing)
- .debug_str     0x00002dab       0x3d CM4/TouchGFX/build/STM32H747I_DISCO/CM4/Core/Src/main.o
-                                0xc07 (size before relaxing)
- .debug_str     0x00002de8       0xac CM4/TouchGFX/build/STM32H747I_DISCO/CM4/Core/Src/stm32h7xx_it.o
-                                0x94d (size before relaxing)
- .debug_str     0x00002e94       0x21 CM4/TouchGFX/build/STM32H747I_DISCO/CM4/Core/Src/stm32h7xx_hal_msp.o
-                                0xaec (size before relaxing)
- .debug_str     0x00002eb5       0x55 CM4/TouchGFX/build/STM32H747I_DISCO/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o
-                                0xbbc (size before relaxing)
- .debug_str     0x00002f0a       0x50 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Startup/startup_stm32h747xihx.o
-                                 0x89 (size before relaxing)
+.debug_str      0x00000000     0x2f63
+ .debug_str     0x00000000     0x1c15 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o
+                               0x1d1f (size before relaxing)
+ .debug_str     0x00001c15      0x4f6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.o
+                               0x16d8 (size before relaxing)
+ .debug_str     0x0000210b      0x1a6 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.o
+                                0xa86 (size before relaxing)
+ .debug_str     0x000022b1      0x5de CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.o
+                               0x1141 (size before relaxing)
+ .debug_str     0x0000288f      0x525 CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.o
+                               0x10e0 (size before relaxing)
+ .debug_str     0x00002db4       0x3d CM4/TouchGFX/build/STM32H747I_DISCO/CM4/Core/Src/main.o
+                                0xc10 (size before relaxing)
+ .debug_str     0x00002df1       0xac CM4/TouchGFX/build/STM32H747I_DISCO/CM4/Core/Src/stm32h7xx_it.o
+                                0x956 (size before relaxing)
+ .debug_str     0x00002e9d       0x21 CM4/TouchGFX/build/STM32H747I_DISCO/CM4/Core/Src/stm32h7xx_hal_msp.o
+                                0xaf5 (size before relaxing)
+ .debug_str     0x00002ebe       0x55 CM4/TouchGFX/build/STM32H747I_DISCO/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o
+                                0xbc5 (size before relaxing)
+ .debug_str     0x00002f13       0x50 CM4/TouchGFX/build/STM32H747I_DISCO/STM32CubeIDE/CM4/Application/User/Startup/startup_stm32h747xihx.o
+                                 0x92 (size before relaxing)
 
 .comment        0x00000000       0x7f
  .comment       0x00000000       0x7f CM4/TouchGFX/build/STM32H747I_DISCO/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.o

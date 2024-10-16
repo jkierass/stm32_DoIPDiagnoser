@@ -73,7 +73,8 @@ CM7/TouchGFX/build/STM32H747I_DISCO/CM7/TouchGFX/gui/src/diagnose_screen/Diagnos
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp
 
 CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:
 
@@ -222,3 +223,5 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPa
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:

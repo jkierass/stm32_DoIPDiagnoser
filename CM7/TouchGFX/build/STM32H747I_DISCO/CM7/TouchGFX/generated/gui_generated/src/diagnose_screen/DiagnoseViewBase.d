@@ -73,6 +73,7 @@ CM7/TouchGFX/build/STM32H747I_DISCO/CM7/TouchGFX/generated/gui_generated/src/dia
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp \
  CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
  CM7/TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  CM7/TouchGFX/generated/images/include/images/BitmapDatabase.hpp
@@ -222,6 +223,8 @@ CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPa
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
 

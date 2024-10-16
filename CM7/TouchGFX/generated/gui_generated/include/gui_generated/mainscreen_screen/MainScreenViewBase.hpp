@@ -33,10 +33,14 @@ protected:
     touchgfx::DigitalClock MainScreenClock;
     touchgfx::TextArea Text_Diagnose;
     touchgfx::TextArea Text_Calculator;
+    touchgfx::TextArea Text_Manipulator;
     touchgfx::TextArea MainTitle;
     touchgfx::Button SwitchToDiagnose;
     touchgfx::ScalableImage CalculatorIcon;
     touchgfx::Button SwitchToCalculator;
+    touchgfx::TextArea Text_Temperature;
+    touchgfx::ScalableImage ManipulatorIcon;
+    touchgfx::Button SwitchToManipulator;
 
 private:
 

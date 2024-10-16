@@ -45,8 +45,8 @@
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp:99:18:virtual void CalculatorViewBase::sendToCalculator_Comma()	0	static
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp:103:18:virtual void CalculatorViewBase::sendToCalculator_Clear()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<CalculatorPresenter>::~View()	0	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:215:1:CalculatorViewBase::~CalculatorViewBase()	0	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:220:6:virtual void CalculatorViewBase::setupScreen()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:215:1:CalculatorViewBase::~CalculatorViewBase()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:220:6:virtual void CalculatorViewBase::setupScreen()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<CalculatorViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ScalableImage>::~ClickListener()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
@@ -57,8 +57,8 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:33:7:virtual touchgfx::ClickListener<touchgfx::ScalableImage>::~ClickListener()	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<CalculatorViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<CalculatorPresenter>::~View()	8	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:215:1:virtual CalculatorViewBase::~CalculatorViewBase()	8	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:225:6:void CalculatorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:215:1:virtual CalculatorViewBase::~CalculatorViewBase()	8	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:225:6:void CalculatorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:118:18:virtual void touchgfx::Image::invalidateContent() const	8	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
@@ -69,4 +69,4 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	24	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:9:1:CalculatorViewBase::CalculatorViewBase()	152	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/calculator_screen/CalculatorViewBase.cpp:9:1:CalculatorViewBase::CalculatorViewBase()	152	static

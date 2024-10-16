@@ -39,13 +39,14 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Application/User/AuxServicesHandler/src \
+Application/User/Calculator/src \
 Application/User/Core \
 Application/User/LIBJPEG/App \
 Application/User/Startup \
 Application/User/TouchGFX/App \
 Application/User/TouchGFX/target \
 Application/User/TouchGFX/target/generated \
-Application/User/calculator/src \
 Application/User/generated \
 Application/User/gui \
 Drivers/BSP/Components \

@@ -1,5 +1,5 @@
 Middlewares/LibJPEG/jmemnobs.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/Ediabas/Middlewares/Third_Party/LibJPEG/source/jmemnobs.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/LibJPEG/source/jmemnobs.c \
  ../../../Middlewares/Third_Party/LibJPEG/include/jinclude.h \
  ../../../CM7/LIBJPEG/Target/jconfig.h \
  ../../../CM7/LIBJPEG/Target/jdata_conf.h \

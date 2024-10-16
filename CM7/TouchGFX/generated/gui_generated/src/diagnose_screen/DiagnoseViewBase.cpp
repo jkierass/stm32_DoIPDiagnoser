@@ -35,7 +35,7 @@ DiagnoseViewBase::DiagnoseViewBase() :
     HomeIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(HomeIcon);
 
-    dynamicGraph1.setPosition(400, 90, 320, 240);
+    dynamicGraph1.setPosition(391, 133, 322, 264);
     dynamicGraph1.setScale(1);
     dynamicGraph1.setGraphAreaMargin(0, 0, 0, 0);
     dynamicGraph1.setGraphAreaPadding(0, 0, 0, 0);
@@ -153,7 +153,7 @@ DiagnoseViewBase::DiagnoseViewBase() :
     HomeButton.setAction(buttonCallback);
     add(HomeButton);
 
-    scrollableContainer1.setPosition(0, 80, 307, 400);
+    scrollableContainer1.setPosition(0, 94, 307, 386);
     scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     scrollableContainer1.setScrollbarsAlpha(255);
     add(scrollableContainer1);
