@@ -47,6 +47,8 @@ Application/User/TouchGFX/target/STM32TouchController.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/Common/ts.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/../Components/ft6x06/ft6x06.h \
@@ -99,6 +101,8 @@ Application/User/TouchGFX/target/STM32TouchController.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/Common/ts.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/../Components/ft6x06/ft6x06.h:

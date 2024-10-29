@@ -1,4 +1,5 @@
 #include <gui/calculator_screen/CalculatorView.hpp>
+#include "Logger.h"
 
 CalculatorView::CalculatorView()
 {
@@ -27,6 +28,7 @@ bool CalculatorView::addChar(char character)
 	touchgfx::Unicode::snprintf(TextResultBuffer, TEXTRESULT_SIZE, "%s", new_buf);
 	TextResult.invalidate();
 	char_counter++;
+	LOG_DEBUG("Calculator; char_count: %d", char_counter);
 	return true;
 }
 
@@ -42,6 +44,7 @@ bool CalculatorView::removeLastChar()
 	touchgfx::Unicode::snprintf(TextResultBuffer, TEXTRESULT_SIZE, "%s", new_buf);
 	TextResult.invalidate();
 	char_counter--;
+	LOG_DEBUG("Calculator; char_count: %d", char_counter);
 	return true;
 }
 

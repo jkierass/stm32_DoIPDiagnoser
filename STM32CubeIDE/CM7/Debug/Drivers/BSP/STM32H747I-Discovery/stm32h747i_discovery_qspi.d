@@ -43,6 +43,8 @@ Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
  C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/BSP/STM32H747I-Discovery/../Components/mt25tl01g/mt25tl01g.h \
  ../../../CM7/Core/Inc/mt25tl01g_conf.h
@@ -89,6 +91,8 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/BSP/ST
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/BSP/STM32H747I-Discovery/../Components/mt25tl01g/mt25tl01g.h:
 ../../../CM7/Core/Inc/mt25tl01g_conf.h:

@@ -1,13 +1,24 @@
 #ifndef __LOGGER_H__
 #define __LOGGER_H__
 
+#include <stdio.h>
 
-#define DEBUG_LOG(...) \
-            do { if (DEBUG) fprintf(stderr, __VA_ARGS__); } while (0)
+#ifdef DEBUG
+#define DEBUG_ENABLED 1
+#else
+#define DEBUG_ENABLED 0
+#endif
 
-void logger_setup(void)
-{
 
-}
+
+#define LOG_DEBUG(fmt, ...) \
+            do {\
+            	if (DEBUG_ENABLED)\
+				{\
+            		fprintf(stdout, fmt, __VA_ARGS__);\
+            		fprintf(stdout, "\r\n");\
+            		fflush(stdout);\
+				}\
+			} while (0)
 
 #endif
