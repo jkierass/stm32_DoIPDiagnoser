@@ -51,6 +51,19 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../../../CM7/Core/Inc/FreeRTOSConfig.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/mainscreen_screen/MainScreenView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
@@ -97,15 +110,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD24DebugPrinter.hpp \
  ../../../CM7/TouchGFX/target/generated/STM32DMA.hpp \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
- ../../../CM7/Core/Inc/FreeRTOSConfig.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../CM7/TouchGFX/target/TouchGFXHAL.hpp \
  ../../../CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
@@ -207,6 +212,19 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+../../../CM7/Core/Inc/FreeRTOSConfig.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/mainscreen_screen/MainScreenView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
@@ -253,15 +271,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD24DebugPrinter.hpp:
 ../../../CM7/TouchGFX/target/generated/STM32DMA.hpp:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
-../../../CM7/Core/Inc/FreeRTOSConfig.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../CM7/TouchGFX/target/TouchGFXHAL.hpp:
 ../../../CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:

@@ -141,7 +141,7 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTRESULT_SIZE = 17;
+    static const uint16_t TEXTRESULT_SIZE = 16;
     touchgfx::Unicode::UnicodeChar TextResultBuffer[TEXTRESULT_SIZE];
 
 private:

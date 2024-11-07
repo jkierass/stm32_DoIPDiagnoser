@@ -23,9 +23,11 @@ RM := rm -rf
 -include Application/User/TouchGFX/App/subdir.mk
 -include Application/User/Startup/subdir.mk
 -include Application/User/LIBJPEG/App/subdir.mk
+-include Application/User/EventManager/src/subdir.mk
+-include Application/User/Core/TaskAdditions/src/subdir.mk
 -include Application/User/Core/subdir.mk
--include Application/User/Calculator/src/subdir.mk
--include Application/User/AuxServicesHandler/src/subdir.mk
+-include Application/User/CommonDefines/src/subdir.mk
+-include Application/User/Calc/src/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -102,7 +104,7 @@ main-build: STM32H747I-DISCO_CM7.elf secondary-outputs
 
 # Tool invocations
 STM32H747I-DISCO_CM7.elf STM32H747I-DISCO_CM7.map: $(OBJS) $(USER_OBJS) C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\ediabasdiagnoser\STM32CubeIDE\CM7\STM32H747XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32H747I-DISCO_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\ediabasdiagnoser\STM32CubeIDE\CM7\STM32H747XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H747I-DISCO_CM7.map" -Wl,--gc-sections -static -L../../../CM7/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "STM32H747I-DISCO_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\ediabasdiagnoser\STM32CubeIDE\CM7\STM32H747XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H747I-DISCO_CM7.map" -Wl,--gc-sections -static -L../../../CM7/Middlewares/ST/touchgfx/lib/core/cortex_m7/gcc -u _printf_float --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

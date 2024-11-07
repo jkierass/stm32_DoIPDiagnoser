@@ -16,3 +16,8 @@ void DiagnosePresenter::deactivate()
 {
 
 }
+
+void DiagnosePresenter::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
+{
+
+}

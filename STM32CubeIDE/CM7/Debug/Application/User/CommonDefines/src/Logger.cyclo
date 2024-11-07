@@ -1,0 +1,3 @@
+../Application/User/CommonDefines/src/Logger.cpp:6:1:LogPrinter::LogPrinter()	1
+../Application/User/CommonDefines/src/Logger.cpp:8:13:static LogPrinter& LogPrinter::instance()	3
+../Application/User/CommonDefines/src/Logger.cpp:14:6:)	1

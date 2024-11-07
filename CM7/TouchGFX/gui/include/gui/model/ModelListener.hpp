@@ -2,6 +2,7 @@
 #define MODELLISTENER_HPP
 
 #include <gui/model/Model.hpp>
+#include "MessageDataTypes.h"
 
 class ModelListener
 {
@@ -14,6 +15,9 @@ public:
     {
         model = m;
     }
+
+    virtual void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) {}
+
 protected:
     Model* model;
 };

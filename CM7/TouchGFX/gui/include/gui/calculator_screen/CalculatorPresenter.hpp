@@ -4,6 +4,8 @@
 #include <gui/model/ModelListener.hpp>
 #include <mvp/Presenter.hpp>
 
+#include "MessageDataTypes.h"
+
 using namespace touchgfx;
 
 class CalculatorView;
@@ -26,6 +28,10 @@ public:
     virtual void deactivate();
 
     virtual ~CalculatorPresenter() {}
+
+    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) override;
+
+    bool sendCalculationRequest(UMessageData request);
 
 private:
     CalculatorPresenter();

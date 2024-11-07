@@ -35,6 +35,8 @@ public:
     virtual void sendToCalculator_Divide() override;
     virtual void sendToCalculator_Comma() override;
     virtual void sendToCalculator_Clear() override;
+
+    void setCalculationResult(unsigned char result[]);
 protected:
 
     bool addChar(char character);

@@ -27,6 +27,8 @@ public:
 
     virtual ~DiagnosePresenter() {}
 
+    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) override;
+
 private:
     DiagnosePresenter();
 

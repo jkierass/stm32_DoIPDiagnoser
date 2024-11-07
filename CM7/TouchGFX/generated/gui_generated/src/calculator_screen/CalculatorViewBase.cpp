@@ -202,7 +202,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Comma.setAction(buttonCallback);
     add(CalculatorButton_Comma);
 
-    TextResult.setPosition(109, 25, 89, 431);
+    TextResult.setPosition(109, 25, 89, 405);
     TextResult.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     TextResult.setLinespacing(0);
     TextResult.setRotation(touchgfx::TEXT_ROTATE_270);

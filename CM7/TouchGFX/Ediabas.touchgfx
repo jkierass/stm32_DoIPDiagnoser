@@ -797,7 +797,7 @@
             "X": 109,
             "Y": 25,
             "Width": 89,
-            "Height": 431,
+            "Height": 405,
             "TextId": "TextResult",
             "TextRotation": "270",
             "Color": {
@@ -808,7 +808,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_YKNQ",
               "UseBuffer": true,
-              "BufferSize": 17
+              "BufferSize": 16
             }
           }
         ],

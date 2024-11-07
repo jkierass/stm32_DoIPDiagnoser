@@ -16,3 +16,8 @@ void MainScreenPresenter::deactivate()
 {
 
 }
+
+void MainScreenPresenter::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
+{
+
+}

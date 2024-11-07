@@ -1,30 +1,32 @@
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:14:6:virtual void CalculatorView::tearDownScreen()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:19:6:virtual void CalculatorView::tearDownScreen()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:24:6:virtual void CalculatorView::sendToCalculator_Equals()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:11:13:CalculatorView::~CalculatorView()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:11:13:virtual CalculatorView::~CalculatorView()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:4:1:CalculatorView::CalculatorView()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:9:6:virtual void CalculatorView::setupScreen()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:19:6:bool CalculatorView::addChar(char)	2
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:59:6:virtual void CalculatorView::sendToCalculator_0()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:64:6:virtual void CalculatorView::sendToCalculator_1()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:69:6:virtual void CalculatorView::sendToCalculator_2()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:74:6:virtual void CalculatorView::sendToCalculator_3()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:79:6:virtual void CalculatorView::sendToCalculator_4()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:84:6:virtual void CalculatorView::sendToCalculator_5()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:89:6:virtual void CalculatorView::sendToCalculator_6()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:94:6:virtual void CalculatorView::sendToCalculator_7()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:99:6:virtual void CalculatorView::sendToCalculator_8()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:104:6:virtual void CalculatorView::sendToCalculator_9()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:109:6:virtual void CalculatorView::sendToCalculator_Add()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:124:6:virtual void CalculatorView::sendToCalculator_OpenParenthesis()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:129:6:virtual void CalculatorView::sendToCalculator_CloseParenthesis()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:134:6:virtual void CalculatorView::sendToCalculator_Subtract()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:139:6:virtual void CalculatorView::sendToCalculator_Multiply()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:144:6:virtual void CalculatorView::sendToCalculator_Divide()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:149:6:virtual void CalculatorView::sendToCalculator_Comma()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:35:6:bool CalculatorView::removeLastChar()	2
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:119:6:virtual void CalculatorView::sendToCalculator_Delete()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:51:6:void CalculatorView::clearText()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:154:6:virtual void CalculatorView::sendToCalculator_Clear()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:9:1:CalculatorView::CalculatorView()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:14:6:virtual void CalculatorView::setupScreen()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:35:6:void CalculatorView::setCalculationResult(unsigned char*)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:43:6:bool CalculatorView::addChar(char)	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:86:6:virtual void CalculatorView::sendToCalculator_0()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:91:6:virtual void CalculatorView::sendToCalculator_1()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:96:6:virtual void CalculatorView::sendToCalculator_2()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:101:6:virtual void CalculatorView::sendToCalculator_3()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:106:6:virtual void CalculatorView::sendToCalculator_4()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:111:6:virtual void CalculatorView::sendToCalculator_5()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:116:6:virtual void CalculatorView::sendToCalculator_6()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:121:6:virtual void CalculatorView::sendToCalculator_7()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:126:6:virtual void CalculatorView::sendToCalculator_8()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:131:6:virtual void CalculatorView::sendToCalculator_9()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:136:6:virtual void CalculatorView::sendToCalculator_Add()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:146:6:virtual void CalculatorView::sendToCalculator_OpenParenthesis()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:151:6:virtual void CalculatorView::sendToCalculator_CloseParenthesis()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:156:6:virtual void CalculatorView::sendToCalculator_Subtract()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:161:6:virtual void CalculatorView::sendToCalculator_Multiply()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:166:6:virtual void CalculatorView::sendToCalculator_Divide()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:171:6:virtual void CalculatorView::sendToCalculator_Comma()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:62:6:bool CalculatorView::removeLastChar()	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:141:6:virtual void CalculatorView::sendToCalculator_Delete()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:78:6:void CalculatorView::clearText()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorView.cpp:176:6:virtual void CalculatorView::sendToCalculator_Clear()	1

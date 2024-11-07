@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.c
+  * @file           : main.cpp
   * @brief          : Main program body
   ******************************************************************************
   * @attention
@@ -24,6 +24,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "queue.h"
+#include "MessageDataTypes.h"
+#include "EventManagerTask.h"
+#include "CalcTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -78,12 +82,24 @@ const osThreadAttr_t videoTask_attributes = {
   .stack_size = 1000 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
-/* Definitions for Task_ASHandler */
-osThreadId_t Task_ASHandlerHandle;
-const osThreadAttr_t Task_ASHandler_attributes = {
-  .name = "Task_ASHandler",
-  .stack_size = 1028 * 4,
+/* Definitions for Task_EventMgr */
+osThreadId_t Task_EventMgrHandle;
+const osThreadAttr_t Task_EventMgr_attributes = {
+  .name = "Task_EventMgr",
+  .stack_size = 2056 * 4,
   .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for Task_Calculator */
+osThreadId_t Task_CalculatorHandle;
+const osThreadAttr_t Task_Calculator_attributes = {
+  .name = "Task_Calculator",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for printMutex */
+osMutexId_t printMutexHandle;
+const osMutexAttr_t printMutex_attributes = {
+  .name = "printMutex"
 };
 /* USER CODE BEGIN PV */
 OTM8009A_Object_t OTM8009AObj;
@@ -105,7 +121,8 @@ static void MX_JPEG_Init(void);
 static void MX_USART1_UART_Init(void);
 void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
-void StartTask_ASHandler(void *argument);
+void StartTask_EventMgr(void *argument);
+void StartTask_Calculator(void *argument);
 
 /* USER CODE BEGIN PFP */
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -113,6 +130,10 @@ void StartTask_ASHandler(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+QueueHandle_t queueToFrontend = xQueueCreate(64, sizeof(SMessage));
+QueueHandle_t queueToBackend = xQueueCreate(8, sizeof(SMessage));
+QueueHandle_t queueToCalculator = xQueueCreate(2, sizeof(SMessage));
+QueueHandle_t queueToProxyDaemon = xQueueCreate(16, sizeof(SMessage));
 /* USER CODE END 0 */
 
 /**
@@ -202,6 +223,9 @@ Error_Handler();
 
   /* Init scheduler */
   osKernelInitialize();
+  /* Create the mutex(es) */
+  /* creation of printMutex */
+  printMutexHandle = osMutexNew(&printMutex_attributes);
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
@@ -226,8 +250,11 @@ Error_Handler();
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
-  /* creation of Task_ASHandler */
-  Task_ASHandlerHandle = osThreadNew(StartTask_ASHandler, NULL, &Task_ASHandler_attributes);
+  /* creation of Task_EventMgr */
+  Task_EventMgrHandle = osThreadNew(StartTask_EventMgr, NULL, &Task_EventMgr_attributes);
+
+  /* creation of Task_Calculator */
+  Task_CalculatorHandle = osThreadNew(StartTask_Calculator, NULL, &Task_Calculator_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -868,22 +895,40 @@ __weak void TouchGFX_Task(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask_ASHandler */
+/* USER CODE BEGIN Header_StartTask_EventMgr */
 /**
-* @brief Function implementing the Task_ASHandler thread.
+* @brief Function implementing the Task_EventMgr thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask_ASHandler */
-__weak void StartTask_ASHandler(void *argument)
+/* USER CODE END Header_StartTask_EventMgr */
+__weak void StartTask_EventMgr(void *argument)
 {
-  /* USER CODE BEGIN StartTask_ASHandler */
+  /* USER CODE BEGIN StartTask_EventMgr */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END StartTask_ASHandler */
+  /* USER CODE END StartTask_EventMgr */
+}
+
+/* USER CODE BEGIN Header_StartTask_Calculator */
+/**
+* @brief Function implementing the Task_Calculator thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask_Calculator */
+__weak void StartTask_Calculator(void *argument)
+{
+  /* USER CODE BEGIN StartTask_Calculator */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTask_Calculator */
 }
 
  /* MPU Configuration */

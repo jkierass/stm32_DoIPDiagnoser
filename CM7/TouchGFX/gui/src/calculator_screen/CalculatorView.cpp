@@ -1,5 +1,10 @@
 #include <gui/calculator_screen/CalculatorView.hpp>
+#include "touchgfx/Unicode.hpp"
+#include <string.h>
+
 #include "Logger.h"
+#include "MessageDataTypes.h"
+
 
 CalculatorView::CalculatorView()
 {
@@ -16,9 +21,28 @@ void CalculatorView::tearDownScreen()
     CalculatorViewBase::tearDownScreen();
 }
 
+void CalculatorView::sendToCalculator_Equals()
+{
+	UMessageData request;
+	for(int i = 0; i < 16; i++)
+	{
+		request.calculation_request[i] = 0;
+	}
+	Unicode::toUTF8(TextResultBuffer, request.calculation_request, char_counter);
+	presenter->sendCalculationRequest(request);
+}
+
+void CalculatorView::setCalculationResult(unsigned char result[])
+{
+	touchgfx::Unicode::fromUTF8(result, TextResultBuffer, TEXTRESULT_SIZE);
+//	touchgfx::Unicode::snprintf(TextResultBuffer, TEXTRESULT_SIZE, "%s", result);
+	TextResult.invalidate();
+	//TODO dodaj flage ze po wyniku kalkulacji dodanie kolejnego znaku zeruje bufor;
+}
+
 bool CalculatorView::addChar(char character)
 {
-	if(char_counter > 15)
+	if(char_counter > TEXTRESULT_SIZE - 1)
 	{
 		return false;
 	}
@@ -28,7 +52,6 @@ bool CalculatorView::addChar(char character)
 	touchgfx::Unicode::snprintf(TextResultBuffer, TEXTRESULT_SIZE, "%s", new_buf);
 	TextResult.invalidate();
 	char_counter++;
-	LOG_DEBUG("Calculator; char_count: %d", char_counter);
 	return true;
 }
 
@@ -44,7 +67,6 @@ bool CalculatorView::removeLastChar()
 	touchgfx::Unicode::snprintf(TextResultBuffer, TEXTRESULT_SIZE, "%s", new_buf);
 	TextResult.invalidate();
 	char_counter--;
-	LOG_DEBUG("Calculator; char_count: %d", char_counter);
 	return true;
 }
 
@@ -109,11 +131,6 @@ void CalculatorView::sendToCalculator_9()
 void CalculatorView::sendToCalculator_Add()
 {
 	addChar('+');
-}
-
-void CalculatorView::sendToCalculator_Equals()
-{
-
 }
 
 void CalculatorView::sendToCalculator_Delete()
