@@ -104,6 +104,22 @@ public:
     {
         // Override and implement this function in Calculator
     }
+    virtual void sendToCalculator_Sqrt()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Power()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_Pi()
+    {
+        // Override and implement this function in Calculator
+    }
+    virtual void sendToCalculator_e()
+    {
+        // Override and implement this function in Calculator
+    }
 
 protected:
     FrontendApplication& application() {
@@ -115,6 +131,8 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::ButtonWithLabel CalculatorButton_0;
+    touchgfx::ButtonWithLabel CalculatorButton_Pi;
+    touchgfx::ButtonWithLabel CalculatorButton_e;
     touchgfx::ButtonWithLabel CalculatorButton_OpenParenthesis;
     touchgfx::ButtonWithLabel CalculatorButton_Clear;
     touchgfx::ButtonWithLabel CalculatorButton_Delete;
@@ -136,12 +154,14 @@ protected:
     touchgfx::ButtonWithLabel CalculatorButton_1;
     touchgfx::ButtonWithLabel CalculatorButton_Equals;
     touchgfx::ButtonWithLabel CalculatorButton_Comma;
+    touchgfx::ButtonWithLabel CalculatorButton_Sqrt;
+    touchgfx::ButtonWithLabel CalculatorButton_Power;
     touchgfx::TextAreaWithOneWildcard TextResult;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTRESULT_SIZE = 16;
+    static const uint16_t TEXTRESULT_SIZE = 17;
     touchgfx::Unicode::UnicodeChar TextResultBuffer[TEXTRESULT_SIZE];
 
 private:

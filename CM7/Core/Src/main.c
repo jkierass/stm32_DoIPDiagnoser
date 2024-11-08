@@ -73,28 +73,35 @@ osThreadId_t TouchGFXTaskHandle;
 const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "TouchGFXTask",
   .stack_size = 3048 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for videoTask */
 osThreadId_t videoTaskHandle;
 const osThreadAttr_t videoTask_attributes = {
   .name = "videoTask",
   .stack_size = 1000 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for Task_EventMgr */
 osThreadId_t Task_EventMgrHandle;
 const osThreadAttr_t Task_EventMgr_attributes = {
   .name = "Task_EventMgr",
   .stack_size = 2056 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for Task_Calculator */
 osThreadId_t Task_CalculatorHandle;
 const osThreadAttr_t Task_Calculator_attributes = {
   .name = "Task_Calculator",
-  .stack_size = 128 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for Task_EDaemonP */
+osThreadId_t Task_EDaemonPHandle;
+const osThreadAttr_t Task_EDaemonP_attributes = {
+  .name = "Task_EDaemonP",
+  .stack_size = 1028 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for printMutex */
 osMutexId_t printMutexHandle;
@@ -120,9 +127,10 @@ static void MX_CRC_Init(void);
 static void MX_JPEG_Init(void);
 static void MX_USART1_UART_Init(void);
 void TouchGFX_Task(void *argument);
-extern void videoTaskFunc(void *argument);
+extern "C" extern void videoTaskFunc(void *argument);
 void StartTask_EventMgr(void *argument);
 void StartTask_Calculator(void *argument);
+void StartTask_EDaemonP(void *argument);
 
 /* USER CODE BEGIN PFP */
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -255,6 +263,9 @@ Error_Handler();
 
   /* creation of Task_Calculator */
   Task_CalculatorHandle = osThreadNew(StartTask_Calculator, NULL, &Task_Calculator_attributes);
+
+  /* creation of Task_EDaemonP */
+  Task_EDaemonPHandle = osThreadNew(StartTask_EDaemonP, NULL, &Task_EDaemonP_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -929,6 +940,24 @@ __weak void StartTask_Calculator(void *argument)
     osDelay(1);
   }
   /* USER CODE END StartTask_Calculator */
+}
+
+/* USER CODE BEGIN Header_StartTask_EDaemonP */
+/**
+* @brief Function implementing the Task_EDaemonP thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartTask_EDaemonP */
+__weak void StartTask_EDaemonP(void *argument)
+{
+  /* USER CODE BEGIN StartTask_EDaemonP */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartTask_EDaemonP */
 }
 
  /* MPU Configuration */

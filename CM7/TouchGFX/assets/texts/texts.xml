@@ -6,6 +6,18 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_CFVA" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">e</Translation>
+      </Text>
+      <Text Id="__SingleUse_EQMS" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">pi</Translation>
+      </Text>
+      <Text Id="__SingleUse_YPAJ" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">^</Translation>
+      </Text>
+      <Text Id="__SingleUse_HCN1" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">sqrt</Translation>
+      </Text>
       <Text Id="__SingleUse_CDWB" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">Manipulator</Translation>
       </Text>
@@ -49,7 +61,7 @@
         <Translation Language="GB">*</Translation>
       </Text>
       <Text Id="__SingleUse_149Y" Alignment="Center" TypographyId="Typography_00">
-        <Translation Language="GB">,</Translation>
+        <Translation Language="GB">.</Translation>
       </Text>
       <Text Id="__SingleUse_RM9D" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">=</Translation>

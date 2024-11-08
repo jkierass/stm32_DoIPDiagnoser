@@ -1,2 +1,2 @@
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:41:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:46:10:uint16_t BitmapDatabase::getInstanceSize()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:43:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/images/src/BitmapDatabase.cpp:48:10:uint16_t BitmapDatabase::getInstanceSize()	1

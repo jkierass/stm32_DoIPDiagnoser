@@ -34,17 +34,22 @@ void CalculatorView::sendToCalculator_Equals()
 
 void CalculatorView::setCalculationResult(unsigned char result[])
 {
-	touchgfx::Unicode::fromUTF8(result, TextResultBuffer, TEXTRESULT_SIZE);
-//	touchgfx::Unicode::snprintf(TextResultBuffer, TEXTRESULT_SIZE, "%s", result);
+	touchgfx::Unicode::fromUTF8(result, TextResultBuffer, 16);
 	TextResult.invalidate();
-	//TODO dodaj flage ze po wyniku kalkulacji dodanie kolejnego znaku zeruje bufor;
+	char_counter = 0;
+	clear_flag = true;
 }
 
 bool CalculatorView::addChar(char character)
 {
-	if(char_counter > TEXTRESULT_SIZE - 1)
+	if(char_counter > TEXTRESULT_SIZE - 2)
 	{
 		return false;
+	}
+	if(clear_flag)
+	{
+		clearText();
+		clear_flag = false;
 	}
 	touchgfx::Unicode::UnicodeChar new_buf[TEXTRESULT_SIZE] = {0};
 	touchgfx::Unicode::strncpy(new_buf, TextResultBuffer, TEXTRESULT_SIZE);
@@ -60,6 +65,11 @@ bool CalculatorView::removeLastChar()
 	if(char_counter < 1)
 	{
 		return false;
+	}
+	if(clear_flag)
+	{
+		clearText();
+		clear_flag = false;
 	}
 	touchgfx::Unicode::UnicodeChar new_buf[TEXTRESULT_SIZE] = {0};
 	touchgfx::Unicode::strncpy(new_buf, TextResultBuffer, TEXTRESULT_SIZE);
@@ -165,7 +175,38 @@ void CalculatorView::sendToCalculator_Divide()
 
 void CalculatorView::sendToCalculator_Comma()
 {
-	addChar(',');
+	addChar('.');
+}
+
+void CalculatorView::sendToCalculator_e()
+{
+	addChar('e');
+}
+
+void CalculatorView::sendToCalculator_Pi()
+{
+	if(char_counter <= TEXTRESULT_SIZE - 2)
+	{
+		addChar('p');
+		addChar('i');
+	}
+}
+
+void CalculatorView::sendToCalculator_Sqrt()
+{
+	if(char_counter <= TEXTRESULT_SIZE - 5)
+	{
+		addChar('s');
+		addChar('q');
+		addChar('r');
+		addChar('t');
+		addChar('(');
+	}
+}
+
+void CalculatorView::sendToCalculator_Power()
+{
+	addChar('^');
 }
 
 void CalculatorView::sendToCalculator_Clear()

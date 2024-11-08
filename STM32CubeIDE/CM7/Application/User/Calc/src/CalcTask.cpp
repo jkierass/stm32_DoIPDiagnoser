@@ -1,4 +1,5 @@
 #include "CalcTask.h"
+#include "Calc.h"
 
 extern QueueHandle_t queueToCalculator;
 
@@ -21,11 +22,7 @@ void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient ev
 	{
 		case ASYNC_REQUEST_CALCULATE:
 			UMessageData replyMessage;
-			for(int i = 0; i < 16; i++)
-			{
-				replyMessage.calculation_request[i] = 1;
-			}
-//			Calculator::calculate(msg.calculation_request, result);
+			Calculator::calculate(&msg.calculation_request[0], &replyMessage.calculation_result[0]);
 			event_bus.send(ASYNC_COMPLETED_CALCULATE, replyMessage, eventSender);
 			break;
 		default:

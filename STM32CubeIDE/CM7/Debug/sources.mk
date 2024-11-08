@@ -40,6 +40,7 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Application/User/Calc/src \
+Application/User/Calc/tinexpr \
 Application/User/CommonDefines/src \
 Application/User/Core/TaskAdditions/src \
 Application/User/Core \

@@ -35,6 +35,10 @@ public:
     virtual void sendToCalculator_Divide() override;
     virtual void sendToCalculator_Comma() override;
     virtual void sendToCalculator_Clear() override;
+    virtual void sendToCalculator_e() override;
+    virtual void sendToCalculator_Pi() override;
+    virtual void sendToCalculator_Sqrt() override;
+    virtual void sendToCalculator_Power() override;
 
     void setCalculationResult(unsigned char result[]);
 protected:
@@ -42,7 +46,9 @@ protected:
     bool addChar(char character);
     bool removeLastChar();
     void clearText();
+
     int char_counter = 0;
+    bool clear_flag = false;
 };
 
 #endif // CALCULATORVIEW_HPP

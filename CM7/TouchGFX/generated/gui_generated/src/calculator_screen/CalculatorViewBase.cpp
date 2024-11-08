@@ -13,7 +13,7 @@ CalculatorViewBase::CalculatorViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    CalculatorButton_0.setXY(541, 247);
+    CalculatorButton_0.setXY(472, 253);
     CalculatorButton_0.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_0.setLabelText(touchgfx::TypedText(T___SINGLEUSE_PMW2));
     CalculatorButton_0.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -22,7 +22,25 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_0.setAction(buttonCallback);
     add(CalculatorButton_0);
 
-    CalculatorButton_OpenParenthesis.setXY(651, 356);
+    CalculatorButton_Pi.setXY(472, 362);
+    CalculatorButton_Pi.setBitmaps(touchgfx::Bitmap(BITMAP_LIGHT_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
+    CalculatorButton_Pi.setLabelText(touchgfx::TypedText(T___SINGLEUSE_EQMS));
+    CalculatorButton_Pi.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_Pi.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_Pi.setLabelRotation(TEXT_ROTATE_270);
+    CalculatorButton_Pi.setAction(buttonCallback);
+    add(CalculatorButton_Pi);
+
+    CalculatorButton_e.setXY(472, 143);
+    CalculatorButton_e.setBitmaps(touchgfx::Bitmap(BITMAP_LIGHT_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
+    CalculatorButton_e.setLabelText(touchgfx::TypedText(T___SINGLEUSE_CFVA));
+    CalculatorButton_e.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_e.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_e.setLabelRotation(TEXT_ROTATE_270);
+    CalculatorButton_e.setAction(buttonCallback);
+    add(CalculatorButton_e);
+
+    CalculatorButton_OpenParenthesis.setXY(582, 362);
     CalculatorButton_OpenParenthesis.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_OpenParenthesis.setLabelText(touchgfx::TypedText(T___SINGLEUSE_8MB0));
     CalculatorButton_OpenParenthesis.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -31,7 +49,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_OpenParenthesis.setAction(buttonCallback);
     add(CalculatorButton_OpenParenthesis);
 
-    CalculatorButton_Clear.setXY(319, 25);
+    CalculatorButton_Clear.setXY(250, 31);
     CalculatorButton_Clear.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Clear.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Q0K8));
     CalculatorButton_Clear.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -40,7 +58,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Clear.setAction(buttonCallback);
     add(CalculatorButton_Clear);
 
-    CalculatorButton_Delete.setXY(208, 25);
+    CalculatorButton_Delete.setXY(139, 31);
     CalculatorButton_Delete.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Delete.setLabelText(touchgfx::TypedText(T___SINGLEUSE_15M7));
     CalculatorButton_Delete.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -49,7 +67,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Delete.setAction(buttonCallback);
     add(CalculatorButton_Delete);
 
-    CalculatorButton_CloseParenthesis.setXY(651, 247);
+    CalculatorButton_CloseParenthesis.setXY(582, 253);
     CalculatorButton_CloseParenthesis.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_CloseParenthesis.setLabelText(touchgfx::TypedText(T___SINGLEUSE_EHMN));
     CalculatorButton_CloseParenthesis.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -58,7 +76,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_CloseParenthesis.setAction(buttonCallback);
     add(CalculatorButton_CloseParenthesis);
 
-    CalculatorButton_Subtract.setXY(541, 25);
+    CalculatorButton_Subtract.setXY(472, 31);
     CalculatorButton_Subtract.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Subtract.setLabelText(touchgfx::TypedText(T___SINGLEUSE_35UA));
     CalculatorButton_Subtract.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -67,7 +85,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Subtract.setAction(buttonCallback);
     add(CalculatorButton_Subtract);
 
-    CalculatorButton_Add.setXY(430, 25);
+    CalculatorButton_Add.setXY(361, 31);
     CalculatorButton_Add.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Add.setLabelText(touchgfx::TypedText(T___SINGLEUSE_VQHH));
     CalculatorButton_Add.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -75,7 +93,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Add.setAction(buttonCallback);
     add(CalculatorButton_Add);
 
-    CalculatorButton_Divide.setXY(651, 25);
+    CalculatorButton_Divide.setXY(582, 31);
     CalculatorButton_Divide.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Divide.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JGAL));
     CalculatorButton_Divide.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -84,7 +102,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Divide.setAction(buttonCallback);
     add(CalculatorButton_Divide);
 
-    CalculatorButton_Multiply.setXY(651, 140);
+    CalculatorButton_Multiply.setXY(582, 146);
     CalculatorButton_Multiply.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Multiply.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ICLN));
     CalculatorButton_Multiply.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -94,16 +112,16 @@ CalculatorViewBase::CalculatorViewBase() :
     add(CalculatorButton_Multiply);
 
     HomeIcon.setBitmap(touchgfx::Bitmap(BITMAP_HOME_ICON_ROATATED_ID));
-    HomeIcon.setPosition(23, 16, 55, 55);
+    HomeIcon.setPosition(13, 387, 55, 55);
     HomeIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(HomeIcon);
 
-    HomeButton.setXY(20, 14);
+    HomeButton.setXY(10, 387);
     HomeButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_OUTLINE_DISABLED_ID));
     HomeButton.setAction(buttonCallback);
     add(HomeButton);
 
-    CalculatorButton_9.setXY(208, 137);
+    CalculatorButton_9.setXY(361, 146);
     CalculatorButton_9.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_9.setLabelText(touchgfx::TypedText(T___SINGLEUSE_NDJ5));
     CalculatorButton_9.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -112,7 +130,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_9.setAction(buttonCallback);
     add(CalculatorButton_9);
 
-    CalculatorButton_8.setXY(208, 247);
+    CalculatorButton_8.setXY(361, 253);
     CalculatorButton_8.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_8.setLabelText(touchgfx::TypedText(T___SINGLEUSE_RCFO));
     CalculatorButton_8.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -121,7 +139,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_8.setAction(buttonCallback);
     add(CalculatorButton_8);
 
-    CalculatorButton_7.setXY(208, 356);
+    CalculatorButton_7.setXY(361, 362);
     CalculatorButton_7.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_7.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2Q40));
     CalculatorButton_7.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -130,7 +148,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_7.setAction(buttonCallback);
     add(CalculatorButton_7);
 
-    CalculatorButton_6.setXY(319, 137);
+    CalculatorButton_6.setXY(250, 143);
     CalculatorButton_6.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_6.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ZM12));
     CalculatorButton_6.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -139,7 +157,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_6.setAction(buttonCallback);
     add(CalculatorButton_6);
 
-    CalculatorButton_5.setXY(319, 247);
+    CalculatorButton_5.setXY(250, 253);
     CalculatorButton_5.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_5.setLabelText(touchgfx::TypedText(T___SINGLEUSE_NU4D));
     CalculatorButton_5.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -148,7 +166,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_5.setAction(buttonCallback);
     add(CalculatorButton_5);
 
-    CalculatorButton_4.setXY(319, 356);
+    CalculatorButton_4.setXY(250, 362);
     CalculatorButton_4.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_4.setLabelText(touchgfx::TypedText(T___SINGLEUSE_AZFA));
     CalculatorButton_4.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -157,7 +175,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_4.setAction(buttonCallback);
     add(CalculatorButton_4);
 
-    CalculatorButton_3.setXY(430, 356);
+    CalculatorButton_3.setXY(139, 143);
     CalculatorButton_3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_8OXV));
     CalculatorButton_3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -166,7 +184,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_3.setAction(buttonCallback);
     add(CalculatorButton_3);
 
-    CalculatorButton_2.setXY(430, 247);
+    CalculatorButton_2.setXY(139, 253);
     CalculatorButton_2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_M3YP));
     CalculatorButton_2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -175,7 +193,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_2.setAction(buttonCallback);
     add(CalculatorButton_2);
 
-    CalculatorButton_1.setXY(430, 140);
+    CalculatorButton_1.setXY(139, 362);
     CalculatorButton_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_G0GL));
     CalculatorButton_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -184,7 +202,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_1.setAction(buttonCallback);
     add(CalculatorButton_1);
 
-    CalculatorButton_Equals.setXY(541, 140);
+    CalculatorButton_Equals.setXY(693, 31);
     CalculatorButton_Equals.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTION_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Equals.setLabelText(touchgfx::TypedText(T___SINGLEUSE_RM9D));
     CalculatorButton_Equals.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -193,7 +211,7 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Equals.setAction(buttonCallback);
     add(CalculatorButton_Equals);
 
-    CalculatorButton_Comma.setXY(541, 356);
+    CalculatorButton_Comma.setXY(693, 362);
     CalculatorButton_Comma.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
     CalculatorButton_Comma.setLabelText(touchgfx::TypedText(T___SINGLEUSE_149Y));
     CalculatorButton_Comma.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -202,7 +220,25 @@ CalculatorViewBase::CalculatorViewBase() :
     CalculatorButton_Comma.setAction(buttonCallback);
     add(CalculatorButton_Comma);
 
-    TextResult.setPosition(109, 25, 89, 405);
+    CalculatorButton_Sqrt.setXY(693, 253);
+    CalculatorButton_Sqrt.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
+    CalculatorButton_Sqrt.setLabelText(touchgfx::TypedText(T___SINGLEUSE_HCN1));
+    CalculatorButton_Sqrt.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_Sqrt.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_Sqrt.setLabelRotation(TEXT_ROTATE_270);
+    CalculatorButton_Sqrt.setAction(buttonCallback);
+    add(CalculatorButton_Sqrt);
+
+    CalculatorButton_Power.setXY(693, 146);
+    CalculatorButton_Power.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_PRESSED_ID));
+    CalculatorButton_Power.setLabelText(touchgfx::TypedText(T___SINGLEUSE_YPAJ));
+    CalculatorButton_Power.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_Power.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    CalculatorButton_Power.setLabelRotation(TEXT_ROTATE_270);
+    CalculatorButton_Power.setAction(buttonCallback);
+    add(CalculatorButton_Power);
+
+    TextResult.setPosition(85, 31, 47, 416);
     TextResult.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     TextResult.setLinespacing(0);
     TextResult.setRotation(touchgfx::TEXT_ROTATE_270);
@@ -370,5 +406,33 @@ void CalculatorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //When CalculatorButton_Clear clicked call virtual function
         //Call sendToCalculator_Clear
         sendToCalculator_Clear();
+    }
+    if (&src == &CalculatorButton_Sqrt)
+    {
+        //CalculatorButtonClicked_Sqrt
+        //When CalculatorButton_Sqrt clicked call virtual function
+        //Call sendToCalculator_Sqrt
+        sendToCalculator_Sqrt();
+    }
+    if (&src == &CalculatorButton_Power)
+    {
+        //CalculatorButtonClicked_Power
+        //When CalculatorButton_Power clicked call virtual function
+        //Call sendToCalculator_Power
+        sendToCalculator_Power();
+    }
+    if (&src == &CalculatorButton_Pi)
+    {
+        //CalculatorButtonClicked_Pi
+        //When CalculatorButton_Pi clicked call virtual function
+        //Call sendToCalculator_Pi
+        sendToCalculator_Pi();
+    }
+    if (&src == &CalculatorButton_e)
+    {
+        //CalculatorButtonClicked_e
+        //When CalculatorButton_e clicked call virtual function
+        //Call sendToCalculator_e
+        sendToCalculator_e();
     }
 }

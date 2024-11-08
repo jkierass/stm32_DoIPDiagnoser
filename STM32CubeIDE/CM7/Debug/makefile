@@ -27,6 +27,7 @@ RM := rm -rf
 -include Application/User/Core/TaskAdditions/src/subdir.mk
 -include Application/User/Core/subdir.mk
 -include Application/User/CommonDefines/src/subdir.mk
+-include Application/User/Calc/tinexpr/subdir.mk
 -include Application/User/Calc/src/subdir.mk
 -include objects.mk
 
