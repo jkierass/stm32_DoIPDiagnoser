@@ -70,11 +70,16 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../CM7/TouchGFX/App/app_touchgfx.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/EventManager/inc/EventManagerTask.h \
+ ../../../Common/Inc/MessageDataTypes.h \
+ ../../../STM32CubeIDE/CM7/Application/User/EventManagerCM7/inc/EventManagerCM7Task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h
+ ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h \
+ ../../../Common/Inc/EventBusManager.h \
+ ../../../Common/Inc/MessageDataTypes.h \
+ ../../../STM32CubeIDE/CM7/Application/User/EdiabasDaemonProxy/inc/EdiabasDaemonProxyTask.h \
+ ../../../Common/Inc/cm_ipc.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
 ../../../CM7/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
@@ -146,8 +151,13 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../CM7/TouchGFX/App/app_touchgfx.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/EventManager/inc/EventManagerTask.h:
+../../../Common/Inc/MessageDataTypes.h:
+../../../STM32CubeIDE/CM7/Application/User/EventManagerCM7/inc/EventManagerCM7Task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h:
+../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h:
+../../../Common/Inc/EventBusManager.h:
+../../../Common/Inc/MessageDataTypes.h:
+../../../STM32CubeIDE/CM7/Application/User/EdiabasDaemonProxy/inc/EdiabasDaemonProxyTask.h:
+../../../Common/Inc/cm_ipc.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h:

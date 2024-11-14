@@ -43,7 +43,7 @@ Application/User/gui/CalculatorView.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h \
+ ../../../Common/Inc/EventBusManager.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
@@ -55,10 +55,11 @@ Application/User/gui/CalculatorView.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h \
+ ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp \
+ ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
@@ -70,7 +71,7 @@ Application/User/gui/CalculatorView.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/Logger.h
+ ../../../STM32CubeIDE/CM7/Application/User/Core/Logger/inc/Logger.h
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -114,7 +115,7 @@ Application/User/gui/CalculatorView.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h:
+../../../Common/Inc/EventBusManager.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../../CM7/Core/Inc/FreeRTOSConfig.h:
@@ -126,10 +127,11 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h:
+../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:
+../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
@@ -141,4 +143,4 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/Logger.h:
+../../../STM32CubeIDE/CM7/Application/User/Core/Logger/inc/Logger.h:

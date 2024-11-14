@@ -6,19 +6,19 @@
 
 extern "C" void StartTask_EDaemonP(void *argument);
 
-class EdiabasDaemonProxyTaskTask
+class EdiabasDaemonProxyTask
 {
 public:
-	EdiabasDaemonProxyTaskTask();
+	EdiabasDaemonProxyTask();
 
 	void process();
 
 	void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender);
 
-	EdiabasDaemonProxyTaskTask(EdiabasDaemonProxyTaskTask const&) = delete;
-	EdiabasDaemonProxyTaskTask& operator=(EdiabasDaemonProxyTaskTask const&) = delete;
-	EdiabasDaemonProxyTaskTask(EdiabasDaemonProxyTaskTask&&) = delete;
-	EdiabasDaemonProxyTaskTask& operator=(EdiabasDaemonProxyTaskTask&&) = delete;
+	EdiabasDaemonProxyTask(EdiabasDaemonProxyTask const&) = delete;
+	EdiabasDaemonProxyTask& operator=(EdiabasDaemonProxyTask const&) = delete;
+	EdiabasDaemonProxyTask(EdiabasDaemonProxyTask&&) = delete;
+	EdiabasDaemonProxyTask& operator=(EdiabasDaemonProxyTask&&) = delete;
 
 private:
 	EventBusManager event_bus;

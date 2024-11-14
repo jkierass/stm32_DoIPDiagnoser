@@ -23,11 +23,11 @@ RM := rm -rf
 -include Application/User/TouchGFX/App/subdir.mk
 -include Application/User/Startup/subdir.mk
 -include Application/User/LIBJPEG/App/subdir.mk
--include Application/User/EventManager/src/subdir.mk
--include Application/User/Core/TaskAdditions/src/subdir.mk
+-include Application/User/EventManagerCM7/src/subdir.mk
+-include Application/User/EdiabasDaemonProxy/src/subdir.mk
+-include Application/User/Core/Logger/src/subdir.mk
 -include Application/User/Core/subdir.mk
--include Application/User/CommonDefines/src/subdir.mk
--include Application/User/Calc/tinexpr/subdir.mk
+-include Application/User/Calc/tinyexpr/subdir.mk
 -include Application/User/Calc/src/subdir.mk
 -include objects.mk
 

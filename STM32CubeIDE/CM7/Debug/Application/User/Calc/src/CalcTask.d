@@ -1,7 +1,7 @@
 Application/User/Calc/src/CalcTask.o: \
  ../Application/User/Calc/src/CalcTask.cpp \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h \
+ ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h \
+ ../../../Common/Inc/EventBusManager.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
@@ -13,10 +13,10 @@ Application/User/Calc/src/CalcTask.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h:
+ ../../../Common/Inc/MessageDataTypes.h \
+ ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h
+../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h:
+../../../Common/Inc/EventBusManager.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../../CM7/Core/Inc/FreeRTOSConfig.h:
@@ -28,5 +28,5 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h:
+../../../Common/Inc/MessageDataTypes.h:
+../../../STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h:

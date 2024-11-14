@@ -46,6 +46,7 @@ MEMORY
 {
 FLASH (rx)     : ORIGIN = 0x08100000, LENGTH = 1024K
 RAM (xrw)      : ORIGIN = 0x10000000, LENGTH = 288K
+RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
 }
 
 /* Define output sections */
@@ -58,6 +59,11 @@ SECTIONS
     KEEP(*(.isr_vector)) /* Startup code */
     . = ALIGN(4);
   } >FLASH
+  
+  .shared_ram (NOLOAD) :
+  {
+  	*(.shared_ram)
+  } >RAM_D3
 
   /* The program code and other data goes into FLASH */
   .text :

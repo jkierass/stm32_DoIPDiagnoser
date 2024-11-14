@@ -1,7 +1,7 @@
 Application/User/gui/Model.o: \
  C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h \
+ ../../../Common/Inc/EventBusManager.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
@@ -13,11 +13,12 @@ Application/User/gui/Model.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h \
+ ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/Logger.h
+ ../../../Common/Inc/MessageDataTypes.h \
+ ../../../STM32CubeIDE/CM7/Application/User/Core/Logger/inc/Logger.h
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h:
+../../../Common/Inc/EventBusManager.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../../CM7/Core/Inc/FreeRTOSConfig.h:
@@ -29,6 +30,7 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h:
+../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/Logger.h:
+../../../Common/Inc/MessageDataTypes.h:
+../../../STM32CubeIDE/CM7/Application/User/Core/Logger/inc/Logger.h:

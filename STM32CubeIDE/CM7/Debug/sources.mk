@@ -40,11 +40,11 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Application/User/Calc/src \
-Application/User/Calc/tinexpr \
-Application/User/CommonDefines/src \
-Application/User/Core/TaskAdditions/src \
+Application/User/Calc/tinyexpr \
+Application/User/Core/Logger/src \
 Application/User/Core \
-Application/User/EventManager/src \
+Application/User/EdiabasDaemonProxy/src \
+Application/User/EventManagerCM7/src \
 Application/User/LIBJPEG/App \
 Application/User/Startup \
 Application/User/TouchGFX/App \

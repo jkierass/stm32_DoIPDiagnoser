@@ -14,7 +14,7 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Th
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:610:8:xStreamBufferSendFromISR	32	static,ignoring_inline_asm
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:713:8:xStreamBufferReceive	40	static,ignoring_inline_asm
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:817:8:xStreamBufferNextMessageLengthBytes	24	static,ignoring_inline_asm
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:861:8:xStreamBufferReceiveFromISR	48	static,ignoring_inline_asm
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:861:8:xStreamBufferReceiveFromISR	32	static,ignoring_inline_asm
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:970:12:xStreamBufferIsEmpty	0	static,ignoring_inline_asm
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:993:12:xStreamBufferIsFull	8	static,ignoring_inline_asm
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c:1028:12:xStreamBufferSendCompletedFromISR	24	static,ignoring_inline_asm

@@ -65,6 +65,11 @@ SECTIONS
     KEEP(*(.isr_vector)) /* Startup code */
     . = ALIGN(4);
   } >FLASH
+  
+  .shared_ram (NOLOAD) :
+  {
+  	*(.shared_ram)
+  } >RAM_D3
 
   /* The program code and other data into "FLASH" Rom type memory */
   .text :

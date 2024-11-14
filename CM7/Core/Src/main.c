@@ -73,19 +73,19 @@ osThreadId_t TouchGFXTaskHandle;
 const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "TouchGFXTask",
   .stack_size = 3048 * 4,
-  .priority = (osPriority_t) osPriorityHigh,
+  .priority = (osPriority_t) osPriorityRealtime,
 };
 /* Definitions for videoTask */
 osThreadId_t videoTaskHandle;
 const osThreadAttr_t videoTask_attributes = {
   .name = "videoTask",
   .stack_size = 1000 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
+  .priority = (osPriority_t) osPriorityHigh,
 };
-/* Definitions for Task_EventMgr */
-osThreadId_t Task_EventMgrHandle;
-const osThreadAttr_t Task_EventMgr_attributes = {
-  .name = "Task_EventMgr",
+/* Definitions for Task_EventMgrM7 */
+osThreadId_t Task_EventMgrM7Handle;
+const osThreadAttr_t Task_EventMgrM7_attributes = {
+  .name = "Task_EventMgrM7",
   .stack_size = 2056 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
@@ -127,8 +127,8 @@ static void MX_CRC_Init(void);
 static void MX_JPEG_Init(void);
 static void MX_USART1_UART_Init(void);
 void TouchGFX_Task(void *argument);
-extern "C" extern void videoTaskFunc(void *argument);
-void StartTask_EventMgr(void *argument);
+extern void videoTaskFunc(void *argument);
+void StartTask_EventMgrM7(void *argument);
 void StartTask_Calculator(void *argument);
 void StartTask_EDaemonP(void *argument);
 
@@ -139,7 +139,7 @@ void StartTask_EDaemonP(void *argument);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 QueueHandle_t queueToFrontend = xQueueCreate(64, sizeof(SMessage));
-QueueHandle_t queueToBackend = xQueueCreate(8, sizeof(SMessage));
+QueueHandle_t queueToEventManager = xQueueCreate(8, sizeof(SMessage));
 QueueHandle_t queueToCalculator = xQueueCreate(2, sizeof(SMessage));
 QueueHandle_t queueToProxyDaemon = xQueueCreate(16, sizeof(SMessage));
 /* USER CODE END 0 */
@@ -258,8 +258,8 @@ Error_Handler();
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
-  /* creation of Task_EventMgr */
-  Task_EventMgrHandle = osThreadNew(StartTask_EventMgr, NULL, &Task_EventMgr_attributes);
+  /* creation of Task_EventMgrM7 */
+  Task_EventMgrM7Handle = osThreadNew(StartTask_EventMgrM7, NULL, &Task_EventMgrM7_attributes);
 
   /* creation of Task_Calculator */
   Task_CalculatorHandle = osThreadNew(StartTask_Calculator, NULL, &Task_Calculator_attributes);
@@ -906,22 +906,22 @@ __weak void TouchGFX_Task(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask_EventMgr */
+/* USER CODE BEGIN Header_StartTask_EventMgrM7 */
 /**
-* @brief Function implementing the Task_EventMgr thread.
+* @brief Function implementing the Task_EventMgrM7 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask_EventMgr */
-__weak void StartTask_EventMgr(void *argument)
+/* USER CODE END Header_StartTask_EventMgrM7 */
+__weak void StartTask_EventMgrM7(void *argument)
 {
-  /* USER CODE BEGIN StartTask_EventMgr */
+  /* USER CODE BEGIN StartTask_EventMgrM7 */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END StartTask_EventMgr */
+  /* USER CODE END StartTask_EventMgrM7 */
 }
 
 /* USER CODE BEGIN Header_StartTask_Calculator */
@@ -1033,7 +1033,7 @@ void MPU_Config(void)
 
 /**
   * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM6 interrupt took place, inside
+  * @note   This function is called  when TIM7 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
   * a global variable "uwTick" used as application time base.
   * @param  htim : TIM handle
@@ -1044,7 +1044,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 0 */
 
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM6) {
+  if (htim->Instance == TIM7) {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */

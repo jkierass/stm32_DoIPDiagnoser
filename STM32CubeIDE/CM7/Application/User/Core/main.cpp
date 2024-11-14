@@ -26,8 +26,10 @@
 /* USER CODE BEGIN Includes */
 #include "queue.h"
 #include "MessageDataTypes.h"
-#include "EventManagerTask.h"
+#include "EventManagerCM7Task.h"
 #include "CalcTask.h"
+#include "EdiabasDaemonProxyTask.h"
+#include "cm_ipc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -82,10 +84,10 @@ const osThreadAttr_t videoTask_attributes = {
   .stack_size = 1000 * 4,
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
-/* Definitions for Task_EventMgr */
-osThreadId_t Task_EventMgrHandle;
-const osThreadAttr_t Task_EventMgr_attributes = {
-  .name = "Task_EventMgr",
+/* Definitions for Task_EventMgrM7 */
+osThreadId_t Task_EventMgrM7Handle;
+const osThreadAttr_t Task_EventMgrM7_attributes = {
+  .name = "Task_EventMgrM7",
   .stack_size = 2056 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
@@ -128,18 +130,18 @@ static void MX_JPEG_Init(void);
 static void MX_USART1_UART_Init(void);
 void TouchGFX_Task(void *argument);
 extern "C" void videoTaskFunc(void *argument);
-void StartTask_EventMgr(void *argument);
+void StartTask_EventMgrM7(void *argument);
 void StartTask_Calculator(void *argument);
 void StartTask_EDaemonP(void *argument);
 
 /* USER CODE BEGIN PFP */
-#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 QueueHandle_t queueToFrontend = xQueueCreate(64, sizeof(SMessage));
-QueueHandle_t queueToBackend = xQueueCreate(8, sizeof(SMessage));
+QueueHandle_t queueToEventManagerCM7 = xQueueCreate(8, sizeof(SMessage));
 QueueHandle_t queueToCalculator = xQueueCreate(2, sizeof(SMessage));
 QueueHandle_t queueToProxyDaemon = xQueueCreate(16, sizeof(SMessage));
 /* USER CODE END 0 */
@@ -226,7 +228,7 @@ Error_Handler();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
-
+  ipc_init();
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -258,8 +260,8 @@ Error_Handler();
   /* creation of videoTask */
   videoTaskHandle = osThreadNew(videoTaskFunc, NULL, &videoTask_attributes);
 
-  /* creation of Task_EventMgr */
-  Task_EventMgrHandle = osThreadNew(StartTask_EventMgr, NULL, &Task_EventMgr_attributes);
+  /* creation of Task_EventMgrM7 */
+  Task_EventMgrM7Handle = osThreadNew(StartTask_EventMgrM7, NULL, &Task_EventMgrM7_attributes);
 
   /* creation of Task_Calculator */
   Task_CalculatorHandle = osThreadNew(StartTask_Calculator, NULL, &Task_Calculator_attributes);
@@ -867,6 +869,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(MCU_ACTIVE_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
+
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
@@ -877,7 +880,7 @@ static void MX_GPIO_Init(void)
   *   None
   * @retval None
   */
-PUTCHAR_PROTOTYPE
+extern "C" int __io_putchar(int ch)
 {
   /* Place your implementation of fputc here */
   /* e.g. write a character to the USART1 and Loop until the end of transmission */
@@ -906,22 +909,22 @@ __weak void TouchGFX_Task(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask_EventMgr */
+/* USER CODE BEGIN Header_StartTask_EventMgrM7 */
 /**
-* @brief Function implementing the Task_EventMgr thread.
+* @brief Function implementing the Task_EventMgrM7 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask_EventMgr */
-__weak void StartTask_EventMgr(void *argument)
+/* USER CODE END Header_StartTask_EventMgrM7 */
+__weak void StartTask_EventMgrM7(void *argument)
 {
-  /* USER CODE BEGIN StartTask_EventMgr */
+  /* USER CODE BEGIN StartTask_EventMgrM7 */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END StartTask_EventMgr */
+  /* USER CODE END StartTask_EventMgrM7 */
 }
 
 /* USER CODE BEGIN Header_StartTask_Calculator */
@@ -1033,7 +1036,7 @@ void MPU_Config(void)
 
 /**
   * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM6 interrupt took place, inside
+  * @note   This function is called  when TIM7 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
   * a global variable "uwTick" used as application time base.
   * @param  htim : TIM handle
@@ -1042,9 +1045,8 @@ void MPU_Config(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
-
   /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM6) {
+  if (htim->Instance == TIM7) {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */

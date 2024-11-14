@@ -1,3 +1,4 @@
+#include <tinyexpr.h>
 #include "Calc.h"
 
 #include <iostream>
@@ -7,7 +8,6 @@
 #include <string>
 #include <cmath>
 
-#include "tinyexpr.h"
 
 void Calculator::calculate(const unsigned char* request, unsigned char* result)
 {

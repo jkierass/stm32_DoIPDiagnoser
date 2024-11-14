@@ -40,7 +40,7 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h \
+ ../../../Common/Inc/EventBusManager.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
@@ -52,7 +52,7 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h \
+ ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/Meta.hpp \
@@ -64,6 +64,7 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp \
+ ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
@@ -143,7 +144,7 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/Core/TaskAdditions/inc/EventBusManager.h:
+../../../Common/Inc/EventBusManager.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../../CM7/Core/Inc/FreeRTOSConfig.h:
@@ -155,7 +156,7 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/CommonDefines/inc/MessageDataTypes.h:
+../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/common/Meta.hpp:
@@ -167,6 +168,7 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/mainscreen_screen/MainScreenPresenter.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:
+../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:

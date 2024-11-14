@@ -62,7 +62,7 @@ extern MDMA_HandleTypeDef hmdma_jpeg_infifo_th;
 extern MDMA_HandleTypeDef hmdma_jpeg_outfifo_th;
 extern JPEG_HandleTypeDef hjpeg;
 extern LTDC_HandleTypeDef hltdc;
-extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim7;
 
 /* USER CODE BEGIN EV */
 
@@ -167,17 +167,17 @@ void DebugMon_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles TIM6 global interrupt, DAC1_CH1 and DAC1_CH2 underrun error interrupts.
+  * @brief This function handles TIM7 global interrupt.
   */
-void TIM6_DAC_IRQHandler(void)
+void TIM7_IRQHandler(void)
 {
-  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+  /* USER CODE BEGIN TIM7_IRQn 0 */
 
-  /* USER CODE END TIM6_DAC_IRQn 0 */
-  HAL_TIM_IRQHandler(&htim6);
-  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+  /* USER CODE END TIM7_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim7);
+  /* USER CODE BEGIN TIM7_IRQn 1 */
 
-  /* USER CODE END TIM6_DAC_IRQn 1 */
+  /* USER CODE END TIM7_IRQn 1 */
 }
 
 /**
@@ -249,6 +249,20 @@ void DSI_IRQHandler(void)
   /* USER CODE BEGIN DSI_IRQn 1 */
 
   /* USER CODE END DSI_IRQn 1 */
+}
+
+/**
+  * @brief This function handles HSEM1 global interrupt.
+  */
+void HSEM1_IRQHandler(void)
+{
+  /* USER CODE BEGIN HSEM1_IRQn 0 */
+
+  /* USER CODE END HSEM1_IRQn 0 */
+  HAL_HSEM_IRQHandler();
+  /* USER CODE BEGIN HSEM1_IRQn 1 */
+
+  /* USER CODE END HSEM1_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

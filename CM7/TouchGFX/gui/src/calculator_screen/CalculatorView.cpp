@@ -34,7 +34,9 @@ void CalculatorView::sendToCalculator_Equals()
 
 void CalculatorView::setCalculationResult(unsigned char result[])
 {
-	touchgfx::Unicode::fromUTF8(result, TextResultBuffer, 16);
+	touchgfx::Unicode::UnicodeChar new_buf[TEXTRESULT_SIZE] = {0};
+	touchgfx::Unicode::fromUTF8(result, new_buf, 16);
+	touchgfx::Unicode::strncpy(TextResultBuffer, new_buf, TEXTRESULT_SIZE);
 	TextResult.invalidate();
 	char_counter = 0;
 	clear_flag = true;
@@ -42,14 +44,14 @@ void CalculatorView::setCalculationResult(unsigned char result[])
 
 bool CalculatorView::addChar(char character)
 {
-	if(char_counter > TEXTRESULT_SIZE - 2)
-	{
-		return false;
-	}
 	if(clear_flag)
 	{
 		clearText();
 		clear_flag = false;
+	}
+	if(char_counter > TEXTRESULT_SIZE - 2)
+	{
+		return false;
 	}
 	touchgfx::Unicode::UnicodeChar new_buf[TEXTRESULT_SIZE] = {0};
 	touchgfx::Unicode::strncpy(new_buf, TextResultBuffer, TEXTRESULT_SIZE);
@@ -62,14 +64,14 @@ bool CalculatorView::addChar(char character)
 
 bool CalculatorView::removeLastChar()
 {
-	if(char_counter < 1)
-	{
-		return false;
-	}
 	if(clear_flag)
 	{
 		clearText();
 		clear_flag = false;
+	}
+	if(char_counter < 1)
+	{
+		return false;
 	}
 	touchgfx::Unicode::UnicodeChar new_buf[TEXTRESULT_SIZE] = {0};
 	touchgfx::Unicode::strncpy(new_buf, TextResultBuffer, TEXTRESULT_SIZE);
@@ -90,7 +92,8 @@ void CalculatorView::clearText()
 
 void CalculatorView::sendToCalculator_0()
 {
-	addChar('0');
+//	addChar('0');
+	presenter->sendIPCecho();
 }
 
 void CalculatorView::sendToCalculator_1()

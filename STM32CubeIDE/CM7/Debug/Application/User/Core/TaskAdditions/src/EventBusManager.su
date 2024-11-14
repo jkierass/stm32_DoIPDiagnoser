@@ -1,2 +1,0 @@
-../Application/User/Core/TaskAdditions/src/EventBusManager.cpp:4:6:bool EventBusManager::send(EEventType, UMessageData, EEventClient)	40	static
-../Application/User/Core/TaskAdditions/src/EventBusManager.cpp:20:6:void EventBusManager::receive(OnEventFunction)	72	static
