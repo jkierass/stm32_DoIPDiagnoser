@@ -29,7 +29,7 @@ void EdiabasDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventC
 		m.event_receiver = eventSender;
 		m.event_sender = eventSender;
 		m.event_type = event;
-		size_t ret = ipc_sendmsg(0, &msg, sizeof(msg), -1);
+		size_t ret = ipc_sendmsg(1, &m, sizeof(m), -1);
 		LOG_DEBUG("sent bytes: %u", ret);
 		break;
 	}

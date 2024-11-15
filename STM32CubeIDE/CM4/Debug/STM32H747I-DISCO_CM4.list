@@ -1380,7 +1380,7 @@ void EdiabasDaemonNativeTask::OnEvent(EEventType event, UMessageData msg, EEvent
  81009c8:	4770      	bx	lr
 
 081009ca <_ZZN23EdiabasDaemonNativeTask7processEvENKUl10EEventType12UMessageData12EEventClientE_clES0_S1_S2_>:
-	size_t ret = ipc_recvmsg(0, &msg, len, 0);
+	size_t ret = ipc_recvmsg(1, &msg, len, 0);
 	if(ret == len)
 	{
 		ipc_sendmsg(1, &msg, len, 0);
@@ -1445,11 +1445,11 @@ void EdiabasDaemonNativeTask::OnEvent(EEventType event, UMessageData msg, EEvent
 	size_t len = sizeof(msg);
  8100a38:	2318      	movs	r3, #24
  8100a3a:	63fb      	str	r3, [r7, #60]	@ 0x3c
-	size_t ret = ipc_recvmsg(0, &msg, len, 0);
+	size_t ret = ipc_recvmsg(1, &msg, len, 0);
  8100a3c:	f107 010c 	add.w	r1, r7, #12
  8100a40:	2300      	movs	r3, #0
  8100a42:	6bfa      	ldr	r2, [r7, #60]	@ 0x3c
- 8100a44:	2000      	movs	r0, #0
+ 8100a44:	2001      	movs	r0, #1
  8100a46:	f7ff fd3f 	bl	81004c8 <ipc_recvmsg>
  8100a4a:	63b8      	str	r0, [r7, #56]	@ 0x38
 	if(ret == len)

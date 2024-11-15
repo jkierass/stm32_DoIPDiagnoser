@@ -30,7 +30,7 @@ void EdiabasDaemonNativeTask::process()
 {
 	SMessage msg;
 	size_t len = sizeof(msg);
-	size_t ret = ipc_recvmsg(0, &msg, len, 0);
+	size_t ret = ipc_recvmsg(1, &msg, len, 0);
 	if(ret == len)
 	{
 		ipc_sendmsg(1, &msg, len, 0);
