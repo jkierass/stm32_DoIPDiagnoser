@@ -6,7 +6,7 @@ extern QueueHandle_t queueToNativeDaemon;
 void StartTask_EventMgrM4(void *argument)
 {
 	EventManagerCM4Task eventManagerInstance;
-	eventManagerInstance.addQueue(EventManagerCM4Task::EVENT_QUEUE_DAEMON, queueToNativeDaemon);
+	eventManagerInstance.addQueue(EventManagerCM4Task::EVENT_QUEUE_DAEMON_NATIVE, queueToNativeDaemon);
 
 	for(;;)
 	{

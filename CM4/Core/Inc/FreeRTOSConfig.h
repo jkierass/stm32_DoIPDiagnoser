@@ -167,12 +167,12 @@ standard names. */
 
 /* USER CODE BEGIN Defines */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
-void vGenerateRemoteInterrupt(void * xUpdatedMessageBuffer, int is_receive);
+void vGenerateRemoteInterrupt(void * xUpdatedMessageBuffer);
 #define sbSEND_COMPLETE_FROM_ISR sbSEND_COMPLETED_FROM_ISR
-#define sbSEND_COMPLETED( pxStreamBuffer ) vGenerateRemoteInterrupt( pxStreamBuffer, 1 )
-#define sbSEND_COMPLETED_FROM_ISR( pxStreamBuffer, pxHigherPriorityTaskWoken ) vGenerateRemoteInterrupt( pxStreamBuffer, 1 )
-#define sbRECEIVE_COMPLETED( pxStreamBuffer ) vGenerateRemoteInterrupt( pxStreamBuffer, 0 )
-#define sbRECEIVE_COMPLETED_FROM_ISR( pxStreamBuffer, pxHigherPriorityTaskWoken )  vGenerateRemoteInterrupt( pxStreamBuffer, 0 )
+#define sbSEND_COMPLETED( pxStreamBuffer ) vGenerateRemoteInterrupt( pxStreamBuffer )
+#define sbSEND_COMPLETED_FROM_ISR( pxStreamBuffer, pxHigherPriorityTaskWoken ) vGenerateRemoteInterrupt( pxStreamBuffer )
+#define sbRECEIVE_COMPLETED( pxStreamBuffer ) vGenerateRemoteInterrupt( pxStreamBuffer )
+#define sbRECEIVE_COMPLETED_FROM_ISR( pxStreamBuffer, pxHigherPriorityTaskWoken ) vGenerateRemoteInterrupt( pxStreamBuffer )
 #define IPC_CHECK_sbSEND_COMPLETED
 /* USER CODE END Defines */
 

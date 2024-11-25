@@ -70,8 +70,8 @@ const osThreadAttr_t Task_EventMgrM4_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_MDMA_Init(void);
-void StartTask_EDaemonN(void *argument);
-void StartTask_EventMgrM4(void *argument);
+extern void StartTask_EDaemonN(void *argument);
+extern void StartTask_EventMgrM4(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -114,7 +114,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  ipc_init();
   /* USER CODE END Init */
 
   /* USER CODE BEGIN SysInit */
@@ -124,7 +124,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_MDMA_Init();
   /* USER CODE BEGIN 2 */
-  ipc_init();
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -240,42 +240,6 @@ static void MX_MDMA_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
-
-/* USER CODE BEGIN Header_StartTask_EDaemonN */
-/**
-  * @brief  Function implementing the Task_EDaemonN thread.
-  * @param  argument: Not used
-  * @retval None
-  */
-/* USER CODE END Header_StartTask_EDaemonN */
-__weak void StartTask_EDaemonN(void *argument)
-{
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END 5 */
-}
-
-/* USER CODE BEGIN Header_StartTask_EventMgrM4 */
-/**
-* @brief Function implementing the Task_EventMgrM4 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_EventMgrM4 */
-__weak void StartTask_EventMgrM4(void *argument)
-{
-  /* USER CODE BEGIN StartTask_EventMgrM4 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_EventMgrM4 */
-}
 
 /**
   * @brief  Period elapsed callback in non blocking mode

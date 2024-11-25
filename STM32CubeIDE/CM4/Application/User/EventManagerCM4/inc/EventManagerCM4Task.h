@@ -10,8 +10,6 @@
 
 #include "MessageDataTypes.h"
 
-extern "C" void StartTask_EventMgrM4(void *argument);
-
 
 class EventManagerCM4Task
 {
@@ -20,7 +18,7 @@ public:
 	enum EEventQueue
 	{
 		/* event queues of clients */
-		EVENT_QUEUE_DAEMON = EVENT_CLIENT_DAEMON,
+		EVENT_QUEUE_DAEMON_NATIVE = EVENT_CLIENT_DAEMON_NATIVE,
 	};
 
 	EventManagerCM4Task() {};

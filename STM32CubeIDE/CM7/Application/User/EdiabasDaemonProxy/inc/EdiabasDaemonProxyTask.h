@@ -4,8 +4,6 @@
 
 #include "EventBusManager.h"
 
-extern "C" void StartTask_EDaemonP(void *argument);
-
 class EdiabasDaemonProxyTask
 {
 public:
@@ -13,7 +11,7 @@ public:
 
 	void process();
 
-	void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender);
+	void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver);
 
 	EdiabasDaemonProxyTask(EdiabasDaemonProxyTask const&) = delete;
 	EdiabasDaemonProxyTask& operator=(EdiabasDaemonProxyTask const&) = delete;
@@ -21,6 +19,8 @@ public:
 	EdiabasDaemonProxyTask& operator=(EdiabasDaemonProxyTask&&) = delete;
 
 private:
+
+	bool processIpcReceive();
 	EventBusManager event_bus;
 
 };

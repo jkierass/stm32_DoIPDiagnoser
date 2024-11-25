@@ -33,8 +33,6 @@ public:
 
     bool sendCalculationRequest(UMessageData request);
 
-    void sendIPCecho();
-
 private:
     CalculatorPresenter();
 

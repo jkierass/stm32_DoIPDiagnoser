@@ -130,9 +130,9 @@ static void MX_JPEG_Init(void);
 static void MX_USART1_UART_Init(void);
 void TouchGFX_Task(void *argument);
 extern "C" void videoTaskFunc(void *argument);
-void StartTask_EventMgrM7(void *argument);
-void StartTask_Calculator(void *argument);
-void StartTask_EDaemonP(void *argument);
+extern void StartTask_EventMgrM7(void *argument);
+extern void StartTask_Calculator(void *argument);
+extern void StartTask_EDaemonP(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -186,7 +186,9 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  // initialize ipc init hardware semaphores to 0
+  HAL_HSEM_FastTake(HSEM_INIT_CM7);
+  HAL_HSEM_FastTake(HSEM_INIT_CM4);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -210,7 +212,7 @@ Error_Handler();
 /* USER CODE END Boot_Mode_Sequence_2 */
 
   /* USER CODE BEGIN SysInit */
-
+  ipc_init(); //init ipc after CM4 core started to synchronise initialization.
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -228,7 +230,6 @@ Error_Handler();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
-  ipc_init();
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -909,60 +910,6 @@ __weak void TouchGFX_Task(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask_EventMgrM7 */
-/**
-* @brief Function implementing the Task_EventMgrM7 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_EventMgrM7 */
-__weak void StartTask_EventMgrM7(void *argument)
-{
-  /* USER CODE BEGIN StartTask_EventMgrM7 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_EventMgrM7 */
-}
-
-/* USER CODE BEGIN Header_StartTask_Calculator */
-/**
-* @brief Function implementing the Task_Calculator thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_Calculator */
-__weak void StartTask_Calculator(void *argument)
-{
-  /* USER CODE BEGIN StartTask_Calculator */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_Calculator */
-}
-
-/* USER CODE BEGIN Header_StartTask_EDaemonP */
-/**
-* @brief Function implementing the Task_EDaemonP thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_EDaemonP */
-__weak void StartTask_EDaemonP(void *argument)
-{
-  /* USER CODE BEGIN StartTask_EDaemonP */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_EDaemonP */
-}
-
  /* MPU Configuration */
 
 void MPU_Config(void)
@@ -1027,6 +974,18 @@ void MPU_Config(void)
   MPU_InitStruct.BaseAddress = 0x10040000;
   MPU_InitStruct.Size = MPU_REGION_SIZE_32KB;
   MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
+
+
+  HAL_MPU_ConfigRegion(&MPU_InitStruct);
+
+  /** Initializes and configures the Region and the memory to be protected
+  */
+  MPU_InitStruct.Number = MPU_REGION_NUMBER1;
+  MPU_InitStruct.BaseAddress = 0x38000000;
+  MPU_InitStruct.Size = MPU_REGION_SIZE_64KB;
+  MPU_InitStruct.AccessPermission = MPU_REGION_FULL_ACCESS;
+  MPU_InitStruct.IsShareable = MPU_ACCESS_SHAREABLE;
+  MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
 
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
   /* Enables the MPU */

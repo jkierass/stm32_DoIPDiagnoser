@@ -3,6 +3,8 @@
 #include "Logger.h"
 
 extern QueueHandle_t queueToProxyDaemon;
+int sendcount = 0;
+int recvcount = 0;
 
 void StartTask_EDaemonP(void *argument)
 {
@@ -12,43 +14,61 @@ void StartTask_EDaemonP(void *argument)
 	for(;;)
 	{
 		EdiabasDaemonProxyTaskInstance.process();
-		osDelay(1000);
+		osDelay(1);
 	}
 }
 
-EdiabasDaemonProxyTask::EdiabasDaemonProxyTask() : event_bus(EventBusManager(queueToProxyDaemon, EVENT_CLIENT_DAEMON)) {}
+EdiabasDaemonProxyTask::EdiabasDaemonProxyTask() : event_bus(EventBusManager(queueToProxyDaemon, EVENT_CLIENT_DAEMON_PROXY)) {}
 
-void EdiabasDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
+void EdiabasDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver)
 {
-	switch(event)
+	switch(eventReceiver)
 	{
-	case EVENT_TYPE_ECHO_IPC:
+	// if recipient is on CM4 side, then send message through IPC.
+	case EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER:
+//		[[fallthrough]]
+//	case EVENT_CLIENT_DATA_MANAGER:
 	{
-		SMessage m;
-		m.message_data = msg;
-		m.event_receiver = eventSender;
-		m.event_sender = eventSender;
-		m.event_type = event;
-		size_t ret = ipc_sendmsg(1, &m, sizeof(m), -1);
-		LOG_DEBUG("sent bytes: %u", ret);
+		SMessage sMsg;
+		sMsg.event_type = event;
+		sMsg.message_data = msg;
+		sMsg.event_sender = eventSender;
+		sMsg.event_receiver = eventReceiver;
+		size_t len = sizeof(sMsg);
+		size_t ret = ipc_sendmsg(&sMsg, len, 10);
+		if(ret != len)
+		{
+			LOG_DEBUG("[FATAL] IPC ERROR, MESSAGE NOT SEND - msg size[%u], bytes sent[%u]", len, ret);
+		}
+		else
+		{
+			sendcount++;
+			LOG_DEBUG("msg sent, size[%u], sendcount[%d]", len, sendcount);
+		}
 		break;
 	}
+	// if recipient is on CM7 side, then forward to event manager.
+	case EVENT_CLIENT_FRONTEND:
+		event_bus.send(event, msg, eventReceiver);
 	default:
-			break;
+		break;;
+	}
+}
+
+void EdiabasDaemonProxyTask::processIpcReceive()
+{
+	SMessage sMsg;
+	size_t len = sizeof(sMsg);
+	size_t ret = ipc_recvmsg(&sMsg, len, 0);
+	if(ret == len)
+	{
+		LOG_DEBUG("msg sent, size[%u]", len);
+		OnEvent(sMsg.event_type, sMsg.message_data, sMsg.event_sender, sMsg.event_receiver);
 	}
 }
 
 void EdiabasDaemonProxyTask::process()
 {
-	SMessage msg;
-	size_t len = sizeof(msg);
-	size_t ret = ipc_recvmsg(1, &msg, len, 0);
-	if(ret == len)
-	{
-		LOG_DEBUG("Received msg: %s", &msg.message_data.calculation_request[0]);
-		LOG_DEBUG("receiver: %d", msg.event_receiver);
-		LOG_DEBUG("sender: %d", msg.event_sender);
-		LOG_DEBUG("type: %d", msg.event_type);
-	}
+	processIpcReceive();
 	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->OnEvent(event, msg, eventSender);});
 }

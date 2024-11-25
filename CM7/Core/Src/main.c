@@ -73,14 +73,14 @@ osThreadId_t TouchGFXTaskHandle;
 const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "TouchGFXTask",
   .stack_size = 3048 * 4,
-  .priority = (osPriority_t) osPriorityRealtime,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for videoTask */
 osThreadId_t videoTaskHandle;
 const osThreadAttr_t videoTask_attributes = {
   .name = "videoTask",
   .stack_size = 1000 * 4,
-  .priority = (osPriority_t) osPriorityHigh,
+  .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for Task_EventMgrM7 */
 osThreadId_t Task_EventMgrM7Handle;
@@ -101,7 +101,7 @@ osThreadId_t Task_EDaemonPHandle;
 const osThreadAttr_t Task_EDaemonP_attributes = {
   .name = "Task_EDaemonP",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
+  .priority = (osPriority_t) osPriorityRealtime,
 };
 /* Definitions for printMutex */
 osMutexId_t printMutexHandle;
@@ -128,9 +128,9 @@ static void MX_JPEG_Init(void);
 static void MX_USART1_UART_Init(void);
 void TouchGFX_Task(void *argument);
 extern void videoTaskFunc(void *argument);
-void StartTask_EventMgrM7(void *argument);
-void StartTask_Calculator(void *argument);
-void StartTask_EDaemonP(void *argument);
+extern void StartTask_EventMgrM7(void *argument);
+extern void StartTask_Calculator(void *argument);
+extern void StartTask_EDaemonP(void *argument);
 
 /* USER CODE BEGIN PFP */
 #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
@@ -906,60 +906,6 @@ __weak void TouchGFX_Task(void *argument)
   /* USER CODE END 5 */
 }
 
-/* USER CODE BEGIN Header_StartTask_EventMgrM7 */
-/**
-* @brief Function implementing the Task_EventMgrM7 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_EventMgrM7 */
-__weak void StartTask_EventMgrM7(void *argument)
-{
-  /* USER CODE BEGIN StartTask_EventMgrM7 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_EventMgrM7 */
-}
-
-/* USER CODE BEGIN Header_StartTask_Calculator */
-/**
-* @brief Function implementing the Task_Calculator thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_Calculator */
-__weak void StartTask_Calculator(void *argument)
-{
-  /* USER CODE BEGIN StartTask_Calculator */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_Calculator */
-}
-
-/* USER CODE BEGIN Header_StartTask_EDaemonP */
-/**
-* @brief Function implementing the Task_EDaemonP thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_EDaemonP */
-__weak void StartTask_EDaemonP(void *argument)
-{
-  /* USER CODE BEGIN StartTask_EDaemonP */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_EDaemonP */
-}
-
  /* MPU Configuration */
 
 void MPU_Config(void)
@@ -1024,6 +970,18 @@ void MPU_Config(void)
   MPU_InitStruct.BaseAddress = 0x10040000;
   MPU_InitStruct.Size = MPU_REGION_SIZE_32KB;
   MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_DISABLE;
+
+  HAL_MPU_ConfigRegion(&MPU_InitStruct);
+
+  /** Initializes and configures the Region and the memory to be protected
+  */
+  MPU_InitStruct.Number = MPU_REGION_NUMBER6;
+  MPU_InitStruct.BaseAddress = 0x38000000;
+  MPU_InitStruct.Size = MPU_REGION_SIZE_64KB;
+  MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_ENABLE;
+  MPU_InitStruct.IsShareable = MPU_ACCESS_SHAREABLE;
+  MPU_InitStruct.IsCacheable = MPU_ACCESS_NOT_CACHEABLE;
+  MPU_InitStruct.IsBufferable = MPU_ACCESS_BUFFERABLE;
 
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
   /* Enables the MPU */

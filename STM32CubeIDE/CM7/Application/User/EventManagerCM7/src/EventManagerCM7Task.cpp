@@ -11,7 +11,7 @@ void StartTask_EventMgrM7(void *argument)
 	EventManagerCM7Task eventManagerInstance;
 	eventManagerInstance.addQueue(EventManagerCM7Task::EVENT_QUEUE_CALCULATOR, queueToCalculator);
 	eventManagerInstance.addQueue(EventManagerCM7Task::EVENT_QUEUE_FRONTEND, queueToFrontend);
-	eventManagerInstance.addQueue(EventManagerCM7Task::EVENT_QUEUE_DAEMON, queueToProxyDaemon);
+	eventManagerInstance.addQueue(EventManagerCM7Task::EVENT_QUEUE_DAEMON_PROXY, queueToProxyDaemon);
 
 	for(;;)
 	{

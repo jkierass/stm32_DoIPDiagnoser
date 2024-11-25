@@ -92,8 +92,7 @@ void CalculatorView::clearText()
 
 void CalculatorView::sendToCalculator_0()
 {
-//	addChar('0');
-	presenter->sendIPCecho();
+	addChar('0');
 }
 
 void CalculatorView::sendToCalculator_1()

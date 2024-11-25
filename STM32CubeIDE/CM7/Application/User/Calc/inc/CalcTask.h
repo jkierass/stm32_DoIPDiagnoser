@@ -3,8 +3,6 @@
 
 #include "EventBusManager.h"
 
-extern "C" void StartTask_Calculator(void *argument);
-
 class CalculatorTask
 {
 public:

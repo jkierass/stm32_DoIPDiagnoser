@@ -30,47 +30,32 @@ extern "C"
 {
 #endif
 
+#define IPC_SHARED_RAM_BASE 0x38001000  // Offset by 4KB to avoid Backup SRAM
+
 typedef void ipc_msg;
 
 int ipc_init(void);
 int ipc_start(void);
 void ipc_isr(void);
 
-size_t ipc_sendmsg(unsigned int channel, ipc_msg* msg, uint32_t size, int32_t timeout);
-size_t ipc_recvmsg(unsigned int channel, ipc_msg* msg, uint32_t size, int32_t timeout);
+size_t ipc_sendmsg(ipc_msg* msg, uint32_t size, int32_t timeout);
+size_t ipc_recvmsg(ipc_msg* msg, uint32_t size, int32_t timeout);
 
-#define IPC_NUMBER_OF_CHANNELS		(2)
-#define IPC_CHANNEL_BUFFER_SIZE		(512)
-
-
-typedef struct {
-	MessageBufferHandle_t buffer;
-	uint32_t is_receive;
-}amp_ctrl_msg_t;
-
-#define CM7_TO_CM4_CTRL_SIZE		(IPC_NUMBER_OF_CHANNELS*(sizeof(amp_ctrl_msg_t)+sizeof(configMESSAGE_BUFFER_LENGTH_TYPE))*16)
-#define CM4_TO_CM7_CTRL_SIZE		(IPC_NUMBER_OF_CHANNELS*(sizeof(amp_ctrl_msg_t)+sizeof(configMESSAGE_BUFFER_LENGTH_TYPE))*16)
+#define CM7_TO_CM4_BUFFER_SIZE		(28*50)
+#define CM4_TO_CM7_BUFFER_SIZE		(28*50)
 
 typedef struct {
 	MessageBufferHandle_t cm7_to_cm4_handle;
 	MessageBufferHandle_t cm4_to_cm7_handle;
 	StaticMessageBuffer_t cm7_to_cm4_xmsg;
 	StaticMessageBuffer_t cm4_to_cm7_xmsg;
-	uint32_t cm7_to_cm4_buffer[IPC_CHANNEL_BUFFER_SIZE/4];
-	uint32_t cm4_to_cm7_buffer[IPC_CHANNEL_BUFFER_SIZE/4];
-}ipc_channel_t;
+	uint32_t cm7_to_cm4_buffer[CM7_TO_CM4_BUFFER_SIZE/4];
+	uint32_t cm4_to_cm7_buffer[CM4_TO_CM7_BUFFER_SIZE/4];
+}shared_ram_t; // Ensure proper alignment;
 
-typedef struct {
-	/* Control message buffers */
-	MessageBufferHandle_t cm7_to_cm4_handle;
-	MessageBufferHandle_t cm4_to_cm7_handle;
-	StaticMessageBuffer_t cm7_to_cm4_xmsg;
-	StaticMessageBuffer_t cm4_to_cm7_xmsg;
-	uint32_t cm7_to_cm4_buffer[CM7_TO_CM4_CTRL_SIZE/4];
-	uint32_t cm4_to_cm7_buffer[CM4_TO_CM7_CTRL_SIZE/4];
+#define HSEM_INIT_CM7 26U  // Semaphore for CM7 initialization
+#define HSEM_INIT_CM4 27U  // Semaphore for CM4 initialization
 
-	ipc_channel_t channels[IPC_NUMBER_OF_CHANNELS];
-}shared_ram_t;
 
 #ifdef __cplusplus
 }

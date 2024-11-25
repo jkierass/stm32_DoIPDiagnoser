@@ -64,7 +64,7 @@ SECTIONS
   {
   	*(.shared_ram)
   } >RAM_D3
-
+  
   /* The program code and other data goes into FLASH */
   .text :
   {

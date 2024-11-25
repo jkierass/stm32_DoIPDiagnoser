@@ -10,8 +10,6 @@
 
 #include "MessageDataTypes.h"
 
-extern "C" void StartTask_EventMgrM7(void *argument);
-
 
 class EventManagerCM7Task
 {
@@ -22,7 +20,7 @@ public:
 		/* event queues of clients */
 		EVENT_QUEUE_FRONTEND = EVENT_CLIENT_FRONTEND,
 		EVENT_QUEUE_CALCULATOR = EVENT_CLIENT_CALCULATOR,
-		EVENT_QUEUE_DAEMON = EVENT_CLIENT_DAEMON,
+		EVENT_QUEUE_DAEMON_PROXY = EVENT_CLIENT_DAEMON_PROXY,
 	};
 
 	EventManagerCM7Task() {};

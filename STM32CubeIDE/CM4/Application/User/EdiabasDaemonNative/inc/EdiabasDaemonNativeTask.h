@@ -4,8 +4,6 @@
 
 #include "EventBusManager.h"
 
-extern "C" void StartTask_EDaemonN(void *argument);
-
 class EdiabasDaemonNativeTask
 {
 public:

@@ -54,14 +54,14 @@ UART_HandleTypeDef huart1;
 osThreadId_t Task_EDaemonNHandle;
 const osThreadAttr_t Task_EDaemonN_attributes = {
   .name = "Task_EDaemonN",
-  .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 2056 * 4,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Task_EventMgrM4 */
 osThreadId_t Task_EventMgrM4Handle;
 const osThreadAttr_t Task_EventMgrM4_attributes = {
   .name = "Task_EventMgrM4",
-  .stack_size = 2056 * 4,
+  .stack_size = 1028 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
@@ -71,7 +71,7 @@ const osThreadAttr_t Task_EventMgrM4_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 static void MX_MDMA_Init(void);
 void StartTask_EDaemonN(void *argument);
-void StartTask_EventMgrM4(void *argument);
+extern void StartTask_EventMgrM4(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -257,24 +257,6 @@ __weak void StartTask_EDaemonN(void *argument)
     osDelay(1);
   }
   /* USER CODE END 5 */
-}
-
-/* USER CODE BEGIN Header_StartTask_EventMgrM4 */
-/**
-* @brief Function implementing the Task_EventMgrM4 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask_EventMgrM4 */
-__weak void StartTask_EventMgrM4(void *argument)
-{
-  /* USER CODE BEGIN StartTask_EventMgrM4 */
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END StartTask_EventMgrM4 */
 }
 
 /**
