@@ -1,5 +1,5 @@
 ../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:21:1:EdiabasDaemonProxyTask::EdiabasDaemonProxyTask()	8	static
 ../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:23:6:void EdiabasDaemonProxyTask::OnEvent(EEventType, UMessageData, EEventClient, EEventClient)	56	static
-../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:57:6:bool EdiabasDaemonProxyTask::processIpcReceive()	32	static
-../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:83:6:void EdiabasDaemonProxyTask::process()	56	static
+../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:58:6:void EdiabasDaemonProxyTask::processIpcReceive()	56	static
 ../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:9:6:void StartTask_EDaemonP(void*)	24	static
+../Application/User/EdiabasDaemonProxy/src/EdiabasDaemonProxyTask.cpp:70:6:void EdiabasDaemonProxyTask::process()	0	static

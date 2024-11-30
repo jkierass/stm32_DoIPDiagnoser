@@ -14,7 +14,7 @@ void StartTask_EDaemonP(void *argument)
 	for(;;)
 	{
 		EdiabasDaemonProxyTaskInstance.process();
-		osDelay(1);
+		osDelay(1000);
 	}
 }
 
@@ -25,7 +25,7 @@ void EdiabasDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventC
 	switch(eventReceiver)
 	{
 	// if recipient is on CM4 side, then send message through IPC.
-	case EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER:
+	case EVENT_CLIENT_EDIABAS_CONNECTION_MANAGER:
 //		[[fallthrough]]
 //	case EVENT_CLIENT_DATA_MANAGER:
 	{
@@ -70,5 +70,5 @@ void EdiabasDaemonProxyTask::processIpcReceive()
 void EdiabasDaemonProxyTask::process()
 {
 	processIpcReceive();
-	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->OnEvent(event, msg, eventSender);});
+//	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->OnEvent(event, msg, eventSender);});
 }

@@ -40,10 +40,15 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Application/User/Core \
+Application/User/EdiabasConnectionManager/src \
 Application/User/EdiabasDaemonNative/src \
 Application/User/EventManagerCM4/src \
+Application/User/LWIP/App \
+Application/User/LWIP/Target \
 Application/User/Startup \
+Drivers/BSP/Components \
 Drivers/CMSIS \
 Drivers/STM32H7xx_HAL_Driver \
 Middlewares/FreeRTOS \
+Middlewares/LwIP \
 

@@ -20,7 +20,7 @@ public:
 
 private:
 
-	bool processIpcReceive();
+	void processIpcReceive();
 	EventBusManager event_bus;
 
 };

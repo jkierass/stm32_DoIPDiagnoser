@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.cpp
+  * @file           : main.c
   * @brief          : Main program body
   ******************************************************************************
   * @attention
@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "lwip.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -55,14 +56,21 @@ osThreadId_t Task_EDaemonNHandle;
 const osThreadAttr_t Task_EDaemonN_attributes = {
   .name = "Task_EDaemonN",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Task_EventMgrM4 */
 osThreadId_t Task_EventMgrM4Handle;
 const osThreadAttr_t Task_EventMgrM4_attributes = {
   .name = "Task_EventMgrM4",
-  .stack_size = 2056 * 4,
+  .stack_size = 1028 * 4,
   .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for Task_EConnMgr */
+osThreadId_t Task_EConnMgrHandle;
+const osThreadAttr_t Task_EConnMgr_attributes = {
+  .name = "Task_EConnMgr",
+  .stack_size = 1028 * 4,
+  .priority = (osPriority_t) osPriorityRealtime,
 };
 /* USER CODE BEGIN PV */
 
@@ -70,8 +78,10 @@ const osThreadAttr_t Task_EventMgrM4_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_MDMA_Init(void);
-extern void StartTask_EDaemonN(void *argument);
+static void MX_GPIO_Init(void);
+void StartTask_EDaemonN(void *argument);
 extern void StartTask_EventMgrM4(void *argument);
+extern void StartTask_EdiabasConnMgr(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -81,6 +91,7 @@ extern void StartTask_EventMgrM4(void *argument);
 /* USER CODE BEGIN 0 */
 QueueHandle_t queueToEventManagerCM4 = xQueueCreate(8, sizeof(SMessage));
 QueueHandle_t queueToNativeDaemon = xQueueCreate(16, sizeof(SMessage));
+QueueHandle_t queueToEdiabasConnMgr = xQueueCreate(64, sizeof(SMessage));
 /* USER CODE END 0 */
 
 /**
@@ -114,7 +125,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  ipc_init();
+
   /* USER CODE END Init */
 
   /* USER CODE BEGIN SysInit */
@@ -123,8 +134,9 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_MDMA_Init();
+  MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-
+  ipc_init();
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -152,6 +164,9 @@ int main(void)
 
   /* creation of Task_EventMgrM4 */
   Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
+
+  /* creation of Task_EConnMgr */
+  Task_EConnMgrHandle = osThreadNew(StartTask_EdiabasConnMgr, NULL, &Task_EConnMgr_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -237,9 +252,51 @@ static void MX_MDMA_Init(void)
 
 }
 
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOG_CLK_ENABLE();
+  __HAL_RCC_GPIOE_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOH_CLK_ENABLE();
+
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
+}
+
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartTask_EDaemonN */
+/**
+  * @brief  Function implementing the Task_EDaemonN thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartTask_EDaemonN */
+__weak void StartTask_EDaemonN(void *argument)
+{
+  /* init code for LWIP */
+  MX_LWIP_Init();
+  /* USER CODE BEGIN 5 */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END 5 */
+}
 
 /**
   * @brief  Period elapsed callback in non blocking mode

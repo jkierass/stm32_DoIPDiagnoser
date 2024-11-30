@@ -142,5 +142,4 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
 }
 
 /* USER CODE BEGIN 1 */
-
 /* USER CODE END 1 */

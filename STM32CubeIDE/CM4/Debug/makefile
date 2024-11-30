@@ -9,12 +9,17 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Middlewares/LwIP/subdir.mk
 -include Middlewares/FreeRTOS/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/subdir.mk
 -include Drivers/CMSIS/subdir.mk
+-include Drivers/BSP/Components/subdir.mk
 -include Application/User/Startup/subdir.mk
+-include Application/User/LWIP/Target/subdir.mk
+-include Application/User/LWIP/App/subdir.mk
 -include Application/User/EventManagerCM4/src/subdir.mk
 -include Application/User/EdiabasDaemonNative/src/subdir.mk
+-include Application/User/EdiabasConnectionManager/src/subdir.mk
 -include Application/User/Core/subdir.mk
 -include objects.mk
 
