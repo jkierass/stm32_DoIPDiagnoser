@@ -193,6 +193,8 @@ int main(void)
 
   /* Configure the system clock */
   SystemClock_Config();
+
+  MX_GPIO_Init();
 /* USER CODE BEGIN Boot_Mode_Sequence_2 */
 /* When system initialization is finished, Cortex-M7 will release Cortex-M4 by means of
 HSEM notification */
@@ -216,7 +218,6 @@ Error_Handler();
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_GPIO_Init();
   MX_MDMA_Init();
   MX_FMC_Init();
   MX_QUADSPI_Init();

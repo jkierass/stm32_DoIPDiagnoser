@@ -1,7 +1,7 @@
-../Application/User/Core/main.cpp:901:13:void TouchGFX_Task(void*)	8	static
-../Application/User/Core/main.cpp:301:6:void SystemClock_Config()	136	static,ignoring_inline_asm
-../Application/User/Core/main.cpp:153:5:int main()	264	static,ignoring_inline_asm
-../Application/User/Core/main.cpp:883:16:int __io_putchar(int)	16	static
-../Application/User/Core/main.cpp:1003:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	0	static
-../Application/User/Core/main.cpp:1019:6:void Error_Handler()	0	static,ignoring_inline_asm
-../Application/User/Core/main.cpp:1028:1:cpp)	8	static
+../Application/User/Core/main.cpp:902:13:void TouchGFX_Task(void*)	8	static
+../Application/User/Core/main.cpp:302:6:void SystemClock_Config()	136	static,ignoring_inline_asm
+../Application/User/Core/main.cpp:153:5:int main()	256	static,ignoring_inline_asm
+../Application/User/Core/main.cpp:884:16:int __io_putchar(int)	16	static
+../Application/User/Core/main.cpp:1004:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	0	static
+../Application/User/Core/main.cpp:1020:6:void Error_Handler()	0	static,ignoring_inline_asm
+../Application/User/Core/main.cpp:1029:1:cpp)	8	static
