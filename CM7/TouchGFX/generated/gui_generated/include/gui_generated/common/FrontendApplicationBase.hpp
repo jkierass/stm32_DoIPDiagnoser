@@ -29,6 +29,12 @@ public:
     // Calculator
     void gotoCalculatorScreenNoTransition();
 
+    // Date
+    void gotoDateScreenNoTransition();
+
+    // Diagnose_Motor
+    void gotoDiagnose_MotorScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -42,6 +48,12 @@ protected:
 
     // Calculator
     void gotoCalculatorScreenNoTransitionImpl();
+
+    // Date
+    void gotoDateScreenNoTransitionImpl();
+
+    // Diagnose_Motor
+    void gotoDiagnose_MotorScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

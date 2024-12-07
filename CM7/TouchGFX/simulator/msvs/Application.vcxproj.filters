@@ -208,6 +208,42 @@
     <Filter Include="Header Files\generated\gui_generated\calculator_screen">
       <UniqueIdentifier>52A11143-F216-BA46-1DBB-5AD5766BC661</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\date_screen">
+      <UniqueIdentifier>E03959BC-8A7E-F941-E706-4FCFA8D1EFD7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\containers">
+      <UniqueIdentifier>E1177883-B4F0-62AD-D3A6-EFFDACFFAEFA</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\containers">
+      <UniqueIdentifier>2BF0C015-4BC0-EA7B-4AA0-2B6ACA62E228</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\date_screen">
+      <UniqueIdentifier>8B69B6F4-15C0-6309-E513-22E8C8FFBDE1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\date_screen">
+      <UniqueIdentifier>BDF2BDA0-B949-A48A-4DDF-142514696E6A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\containers">
+      <UniqueIdentifier>42BE70F5-90DF-259E-BEA5-CC641C592608</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\containers">
+      <UniqueIdentifier>B08AB2F1-3785-C3F9-13A1-EF1285D364CD</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\date_screen">
+      <UniqueIdentifier>6B47DE96-236A-C939-C196-53348D24EAE4</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\diagnose_motor_screen">
+      <UniqueIdentifier>0B2A1346-9E38-E78B-5124-569315A9DEFF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\diagnose_motor_screen">
+      <UniqueIdentifier>1EB2B1ED-70A5-641E-320E-6045C912183C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\diagnose_motor_screen">
+      <UniqueIdentifier>1FD1FC06-EB15-D73D-62B5-9EBD82FE50A9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\diagnose_motor_screen">
+      <UniqueIdentifier>BB319217-F95D-A68E-7432-7798DC940D84</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -266,6 +302,36 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\mainscreen_screen\MainScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\mainscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\date_screen\DatePresenter.cpp">
+      <Filter>Source Files\gui\date_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\date_screen\DateView.cpp">
+      <Filter>Source Files\gui\date_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\date_screen\DateViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\date_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\DayElement.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\DayElementBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\ParameterListElement.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ParameterListElementBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\diagnose_motor_screen\Diagnose_MotorPresenter.cpp">
+      <Filter>Source Files\gui\diagnose_motor_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\diagnose_motor_screen\Diagnose_MotorView.cpp">
+      <Filter>Source Files\gui\diagnose_motor_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_motor_screen\Diagnose_MotorViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\diagnose_motor_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -735,6 +801,36 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainscreen_screen\MainScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\mainscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\date_screen\DatePresenter.hpp">
+      <Filter>Header Files\gui\date_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\date_screen\DateView.hpp">
+      <Filter>Header Files\gui\date_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\date_screen\DateViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\date_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\DayElement.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\DayElementBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\ParameterListElement.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ParameterListElementBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_motor_screen\Diagnose_MotorPresenter.hpp">
+      <Filter>Header Files\gui\diagnose_motor_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_motor_screen\Diagnose_MotorView.hpp">
+      <Filter>Header Files\gui\diagnose_motor_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_motor_screen\Diagnose_MotorViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\diagnose_motor_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

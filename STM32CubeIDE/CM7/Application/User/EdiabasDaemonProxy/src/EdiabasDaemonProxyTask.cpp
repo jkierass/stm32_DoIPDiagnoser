@@ -10,15 +10,16 @@ void StartTask_EDaemonP(void *argument)
 {
 	ipc_start();
 	EdiabasDaemonProxyTask EdiabasDaemonProxyTaskInstance;
+	EdiabasDaemonProxyTaskInstance.process();
 
 	for(;;)
 	{
-		EdiabasDaemonProxyTaskInstance.process();
-		osDelay(1000);
+//		EdiabasDaemonProxyTaskInstance.process();
+		osDelay(30000);
 	}
 }
 
-EdiabasDaemonProxyTask::EdiabasDaemonProxyTask() : event_bus(EventBusManager(queueToProxyDaemon, EVENT_CLIENT_DAEMON_PROXY)) {}
+EdiabasDaemonProxyTask::EdiabasDaemonProxyTask() : event_bus(EventBus(queueToProxyDaemon, EVENT_CLIENT_DAEMON_PROXY)) {}
 
 void EdiabasDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver)
 {
@@ -69,6 +70,13 @@ void EdiabasDaemonProxyTask::processIpcReceive()
 
 void EdiabasDaemonProxyTask::process()
 {
-	processIpcReceive();
+//	processIpcReceive();
+	SMessage sMsg;
+	sMsg.event_type = ASYNC_REQUEST_CALCULATE;
+	sMsg.message_data.battery_voltage = 10.0f;
+	sMsg.event_sender = EVENT_CLIENT_FRONTEND;
+	sMsg.event_receiver = EVENT_CLIENT_EDIABAS_CONNECTION_MANAGER;
+	size_t len = sizeof(sMsg);
+	size_t ret = ipc_sendmsg(&sMsg, len, -1);
 //	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->OnEvent(event, msg, eventSender);});
 }

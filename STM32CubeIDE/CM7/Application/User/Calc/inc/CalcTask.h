@@ -1,7 +1,8 @@
 #ifndef __CALCTASK_H__
 #define __CALCTASK_H__
 
-#include "EventBusManager.h"
+#include "EventBus.h"
+#include "Calc.h"
 
 class CalculatorTask
 {
@@ -18,7 +19,8 @@ public:
 	CalculatorTask& operator=(CalculatorTask&&) = delete;
 
 private:
-	EventBusManager event_bus;
+	EventBus event_bus;
+    Calculator calculator_instance;
 
 };
 

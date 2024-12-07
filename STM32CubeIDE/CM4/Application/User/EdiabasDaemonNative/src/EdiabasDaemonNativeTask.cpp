@@ -15,7 +15,7 @@ void StartTask_EDaemonN(void *argument)
 	}
 }
 
-EdiabasDaemonNativeTask::EdiabasDaemonNativeTask() : event_bus(EventBusManager(queueToNativeDaemon, EVENT_CLIENT_DAEMON_NATIVE)) {}
+EdiabasDaemonNativeTask::EdiabasDaemonNativeTask() : event_bus(EventBus(queueToNativeDaemon, EVENT_CLIENT_DAEMON_NATIVE)) {}
 
 void EdiabasDaemonNativeTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
 {
@@ -47,10 +47,10 @@ void EdiabasDaemonNativeTask::process()
 {
 	SMessage msg;
 	size_t len = sizeof(msg);
-	size_t ret = ipc_recvmsg(&msg, len, 0);
+	size_t ret = ipc_recvmsg(&msg, len, 100000);
 	if(ret == len)
 	{
-		ipc_sendmsg(&msg, len, 0);
+//		ipc_sendmsg(&msg, len, 0);
 	}
 	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->OnEvent(event, msg, eventSender);});
 }

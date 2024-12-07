@@ -46,7 +46,7 @@ MEMORY
 {
 FLASH (rx)     : ORIGIN = 0x08100000, LENGTH = 1024K
 RAM (xrw)      : ORIGIN = 0x10000000, LENGTH = 288K
-RAM_D2 (xrw)   : ORIGIN = 0x30000000, LENGTH = 288K /* alias to RAM, added to eliminate memory issues*/
+RAM_ETH (xrw)  : ORIGIN = 0x10020000, LENGTH = 160K
 RAM_D3 (xrw)   : ORIGIN = 0x38000000, LENGTH = 64K
 }
 
@@ -168,15 +168,15 @@ SECTIONS
   /* Modification start (ETH) */
   .lwip_sec (NOLOAD) :
   {
-    . = ABSOLUTE(0x30040000);
+    . = ABSOLUTE(0x10040000);
     *(.RxDecripSection) 
     
-    . = ABSOLUTE(0x30040100);
+    . = ABSOLUTE(0x10040100);
     *(.TxDecripSection)
     
-    . = ABSOLUTE(0x30040200);
+    . = ABSOLUTE(0x10040200);
     *(.Rx_PoolSection)  
-  } >RAM_D2
+  } >RAM_ETH
   /* Modification end (ETH)*/
 
   /* Remove information from the standard libraries */

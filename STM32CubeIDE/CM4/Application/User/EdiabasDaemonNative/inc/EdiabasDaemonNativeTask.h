@@ -2,7 +2,7 @@
 #define __EDIABASDAEMONNativeTASK_H__
 
 
-#include "EventBusManager.h"
+#include "EventBus.h"
 
 class EdiabasDaemonNativeTask
 {
@@ -19,7 +19,7 @@ public:
 	EdiabasDaemonNativeTask& operator=(EdiabasDaemonNativeTask&&) = delete;
 
 private:
-	EventBusManager event_bus;
+	EventBus event_bus;
 
 };
 

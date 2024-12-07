@@ -42,8 +42,8 @@ Application/User/generated/CalculatorViewBase.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp \
- ../../../Common/Inc/EventBusManager.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../../../Common/Inc/EventBus.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM7/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -51,9 +51,11 @@ Application/User/generated/CalculatorViewBase.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp \
@@ -115,8 +117,8 @@ Application/User/generated/CalculatorViewBase.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp:
-../../../Common/Inc/EventBusManager.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../../../Common/Inc/EventBus.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../../CM7/Core/Inc/FreeRTOSConfig.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -124,9 +126,11 @@ Application/User/generated/CalculatorViewBase.o: \
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp:

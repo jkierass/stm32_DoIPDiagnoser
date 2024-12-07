@@ -5,7 +5,7 @@
 
 extern QueueHandle_t queueToFrontend;
 
-Model::Model() : modelListener(0), event_bus(EventBusManager(queueToFrontend, EVENT_CLIENT_FRONTEND))
+Model::Model() : modelListener(0), event_bus(EventBus(queueToFrontend, EVENT_CLIENT_FRONTEND))
 {
 
 }

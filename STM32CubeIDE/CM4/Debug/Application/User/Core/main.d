@@ -34,16 +34,6 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
- ../../../CM4/Core/Inc/FreeRTOSConfig.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../CM4/LWIP/App/lwip.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
@@ -78,11 +68,21 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h \
  ../../../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ ../../../CM4/Core/Inc/FreeRTOSConfig.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../CM4/LWIP/Target/ethernetif.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h \
  ../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h \
- ../../../Common/Inc/EventBusManager.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../../../Common/Inc/EventBus.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Common/Inc/MessageDataTypes.h \
@@ -125,16 +125,6 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
-../../../CM4/Core/Inc/FreeRTOSConfig.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../CM4/LWIP/App/lwip.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h:
@@ -169,11 +159,21 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h:
 ../../../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
+../../../CM4/Core/Inc/FreeRTOSConfig.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../CM4/LWIP/Target/ethernetif.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h:
 ../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h:
-../../../Common/Inc/EventBusManager.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../../../Common/Inc/EventBus.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Common/Inc/MessageDataTypes.h:

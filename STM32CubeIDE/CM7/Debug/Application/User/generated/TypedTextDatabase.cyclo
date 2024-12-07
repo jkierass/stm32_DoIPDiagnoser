@@ -1,6 +1,6 @@
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:70:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:75:10:uint16_t TypedTextDatabase::getInstanceSize()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:80:24:const touchgfx::Font** TypedTextDatabase::getFonts()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:85:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:92:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	6
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:113:1:cpp)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:102:43:const touchgfx::TypedText::TypedTextData* TypedTextDatabase::getInstance(touchgfx::LanguageId)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:107:10:uint16_t TypedTextDatabase::getInstanceSize()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:112:24:const touchgfx::Font** TypedTextDatabase::getFonts()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:117:23:const touchgfx::Font* TypedTextDatabase::setFont(touchgfx::FontId, const touchgfx::Font*)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:124:6:void TypedTextDatabase::resetFont(touchgfx::FontId)	7
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/TypedTextDatabase.cpp:148:1:cpp)	1

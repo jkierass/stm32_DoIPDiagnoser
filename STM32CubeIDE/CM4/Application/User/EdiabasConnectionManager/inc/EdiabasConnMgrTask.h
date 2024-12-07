@@ -1,7 +1,7 @@
 #ifndef __CALCTASK_H__
 #define __CALCTASK_H__
 
-#include "EventBusManager.h"
+#include "EventBus.h"
 
 class EdiabasConnectionManagerTask
 {
@@ -18,7 +18,7 @@ public:
 	EdiabasConnectionManagerTask& operator=(EdiabasConnectionManagerTask&&) = delete;
 
 private:
-	EventBusManager event_bus;
+	EventBus event_bus;
 
 };
 

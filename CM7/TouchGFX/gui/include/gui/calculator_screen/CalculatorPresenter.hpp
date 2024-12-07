@@ -31,7 +31,7 @@ public:
 
     void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) override;
 
-    bool sendCalculationRequest(UMessageData request);
+    bool sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver);
 
 private:
     CalculatorPresenter();

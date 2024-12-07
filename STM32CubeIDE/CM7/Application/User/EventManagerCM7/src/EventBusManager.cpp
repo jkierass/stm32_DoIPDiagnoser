@@ -1,15 +1,15 @@
-#include "EventBusManager.h"
+#include "EventBus.h"
 
 #include "Logger.h"
 
 extern QueueHandle_t queueToEventManagerCM7;
 
-EventBusManager::EventBusManager(QueueHandle_t queueSelf, EEventClient senderSelf)
+EventBus::EventBus(QueueHandle_t queueSelf, EEventClient senderSelf)
 					 : queue_self(queueSelf),
 					   sender_self(senderSelf),
 					   queue_event_manager(queueToEventManagerCM7){}
 
-bool EventBusManager::send(EEventType event, UMessageData message, EEventClient eventReceiver)
+bool EventBus::send(EEventType event, UMessageData message, EEventClient eventReceiver)
 {
 	if(queue_event_manager)
 	{
@@ -25,7 +25,7 @@ bool EventBusManager::send(EEventType event, UMessageData message, EEventClient 
 	return false;
 }
 
-void EventBusManager::receive(OnEventFunction on_event_function)
+void EventBus::receive(OnEventFunction on_event_function)
 {
 	if(queue_self)
 	{

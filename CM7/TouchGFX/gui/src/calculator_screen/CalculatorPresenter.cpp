@@ -17,9 +17,9 @@ void CalculatorPresenter::deactivate()
 
 }
 
-bool CalculatorPresenter::sendCalculationRequest(UMessageData request)
+bool CalculatorPresenter::sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver)
 {
-	return model->sendEvent(ASYNC_REQUEST_CALCULATE, request, EVENT_CLIENT_CALCULATOR);
+	return model->sendEvent(event, message, eventReceiver);
 }
 
 void CalculatorPresenter::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)

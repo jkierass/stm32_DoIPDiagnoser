@@ -72,7 +72,7 @@ SDRAM_HandleTypeDef hsdram1;
 osThreadId_t TouchGFXTaskHandle;
 const osThreadAttr_t TouchGFXTask_attributes = {
   .name = "TouchGFXTask",
-  .stack_size = 3048 * 4,
+  .stack_size = 6144 * 4,
   .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for videoTask */
@@ -80,28 +80,28 @@ osThreadId_t videoTaskHandle;
 const osThreadAttr_t videoTask_attributes = {
   .name = "videoTask",
   .stack_size = 1000 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
+  .priority = (osPriority_t) osPriorityRealtime,
 };
 /* Definitions for Task_EventMgrM7 */
 osThreadId_t Task_EventMgrM7Handle;
 const osThreadAttr_t Task_EventMgrM7_attributes = {
   .name = "Task_EventMgrM7",
-  .stack_size = 2056 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
+  .stack_size = 1024 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for Task_Calculator */
 osThreadId_t Task_CalculatorHandle;
 const osThreadAttr_t Task_Calculator_attributes = {
   .name = "Task_Calculator",
-  .stack_size = 512 * 4,
+  .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for Task_EDaemonP */
 osThreadId_t Task_EDaemonPHandle;
 const osThreadAttr_t Task_EDaemonP_attributes = {
   .name = "Task_EDaemonP",
-  .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityRealtime,
+  .stack_size = 1024 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for printMutex */
 osMutexId_t printMutexHandle;
@@ -314,7 +314,7 @@ void SystemClock_Config(void)
   * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
   RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;

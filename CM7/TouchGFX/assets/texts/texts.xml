@@ -6,6 +6,114 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_TL8J" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Dynamic&#10;Stability&#10;Control</Translation>
+      </Text>
+      <Text Id="__SingleUse_TRKD" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Climate</Translation>
+      </Text>
+      <Text Id="__SingleUse_1B3O" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Errors</Translation>
+      </Text>
+      <Text Id="__SingleUse_2C73" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">GPS</Translation>
+      </Text>
+      <Text Id="__SingleUse_V2G9" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Power&#10;Management</Translation>
+      </Text>
+      <Text Id="__SingleUse_JS26" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Motor</Translation>
+      </Text>
+      <Text Id="__SingleUse_2LSX" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_S3OG" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">23°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_2O72" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Motor</Translation>
+      </Text>
+      <Text Id="__SingleUse_GF6Z" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0S10" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_FIEO" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_O14H" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_AO8U" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_TYZ8" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_KEV0" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UXSI" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6PNS" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Date and Time</Translation>
+      </Text>
+      <Text Id="__SingleUse_4U5S" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">23°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_6FAH" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZDQ8" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AIJU" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Ediabas Diagnoser</Translation>
+      </Text>
+      <Text Id="__SingleUse_05D4" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">23°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_DGLN" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_L1QD" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_NR0L" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_33RI" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Diagnoser</Translation>
+      </Text>
+      <Text Id="__SingleUse_X1VW" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">23°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_3EQW" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">Confirm</Translation>
+      </Text>
+      <Text Id="__SingleUse_5SP9" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">:</Translation>
+      </Text>
+      <Text Id="__SingleUse_DP2O" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Minute</Translation>
+      </Text>
+      <Text Id="__SingleUse_58AR" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Hour</Translation>
+      </Text>
+      <Text Id="__SingleUse_G3DK" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Year</Translation>
+      </Text>
+      <Text Id="__SingleUse_2H9E" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Month</Translation>
+      </Text>
+      <Text Id="__SingleUse_J2VA" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">Day</Translation>
+      </Text>
+      <Text Id="__SingleUse_CDWB" Alignment="Center" TypographyId="Typography_02">
+        <Translation Language="GB">Date and time</Translation>
+      </Text>
       <Text Id="__SingleUse_CFVA" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">e</Translation>
       </Text>
@@ -18,19 +126,13 @@
       <Text Id="__SingleUse_HCN1" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">sqrt</Translation>
       </Text>
-      <Text Id="__SingleUse_CDWB" Alignment="Center" TypographyId="Typography_00">
-        <Translation Language="GB">Manipulator</Translation>
-      </Text>
-      <Text Id="__SingleUse_EH0R" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">23°C</Translation>
-      </Text>
       <Text Id="__SingleUse_YKNQ" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
       </Text>
       <Text Id="TextResult" Alignment="Right" TypographyId="Large">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_10PZ" Alignment="Center" TypographyId="Typography_00">
+      <Text Id="__SingleUse_10PZ" Alignment="Center" TypographyId="Typography_02">
         <Translation Language="GB">Calculator</Translation>
       </Text>
       <Text Id="__SingleUse_15M7" Alignment="Center" TypographyId="Typography_00">
@@ -93,28 +195,17 @@
       <Text Id="__SingleUse_NDJ5" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">9</Translation>
       </Text>
-      <Text Id="__SingleUse_6UML" Alignment="Center" TypographyId="Typography_00">
+      <Text Id="__SingleUse_6UML" Alignment="Center" TypographyId="Typography_02">
         <Translation Language="GB">Diagnose</Translation>
-      </Text>
-      <Text Id="__SingleUse_HFBR" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Ediabas Diagnoser</Translation>
-      </Text>
-      <Text Id="__SingleUse_RGBC" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_HCE1" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Diagnose</Translation>
-      </Text>
-      <Text Id="__SingleUse_NI1A" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="21" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
-    <Typography Id="Typography_01" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="26" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Typography_02" Font="verdana.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
   </Typographies>
 </TextDatabase>

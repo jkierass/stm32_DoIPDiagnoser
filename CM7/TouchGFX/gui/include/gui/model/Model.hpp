@@ -1,7 +1,7 @@
 #ifndef MODEL_HPP
 #define MODEL_HPP
 
-#include "EventBusManager.h"
+#include "EventBus.h"
 
 class ModelListener;
 
@@ -22,7 +22,7 @@ public:
 protected:
     ModelListener* modelListener;
 
-    EventBusManager event_bus;
+    EventBus event_bus;
 };
 
 #endif // MODEL_HPP

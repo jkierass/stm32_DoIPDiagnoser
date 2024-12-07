@@ -130,6 +130,7 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Box box1;
     touchgfx::ButtonWithLabel CalculatorButton_0;
     touchgfx::ButtonWithLabel CalculatorButton_Pi;
     touchgfx::ButtonWithLabel CalculatorButton_e;

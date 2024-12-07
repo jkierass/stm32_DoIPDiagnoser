@@ -20,6 +20,19 @@ RM := rm -rf
 -include Application/User/EventManagerCM4/src/subdir.mk
 -include Application/User/EdiabasDaemonNative/src/subdir.mk
 -include Application/User/EdiabasConnectionManager/src/subdir.mk
+-include Application/User/Debug/Middlewares/LwIP/subdir.mk
+-include Application/User/Debug/Middlewares/FreeRTOS/subdir.mk
+-include Application/User/Debug/Drivers/STM32H7xx_HAL_Driver/subdir.mk
+-include Application/User/Debug/Drivers/CMSIS/subdir.mk
+-include Application/User/Debug/Drivers/BSP/Components/subdir.mk
+-include Application/User/Debug/Application/User/Startup/subdir.mk
+-include Application/User/Debug/Application/User/LWIP/Target/subdir.mk
+-include Application/User/Debug/Application/User/LWIP/App/subdir.mk
+-include Application/User/Debug/Application/User/EventManagerCM4/src/subdir.mk
+-include Application/User/Debug/Application/User/EdiabasDaemonNative/src/subdir.mk
+-include Application/User/Debug/Application/User/EdiabasConnectionManager/src/subdir.mk
+-include Application/User/Debug/Application/User/Core/subdir.mk
+-include Application/User/Debug/subdir.mk
 -include Application/User/Core/subdir.mk
 -include objects.mk
 

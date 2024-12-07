@@ -14,7 +14,7 @@ void StartTask_Calculator(void *argument)
 	}
 }
 
-CalculatorTask::CalculatorTask() : event_bus(EventBusManager(queueToCalculator, EVENT_CLIENT_CALCULATOR)) {}
+CalculatorTask::CalculatorTask() : event_bus(EventBus(queueToCalculator, EVENT_CLIENT_CALCULATOR)) {}
 
 void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
 {
@@ -22,7 +22,7 @@ void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient ev
 	{
 		case ASYNC_REQUEST_CALCULATE:
 			UMessageData replyMessage;
-			Calculator::calculate(&msg.calculation_request[0], &replyMessage.calculation_result[0]);
+			calculator_instance.calculate(&msg.calculation_request[0], &replyMessage.calculation_result[0]);
 			event_bus.send(ASYNC_COMPLETED_CALCULATE, replyMessage, eventSender);
 			break;
 		default:

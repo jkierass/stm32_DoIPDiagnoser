@@ -18,6 +18,10 @@
 #include <gui/diagnose_screen/DiagnosePresenter.hpp>
 #include <gui/calculator_screen/CalculatorView.hpp>
 #include <gui/calculator_screen/CalculatorPresenter.hpp>
+#include <gui/date_screen/DateView.hpp>
+#include <gui/date_screen/DatePresenter.hpp>
+#include <gui/diagnose_motor_screen/Diagnose_MotorView.hpp>
+#include <gui/diagnose_motor_screen/Diagnose_MotorPresenter.hpp>
 
 
 /**
@@ -43,7 +47,9 @@ public:
     typedef touchgfx::meta::TypeList< MainScreenView,
             touchgfx::meta::TypeList< DiagnoseView,
             touchgfx::meta::TypeList< CalculatorView,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< DateView,
+            touchgfx::meta::TypeList< Diagnose_MotorView,
+            touchgfx::meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -58,7 +64,9 @@ public:
     typedef touchgfx::meta::TypeList< MainScreenPresenter,
             touchgfx::meta::TypeList< DiagnosePresenter,
             touchgfx::meta::TypeList< CalculatorPresenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< DatePresenter,
+            touchgfx::meta::TypeList< Diagnose_MotorPresenter,
+            touchgfx::meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**

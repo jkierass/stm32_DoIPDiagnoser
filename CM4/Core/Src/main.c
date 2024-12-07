@@ -55,22 +55,29 @@ UART_HandleTypeDef huart1;
 osThreadId_t Task_EDaemonNHandle;
 const osThreadAttr_t Task_EDaemonN_attributes = {
   .name = "Task_EDaemonN",
-  .stack_size = 1028 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Task_EventMgrM4 */
 osThreadId_t Task_EventMgrM4Handle;
 const osThreadAttr_t Task_EventMgrM4_attributes = {
   .name = "Task_EventMgrM4",
-  .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for Task_EConnMgr */
 osThreadId_t Task_EConnMgrHandle;
 const osThreadAttr_t Task_EConnMgr_attributes = {
   .name = "Task_EConnMgr",
-  .stack_size = 1028 * 4,
+  .stack_size = 1024 * 4,
   .priority = (osPriority_t) osPriorityRealtime,
+};
+/* Definitions for Task_CTemp */
+osThreadId_t Task_CTempHandle;
+const osThreadAttr_t Task_CTemp_attributes = {
+  .name = "Task_CTemp",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
 
@@ -82,6 +89,7 @@ static void MX_GPIO_Init(void);
 void StartTask_EDaemonN(void *argument);
 extern void StartTask_EventMgrM4(void *argument);
 extern void StartTask_EdiabasConnMgr(void *argument);
+extern void StartTask_CTemp(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -166,6 +174,9 @@ int main(void)
 
   /* creation of Task_EConnMgr */
   Task_EConnMgrHandle = osThreadNew(StartTask_EdiabasConnMgr, NULL, &Task_EConnMgr_attributes);
+
+  /* creation of Task_CTemp */
+  Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -263,8 +274,11 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOG_CLK_ENABLE();
+  __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOH_CLK_ENABLE();
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

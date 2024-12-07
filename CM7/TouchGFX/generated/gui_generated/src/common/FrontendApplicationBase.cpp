@@ -15,6 +15,10 @@
 #include <gui/diagnose_screen/DiagnosePresenter.hpp>
 #include <gui/calculator_screen/CalculatorView.hpp>
 #include <gui/calculator_screen/CalculatorPresenter.hpp>
+#include <gui/date_screen/DateView.hpp>
+#include <gui/date_screen/DatePresenter.hpp>
+#include <gui/diagnose_motor_screen/Diagnose_MotorView.hpp>
+#include <gui/diagnose_motor_screen/Diagnose_MotorPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -72,4 +76,30 @@ void FrontendApplicationBase::gotoCalculatorScreenNoTransition()
 void FrontendApplicationBase::gotoCalculatorScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<CalculatorView, CalculatorPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Date
+
+void FrontendApplicationBase::gotoDateScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDateScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDateScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<DateView, DatePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Diagnose_Motor
+
+void FrontendApplicationBase::gotoDiagnose_MotorScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_MotorScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDiagnose_MotorScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Diagnose_MotorView, Diagnose_MotorPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

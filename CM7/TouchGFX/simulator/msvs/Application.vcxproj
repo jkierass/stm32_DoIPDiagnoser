@@ -30,6 +30,16 @@
     <ClCompile Include="..\..\gui\src\mainscreen_screen\MainScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\mainscreen_screen\MainScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\mainscreen_screen\MainScreenViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\date_screen\DatePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\date_screen\DateView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\date_screen\DateViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\DayElement.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\DayElementBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\ParameterListElement.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ParameterListElementBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\diagnose_motor_screen\Diagnose_MotorPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\diagnose_motor_screen\Diagnose_MotorView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_motor_screen\Diagnose_MotorViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -189,6 +199,16 @@
     <ClInclude Include="..\..\gui\include\gui\mainscreen_screen\MainScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\mainscreen_screen\MainScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainscreen_screen\MainScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\date_screen\DatePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\date_screen\DateView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\date_screen\DateViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\DayElement.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\DayElementBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\ParameterListElement.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ParameterListElementBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_motor_screen\Diagnose_MotorPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_motor_screen\Diagnose_MotorView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_motor_screen\Diagnose_MotorViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

@@ -13,6 +13,10 @@ CalculatorViewBase::CalculatorViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    box1.setPosition(0, 0, 800, 480);
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    add(box1);
+
     CalculatorButton_0.setXY(472, 253);
     CalculatorButton_0.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_SMALL_OUTLINE_DISABLED_ID));
     CalculatorButton_0.setLabelText(touchgfx::TypedText(T___SINGLEUSE_PMW2));
@@ -262,7 +266,7 @@ void CalculatorViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
 {
     if (&src == &HomeButton)
     {
-        //Interaction1
+        //SwitchToMainScreen
         //When HomeButton clicked change screen to MainScreen
         //Go to MainScreen with no screen transition
         application().gotoMainScreenScreenNoTransition();

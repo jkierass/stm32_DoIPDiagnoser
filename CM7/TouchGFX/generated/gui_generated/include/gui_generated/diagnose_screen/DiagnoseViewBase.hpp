@@ -8,15 +8,13 @@
 #include <mvp/View.hpp>
 #include <gui/diagnose_screen/DiagnosePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
-#include <touchgfx/widgets/graph/GraphWrapAndClear.hpp>
-#include <touchgfx/widgets/graph/GraphElements.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB888.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/containers/ScrollableContainer.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class DiagnoseViewBase : public touchgfx::View<DiagnosePresenter>
 {
@@ -34,22 +32,23 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::DigitalClock DiagnoseClock;
-    touchgfx::TextArea DiagnoseTitile;
+    touchgfx::Box box1;
+    touchgfx::Container container1;
+    touchgfx::Box box2;
+    touchgfx::DigitalClock Clock;
+    touchgfx::TextArea MainTitle;
+    touchgfx::TextArea Text_Temperature;
+    touchgfx::TextArea Text_Date;
     touchgfx::ClickListener< touchgfx::ScalableImage > HomeIcon;
-    touchgfx::GraphWrapAndClear<100> dynamicGraph1;
-    touchgfx::GraphElementLine dynamicGraph1Line1;
-    touchgfx::PainterRGB888 dynamicGraph1Line1Painter;
     touchgfx::Button HomeButton;
-    touchgfx::ScrollableContainer scrollableContainer1;
+    touchgfx::ButtonWithLabel MotorButton;
+    touchgfx::ButtonWithLabel PowerMgmntButton;
+    touchgfx::ButtonWithLabel GPSButton;
+    touchgfx::ButtonWithLabel ErrorsButton;
+    touchgfx::ButtonWithLabel ClimateButton;
+    touchgfx::ButtonWithLabel DSCButton;
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 12000;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

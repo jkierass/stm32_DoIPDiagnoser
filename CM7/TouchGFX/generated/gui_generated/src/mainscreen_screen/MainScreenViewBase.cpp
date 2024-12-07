@@ -13,42 +13,66 @@ MainScreenViewBase::MainScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    box1.setPosition(0, 0, 800, 480);
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    add(box1);
+
+    backgroungImage.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BACKGROUNDS_480X272_SHATTERED_RAIN_ID));
+    backgroungImage.setPosition(0, 74, 800, 405);
+    backgroungImage.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(backgroungImage);
+
+    container1.setPosition(0, 0, 800, 75);
+    Text_Date_1.setPosition(657, 36, 128, 24);
+    Text_Date_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_Date_1.setLinespacing(0);
+    Text_Date_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DGLN));
+    container1.add(Text_Date_1);
+
+    Text_Temperature.setPosition(546, 10, 105, 52);
+    Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
+    Text_Temperature.setLinespacing(0);
+    Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_05D4));
+    container1.add(Text_Temperature);
+
+    MainTitle.setPosition(50, 11, 447, 52);
+    MainTitle.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
+    MainTitle.setLinespacing(0);
+    MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AIJU));
+    container1.add(MainTitle);
+
+    Clock.setPosition(659, 7, 124, 26);
+    Clock.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Clock.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZDQ8));
+    Clock.displayLeadingZeroForHourIndicator(true);
+    Clock.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR_NO_SECONDS);
+    Clock.setTime24Hour(10, 10, 0);
+    container1.add(Clock);
+
+    add(container1);
+
     DiagnoseIcon.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_CROPPED_ID));
     DiagnoseIcon.setPosition(56, 112, 164, 164);
     DiagnoseIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(DiagnoseIcon);
 
-    MainScreenClock.setPosition(597, 18, 187, 51);
-    MainScreenClock.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
-    MainScreenClock.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NI1A));
-    MainScreenClock.displayLeadingZeroForHourIndicator(true);
-    MainScreenClock.setDisplayMode(touchgfx::DigitalClock::DISPLAY_24_HOUR);
-    MainScreenClock.setTime24Hour(10, 10, 0);
-    add(MainScreenClock);
-
-    Text_Diagnose.setPosition(81, 286, 114, 33);
+    Text_Diagnose.setPosition(56, 282, 164, 29);
     Text_Diagnose.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     Text_Diagnose.setLinespacing(0);
     Text_Diagnose.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6UML));
     add(Text_Diagnose);
 
-    Text_Calculator.setPosition(317, 289, 114, 26);
+    Text_Calculator.setPosition(289, 282, 164, 29);
     Text_Calculator.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     Text_Calculator.setLinespacing(0);
     Text_Calculator.setTypedText(touchgfx::TypedText(T___SINGLEUSE_10PZ));
     add(Text_Calculator);
 
-    Text_Manipulator.setPosition(530, 289, 134, 26);
-    Text_Manipulator.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
-    Text_Manipulator.setLinespacing(0);
-    Text_Manipulator.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CDWB));
-    add(Text_Manipulator);
-
-    MainTitle.setPosition(47, 18, 384, 51);
-    MainTitle.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
-    MainTitle.setLinespacing(0);
-    MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HFBR));
-    add(MainTitle);
+    Text_Date.setPosition(497, 288, 194, 33);
+    Text_Date.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
+    Text_Date.setLinespacing(0);
+    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CDWB));
+    add(Text_Date);
 
     SwitchToDiagnose.setXY(50, 107);
     SwitchToDiagnose.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));
@@ -65,20 +89,15 @@ MainScreenViewBase::MainScreenViewBase() :
     SwitchToCalculator.setAction(buttonCallback);
     add(SwitchToCalculator);
 
-    Text_Temperature.setPosition(463, 18, 101, 51);
-    Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
-    Text_Temperature.setLinespacing(0);
-    Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EH0R));
-    add(Text_Temperature);
+    DateIcon.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_TIME_ID));
+    DateIcon.setPosition(510, 113, 168, 163);
+    DateIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(DateIcon);
 
-    ManipulatorIcon.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_MANIPULATOR_ID));
-    ManipulatorIcon.setPosition(513, 112, 169, 164);
-    ManipulatorIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    add(ManipulatorIcon);
-
-    SwitchToManipulator.setXY(509, 107);
-    SwitchToManipulator.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));
-    add(SwitchToManipulator);
+    SwitchToDate.setXY(506, 107);
+    SwitchToDate.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));
+    SwitchToDate.setAction(buttonCallback);
+    add(SwitchToDate);
 }
 
 MainScreenViewBase::~MainScreenViewBase()
@@ -102,9 +121,16 @@ void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
     }
     if (&src == &SwitchToCalculator)
     {
-        //Interaction1
+        //SwitchToCalculator
         //When SwitchToCalculator clicked change screen to Calculator
         //Go to Calculator with no screen transition
         application().gotoCalculatorScreenNoTransition();
+    }
+    if (&src == &SwitchToDate)
+    {
+        //SwtichToDate
+        //When SwitchToDate clicked change screen to Date
+        //Go to Date with no screen transition
+        application().gotoDateScreenNoTransition();
     }
 }

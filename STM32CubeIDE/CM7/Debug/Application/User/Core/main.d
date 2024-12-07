@@ -74,8 +74,8 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../STM32CubeIDE/CM7/Application/User/EventManagerCM7/inc/EventManagerCM7Task.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h \
- ../../../Common/Inc/EventBusManager.h \
- ../../../Common/Inc/MessageDataTypes.h \
+ ../../../Common/Inc/EventBus.h ../../../Common/Inc/MessageDataTypes.h \
+ ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h \
  ../../../STM32CubeIDE/CM7/Application/User/EdiabasDaemonProxy/inc/EdiabasDaemonProxyTask.h \
  ../../../Common/Inc/cm_ipc.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
@@ -155,8 +155,9 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../STM32CubeIDE/CM7/Application/User/EventManagerCM7/inc/EventManagerCM7Task.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h:
-../../../Common/Inc/EventBusManager.h:
+../../../Common/Inc/EventBus.h:
 ../../../Common/Inc/MessageDataTypes.h:
+../../../STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h:
 ../../../STM32CubeIDE/CM7/Application/User/EdiabasDaemonProxy/inc/EdiabasDaemonProxyTask.h:
 ../../../Common/Inc/cm_ipc.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h:

@@ -4,7 +4,7 @@
 #include <vector>
 #include <map>
 
-#include "cmsis_os2.h"
+#include "cmsis_os.h"
 #include "FreeRTOS.h"
 #include "queue.h"
 

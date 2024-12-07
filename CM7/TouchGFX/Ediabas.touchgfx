@@ -5,6 +5,93 @@
         "Name": "MainScreen",
         "Components": [
           {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 800,
+            "Height": 480,
+            "LockPosition": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "backgroungImage",
+            "Y": 74,
+            "Width": 800,
+            "Height": 405,
+            "LockPosition": true,
+            "Filename": "__generated\\dark_theme_images_backgrounds_480x272_shattered_rain.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "Container",
+            "Name": "container1",
+            "Width": 800,
+            "Height": 75,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date_1",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_DGLN",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_05D4",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "MainTitle",
+                "X": 50,
+                "Y": 11,
+                "Width": 447,
+                "Height": 52,
+                "TextId": "__SingleUse_AIJU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 163,
+                  "Green": 186,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "DigitalClock",
+                "Name": "Clock",
+                "X": 659,
+                "Y": 7,
+                "Width": 124,
+                "Height": 26,
+                "TextColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextId": "__SingleUse_ZDQ8",
+                "DisplayLeadingZeroForHourIndicator": true,
+                "InitialHour": 10,
+                "InitialMinute": 10
+              }
+            ]
+          },
+          {
             "Type": "ScalableImage",
             "Name": "DiagnoseIcon",
             "X": 56,
@@ -15,30 +102,12 @@
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
-            "Type": "DigitalClock",
-            "Name": "MainScreenClock",
-            "X": 597,
-            "Y": 18,
-            "Width": 187,
-            "Height": 51,
-            "TextColor": {
-              "Red": 163,
-              "Green": 186,
-              "Blue": 255
-            },
-            "TextId": "__SingleUse_NI1A",
-            "DisplaySeconds": true,
-            "DisplayLeadingZeroForHourIndicator": true,
-            "InitialHour": 10,
-            "InitialMinute": 10
-          },
-          {
             "Type": "TextArea",
             "Name": "Text_Diagnose",
-            "X": 81,
-            "Y": 286,
-            "Width": 114,
-            "Height": 33,
+            "X": 56,
+            "Y": 282,
+            "Width": 164,
+            "Height": 29,
             "TextId": "__SingleUse_6UML",
             "TextRotation": "0",
             "Color": {
@@ -50,10 +119,10 @@
           {
             "Type": "TextArea",
             "Name": "Text_Calculator",
-            "X": 317,
-            "Y": 289,
-            "Width": 114,
-            "Height": 26,
+            "X": 289,
+            "Y": 282,
+            "Width": 164,
+            "Height": 29,
             "TextId": "__SingleUse_10PZ",
             "TextRotation": "0",
             "Color": {
@@ -64,27 +133,12 @@
           },
           {
             "Type": "TextArea",
-            "Name": "Text_Manipulator",
-            "X": 530,
-            "Y": 289,
-            "Width": 134,
-            "Height": 26,
+            "Name": "Text_Date",
+            "X": 497,
+            "Y": 288,
+            "Width": 194,
+            "Height": 33,
             "TextId": "__SingleUse_CDWB",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 163,
-              "Green": 186,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "MainTitle",
-            "X": 47,
-            "Y": 18,
-            "Width": 384,
-            "Height": 51,
-            "TextId": "__SingleUse_HFBR",
             "TextRotation": "0",
             "Color": {
               "Red": 163,
@@ -125,34 +179,19 @@
             "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\large_outline_disabled.json"
           },
           {
-            "Type": "TextArea",
-            "Name": "Text_Temperature",
-            "X": 463,
-            "Y": 18,
-            "Width": 101,
-            "Height": 51,
-            "TextId": "__SingleUse_EH0R",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 163,
-              "Green": 186,
-              "Blue": 255
-            }
-          },
-          {
             "Type": "ScalableImage",
-            "Name": "ManipulatorIcon",
-            "X": 513,
-            "Y": 112,
-            "Width": 169,
-            "Height": 164,
-            "Filename": "logo_manipulator.png",
+            "Name": "DateIcon",
+            "X": 510,
+            "Y": 113,
+            "Width": 168,
+            "Height": 163,
+            "Filename": "logo_time.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "Button",
-            "Name": "SwitchToManipulator",
-            "X": 509,
+            "Name": "SwitchToDate",
+            "X": 506,
             "Y": 107,
             "Width": 176,
             "Height": 175,
@@ -175,7 +214,7 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "SwitchToCalculator",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "SwitchToCalculator"
@@ -185,115 +224,266 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Calculator"
             }
+          },
+          {
+            "InteractionName": "SwtichToDate",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "SwitchToDate"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Date"
+            }
           }
         ]
       },
       {
         "Name": "Diagnose",
-        "CanvasBufferSize": 12000,
         "Components": [
           {
-            "Type": "DigitalClock",
-            "Name": "DiagnoseClock",
-            "X": 529,
-            "Y": 12,
-            "Width": 256,
-            "Height": 72,
-            "LockPosition": true,
-            "TextColor": {
-              "Red": 163,
-              "Green": 186,
-              "Blue": 255
-            },
-            "TextId": "__SingleUse_RGBC",
-            "DisplaySeconds": true,
-            "DisplayLeadingZeroForHourIndicator": true,
-            "InitialHour": 10,
-            "InitialMinute": 10
-          },
-          {
-            "Type": "TextArea",
-            "Name": "DiagnoseTitile",
-            "Y": 12,
+            "Type": "Box",
+            "Name": "box1",
             "Width": 800,
-            "Height": 62,
-            "LockPosition": true,
-            "TextId": "__SingleUse_HCE1",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 163,
-              "Green": 186,
-              "Blue": 255
-            }
+            "Height": 480,
+            "LockPosition": true
           },
           {
-            "Type": "ScalableImage",
-            "Name": "HomeIcon",
-            "X": 23,
-            "Y": 16,
-            "Width": 55,
-            "Height": 55,
+            "Type": "Container",
+            "Name": "container1",
+            "Width": 800,
+            "Height": 75,
             "LockPosition": true,
-            "Filename": "home_icon.png",
-            "ScalingAlgorithm": "Nearest-neighbor",
-            "Clickable": true
-          },
-          {
-            "Type": "DynamicGraph",
-            "Name": "dynamicGraph1",
-            "X": 391,
-            "Y": 133,
-            "Width": 322,
-            "Height": 264,
-            "DataSeed": 1180091041,
-            "NumberOfValues": 100,
-            "MaxY": 100.0,
-            "Precision": "1",
-            "LastIndex": 99,
-            "XAxisScale": 1.0,
-            "InsertRandomValues": true,
-            "GraphType": "GraphWrapClear",
-            "GraphDrawers": [
+            "Components": [
               {
-                "Type": "LineDrawer",
-                "LineWidth": 2,
-                "FileNameImage": "",
+                "Type": "Box",
+                "Name": "box2",
+                "Width": 800,
+                "Height": 75
+              },
+              {
+                "Type": "DigitalClock",
+                "Name": "Clock",
+                "X": 659,
+                "Y": 7,
+                "Width": 124,
+                "Height": 26,
+                "TextColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextId": "__SingleUse_NR0L",
+                "DisplayLeadingZeroForHourIndicator": true,
+                "InitialHour": 10,
+                "InitialMinute": 10
+              },
+              {
+                "Type": "TextArea",
+                "Name": "MainTitle",
+                "X": 138,
+                "Y": 12,
+                "Width": 240,
+                "Height": 52,
+                "TextId": "__SingleUse_33RI",
+                "TextRotation": "0",
                 "Color": {
-                  "Red": 20,
-                  "Green": 151,
-                  "Blue": 197
+                  "Red": 163,
+                  "Green": 186,
+                  "Blue": 255
                 }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_X1VW",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_L1QD",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "HomeIcon",
+                "X": 12,
+                "Y": 9,
+                "Width": 55,
+                "Height": 55,
+                "Filename": "home_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "Button",
+                "Name": "HomeButton",
+                "X": 9,
+                "Y": 7,
+                "Width": 60,
+                "Height": 60,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
               }
             ]
           },
           {
-            "Type": "Button",
-            "Name": "HomeButton",
-            "X": 20,
-            "Y": 14,
-            "Width": 60,
-            "Height": 60,
-            "LockPosition": true,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-            "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+            "Type": "ButtonWithLabel",
+            "Name": "MotorButton",
+            "X": 82,
+            "Y": 96,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
+            "TextId": "__SingleUse_JS26",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
           },
           {
-            "Type": "ScrollableContainer",
-            "Name": "scrollableContainer1",
-            "Y": 94,
-            "Width": 307,
-            "Height": 386,
-            "HorizontalScrollEnabled": true,
-            "VerticalScrollEnabled": true,
-            "ScrollbarsVisibleOnPressed": true,
-            "ScrollbarsAlpha": 255,
-            "Components": []
+            "Type": "ButtonWithLabel",
+            "Name": "PowerMgmntButton",
+            "X": 312,
+            "Y": 96,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
+            "TextId": "__SingleUse_V2G9",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "GPSButton",
+            "X": 545,
+            "Y": 96,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
+            "TextId": "__SingleUse_2C73",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "ErrorsButton",
+            "X": 546,
+            "Y": 287,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
+            "TextId": "__SingleUse_1B3O",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "ClimateButton",
+            "X": 82,
+            "Y": 287,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
+            "TextId": "__SingleUse_TRKD",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "DSCButton",
+            "X": 312,
+            "Y": 287,
+            "Width": 176,
+            "Height": 175,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
+            "TextId": "__SingleUse_TL8J",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "SwitchToMainScreen",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "HomeButton"
@@ -303,12 +493,31 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "MainScreen"
             }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "MotorButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_Motor"
+            }
           }
         ]
       },
       {
         "Name": "Calculator",
         "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 800,
+            "Height": 480,
+            "LockPosition": true
+          },
           {
             "Type": "ButtonWithLabel",
             "Name": "CalculatorButton_0",
@@ -904,7 +1113,7 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "SwitchToMainScreen",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "HomeButton"
@@ -1180,9 +1389,677 @@
             }
           }
         ]
+      },
+      {
+        "Name": "Date",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 800,
+            "Height": 480,
+            "LockPosition": true
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "BackgroundImage",
+            "Y": 80,
+            "Width": 800,
+            "Height": 400,
+            "LockPosition": true,
+            "Filename": "__generated\\dark_theme_images_backgrounds_480x272_shattered_rain.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 33,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "LockPosition": true,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1",
+            "X": 171,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "LockPosition": true,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_2",
+            "X": 309,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "LockPosition": true,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_3",
+            "X": 485,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "LockPosition": true,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_4",
+            "X": 638,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "LockPosition": true,
+            "BorderColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "Container",
+            "Name": "container1",
+            "Width": 800,
+            "Height": 75,
+            "Components": [
+              {
+                "Type": "DigitalClock",
+                "Name": "Clock",
+                "X": 659,
+                "Y": 7,
+                "Width": 124,
+                "Height": 26,
+                "TextColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextId": "__SingleUse_UXSI",
+                "DisplayLeadingZeroForHourIndicator": true,
+                "InitialHour": 10,
+                "InitialMinute": 10
+              },
+              {
+                "Type": "TextArea",
+                "Name": "MainTitle",
+                "X": 50,
+                "Y": 11,
+                "Width": 447,
+                "Height": 52,
+                "TextId": "__SingleUse_6PNS",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 163,
+                  "Green": 186,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_4U5S",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date_1",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_6FAH",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "Button",
+                "Name": "HomeButton",
+                "X": 23,
+                "Y": 12,
+                "Width": 60,
+                "Height": 60,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_normal.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_normal.json"
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "HomeIcon",
+            "X": 28,
+            "Y": 18,
+            "Width": 50,
+            "Height": 48,
+            "Filename": "home_icon.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScrollWheel",
+            "Name": "scrollWheel_Month",
+            "X": 171,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "SelectedItemOffset": 15,
+            "ItemTemplateName": "DayElement",
+            "NumberofItems": 12,
+            "InitialElement": 1,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "ScrollWheel",
+            "Name": "scrollWheel_Day",
+            "X": 33,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "SelectedItemOffset": 15,
+            "ItemTemplateName": "DayElement",
+            "NumberofItems": 31,
+            "InitialElement": 1,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "ScrollWheel",
+            "Name": "scrollWheel_Minute",
+            "X": 638,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "SelectedItemOffset": 15,
+            "ItemTemplateName": "DayElement",
+            "NumberofItems": 60,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "ScrollWheel",
+            "Name": "scrollWheel_Hour",
+            "X": 482,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "SelectedItemOffset": 15,
+            "ItemTemplateName": "DayElement",
+            "NumberofItems": 24,
+            "InitialElement": 1,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "ScrollWheel",
+            "Name": "scrollWheel_Year",
+            "X": 309,
+            "Y": 225,
+            "Width": 101,
+            "Height": 80,
+            "SelectedItemOffset": 15,
+            "ItemTemplateName": "DayElement",
+            "NumberofItems": 100,
+            "InitialElement": 1,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Day",
+            "X": 33,
+            "Y": 152,
+            "Width": 101,
+            "Height": 48,
+            "TextId": "__SingleUse_J2VA",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_TimeColon",
+            "X": 586,
+            "Y": 240,
+            "Width": 52,
+            "Height": 51,
+            "TextId": "__SingleUse_5SP9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Hour",
+            "X": 478,
+            "Y": 152,
+            "Width": 108,
+            "Height": 48,
+            "TextId": "__SingleUse_58AR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Minute",
+            "X": 620,
+            "Y": 152,
+            "Width": 137,
+            "Height": 48,
+            "TextId": "__SingleUse_DP2O",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Month",
+            "X": 157,
+            "Y": 152,
+            "Width": 131,
+            "Height": 48,
+            "TextId": "__SingleUse_2H9E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Year",
+            "X": 294,
+            "Y": 152,
+            "Width": 131,
+            "Height": 48,
+            "TextId": "__SingleUse_G3DK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "button_Confirm",
+            "X": 478,
+            "Y": 394,
+            "Width": 290,
+            "Height": 36,
+            "Pressed": "__generated\\dark_theme_images_widgets_button_regular_height_36_large_round_action.png",
+            "Released": "__generated\\dark_theme_images_widgets_button_regular_height_36_large_round_active.png",
+            "TextId": "__SingleUse_3EQW",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SwitchToMainScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Diagnose_Motor",
+        "Components": [
+          {
+            "Type": "ScrollList",
+            "Name": "DiagnoseMotorList",
+            "Y": 74,
+            "Width": 800,
+            "Height": 406,
+            "ItemTemplateName": "ParameterListElement",
+            "NumberofItems": 26,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "Container",
+            "Name": "container1",
+            "Width": 800,
+            "Height": 75,
+            "LockPosition": true,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box2",
+                "Y": -1,
+                "Width": 800,
+                "Height": 75,
+                "LockPosition": true
+              },
+              {
+                "Type": "DigitalClock",
+                "Name": "Clock",
+                "X": 659,
+                "Y": 7,
+                "Width": 124,
+                "Height": 26,
+                "LockPosition": true,
+                "TextColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextId": "__SingleUse_GF6Z",
+                "DisplayLeadingZeroForHourIndicator": true,
+                "InitialHour": 10,
+                "InitialMinute": 10
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_MotorTitile",
+                "X": 198,
+                "Y": 12,
+                "Width": 240,
+                "Height": 52,
+                "LockPosition": true,
+                "TextId": "__SingleUse_2O72",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 163,
+                  "Green": 186,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "LockPosition": true,
+                "TextId": "__SingleUse_S3OG",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_2LSX",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "HomeIcon",
+                "X": 12,
+                "Y": 9,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "home_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "ReturnIcon",
+                "X": 86,
+                "Y": 10,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "return.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "Button",
+                "Name": "HomeButton",
+                "X": 12,
+                "Y": 6,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "ReturnButton",
+                "X": 83,
+                "Y": 8,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SwitchToMainScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainScreen"
+            }
+          },
+          {
+            "InteractionName": "SwitchToDiagnose",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ReturnButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose"
+            }
+          }
+        ]
       }
     ],
-    "CustomContainerDefinitions": [],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "DayElement",
+        "Width": 101,
+        "Height": 50,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Width": 101,
+            "Height": 50,
+            "TextId": "__SingleUse_KEV0",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 163,
+              "Green": 186,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_TYZ8",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "ParameterListElement",
+        "Width": 800,
+        "Height": 46,
+        "Components": [
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage1",
+            "Y": -2,
+            "Width": 800,
+            "Height": 46,
+            "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage2",
+            "X": -10,
+            "Y": 44,
+            "Width": 820,
+            "Height": 2,
+            "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Parameter",
+            "X": 10,
+            "Y": 9,
+            "Width": 390,
+            "Height": 37,
+            "TextId": "__SingleUse_AO8U",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_O14H",
+              "UseBuffer": true,
+              "BufferSize": 40
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "text_Value",
+            "X": 410,
+            "Y": 9,
+            "Width": 390,
+            "Height": 35,
+            "TextId": "__SingleUse_FIEO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_0S10",
+              "UseBuffer": true,
+              "BufferSize": 20
+            }
+          }
+        ],
+        "Interactions": []
+      }
+    ],
     "Name": "Ediabas",
     "Resolution": {
       "Width": 800,

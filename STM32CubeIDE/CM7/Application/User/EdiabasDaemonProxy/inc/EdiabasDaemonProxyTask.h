@@ -2,7 +2,7 @@
 #define __EDIABASDAEMONPROXYTASK_H__
 
 
-#include "EventBusManager.h"
+#include "EventBus.h"
 
 class EdiabasDaemonProxyTask
 {
@@ -21,7 +21,7 @@ public:
 private:
 
 	void processIpcReceive();
-	EventBusManager event_bus;
+	EventBus event_bus;
 
 };
 

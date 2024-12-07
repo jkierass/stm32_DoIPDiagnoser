@@ -29,7 +29,7 @@ void CalculatorView::sendToCalculator_Equals()
 		request.calculation_request[i] = 0;
 	}
 	Unicode::toUTF8(TextResultBuffer, request.calculation_request, char_counter);
-	presenter->sendCalculationRequest(request);
+	presenter->sendEvent(ASYNC_REQUEST_CALCULATE, request, EVENT_CLIENT_CALCULATOR);
 }
 
 void CalculatorView::setCalculationResult(unsigned char result[])

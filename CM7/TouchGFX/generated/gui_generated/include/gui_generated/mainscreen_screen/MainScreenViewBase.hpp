@@ -9,8 +9,9 @@
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/containers/clock/DigitalClock.hpp>
+#include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/Button.hpp>
 
 class MainScreenViewBase : public touchgfx::View<MainScreenPresenter>
@@ -29,18 +30,22 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Box box1;
+    touchgfx::ScalableImage backgroungImage;
+    touchgfx::Container container1;
+    touchgfx::TextArea Text_Date_1;
+    touchgfx::TextArea Text_Temperature;
+    touchgfx::TextArea MainTitle;
+    touchgfx::DigitalClock Clock;
     touchgfx::ScalableImage DiagnoseIcon;
-    touchgfx::DigitalClock MainScreenClock;
     touchgfx::TextArea Text_Diagnose;
     touchgfx::TextArea Text_Calculator;
-    touchgfx::TextArea Text_Manipulator;
-    touchgfx::TextArea MainTitle;
+    touchgfx::TextArea Text_Date;
     touchgfx::Button SwitchToDiagnose;
     touchgfx::ScalableImage CalculatorIcon;
     touchgfx::Button SwitchToCalculator;
-    touchgfx::TextArea Text_Temperature;
-    touchgfx::ScalableImage ManipulatorIcon;
-    touchgfx::Button SwitchToManipulator;
+    touchgfx::ScalableImage DateIcon;
+    touchgfx::Button SwitchToDate;
 
 private:
 
