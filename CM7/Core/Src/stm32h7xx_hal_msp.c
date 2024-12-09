@@ -80,7 +80,7 @@ void HAL_MspInit(void)
 
   /* Peripheral interrupt init */
   /* HSEM1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(HSEM1_IRQn, 5, 0);
+  HAL_NVIC_SetPriority(HSEM1_IRQn, 8, 0);
   HAL_NVIC_EnableIRQ(HSEM1_IRQn);
 
   /* USER CODE BEGIN MspInit 1 */
@@ -149,7 +149,7 @@ void HAL_DMA2D_MspInit(DMA2D_HandleTypeDef* hdma2d)
     /* Peripheral clock enable */
     __HAL_RCC_DMA2D_CLK_ENABLE();
     /* DMA2D interrupt Init */
-    HAL_NVIC_SetPriority(DMA2D_IRQn, 7, 0);
+    HAL_NVIC_SetPriority(DMA2D_IRQn, 6, 0);
     HAL_NVIC_EnableIRQ(DMA2D_IRQn);
   /* USER CODE BEGIN DMA2D_MspInit 1 */
 

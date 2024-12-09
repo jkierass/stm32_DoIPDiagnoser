@@ -4,13 +4,21 @@
 #include <string.h>
 #include "ethernetif.h"
 
+#include "FreeRTOS.h"
+#include "task.h"
+
 extern struct netif gnetif;
 
 extern QueueHandle_t queueToEdiabasConnMgr;
 
 void StartTask_EdiabasConnMgr(void *argument)
 {
-//	MX_LWIP_Init();
+	osDelay(30000);
+	auto heapSize = xPortGetFreeHeapSize();
+	(void) heapSize;
+	MX_LWIP_Init();
+	heapSize = xPortGetFreeHeapSize();
+	(void) heapSize;
 
 	/* Infinite loop */
 	for (;;) {

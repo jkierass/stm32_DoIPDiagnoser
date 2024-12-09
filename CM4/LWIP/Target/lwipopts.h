@@ -115,6 +115,11 @@
 /* USER CODE BEGIN 1 */
 #undef LWIP_PROVIDE_ERRNO
 #define LWIP_ERRNO_STDINCLUDE
+
+#define LWIP_ICMP                   1   // Obsługa PING
+#define LWIP_DHCP                   0   // Wyłącz DHCP (użyj statycznego IP)
+#define IP_REASSEMBLY               1   // Obsługa fragmentacji IP
+#define IP_FRAG                     1   // Obsługa fragmentacji IP
 /* USER CODE END 1 */
 
 #ifdef __cplusplus
