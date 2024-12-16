@@ -105,9 +105,10 @@ int ipc_init(void)
   __HAL_RCC_HSEM_CLK_ENABLE();
 #ifdef CORE_CM4
   	HAL_HSEM_Take(HSEM_INIT_CM4, 0);
-#endif
+#elif defined(CORE_CM7)
 	memset((void*)(&shared_ram.cm7_to_cm4_buffer), 0, CM7_TO_CM4_BUFFER_SIZE);
 	memset((void*)(&shared_ram.cm4_to_cm7_buffer), 0, CM4_TO_CM7_BUFFER_SIZE);
+#endif
     shared_ram.cm7_to_cm4_handle = xMessageBufferCreateStatic(CM7_TO_CM4_BUFFER_SIZE, (uint8_t*)shared_ram.cm7_to_cm4_buffer,(StaticMessageBuffer_t*) &shared_ram.cm7_to_cm4_xmsg);
     shared_ram.cm4_to_cm7_handle = xMessageBufferCreateStatic(CM4_TO_CM7_BUFFER_SIZE, (uint8_t*)shared_ram.cm4_to_cm7_buffer,(StaticMessageBuffer_t*) &shared_ram.cm4_to_cm7_xmsg);
 

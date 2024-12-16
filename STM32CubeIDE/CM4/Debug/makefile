@@ -14,6 +14,7 @@ RM := rm -rf
 -include Drivers/STM32H7xx_HAL_Driver/subdir.mk
 -include Drivers/CMSIS/subdir.mk
 -include Drivers/BSP/Components/subdir.mk
+-include Application/User/Temperature/src/subdir.mk
 -include Application/User/Startup/subdir.mk
 -include Application/User/LWIP/Target/subdir.mk
 -include Application/User/LWIP/App/subdir.mk

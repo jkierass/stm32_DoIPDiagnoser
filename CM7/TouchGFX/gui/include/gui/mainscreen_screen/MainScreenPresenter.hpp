@@ -27,7 +27,7 @@ public:
 
     virtual ~MainScreenPresenter() {}
 
-    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) override;
+    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver) override;
 
 private:
     MainScreenPresenter();

@@ -11,6 +11,8 @@ public:
     virtual ~DiagnoseView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+    void setTemperature(short int temperature);
 protected:
 };
 

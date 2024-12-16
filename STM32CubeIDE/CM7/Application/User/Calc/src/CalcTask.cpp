@@ -16,7 +16,7 @@ void StartTask_Calculator(void *argument)
 
 CalculatorTask::CalculatorTask() : event_bus(EventBus(queueToCalculator, EVENT_CLIENT_CALCULATOR)) {}
 
-void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
+void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, [[maybe_unused]] EEventClient eventReceiver)
 {
 	switch(event)
 	{
@@ -32,5 +32,5 @@ void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient ev
 
 void CalculatorTask::process()
 {
-	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->OnEvent(event, msg, eventSender);});
+    event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver){this->OnEvent(event, msg, eventSender, eventReceiver);});
 }

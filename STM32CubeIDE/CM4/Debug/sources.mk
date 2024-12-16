@@ -59,6 +59,7 @@ Application/User/EventManagerCM4/src \
 Application/User/LWIP/App \
 Application/User/LWIP/Target \
 Application/User/Startup \
+Application/User/Temperature/src \
 Drivers/BSP/Components \
 Drivers/CMSIS \
 Drivers/STM32H7xx_HAL_Driver \

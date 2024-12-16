@@ -11,6 +11,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
@@ -37,7 +38,7 @@ protected:
     touchgfx::Box box2;
     touchgfx::DigitalClock Clock;
     touchgfx::TextArea MainTitle;
-    touchgfx::TextArea Text_Temperature;
+    touchgfx::TextAreaWithOneWildcard Text_Temperature;
     touchgfx::TextArea Text_Date;
     touchgfx::ClickListener< touchgfx::ScalableImage > HomeIcon;
     touchgfx::Button HomeButton;
@@ -47,6 +48,12 @@ protected:
     touchgfx::ButtonWithLabel ErrorsButton;
     touchgfx::ButtonWithLabel ClimateButton;
     touchgfx::ButtonWithLabel DSCButton;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
+    touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
 
 private:
 

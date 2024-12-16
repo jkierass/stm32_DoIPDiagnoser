@@ -16,7 +16,7 @@ public:
         model = m;
     }
 
-    virtual void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) {}
+    virtual void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver) {}
 
 protected:
     Model* model;

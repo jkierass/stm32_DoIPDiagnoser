@@ -39,3 +39,8 @@ void DateView::tearDownScreen()
 {
     DateViewBase::tearDownScreen();
 }
+
+void DateView::setTemperature(short int temperature)
+{
+    touchgfx::Unicode::snprintf(Text_TemperatureBuffer, TEXT_TEMPERATURE_SIZE, "%hi", temperature);
+}

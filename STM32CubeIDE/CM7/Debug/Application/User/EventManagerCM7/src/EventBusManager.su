@@ -1,3 +1,0 @@
-../Application/User/EventManagerCM7/src/EventBusManager.cpp:7:1:EventBus::EventBus(QueueHandle_t, EEventClient)	0	static
-../Application/User/EventManagerCM7/src/EventBusManager.cpp:12:6:bool EventBus::send(EEventType, UMessageData, EEventClient)	40	static
-../Application/User/EventManagerCM7/src/EventBusManager.cpp:28:6:void EventBus::receive(OnEventFunction)	72	static

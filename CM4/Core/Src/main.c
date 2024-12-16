@@ -49,6 +49,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 
+I2C_HandleTypeDef hi2c4;
+
 UART_HandleTypeDef huart1;
 
 /* Definitions for Task_EDaemonN */
@@ -86,6 +88,7 @@ const osThreadAttr_t Task_CTemp_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 static void MX_MDMA_Init(void);
 static void MX_GPIO_Init(void);
+static void MX_I2C4_Init(void);
 void StartTask_EDaemonN(void *argument);
 extern void StartTask_EventMgrM4(void *argument);
 extern void StartTask_EdiabasConnMgr(void *argument);
@@ -142,6 +145,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_MDMA_Init();
   MX_GPIO_Init();
+  MX_I2C4_Init();
   /* USER CODE BEGIN 2 */
   ipc_init();
   /* USER CODE END 2 */
@@ -200,6 +204,54 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+}
+
+/**
+  * @brief I2C4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C4_Init(void)
+{
+
+  /* USER CODE BEGIN I2C4_Init 0 */
+
+  /* USER CODE END I2C4_Init 0 */
+
+  /* USER CODE BEGIN I2C4_Init 1 */
+
+  /* USER CODE END I2C4_Init 1 */
+  hi2c4.Instance = I2C4;
+  hi2c4.Init.Timing = 0x10C0ECFF;
+  hi2c4.Init.OwnAddress1 = 0;
+  hi2c4.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c4.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c4.Init.OwnAddress2 = 0;
+  hi2c4.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c4.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c4.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c4, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c4, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C4_Init 2 */
+
+  /* USER CODE END I2C4_Init 2 */
+
 }
 
 /**
@@ -276,6 +328,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOG_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

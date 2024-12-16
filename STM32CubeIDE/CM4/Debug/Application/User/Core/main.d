@@ -81,11 +81,12 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../CM4/LWIP/Target/ethernetif.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h \
- ../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc/TemperatureTask.h \
  ../../../Common/Inc/EventBus.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Common/Inc/MessageDataTypes.h \
+ ../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h \
  ../../../STM32CubeIDE/CM4/Application/User/EventManagerCM4/inc/EventManagerCM4Task.h \
  ../../../Common/Inc/MessageDataTypes.h ../../../Common/Inc/cm_ipc.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
@@ -172,11 +173,12 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../CM4/LWIP/Target/ethernetif.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h:
-../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc/TemperatureTask.h:
 ../../../Common/Inc/EventBus.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Common/Inc/MessageDataTypes.h:
+../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h:
 ../../../STM32CubeIDE/CM4/Application/User/EventManagerCM4/inc/EventManagerCM4Task.h:
 ../../../Common/Inc/MessageDataTypes.h:
 ../../../Common/Inc/cm_ipc.h:

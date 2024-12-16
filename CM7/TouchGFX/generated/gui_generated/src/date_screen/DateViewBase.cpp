@@ -68,12 +68,6 @@ DateViewBase::DateViewBase() :
     MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6PNS));
     container1.add(MainTitle);
 
-    Text_Temperature.setPosition(546, 10, 105, 52);
-    Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
-    Text_Temperature.setLinespacing(0);
-    Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4U5S));
-    container1.add(Text_Temperature);
-
     Text_Date_1.setPosition(657, 36, 128, 24);
     Text_Date_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Text_Date_1.setLinespacing(0);
@@ -84,6 +78,14 @@ DateViewBase::DateViewBase() :
     HomeButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_OUTLINE_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_OUTLINE_PRESSED_ID));
     HomeButton.setAction(buttonCallback);
     container1.add(HomeButton);
+
+    Text_Temperature.setPosition(546, 10, 105, 52);
+    Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
+    Text_Temperature.setLinespacing(0);
+    Unicode::snprintf(Text_TemperatureBuffer, TEXT_TEMPERATURE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZOIX).getText());
+    Text_Temperature.setWildcard(Text_TemperatureBuffer);
+    Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SKQQ));
+    container1.add(Text_Temperature);
 
     add(container1);
 

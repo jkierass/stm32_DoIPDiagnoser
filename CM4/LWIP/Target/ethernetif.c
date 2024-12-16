@@ -43,7 +43,7 @@
 #define ETHIF_TX_TIMEOUT (2000U)
 /* USER CODE BEGIN OS_THREAD_STACK_SIZE_WITH_RTOS */
 /* Stack size of the interface thread */
-#define INTERFACE_THREAD_STACK_SIZE ( 350 )
+#define INTERFACE_THREAD_STACK_SIZE ( 1028 )
 /* USER CODE END OS_THREAD_STACK_SIZE_WITH_RTOS */
 /* Network interface name */
 #define IFNAME0 's'
@@ -808,16 +808,6 @@ void ethernet_link_thread(void* argument)
   for(;;)
   {
   PHYLinkState = LAN8742_GetLinkState(&LAN8742);
-
-  uint32_t basic_status;
-  HAL_ETH_ReadPHYRegister(&heth, 0x00, 0x01, &basic_status);
-  printf("Basic Status Register: 0x%04lx\n", basic_status);
-
-  uint32_t scsr;
-  HAL_ETH_ReadPHYRegister(&heth, 0x00, 0x1F, &scsr);
-  printf("Special Control/Status Register: 0x%04lx\n", scsr);
-
-
 
   if(netif_is_link_up(netif) && (PHYLinkState <= LAN8742_STATUS_LINK_DOWN))
   {

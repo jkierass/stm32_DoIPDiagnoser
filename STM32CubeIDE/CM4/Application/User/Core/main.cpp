@@ -1,8 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
+  * @file           : main.cpp
+  * @brief          : CM4 core main file of the project "DoIP Diagnostics Tool"
+  * @author			: Jakub Kierasiński
   ******************************************************************************
   * @attention
   *
@@ -24,9 +25,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "EdiabasDaemonNativeTask.h"
+#include "TemperatureTask.h"
 #include "EventManagerCM4Task.h"
 #include "cm_ipc.h"
+
+#include "IPCDaemonNativeTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +51,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+
+I2C_HandleTypeDef hi2c4;
 
 UART_HandleTypeDef huart1;
 
@@ -72,6 +77,13 @@ const osThreadAttr_t Task_EConnMgr_attributes = {
   .stack_size = 1028 * 4,
   .priority = (osPriority_t) osPriorityRealtime,
 };
+/* Definitions for Task_CTemp */
+osThreadId_t Task_CTempHandle;
+const osThreadAttr_t Task_CTemp_attributes = {
+  .name = "Task_CTemp",
+  .stack_size = 1028 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -79,9 +91,11 @@ const osThreadAttr_t Task_EConnMgr_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 static void MX_MDMA_Init(void);
 static void MX_GPIO_Init(void);
+static void MX_I2C4_Init(void);
 void StartTask_EDaemonN(void *argument);
 extern void StartTask_EventMgrM4(void *argument);
-extern void StartTask_EdiabasConnMgr(void *argument);
+extern void StartTask_EthernetConnMgr(void *argument);
+extern void StartTask_CTemp(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -89,9 +103,10 @@ extern void StartTask_EdiabasConnMgr(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-QueueHandle_t queueToEventManagerCM4 = xQueueCreate(8, sizeof(SMessage));
+QueueHandle_t queueToEventManagerCM4 = xQueueCreate(64, sizeof(SMessage));
 QueueHandle_t queueToNativeDaemon = xQueueCreate(16, sizeof(SMessage));
-QueueHandle_t queueToEdiabasConnMgr = xQueueCreate(64, sizeof(SMessage));
+QueueHandle_t queueToEthernetConnMgr = xQueueCreate(16, sizeof(SMessage));
+QueueHandle_t queueToTemperature = xQueueCreate(4, sizeof(SMessage));
 /* USER CODE END 0 */
 
 /**
@@ -135,6 +150,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_MDMA_Init();
   MX_GPIO_Init();
+  MX_I2C4_Init();
   /* USER CODE BEGIN 2 */
   ipc_init();
   /* USER CODE END 2 */
@@ -160,13 +176,16 @@ int main(void)
 
   /* Create the thread(s) */
   /* creation of Task_EDaemonN */
-  Task_EDaemonNHandle = osThreadNew(StartTask_EDaemonN, NULL, &Task_EDaemonN_attributes);
+ Task_EDaemonNHandle = osThreadNew(StartTask_EDaemonN, NULL, &Task_EDaemonN_attributes);
 
-  /* creation of Task_EventMgrM4 */
-  Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
+ /* creation of Task_EventMgrM4 */
+ Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
 
-  /* creation of Task_EConnMgr */
-  Task_EConnMgrHandle = osThreadNew(StartTask_EdiabasConnMgr, NULL, &Task_EConnMgr_attributes);
+ /* creation of Task_EConnMgr */
+ Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
+
+  /* creation of Task_CTemp */
+  Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -190,6 +209,54 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+}
+
+/**
+  * @brief I2C4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C4_Init(void)
+{
+
+  /* USER CODE BEGIN I2C4_Init 0 */
+
+  /* USER CODE END I2C4_Init 0 */
+
+  /* USER CODE BEGIN I2C4_Init 1 */
+
+  /* USER CODE END I2C4_Init 1 */
+  hi2c4.Instance = I2C4;
+  hi2c4.Init.Timing = 0x10C0ECFF;
+  hi2c4.Init.OwnAddress1 = 0;
+  hi2c4.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c4.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c4.Init.OwnAddress2 = 0;
+  hi2c4.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c4.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c4.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c4, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c4, 2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C4_Init 2 */
+
+  /* USER CODE END I2C4_Init 2 */
+
 }
 
 /**
@@ -269,6 +336,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

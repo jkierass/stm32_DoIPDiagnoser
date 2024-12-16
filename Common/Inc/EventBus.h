@@ -21,7 +21,7 @@ public:
 	 * @brief Callable object type that takes event type and message data as arguments. It is used for
 	 * 	      injecting a handle to process incoming events.
 	 */
-	typedef std::function<void(EEventType, UMessageData, EEventClient)> OnEventFunction;
+	typedef std::function<void(EEventType, UMessageData, EEventClient, EEventClient)> OnEventFunction;
 
 	EventBus(QueueHandle_t queueSelf, EEventClient senderSelf);
 

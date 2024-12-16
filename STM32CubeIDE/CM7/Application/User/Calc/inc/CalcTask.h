@@ -11,7 +11,7 @@ public:
 
 	void process();
 
-	void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender);
+	void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver);
 
 	CalculatorTask(CalculatorTask const&) = delete;
 	CalculatorTask& operator=(CalculatorTask const&) = delete;

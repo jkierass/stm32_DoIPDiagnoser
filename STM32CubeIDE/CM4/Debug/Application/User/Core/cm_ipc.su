@@ -1,8 +1,8 @@
 ../Application/User/Core/cm_ipc.c:84:6:HAL_HSEM_FreeCallback	16	static
 ../Application/User/Core/cm_ipc.c:102:5:ipc_init	24	static
-../Application/User/Core/cm_ipc.c:129:5:ipc_start	8	static
-../Application/User/Core/cm_ipc.c:135:13:prvCoreInterruptHandler	16	static,ignoring_inline_asm
-../Application/User/Core/cm_ipc.c:155:13:prvCoreWakeupInterruptHandler	16	static,ignoring_inline_asm
-../Application/User/Core/cm_ipc.c:175:6:vGenerateRemoteInterrupt	24	static,ignoring_inline_asm
-../Application/User/Core/cm_ipc.c:201:8:ipc_sendmsg	32	static
-../Application/User/Core/cm_ipc.c:216:8:ipc_recvmsg	32	static
+../Application/User/Core/cm_ipc.c:130:5:ipc_start	8	static
+../Application/User/Core/cm_ipc.c:136:13:prvCoreInterruptHandler	16	static,ignoring_inline_asm
+../Application/User/Core/cm_ipc.c:156:13:prvCoreWakeupInterruptHandler	16	static,ignoring_inline_asm
+../Application/User/Core/cm_ipc.c:176:6:vGenerateRemoteInterrupt	24	static,ignoring_inline_asm
+../Application/User/Core/cm_ipc.c:202:8:ipc_sendmsg	32	static
+../Application/User/Core/cm_ipc.c:217:8:ipc_recvmsg	32	static

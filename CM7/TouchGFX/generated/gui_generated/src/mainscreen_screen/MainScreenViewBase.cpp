@@ -32,10 +32,12 @@ MainScreenViewBase::MainScreenViewBase() :
     Text_Temperature.setPosition(546, 10, 105, 52);
     Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
     Text_Temperature.setLinespacing(0);
+    Unicode::snprintf(Text_TemperatureBuffer, TEXT_TEMPERATURE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_CGCY).getText());
+    Text_Temperature.setWildcard(Text_TemperatureBuffer);
     Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_05D4));
     container1.add(Text_Temperature);
 
-    MainTitle.setPosition(50, 11, 447, 52);
+    MainTitle.setPosition(12, 11, 447, 52);
     MainTitle.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
     MainTitle.setLinespacing(0);
     MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AIJU));

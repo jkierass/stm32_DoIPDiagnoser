@@ -19,7 +19,7 @@ void Model::tick()
 {
 	if(modelListener)
 	{
-		event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender){this->modelListener->OnEvent(event, msg, eventSender);});
+		event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver){modelListener->OnEvent(event, msg, eventSender, eventReceiver);});
 	}
 	else
 	{

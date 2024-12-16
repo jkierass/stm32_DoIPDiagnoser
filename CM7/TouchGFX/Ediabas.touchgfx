@@ -55,12 +55,17 @@
                   "Red": 247,
                   "Green": 64,
                   "Blue": 174
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_CGCY",
+                  "UseBuffer": true,
+                  "BufferSize": 4
                 }
               },
               {
                 "Type": "TextArea",
                 "Name": "MainTitle",
-                "X": 50,
+                "X": 12,
                 "Y": 11,
                 "Width": 447,
                 "Height": 52,
@@ -307,6 +312,11 @@
                   "Red": 247,
                   "Green": 64,
                   "Blue": 174
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_SASM",
+                  "UseBuffer": true,
+                  "BufferSize": 4
                 }
               },
               {
@@ -503,7 +513,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Diagnose_Motor"
+              "ActionComponent": "Diagnose_Motor1"
             }
           }
         ]
@@ -1525,21 +1535,6 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "Text_Temperature",
-                "X": 546,
-                "Y": 10,
-                "Width": 105,
-                "Height": 52,
-                "TextId": "__SingleUse_4U5S",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 247,
-                  "Green": 64,
-                  "Blue": 174
-                }
-              },
-              {
-                "Type": "TextArea",
                 "Name": "Text_Date_1",
                 "X": 657,
                 "Y": 36,
@@ -1563,6 +1558,26 @@
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_pressed.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_normal.png",
                 "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_normal.json"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_SKQQ",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_ZOIX",
+                  "UseBuffer": true,
+                  "BufferSize": 4
+                }
               }
             ]
           },
@@ -1789,7 +1804,7 @@
         ]
       },
       {
-        "Name": "Diagnose_Motor",
+        "Name": "Diagnose_Motor3",
         "Components": [
           {
             "Type": "ScrollList",
@@ -1798,7 +1813,475 @@
             "Width": 800,
             "Height": 406,
             "ItemTemplateName": "ParameterListElement",
-            "NumberofItems": 26,
+            "NumberofItems": 9,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "Container",
+            "Name": "container1",
+            "Width": 800,
+            "Height": 75,
+            "LockPosition": true,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box2",
+                "Y": -1,
+                "Width": 800,
+                "Height": 75,
+                "LockPosition": true
+              },
+              {
+                "Type": "DigitalClock",
+                "Name": "Clock",
+                "X": 659,
+                "Y": 7,
+                "Width": 124,
+                "Height": 26,
+                "LockPosition": true,
+                "TextColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextId": "__SingleUse_JBCV",
+                "DisplayLeadingZeroForHourIndicator": true,
+                "InitialHour": 10,
+                "InitialMinute": 10
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_MotorTitile",
+                "X": 198,
+                "Y": 12,
+                "Width": 240,
+                "Height": 52,
+                "LockPosition": true,
+                "TextId": "__SingleUse_6BK9",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 163,
+                  "Green": 186,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_CHN0",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "HomeIcon",
+                "X": 12,
+                "Y": 9,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "home_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "ReturnIcon",
+                "X": 86,
+                "Y": 10,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "return.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "PrevParameterIcon",
+                "X": 373,
+                "Y": 12,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_66A3FF.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "Button",
+                "Name": "HomeButton",
+                "X": 12,
+                "Y": 6,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "ReturnButton",
+                "X": 83,
+                "Y": 6,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "PrevParameter",
+                "X": 370,
+                "Y": 9,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_LVFG",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_UF7O",
+                  "UseBuffer": true,
+                  "BufferSize": 4
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SwitchToMainScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainScreen"
+            }
+          },
+          {
+            "InteractionName": "SwitchToDiagnose",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ReturnButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose"
+            }
+          },
+          {
+            "InteractionName": "PrevParam",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PrevParameter"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_Motor2"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Diagnose_Motor2",
+        "Components": [
+          {
+            "Type": "ScrollList",
+            "Name": "DiagnoseMotorList",
+            "Y": 74,
+            "Width": 800,
+            "Height": 406,
+            "ItemTemplateName": "ParameterListElement",
+            "NumberofItems": 9,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          },
+          {
+            "Type": "Container",
+            "Name": "container1",
+            "Width": 800,
+            "Height": 75,
+            "LockPosition": true,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box2",
+                "Y": -1,
+                "Width": 800,
+                "Height": 75,
+                "LockPosition": true
+              },
+              {
+                "Type": "DigitalClock",
+                "Name": "Clock",
+                "X": 659,
+                "Y": 7,
+                "Width": 124,
+                "Height": 26,
+                "LockPosition": true,
+                "TextColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextId": "__SingleUse_JQ0U",
+                "DisplayLeadingZeroForHourIndicator": true,
+                "InitialHour": 10,
+                "InitialMinute": 10
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_MotorTitile",
+                "X": 198,
+                "Y": 12,
+                "Width": 240,
+                "Height": 52,
+                "LockPosition": true,
+                "TextId": "__SingleUse_RA9L",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 163,
+                  "Green": 186,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "LockPosition": true,
+                "TextId": "__SingleUse_F8QU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "HomeIcon",
+                "X": 12,
+                "Y": 9,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "home_icon.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "ReturnIcon",
+                "X": 86,
+                "Y": 10,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "return.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "NextParameterIcon",
+                "X": 441,
+                "Y": 11,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_66A3FF.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "PrevParameterIcon",
+                "X": 373,
+                "Y": 12,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_66A3FF.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
+                "Type": "Button",
+                "Name": "HomeButton",
+                "X": 12,
+                "Y": 6,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "ReturnButton",
+                "X": 83,
+                "Y": 6,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "PrevParameter",
+                "X": 370,
+                "Y": 9,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "NextParameter",
+                "X": 438,
+                "Y": 9,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_0J0V",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_B5OB",
+                  "UseBuffer": true,
+                  "BufferSize": 4
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "SwitchToMainScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "HomeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "MainScreen"
+            }
+          },
+          {
+            "InteractionName": "SwitchToDiagnose",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ReturnButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose"
+            }
+          },
+          {
+            "InteractionName": "PrevParam",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "PrevParameter"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_Motor1"
+            }
+          },
+          {
+            "InteractionName": "NextParam",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "NextParameter"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_Motor3"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Diagnose_Motor1",
+        "Components": [
+          {
+            "Type": "ScrollList",
+            "Name": "DiagnoseMotorList",
+            "Y": 74,
+            "Width": 800,
+            "Height": 406,
+            "ItemTemplateName": "ParameterListElement",
+            "NumberofItems": 9,
             "Easing": "Back",
             "EasingOption": "Out",
             "SwipeAcceleration": 1.0,
@@ -1856,22 +2339,6 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "Text_Temperature",
-                "X": 546,
-                "Y": 10,
-                "Width": 105,
-                "Height": 52,
-                "LockPosition": true,
-                "TextId": "__SingleUse_S3OG",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 247,
-                  "Green": 64,
-                  "Blue": 174
-                }
-              },
-              {
-                "Type": "TextArea",
                 "Name": "Text_Date",
                 "X": 657,
                 "Y": 36,
@@ -1911,6 +2378,18 @@
                 "Clickable": true
               },
               {
+                "Type": "ScalableImage",
+                "Name": "NextParameterIcon",
+                "X": 441,
+                "Y": 11,
+                "Width": 55,
+                "Height": 55,
+                "LockPosition": true,
+                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_66A3FF.svg.png",
+                "ScalingAlgorithm": "Nearest-neighbor",
+                "Clickable": true
+              },
+              {
                 "Type": "Button",
                 "Name": "HomeButton",
                 "X": 12,
@@ -1926,13 +2405,45 @@
                 "Type": "Button",
                 "Name": "ReturnButton",
                 "X": 83,
-                "Y": 8,
+                "Y": 6,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
                 "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
                 "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
                 "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "Button",
+                "Name": "NextParameter",
+                "X": 438,
+                "Y": 9,
+                "Width": 60,
+                "Height": 60,
+                "LockPosition": true,
+                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
+                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Temperature",
+                "X": 546,
+                "Y": 10,
+                "Width": 105,
+                "Height": 52,
+                "TextId": "__SingleUse_S3JG",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 247,
+                  "Green": 64,
+                  "Blue": 174
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_QW4M",
+                  "UseBuffer": true,
+                  "BufferSize": 4
+                }
               }
             ]
           }
@@ -1960,6 +2471,18 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Diagnose"
+            }
+          },
+          {
+            "InteractionName": "NextParams",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "NextParameter"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_Motor2"
             }
           }
         ]
@@ -1995,14 +2518,14 @@
       {
         "Name": "ParameterListElement",
         "Width": 800,
-        "Height": 46,
+        "Height": 44,
         "Components": [
           {
             "Type": "ScalableImage",
             "Name": "scalableImage1",
             "Y": -2,
             "Width": 800,
-            "Height": 46,
+            "Height": 44,
             "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
@@ -2010,7 +2533,7 @@
             "Type": "ScalableImage",
             "Name": "scalableImage2",
             "X": -10,
-            "Y": 44,
+            "Y": 42,
             "Width": 820,
             "Height": 2,
             "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
@@ -2020,7 +2543,7 @@
             "Type": "TextArea",
             "Name": "text_Parameter",
             "X": 10,
-            "Y": 9,
+            "Y": 7,
             "Width": 390,
             "Height": 37,
             "TextId": "__SingleUse_AO8U",
@@ -2040,7 +2563,7 @@
             "Type": "TextArea",
             "Name": "text_Value",
             "X": 410,
-            "Y": 9,
+            "Y": 7,
             "Width": 390,
             "Height": 35,
             "TextId": "__SingleUse_FIEO",

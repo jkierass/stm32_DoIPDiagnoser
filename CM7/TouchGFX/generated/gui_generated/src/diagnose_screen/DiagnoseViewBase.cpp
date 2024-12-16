@@ -39,6 +39,8 @@ DiagnoseViewBase::DiagnoseViewBase() :
     Text_Temperature.setPosition(546, 10, 105, 52);
     Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
     Text_Temperature.setLinespacing(0);
+    Unicode::snprintf(Text_TemperatureBuffer, TEXT_TEMPERATURE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_SASM).getText());
+    Text_Temperature.setWildcard(Text_TemperatureBuffer);
     Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X1VW));
     container1.add(Text_Temperature);
 
@@ -126,8 +128,8 @@ void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     if (&src == &MotorButton)
     {
         //Interaction1
-        //When MotorButton clicked change screen to Diagnose_Motor
-        //Go to Diagnose_Motor with no screen transition
-        application().gotoDiagnose_MotorScreenNoTransition();
+        //When MotorButton clicked change screen to Diagnose_Motor1
+        //Go to Diagnose_Motor1 with no screen transition
+        application().gotoDiagnose_Motor1ScreenNoTransition();
     }
 }

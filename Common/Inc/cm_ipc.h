@@ -30,8 +30,6 @@ extern "C"
 {
 #endif
 
-#define IPC_SHARED_RAM_BASE 0x38001000  // Offset by 4KB to avoid Backup SRAM
-
 typedef void ipc_msg;
 
 int ipc_init(void);

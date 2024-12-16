@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "lwip.h": "c",
+        "main.h": "c"
     }
 }

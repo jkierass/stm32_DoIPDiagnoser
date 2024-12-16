@@ -9,18 +9,18 @@
 ParameterListElementBase::ParameterListElementBase()
 {
     setWidth(800);
-    setHeight(46);
+    setHeight(44);
     scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1.setPosition(0, -2, 800, 46);
+    scalableImage1.setPosition(0, -2, 800, 44);
     scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(scalableImage1);
 
     scalableImage2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2.setPosition(-10, 44, 820, 2);
+    scalableImage2.setPosition(-10, 42, 820, 2);
     scalableImage2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(scalableImage2);
 
-    text_Parameter.setPosition(10, 9, 390, 37);
+    text_Parameter.setPosition(10, 7, 390, 37);
     text_Parameter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_Parameter.setLinespacing(0);
     Unicode::snprintf(text_ParameterBuffer, TEXT_PARAMETER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_O14H).getText());
@@ -28,7 +28,7 @@ ParameterListElementBase::ParameterListElementBase()
     text_Parameter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_AO8U));
     add(text_Parameter);
 
-    text_Value.setPosition(410, 9, 390, 35);
+    text_Value.setPosition(410, 7, 390, 35);
     text_Value.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_Value.setLinespacing(0);
     Unicode::snprintf(text_ValueBuffer, TEXT_VALUE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_0S10).getText());

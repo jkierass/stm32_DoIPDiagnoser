@@ -27,6 +27,8 @@ public:
 
     virtual ~DatePresenter() {}
 
+    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver) override;
+
 private:
     DatePresenter();
 

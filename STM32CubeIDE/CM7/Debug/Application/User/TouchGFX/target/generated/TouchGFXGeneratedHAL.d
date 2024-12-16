@@ -75,9 +75,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp \
@@ -99,12 +99,18 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/DayElement.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/DayElementBase.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor_screen/Diagnose_MotorView.hpp \
- ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor_screen/Diagnose_MotorViewBase.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor_screen/Diagnose_MotorPresenter.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor3_screen/Diagnose_Motor3ViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ParameterListElement.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/ParameterListElementBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor2_screen/Diagnose_Motor2ViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor1_screen/Diagnose_Motor1ViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
@@ -253,9 +259,9 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/DigitalClock.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/clock/AbstractClock.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:
@@ -277,12 +283,18 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/DayElement.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/DayElementBase.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor_screen/Diagnose_MotorView.hpp:
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor_screen/Diagnose_MotorViewBase.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor_screen/Diagnose_MotorPresenter.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor3_screen/Diagnose_Motor3ViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ParameterListElement.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/ParameterListElementBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor2_screen/Diagnose_Motor2ViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor1_screen/Diagnose_Motor1ViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:

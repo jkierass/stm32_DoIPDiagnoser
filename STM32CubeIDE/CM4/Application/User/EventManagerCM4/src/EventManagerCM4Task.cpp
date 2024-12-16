@@ -45,15 +45,7 @@ std::vector<SMessage> EventManagerCM4Task::receive()
 		{
 			receivedMessages.push_back(msg);
 		}
-	}while(ret == pdTRUE);
-
-	if(receivedMessages.size() > 0)
-	{
-		for(auto msg : receivedMessages)
-		{
-//			LOG_DEBUG("EVENT_MANAGER: Received message. r[%d], s[%d], e[%d]", msg.event_receiver, msg.event_sender, msg.event_type);
-		}
-	}
+	} while(ret == pdTRUE);
 
 	return receivedMessages;
 }
@@ -65,16 +57,21 @@ void EventManagerCM4Task::send(const std::vector<SMessage>& messages)
 		auto eventReceiver = static_cast<EEventQueue>(msg.event_receiver);
 		auto it = queue_handles.find(eventReceiver);
 
+		QueueHandle_t targetQueue;
+
 		if(it != queue_handles.end())
 		{
-			QueueHandle_t targetQueue = queue_handles[eventReceiver];
-			if(targetQueue)
-			{
-				if(xQueueSend(targetQueue, static_cast<void*>(&msg), static_cast<TickType_t>(10)) != pdTRUE)
-				{
-//					LOG_DEBUG("[FATAL] Could not send message. e[%d], r[%d]", msg.event_type, msg.event_receiver);
-				}
-			}
+			targetQueue = queue_handles[eventReceiver];
+		}
+		else
+		{
+			// if receiver not found, then it means i has to be on CM7 side, so send to IPC connection damon.
+			targetQueue = queue_handles[EVENT_QUEUE_DAEMON_NATIVE];
+		}
+
+		if(targetQueue)
+		{
+			xQueueSend(targetQueue, static_cast<void*>(&msg), portMAX_DELAY);
 		}
 	}
 }

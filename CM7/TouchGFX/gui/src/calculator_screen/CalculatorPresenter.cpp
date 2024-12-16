@@ -22,7 +22,7 @@ bool CalculatorPresenter::sendEvent(EEventType event, UMessageData message, EEve
 	return model->sendEvent(event, message, eventReceiver);
 }
 
-void CalculatorPresenter::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender)
+void CalculatorPresenter::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, [[maybe_unused]] EEventClient eventReceiver)
 {
 	switch(event)
 	{

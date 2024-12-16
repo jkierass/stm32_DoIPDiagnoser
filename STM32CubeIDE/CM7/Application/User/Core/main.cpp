@@ -2,7 +2,8 @@
 /**
   ******************************************************************************
   * @file           : main.cpp
-  * @brief          : Main program body
+  * @brief          : CM7 core main file of the project "DoIP Diagnostics Tool"
+  * @author			: Jakub Kierasiński
   ******************************************************************************
   * @attention
   *
@@ -28,8 +29,9 @@
 #include "MessageDataTypes.h"
 #include "EventManagerCM7Task.h"
 #include "CalcTask.h"
-#include "EdiabasDaemonProxyTask.h"
 #include "cm_ipc.h"
+
+#include "IPCDaemonProxyTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

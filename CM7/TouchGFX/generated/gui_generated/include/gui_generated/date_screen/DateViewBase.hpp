@@ -14,6 +14,7 @@
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/scrollers/ScrollWheel.hpp>
 #include <gui/containers/DayElement.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
@@ -69,9 +70,9 @@ protected:
     touchgfx::Container container1;
     touchgfx::DigitalClock Clock;
     touchgfx::TextArea MainTitle;
-    touchgfx::TextArea Text_Temperature;
     touchgfx::TextArea Text_Date_1;
     touchgfx::Button HomeButton;
+    touchgfx::TextAreaWithOneWildcard Text_Temperature;
     touchgfx::ScalableImage HomeIcon;
     touchgfx::ScrollWheel scrollWheel_Month;
     touchgfx::DrawableListItems<DayElement, 3> scrollWheel_MonthListItems;
@@ -90,6 +91,12 @@ protected:
     touchgfx::TextArea text_Month;
     touchgfx::TextArea text_Year;
     touchgfx::ButtonWithLabel button_Confirm;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
+    touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
 
 private:
 

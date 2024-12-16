@@ -5,15 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../Application/User/EventManagerCM7/src/EventBusManager.cpp \
+../Application/User/EventManagerCM7/src/EventBus.cpp \
 ../Application/User/EventManagerCM7/src/EventManagerCM7Task.cpp 
 
 OBJS += \
-./Application/User/EventManagerCM7/src/EventBusManager.o \
+./Application/User/EventManagerCM7/src/EventBus.o \
 ./Application/User/EventManagerCM7/src/EventManagerCM7Task.o 
 
 CPP_DEPS += \
-./Application/User/EventManagerCM7/src/EventBusManager.d \
+./Application/User/EventManagerCM7/src/EventBus.d \
 ./Application/User/EventManagerCM7/src/EventManagerCM7Task.d 
 
 
@@ -24,7 +24,7 @@ Application/User/EventManagerCM7/src/%.o Application/User/EventManagerCM7/src/%.
 clean: clean-Application-2f-User-2f-EventManagerCM7-2f-src
 
 clean-Application-2f-User-2f-EventManagerCM7-2f-src:
-	-$(RM) ./Application/User/EventManagerCM7/src/EventBusManager.cyclo ./Application/User/EventManagerCM7/src/EventBusManager.d ./Application/User/EventManagerCM7/src/EventBusManager.o ./Application/User/EventManagerCM7/src/EventBusManager.su ./Application/User/EventManagerCM7/src/EventManagerCM7Task.cyclo ./Application/User/EventManagerCM7/src/EventManagerCM7Task.d ./Application/User/EventManagerCM7/src/EventManagerCM7Task.o ./Application/User/EventManagerCM7/src/EventManagerCM7Task.su
+	-$(RM) ./Application/User/EventManagerCM7/src/EventBus.cyclo ./Application/User/EventManagerCM7/src/EventBus.d ./Application/User/EventManagerCM7/src/EventBus.o ./Application/User/EventManagerCM7/src/EventBus.su ./Application/User/EventManagerCM7/src/EventManagerCM7Task.cyclo ./Application/User/EventManagerCM7/src/EventManagerCM7Task.d ./Application/User/EventManagerCM7/src/EventManagerCM7Task.o ./Application/User/EventManagerCM7/src/EventManagerCM7Task.su
 
 .PHONY: clean-Application-2f-User-2f-EventManagerCM7-2f-src
 

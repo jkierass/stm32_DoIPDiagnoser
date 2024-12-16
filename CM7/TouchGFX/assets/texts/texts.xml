@@ -6,6 +6,54 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_QW4M" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_S3JG" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_B5OB" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_0J0V" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_UF7O" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_LVFG" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZOIX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_SKQQ" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_SASM" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_CGCY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_CHN0" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_6BK9" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Motor</Translation>
+      </Text>
+      <Text Id="__SingleUse_JBCV" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_F8QU" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_RA9L" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Motor</Translation>
+      </Text>
+      <Text Id="__SingleUse_JQ0U" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_TL8J" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Dynamic&#10;Stability&#10;Control</Translation>
       </Text>
@@ -26,9 +74,6 @@
       </Text>
       <Text Id="__SingleUse_2LSX" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">01.01.2024</Translation>
-      </Text>
-      <Text Id="__SingleUse_S3OG" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">23°C</Translation>
       </Text>
       <Text Id="__SingleUse_2O72" Alignment="Left" TypographyId="Large">
         <Translation Language="GB">Motor</Translation>
@@ -60,9 +105,6 @@
       <Text Id="__SingleUse_6PNS" Alignment="Center" TypographyId="Large">
         <Translation Language="GB">Date and Time</Translation>
       </Text>
-      <Text Id="__SingleUse_4U5S" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">23°C</Translation>
-      </Text>
       <Text Id="__SingleUse_6FAH" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">01.01.2024</Translation>
       </Text>
@@ -70,10 +112,10 @@
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_AIJU" Alignment="Center" TypographyId="Large">
-        <Translation Language="GB">Ediabas Diagnoser</Translation>
+        <Translation Language="GB">DoIP Diagnoser</Translation>
       </Text>
       <Text Id="__SingleUse_05D4" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">23°C</Translation>
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
       </Text>
       <Text Id="__SingleUse_DGLN" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">01.01.2024</Translation>
@@ -88,7 +130,7 @@
         <Translation Language="GB">Diagnoser</Translation>
       </Text>
       <Text Id="__SingleUse_X1VW" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">23°C</Translation>
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
       </Text>
       <Text Id="__SingleUse_3EQW" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">Confirm</Translation>

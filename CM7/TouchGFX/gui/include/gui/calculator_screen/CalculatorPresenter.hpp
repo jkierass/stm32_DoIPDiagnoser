@@ -29,7 +29,7 @@ public:
 
     virtual ~CalculatorPresenter() {}
 
-    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender) override;
+    void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver) override;
 
     bool sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver);
 

@@ -17,6 +17,8 @@ public:
     virtual void scrollWheel_MinuteUpdateItem(DayElement& item, int16_t itemIndex) override;
     virtual void scrollWheel_HourUpdateItem(DayElement& item, int16_t itemIndex) override;
     virtual void scrollWheel_YearUpdateItem(DayElement& item, int16_t itemIndex) override;
+
+    void setTemperature(short int temperature);
 protected:
 };
 

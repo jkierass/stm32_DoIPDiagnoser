@@ -17,8 +17,12 @@
 #include <gui/calculator_screen/CalculatorPresenter.hpp>
 #include <gui/date_screen/DateView.hpp>
 #include <gui/date_screen/DatePresenter.hpp>
-#include <gui/diagnose_motor_screen/Diagnose_MotorView.hpp>
-#include <gui/diagnose_motor_screen/Diagnose_MotorPresenter.hpp>
+#include <gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp>
+#include <gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp>
+#include <gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp>
+#include <gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp>
+#include <gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp>
+#include <gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp>
 
 using namespace touchgfx;
 
@@ -91,15 +95,41 @@ void FrontendApplicationBase::gotoDateScreenNoTransitionImpl()
     touchgfx::makeTransition<DateView, DatePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Diagnose_Motor
+// Diagnose_Motor3
 
-void FrontendApplicationBase::gotoDiagnose_MotorScreenNoTransition()
+void FrontendApplicationBase::gotoDiagnose_Motor3ScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_MotorScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_Motor3ScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoDiagnose_MotorScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoDiagnose_Motor3ScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<Diagnose_MotorView, Diagnose_MotorPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<Diagnose_Motor3View, Diagnose_Motor3Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Diagnose_Motor2
+
+void FrontendApplicationBase::gotoDiagnose_Motor2ScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_Motor2ScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDiagnose_Motor2ScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Diagnose_Motor2View, Diagnose_Motor2Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Diagnose_Motor1
+
+void FrontendApplicationBase::gotoDiagnose_Motor1ScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_Motor1ScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDiagnose_Motor1ScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Diagnose_Motor1View, Diagnose_Motor1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
