@@ -76,10 +76,10 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/CalcTask.h \
  ../../../Common/Inc/EventBus.h ../../../Common/Inc/MessageDataTypes.h \
  ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h \
- ../../../STM32CubeIDE/CM7/Application/User/EdiabasDaemonProxy/inc/EdiabasDaemonProxyTask.h \
  ../../../Common/Inc/cm_ipc.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h \
+ ../../../STM32CubeIDE/CM7/Application/User/IPCDaemonProxy/inc/IPCDaemonProxyTask.h
 ../../../CM7/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM7/Core/Inc/stm32h7xx_hal_conf.h:
@@ -158,7 +158,7 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Common/Inc/EventBus.h:
 ../../../Common/Inc/MessageDataTypes.h:
 ../../../STM32CubeIDE/CM7/Application/User/Calc/inc/Calc.h:
-../../../STM32CubeIDE/CM7/Application/User/EdiabasDaemonProxy/inc/EdiabasDaemonProxyTask.h:
 ../../../Common/Inc/cm_ipc.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h:
+../../../STM32CubeIDE/CM7/Application/User/IPCDaemonProxy/inc/IPCDaemonProxyTask.h:

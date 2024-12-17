@@ -1,7 +1,7 @@
-../Application/User/Core/main.cpp:903:13:void TouchGFX_Task(void*)	1
-../Application/User/Core/main.cpp:303:6:void SystemClock_Config()	4
-../Application/User/Core/main.cpp:154:5:int main()	32
-../Application/User/Core/main.cpp:885:16:int __io_putchar(int)	1
-../Application/User/Core/main.cpp:1005:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
-../Application/User/Core/main.cpp:1021:6:void Error_Handler()	1
-../Application/User/Core/main.cpp:1030:1:cpp)	1
+../Application/User/Core/main.cpp:901:13:void TouchGFX_Task(void*)	1
+../Application/User/Core/main.cpp:301:6:void SystemClock_Config()	4
+../Application/User/Core/main.cpp:155:5:int main()	32
+../Application/User/Core/main.cpp:883:16:int __io_putchar(int)	1
+../Application/User/Core/main.cpp:1003:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
+../Application/User/Core/main.cpp:1019:6:void Error_Handler()	1
+../Application/User/Core/main.cpp:1028:1:cpp)	1

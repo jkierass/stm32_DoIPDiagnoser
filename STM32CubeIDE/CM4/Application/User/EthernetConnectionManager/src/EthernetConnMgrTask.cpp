@@ -111,7 +111,7 @@ void StartTask_EthernetConnMgr(void *argument) {
 }
 
 
-EthernetConnectionManagerTask::EthernetConnectionManagerTask() : event_bus(EventBus(queueToEthernetConnMgr, EVENT_CLIENT_Ethernet_CONNECTION_MANAGER)) {}
+EthernetConnectionManagerTask::EthernetConnectionManagerTask() : event_bus(EventBus(queueToEthernetConnMgr, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER)) {}
 
 void EthernetConnectionManagerTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, [[maybe_unused]] EEventClient eventReceiver)
 {

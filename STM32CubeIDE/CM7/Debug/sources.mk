@@ -43,8 +43,8 @@ Application/User/Calc/src \
 Application/User/Calc/tinyexpr \
 Application/User/Core/Logger/src \
 Application/User/Core \
-Application/User/EdiabasDaemonProxy/src \
 Application/User/EventManagerCM7/src \
+Application/User/IPCDaemonProxy/src \
 Application/User/LIBJPEG/App \
 Application/User/Startup \
 Application/User/TouchGFX/App \

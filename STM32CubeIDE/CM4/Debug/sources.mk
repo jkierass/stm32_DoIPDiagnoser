@@ -53,9 +53,9 @@ Application/User/Debug/Drivers/STM32H7xx_HAL_Driver \
 Application/User/Debug/Middlewares/FreeRTOS \
 Application/User/Debug/Middlewares/LwIP \
 Application/User/Debug \
-Application/User/EdiabasConnectionManager/src \
-Application/User/EdiabasDaemonNative/src \
+Application/User/EthernetConnectionManager/src \
 Application/User/EventManagerCM4/src \
+Application/User/IPCDaemonNative/src \
 Application/User/LWIP/App \
 Application/User/LWIP/Target \
 Application/User/Startup \

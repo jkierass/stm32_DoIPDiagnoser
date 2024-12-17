@@ -2,21 +2,38 @@
 /**
   ******************************************************************************
   * @file           : main.cpp
-  * @brief          : CM4 core main file of the project "DoIP Diagnostics Tool"
-  * @author			: Jakub Kierasiński
+  * @brief          : Main file for the CM4 core in the "DoIP Diagnostics Tool" project.
+  * @author         : Jakub Kierasiński
+  * @date           : 2024
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * This software is provided under the MIT License.
   *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
+  * Copyright (c) 2024 Jakub Kierasiński
+  *
+  * Permission is hereby granted, free of charge, to any person obtaining a copy
+  * of this software and associated documentation files (the "Software"), to deal
+  * in the Software without restriction, including without limitation the rights
+  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  * copies of the Software, and to permit persons to whom the Software is
+  * furnished to do so, subject to the following conditions:
+  *
+  * The above copyright notice and this permission notice shall be included in
+  * all copies or substantial portions of the Software.
+  *
+  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  * THE SOFTWARE.
   *
   ******************************************************************************
   */
+
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -116,99 +133,102 @@ QueueHandle_t queueToTemperature = xQueueCreate(4, sizeof(SMessage));
 int main(void)
 {
 
-  /* USER CODE BEGIN 1 */
-  /* USER CODE END 1 */
+    /* USER CODE BEGIN 1 */
+    /* USER CODE END 1 */
 
-/* USER CODE BEGIN Boot_Mode_Sequence_1 */
-  /*HW semaphore Clock enable*/
-  __HAL_RCC_HSEM_CLK_ENABLE();
-  /* Activate HSEM notification for Cortex-M4*/
-  HAL_HSEM_ActivateNotification(__HAL_HSEM_SEMID_TO_MASK(HSEM_ID_0));
-  /*
-  Domain D2 goes to STOP mode (Cortex-M4 in deep-sleep) waiting for Cortex-M7 to
-  perform system initialization (system clock config, external memory configuration.. )
-  */
-  HAL_PWREx_ClearPendingEvent();
-  HAL_PWREx_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFE, PWR_D2_DOMAIN);
-  /* Clear HSEM flag */
-  __HAL_HSEM_CLEAR_FLAG(__HAL_HSEM_SEMID_TO_MASK(HSEM_ID_0));
+    /* USER CODE BEGIN Boot_Mode_Sequence_1 */
+    /*HW semaphore Clock enable*/
+    __HAL_RCC_HSEM_CLK_ENABLE();
+    /* Activate HSEM notification for Cortex-M4*/
+    HAL_HSEM_ActivateNotification(__HAL_HSEM_SEMID_TO_MASK(HSEM_ID_0));
+    /*
+    Domain D2 goes to STOP mode (Cortex-M4 in deep-sleep) waiting for Cortex-M7 to
+    perform system initialization (system clock config, external memory configuration.. )
+    */
+    HAL_PWREx_ClearPendingEvent();
+    HAL_PWREx_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFE, PWR_D2_DOMAIN);
+    /* Clear HSEM flag */
+    __HAL_HSEM_CLEAR_FLAG(__HAL_HSEM_SEMID_TO_MASK(HSEM_ID_0));
 
-/* USER CODE END Boot_Mode_Sequence_1 */
-  /* MCU Configuration--------------------------------------------------------*/
+    /* USER CODE END Boot_Mode_Sequence_1 */
+    /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+    HAL_Init();
 
-  /* USER CODE BEGIN Init */
+    /* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+    /* USER CODE END Init */
 
-  /* USER CODE BEGIN SysInit */
+    /* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+    /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_MDMA_Init();
-  MX_GPIO_Init();
-  MX_I2C4_Init();
-  /* USER CODE BEGIN 2 */
-  ipc_init();
-  /* USER CODE END 2 */
+    /* Initialize all configured peripherals */
+    MX_MDMA_Init();
+    MX_GPIO_Init();
+    MX_I2C4_Init();
+    /* USER CODE BEGIN 2 */
+    ipc_init();
+    /* USER CODE END 2 */
 
-  /* Init scheduler */
-  osKernelInitialize();
+    /* Init scheduler */
+    osKernelInitialize();
 
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
+    /* USER CODE BEGIN RTOS_MUTEX */
+    /* add mutexes, ... */
+    /* USER CODE END RTOS_MUTEX */
 
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
+    /* USER CODE BEGIN RTOS_SEMAPHORES */
+    /* add semaphores, ... */
+    /* USER CODE END RTOS_SEMAPHORES */
 
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
+    /* USER CODE BEGIN RTOS_TIMERS */
+    /* start timers, add new ones, ... */
+    /* USER CODE END RTOS_TIMERS */
 
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
+    /* USER CODE BEGIN RTOS_QUEUES */
+    /* add queues, ... */
+    /* USER CODE END RTOS_QUEUES */
 
-  /* Create the thread(s) */
-  /* creation of Task_EDaemonN */
- Task_EDaemonNHandle = osThreadNew(StartTask_EDaemonN, NULL, &Task_EDaemonN_attributes);
+    /* Create the thread(s) */
+    /* creation of Task_EDaemonN */
+    Task_EDaemonNHandle = osThreadNew(StartTask_EDaemonN, NULL, &Task_EDaemonN_attributes);
 
- /* creation of Task_EventMgrM4 */
- Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
+    /* creation of Task_EventMgrM4 */
+    Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
 
- /* creation of Task_EConnMgr */
- Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
+    /* creation of Task_EConnMgr */
+    Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
 
-  /* creation of Task_CTemp */
-  Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
+    /* creation of Task_CTemp */
+    Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
 
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
+    /* creation of Task_CTemp */
+    Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
 
-  /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
+    /* USER CODE BEGIN RTOS_THREADS */
+    /* add threads, ... */
+    /* USER CODE END RTOS_THREADS */
 
-  /* Start scheduler */
-  osKernelStart();
+    /* USER CODE BEGIN RTOS_EVENTS */
+    /* add events, ... */
+    /* USER CODE END RTOS_EVENTS */
 
-  /* We should never get here as control is now taken by the scheduler */
+    /* Start scheduler */
+    osKernelStart();
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
+    /* We should never get here as control is now taken by the scheduler */
 
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
+    while (1)
+    {
+        /* USER CODE END WHILE */
+
+        /* USER CODE BEGIN 3 */
+    }
+    /* USER CODE END 3 */
 }
 
 /**

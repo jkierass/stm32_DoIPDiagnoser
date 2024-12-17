@@ -34,13 +34,12 @@ typedef void ipc_msg;
 
 int ipc_init(void);
 int ipc_start(void);
-void ipc_isr(void);
 
 size_t ipc_sendmsg(ipc_msg* msg, uint32_t size, int32_t timeout);
 size_t ipc_recvmsg(ipc_msg* msg, uint32_t size, int32_t timeout);
 
-#define CM7_TO_CM4_BUFFER_SIZE		(28*50)
-#define CM4_TO_CM7_BUFFER_SIZE		(28*50)
+#define CM7_TO_CM4_BUFFER_SIZE		(28*100)
+#define CM4_TO_CM7_BUFFER_SIZE		(28*100)
 
 typedef struct {
 	MessageBufferHandle_t cm7_to_cm4_handle;
@@ -50,10 +49,6 @@ typedef struct {
 	uint32_t cm7_to_cm4_buffer[CM7_TO_CM4_BUFFER_SIZE/4];
 	uint32_t cm4_to_cm7_buffer[CM4_TO_CM7_BUFFER_SIZE/4];
 }shared_ram_t; // Ensure proper alignment;
-
-#define HSEM_INIT_CM7 26U  // Semaphore for CM7 initialization
-#define HSEM_INIT_CM4 27U  // Semaphore for CM4 initialization
-
 
 #ifdef __cplusplus
 }

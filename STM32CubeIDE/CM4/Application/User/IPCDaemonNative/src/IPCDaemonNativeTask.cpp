@@ -35,7 +35,7 @@ void IPCDaemonNativeTask::OnEvent(EEventType event, UMessageData msg, EEventClie
 		break;
 	}
 	// if recipient is on CM4 side, then forward to event manager.
-	case EVENT_CLIENT_IPC_CONNECTION_MANAGER:
+	case EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER:
 	case EVENT_CLIENT_THERMOMETER:
 		event_bus.send(event, msg, eventReceiver);
 	default:
@@ -54,9 +54,9 @@ void IPCDaemonNativeTask::processIpcReceive()
 	}
 }
 
-
 void IPCDaemonNativeTask::process()
 {
 	processIpcReceive();
-	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver){this->OnEvent(event, msg, eventSender, eventReceiver);});
+	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver)
+                      {this->OnEvent(event, msg, eventSender, eventReceiver);});
 }

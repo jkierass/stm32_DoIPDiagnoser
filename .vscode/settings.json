@@ -2,6 +2,9 @@
     "files.associations": {
         "cmath": "cpp",
         "lwip.h": "c",
-        "main.h": "c"
-    }
+        "main.h": "c",
+        "cm_ipc.h": "c",
+        "freertos.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

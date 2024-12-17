@@ -25,7 +25,7 @@ void IPCDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventClien
 	switch(eventReceiver)
 	{
 	// if recipient is on CM4 side, then send message through IPC.
-	case EVENT_CLIENT_IPC_CONNECTION_MANAGER:
+	case EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER:
 	case EVENT_CLIENT_THERMOMETER:
 	{
 		SMessage sMsg;
@@ -57,7 +57,6 @@ void IPCDaemonProxyTask::processIpcReceive()
 	size_t ret = ipc_recvmsg(&sMsg, len, 0);
 	if(ret == len)
 	{
-//		LOG_DEBUG("msg received");
 		OnEvent(sMsg.event_type, sMsg.message_data, sMsg.event_sender, sMsg.event_receiver);
 	}
 }
@@ -65,5 +64,6 @@ void IPCDaemonProxyTask::processIpcReceive()
 void IPCDaemonProxyTask::process()
 {
 	processIpcReceive();
-	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver){this->OnEvent(event, msg, eventSender, eventReceiver);});
+	event_bus.receive([this](EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver)
+					  {this->OnEvent(event, msg, eventSender, eventReceiver);});
 }

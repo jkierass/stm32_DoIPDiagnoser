@@ -5,5 +5,5 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/g
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:11:13:DiagnoseView::~DiagnoseView()	8	static
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:11:13:virtual DiagnoseView::~DiagnoseView()	8	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:4:1:DiagnoseView::DiagnoseView()	8	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:19:6:void DiagnoseView::setTemperature(short int)	0	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:9:6:virtual void DiagnoseView::setupScreen()	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:19:6:void DiagnoseView::setTemperature(short int)	8	static

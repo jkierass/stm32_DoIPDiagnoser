@@ -86,11 +86,11 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Common/Inc/MessageDataTypes.h \
- ../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h \
  ../../../STM32CubeIDE/CM4/Application/User/EventManagerCM4/inc/EventManagerCM4Task.h \
  ../../../Common/Inc/MessageDataTypes.h ../../../Common/Inc/cm_ipc.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
+ ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h \
+ ../../../STM32CubeIDE/CM4/Application/User/IPCDaemonNative/inc/IPCDaemonNativeTask.h
 ../../../CM4/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM4/Core/Inc/stm32h7xx_hal_conf.h:
@@ -178,9 +178,9 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../../../Common/Inc/MessageDataTypes.h:
-../../../STM32CubeIDE/CM4/Application/User/EdiabasDaemonNative/inc/EdiabasDaemonNativeTask.h:
 ../../../STM32CubeIDE/CM4/Application/User/EventManagerCM4/inc/EventManagerCM4Task.h:
 ../../../Common/Inc/MessageDataTypes.h:
 ../../../Common/Inc/cm_ipc.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h:
+../../../STM32CubeIDE/CM4/Application/User/IPCDaemonNative/inc/IPCDaemonNativeTask.h:

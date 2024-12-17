@@ -23,31 +23,19 @@
 
 #include "cm_ipc.h"
 
-#ifndef IPC_CHECK_sbSEND_COMPLETED
-/*
- Please make sure the below code is placed in FreeRTOSConfig.h:
-   void vGenerateRemoteInterrupt(void * xUpdatedMessageBuffer);
-   #define sbSEND_COMPLETED( pxStreamBuffer ) vGenerateRemoteInterrupt( pxStreamBuffer )
-   #define sbSEND_COMPLETED_FROM_ISR( pxStreamBuffer, pxHigherPriorityTaskWoken ) vGenerateRemoteInterrupt( pxStreamBuffer )
-   #define sbRECEIVE_COMPLETED( pxStreamBuffer ) vGenerateRemoteInterrupt( pxStreamBuffer )
-   #define sbRECEIVE_COMPLETED_FROM_ISR( pxStreamBuffer, pxHigherPriorityTaskWoken ) vGenerateRemoteInterrupt( pxStreamBuffer )
- */
-#error "Please make sure the above comment instructions are followed"
-#endif
-
 #define HSEM_PROCESS		(27U)
 
 #ifdef CORE_CM7
 #define HSEM_IRQn               HSEM1_IRQn
-#define HSEM_TX_ID              (28U) /* use HW semaphore 8*/
-#define HSEM_RX_ID              (29U) /* use HW semaphore 9*/
+#define HSEM_TX_ID              (28U)
+#define HSEM_RX_ID              (29U)
 
 #define HSEM_TX_WAKEUP			(30U)
 #define HSEM_RX_WAKEUP			(31U)
 #elif CORE_CM4
 #define HSEM_IRQn               HSEM2_IRQn
-#define HSEM_TX_ID              (29U) /* use HW semaphore 8*/
-#define HSEM_RX_ID              (28U) /* use HW semaphore 9*/
+#define HSEM_TX_ID              (29U)
+#define HSEM_RX_ID              (28U)
 
 #define HSEM_TX_WAKEUP			(31U)
 #define HSEM_RX_WAKEUP			(30U)
@@ -57,7 +45,6 @@
 
 #if defined(__GNUC__)
 
-/* TODO: add initialization (= 0) for CM7 ??? */
 static volatile shared_ram_t shared_ram __attribute__((section(".shared_ram")));
 
 
@@ -83,46 +70,31 @@ static void prvCoreWakeupInterruptHandler(void);
   */
 void HAL_HSEM_FreeCallback(uint32_t SemMask)
 {
-  if((SemMask &  __HAL_HSEM_SEMID_TO_MASK(HSEM_RX_ID))!= 0)
-  {
-    /* Re-Activate HSEM notification */
-    HAL_HSEM_ActivateNotification(__HAL_HSEM_SEMID_TO_MASK(HSEM_RX_ID));
-    /* New message received */
-    prvCoreInterruptHandler();
-  }
+    if((SemMask &  __HAL_HSEM_SEMID_TO_MASK(HSEM_RX_ID))!= 0)
+    {
+        /* Re-Activate HSEM notification */
+        HAL_HSEM_ActivateNotification(__HAL_HSEM_SEMID_TO_MASK(HSEM_RX_ID));
+        /* New message received */
+        prvCoreInterruptHandler();
+    }
 
-  if((SemMask & __HAL_HSEM_SEMID_TO_MASK(HSEM_TX_WAKEUP)) !=0){
-	/* Re-Activate HSEM notification */
-	HAL_HSEM_ActivateNotification(__HAL_HSEM_SEMID_TO_MASK(HSEM_TX_WAKEUP));
-	/* TX queue is empty => wake-up task trying to send a message */
-	prvCoreWakeupInterruptHandler();
-  }
+    if((SemMask & __HAL_HSEM_SEMID_TO_MASK(HSEM_TX_WAKEUP)) !=0)
+    {
+        /* Re-Activate HSEM notification */
+        HAL_HSEM_ActivateNotification(__HAL_HSEM_SEMID_TO_MASK(HSEM_TX_WAKEUP));
+        /* TX queue is empty => wake-up task trying to send a message */
+        prvCoreWakeupInterruptHandler();
+    }
 }
 
 int ipc_init(void)
 {
-    /*HW semaphore Clock enable*/
-  __HAL_RCC_HSEM_CLK_ENABLE();
-#ifdef CORE_CM4
-  	HAL_HSEM_Take(HSEM_INIT_CM4, 0);
-#elif defined(CORE_CM7)
+#ifdef CORE_CM7
 	memset((void*)(&shared_ram.cm7_to_cm4_buffer), 0, CM7_TO_CM4_BUFFER_SIZE);
 	memset((void*)(&shared_ram.cm4_to_cm7_buffer), 0, CM4_TO_CM7_BUFFER_SIZE);
 #endif
     shared_ram.cm7_to_cm4_handle = xMessageBufferCreateStatic(CM7_TO_CM4_BUFFER_SIZE, (uint8_t*)shared_ram.cm7_to_cm4_buffer,(StaticMessageBuffer_t*) &shared_ram.cm7_to_cm4_xmsg);
     shared_ram.cm4_to_cm7_handle = xMessageBufferCreateStatic(CM4_TO_CM7_BUFFER_SIZE, (uint8_t*)shared_ram.cm4_to_cm7_buffer,(StaticMessageBuffer_t*) &shared_ram.cm4_to_cm7_xmsg);
-
-#ifdef CORE_CM7
-    // Signal CM4 that CM7 has completed initialization
-    HAL_HSEM_Release(HSEM_INIT_CM4, 0);
-    // Wait for CM4 to complete initialization
-    HAL_HSEM_Take(HSEM_INIT_CM7, 0);
-#elif defined(CORE_CM4)
-    // Signal CM7 that CM4 has completed initialization
-    HAL_HSEM_Release(HSEM_INIT_CM7, 0);
-#endif
-
-
 
     return 0;
 }
@@ -142,9 +114,7 @@ static void prvCoreInterruptHandler(void)
     	return;
     }
 
-
-	xMessageBufferSendCompletedFromISR(xrx_data_buf,
-									   &xHigherPriorityTaskWoken);
+	xMessageBufferSendCompletedFromISR(xrx_data_buf, &xHigherPriorityTaskWoken);
 
     /* Normal FreeRTOS yield from interrupt semantics, where
        xHigherPriorityTaskWoken is initialzed to pdFALSE and will then get set
@@ -162,9 +132,7 @@ static void prvCoreWakeupInterruptHandler(void)
     	return;
     }
 
-
-	xMessageBufferReceiveCompletedFromISR(xtx_data_buf,
-									   &xHigherPriorityTaskWoken);
+	xMessageBufferReceiveCompletedFromISR(xtx_data_buf, &xHigherPriorityTaskWoken);
 
     /* Normal FreeRTOS yield from interrupt semantics, where
        xHigherPriorityTaskWoken is initialzed to pdFALSE and will then get set

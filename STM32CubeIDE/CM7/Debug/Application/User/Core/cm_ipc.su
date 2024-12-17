@@ -1,6 +1,6 @@
-../Application/User/Core/cm_ipc.c:84:6:HAL_HSEM_FreeCallback	16	static,ignoring_inline_asm
-../Application/User/Core/cm_ipc.c:102:5:ipc_init	40	static
-../Application/User/Core/cm_ipc.c:130:5:ipc_start	8	static
-../Application/User/Core/cm_ipc.c:176:6:vGenerateRemoteInterrupt	8	static,ignoring_inline_asm
-../Application/User/Core/cm_ipc.c:202:8:ipc_sendmsg	4	static
-../Application/User/Core/cm_ipc.c:217:8:ipc_recvmsg	4	static
+../Application/User/Core/cm_ipc.c:72:6:HAL_HSEM_FreeCallback	16	static,ignoring_inline_asm
+../Application/User/Core/cm_ipc.c:91:5:ipc_init	32	static
+../Application/User/Core/cm_ipc.c:103:5:ipc_start	8	static
+../Application/User/Core/cm_ipc.c:145:6:vGenerateRemoteInterrupt	8	static,ignoring_inline_asm
+../Application/User/Core/cm_ipc.c:171:8:ipc_sendmsg	4	static
+../Application/User/Core/cm_ipc.c:186:8:ipc_recvmsg	4	static
