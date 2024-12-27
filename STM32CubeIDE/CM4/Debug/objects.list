@@ -1,3 +1,4 @@
+"./Application/User/Core/Logger/src/Logger.o"
 "./Application/User/Core/cm_ipc.o"
 "./Application/User/Core/freertos.o"
 "./Application/User/Core/main.o"

@@ -7,3 +7,5 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/g
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:3:1:MainScreenView::MainScreenView()	1
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:8:6:virtual void MainScreenView::setupScreen()	1
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:18:6:void MainScreenView::setTemperature(short int)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:24:6:void MainScreenView::setDate(uint8_t, uint8_t, unsigned int)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/mainscreen_screen/MainScreenView.cpp:30:6:void MainScreenView::setTime(uint8_t, uint8_t)	1

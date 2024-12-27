@@ -32,6 +32,8 @@ public:
 private:
     Diagnose_Motor2Presenter();
 
+    void loadCache();
+
     Diagnose_Motor2View& view;
 };
 

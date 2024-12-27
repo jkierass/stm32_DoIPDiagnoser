@@ -22,7 +22,7 @@ void CalculatorTask::OnEvent(EEventType event, UMessageData msg, EEventClient ev
 	{
 		case ASYNC_REQUEST_CALCULATE:
 			UMessageData replyMessage;
-			calculator_instance.calculate(&msg.calculation_request[0], &replyMessage.calculation_result[0]);
+			calculator_instance.calculate(msg.calculation_request, replyMessage.calculation_result);
 			event_bus.send(ASYNC_COMPLETED_CALCULATE, replyMessage, eventSender);
 			break;
 		default:

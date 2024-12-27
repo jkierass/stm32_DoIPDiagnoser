@@ -32,6 +32,8 @@ public:
 private:
     DiagnosePresenter();
 
+    void loadCache();
+
     DiagnoseView& view;
 };
 

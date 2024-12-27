@@ -2,11 +2,13 @@
 
 extern QueueHandle_t queueToEventManagerCM4;
 extern QueueHandle_t queueToNativeDaemon;
+extern QueueHandle_t queueToEthernetConnMgr;
 
 void StartTask_EventMgrM4(void *argument)
 {
 	EventManagerCM4Task eventManagerInstance;
 	eventManagerInstance.addQueue(EventManagerCM4Task::EVENT_QUEUE_DAEMON_NATIVE, queueToNativeDaemon);
+	eventManagerInstance.addQueue(EventManagerCM4Task::EVENT_QUEUE_ETHERNET_CONNECTION_MANAGER, queueToEthernetConnMgr);
 
 	for(;;)
 	{

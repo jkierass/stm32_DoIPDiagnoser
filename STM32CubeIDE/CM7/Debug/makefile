@@ -22,6 +22,7 @@ RM := rm -rf
 -include Application/User/TouchGFX/target/subdir.mk
 -include Application/User/TouchGFX/App/subdir.mk
 -include Application/User/Startup/subdir.mk
+-include Application/User/RTC/src/subdir.mk
 -include Application/User/LIBJPEG/App/subdir.mk
 -include Application/User/IPCDaemonProxy/src/subdir.mk
 -include Application/User/EventManagerCM7/src/subdir.mk

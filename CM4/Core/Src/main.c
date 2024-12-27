@@ -37,7 +37,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "cmsis_os2.h"
+#include "cmsis_os.h"
 #include "lwip.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -77,28 +77,28 @@ UART_HandleTypeDef huart1;
 osThreadId_t Task_EDaemonNHandle;
 const osThreadAttr_t Task_EDaemonN_attributes = {
   .name = "Task_EDaemonN",
-  .stack_size = 1028 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Task_EventMgrM4 */
 osThreadId_t Task_EventMgrM4Handle;
 const osThreadAttr_t Task_EventMgrM4_attributes = {
   .name = "Task_EventMgrM4",
-  .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 512 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for Task_EConnMgr */
 osThreadId_t Task_EConnMgrHandle;
 const osThreadAttr_t Task_EConnMgr_attributes = {
   .name = "Task_EConnMgr",
-  .stack_size = 1028 * 4,
+  .stack_size = 512 * 4,
   .priority = (osPriority_t) osPriorityRealtime,
 };
 /* Definitions for Task_CTemp */
 osThreadId_t Task_CTempHandle;
 const osThreadAttr_t Task_CTemp_attributes = {
   .name = "Task_CTemp",
-  .stack_size = 1028 * 4,
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
@@ -133,10 +133,10 @@ QueueHandle_t queueToTemperature = xQueueCreate(4, sizeof(SMessage));
 int main(void)
 {
 
-    /* USER CODE BEGIN 1 */
-    /* USER CODE END 1 */
+  /* USER CODE BEGIN 1 */
+  /* USER CODE END 1 */
 
-    /* USER CODE BEGIN Boot_Mode_Sequence_1 */
+/* USER CODE BEGIN Boot_Mode_Sequence_1 */
     /*HW semaphore Clock enable*/
     __HAL_RCC_HSEM_CLK_ENABLE();
     /* Activate HSEM notification for Cortex-M4*/
@@ -150,85 +150,82 @@ int main(void)
     /* Clear HSEM flag */
     __HAL_HSEM_CLEAR_FLAG(__HAL_HSEM_SEMID_TO_MASK(HSEM_ID_0));
 
-    /* USER CODE END Boot_Mode_Sequence_1 */
-    /* MCU Configuration--------------------------------------------------------*/
+/* USER CODE END Boot_Mode_Sequence_1 */
+  /* MCU Configuration--------------------------------------------------------*/
 
-    /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-    HAL_Init();
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
 
-    /* USER CODE BEGIN Init */
+  /* USER CODE BEGIN Init */
 
-    /* USER CODE END Init */
+  /* USER CODE END Init */
 
-    /* USER CODE BEGIN SysInit */
+  /* USER CODE BEGIN SysInit */
 
-    /* USER CODE END SysInit */
+  /* USER CODE END SysInit */
 
-    /* Initialize all configured peripherals */
-    MX_MDMA_Init();
-    MX_GPIO_Init();
-    MX_I2C4_Init();
-    /* USER CODE BEGIN 2 */
+  /* Initialize all configured peripherals */
+  MX_MDMA_Init();
+  MX_GPIO_Init();
+  MX_I2C4_Init();
+  /* USER CODE BEGIN 2 */
     ipc_init();
-    /* USER CODE END 2 */
+  /* USER CODE END 2 */
 
-    /* Init scheduler */
-    osKernelInitialize();
+  /* Init scheduler */
+  osKernelInitialize();
 
-    /* USER CODE BEGIN RTOS_MUTEX */
+  /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
-    /* USER CODE END RTOS_MUTEX */
+  /* USER CODE END RTOS_MUTEX */
 
-    /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
     /* add semaphores, ... */
-    /* USER CODE END RTOS_SEMAPHORES */
+  /* USER CODE END RTOS_SEMAPHORES */
 
-    /* USER CODE BEGIN RTOS_TIMERS */
+  /* USER CODE BEGIN RTOS_TIMERS */
     /* start timers, add new ones, ... */
-    /* USER CODE END RTOS_TIMERS */
+  /* USER CODE END RTOS_TIMERS */
 
-    /* USER CODE BEGIN RTOS_QUEUES */
+  /* USER CODE BEGIN RTOS_QUEUES */
     /* add queues, ... */
-    /* USER CODE END RTOS_QUEUES */
+  /* USER CODE END RTOS_QUEUES */
 
-    /* Create the thread(s) */
-    /* creation of Task_EDaemonN */
-    Task_EDaemonNHandle = osThreadNew(StartTask_EDaemonN, NULL, &Task_EDaemonN_attributes);
+  /* Create the thread(s) */
+  /* creation of Task_EDaemonN */
+  Task_EDaemonNHandle = osThreadNew(StartTask_EDaemonN, NULL, &Task_EDaemonN_attributes);
 
-    /* creation of Task_EventMgrM4 */
-    Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
+  /* creation of Task_EventMgrM4 */
+  Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
 
-    /* creation of Task_EConnMgr */
-    Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
+  /* creation of Task_EConnMgr */
+  Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
 
-    /* creation of Task_CTemp */
-    Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
+  /* creation of Task_CTemp */
+  Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
 
-    /* creation of Task_CTemp */
-    Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
-
-    /* USER CODE BEGIN RTOS_THREADS */
+  /* USER CODE BEGIN RTOS_THREADS */
     /* add threads, ... */
-    /* USER CODE END RTOS_THREADS */
+  /* USER CODE END RTOS_THREADS */
 
-    /* USER CODE BEGIN RTOS_EVENTS */
+  /* USER CODE BEGIN RTOS_EVENTS */
     /* add events, ... */
-    /* USER CODE END RTOS_EVENTS */
+  /* USER CODE END RTOS_EVENTS */
 
-    /* Start scheduler */
-    osKernelStart();
+  /* Start scheduler */
+  osKernelStart();
 
-    /* We should never get here as control is now taken by the scheduler */
+  /* We should never get here as control is now taken by the scheduler */
 
-    /* Infinite loop */
-    /* USER CODE BEGIN WHILE */
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
     while (1)
     {
-        /* USER CODE END WHILE */
+    /* USER CODE END WHILE */
 
-        /* USER CODE BEGIN 3 */
+    /* USER CODE BEGIN 3 */
     }
-    /* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /**
@@ -269,7 +266,7 @@ static void MX_I2C4_Init(void)
 
   /** Configure Digital filter
   */
-  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c4, 2) != HAL_OK)
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c4, 0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -351,11 +348,8 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOG_CLK_ENABLE();
-  __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */

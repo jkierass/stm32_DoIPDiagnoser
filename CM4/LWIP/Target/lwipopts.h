@@ -74,7 +74,7 @@
 /*----- Value in opt.h for TCPIP_THREAD_STACKSIZE: 0 -----*/
 #define TCPIP_THREAD_STACKSIZE 1024
 /*----- Value in opt.h for TCPIP_THREAD_PRIO: 1 -----*/
-#define TCPIP_THREAD_PRIO 24
+#define TCPIP_THREAD_PRIO 1
 /*----- Value in opt.h for TCPIP_MBOX_SIZE: 0 -----*/
 #define TCPIP_MBOX_SIZE 6
 /*----- Value in opt.h for SLIPIF_THREAD_STACKSIZE: 0 -----*/
@@ -116,10 +116,15 @@
 #undef LWIP_PROVIDE_ERRNO
 #define LWIP_ERRNO_STDINCLUDE
 
-#define LWIP_ICMP                   1   // Obsługa PING
-#define LWIP_DHCP                   0   // Wyłącz DHCP (użyj statycznego IP)
-#define IP_REASSEMBLY               1   // Obsługa fragmentacji IP
-#define IP_FRAG                     1   // Obsługa fragmentacji IP
+#define LWIP_ICMP                     1   // PING
+#define LWIP_DHCP                     0   // Turn DHCP off (use static IP)
+#define IP_REASSEMBLY                 1
+#define IP_FRAG                       1
+#define MEMP_NUM_TCP_PCB              10
+#define LWIP_TCPIP_CORE_LOCKING_INPUT 1
+#define LWIP_TCP_KEEPALIVE            1
+#define LWIP_ARP                      1
+#define ARP_QUEUEING                  1
 /* USER CODE END 1 */
 
 #ifdef __cplusplus

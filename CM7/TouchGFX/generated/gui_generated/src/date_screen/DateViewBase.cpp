@@ -68,11 +68,13 @@ DateViewBase::DateViewBase() :
     MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6PNS));
     container1.add(MainTitle);
 
-    Text_Date_1.setPosition(657, 36, 128, 24);
-    Text_Date_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Text_Date_1.setLinespacing(0);
-    Text_Date_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6FAH));
-    container1.add(Text_Date_1);
+    Text_Date.setPosition(657, 36, 128, 24);
+    Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_Date.setLinespacing(0);
+    Unicode::snprintf(Text_DateBuffer, TEXT_DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8JVG).getText());
+    Text_Date.setWildcard(Text_DateBuffer);
+    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6FAH));
+    container1.add(Text_Date);
 
     HomeButton.setXY(23, 12);
     HomeButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_OUTLINE_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_TINY_OUTLINE_PRESSED_ID));
@@ -156,7 +158,7 @@ DateViewBase::DateViewBase() :
     scrollWheel_Year.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
     scrollWheel_Year.setSwipeAcceleration(10);
     scrollWheel_Year.setDragAcceleration(10);
-    scrollWheel_Year.setNumberOfItems(100);
+    scrollWheel_Year.setNumberOfItems(50);
     scrollWheel_Year.setSelectedItemOffset(15);
     scrollWheel_Year.setOvershootPercentage(75);
     scrollWheel_Year.setDrawableSize(50, 0);
@@ -205,7 +207,30 @@ DateViewBase::DateViewBase() :
     button_Confirm.setLabelText(touchgfx::TypedText(T___SINGLEUSE_3EQW));
     button_Confirm.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     button_Confirm.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    button_Confirm.setAction(buttonCallback);
     add(button_Confirm);
+
+    DateSetModalWindow.setBackground(touchgfx::BitmapId(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_WIDE_OUTLINED_LIGHT_ID), 160, 105);
+    DateSetModalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    DateSetModalWindow.hide();
+    Text_Popup.setPosition(61, 40, 377, 160);
+    Text_Popup.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Text_Popup.setLinespacing(0);
+    Text_Popup.setWideTextAction(WIDE_TEXT_WORDWRAP);
+    Unicode::snprintf(Text_PopupBuffer, TEXT_POPUP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_5IN1).getText());
+    Text_Popup.setWildcard(Text_PopupBuffer);
+    Text_Popup.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CHZX));
+    DateSetModalWindow.add(Text_Popup);
+
+    ButtonHidePopup.setXY(143, 211);
+    ButtonHidePopup.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUND_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUND_PRESSED_ID));
+    ButtonHidePopup.setLabelText(touchgfx::TypedText(T___SINGLEUSE_ZZLF));
+    ButtonHidePopup.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ButtonHidePopup.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ButtonHidePopup.setAction(buttonCallback);
+    DateSetModalWindow.add(ButtonHidePopup);
+
+    add(DateSetModalWindow);
 }
 
 DateViewBase::~DateViewBase()
@@ -250,6 +275,21 @@ void DateViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When HomeButton clicked change screen to MainScreen
         //Go to MainScreen with no screen transition
         application().gotoMainScreenScreenNoTransition();
+    }
+    if (&src == &button_Confirm)
+    {
+        //confirmedDate
+        //When button_Confirm clicked call virtual function
+        //Call onConfirmedDate
+        onConfirmedDate();
+    }
+    if (&src == &ButtonHidePopup)
+    {
+        //hidePopup
+        //When ButtonHidePopup clicked hide DateSetModalWindow
+        //Hide DateSetModalWindow
+        DateSetModalWindow.setVisible(false);
+        DateSetModalWindow.invalidate();
     }
 }
 

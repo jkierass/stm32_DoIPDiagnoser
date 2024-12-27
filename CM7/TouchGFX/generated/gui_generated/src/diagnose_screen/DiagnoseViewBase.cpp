@@ -36,6 +36,14 @@ DiagnoseViewBase::DiagnoseViewBase() :
     MainTitle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_33RI));
     container1.add(MainTitle);
 
+    Text_Date.setPosition(657, 36, 128, 24);
+    Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_Date.setLinespacing(0);
+    Unicode::snprintf(Text_DateBuffer, TEXT_DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BNDJ).getText());
+    Text_Date.setWildcard(Text_DateBuffer);
+    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BR4U));
+    container1.add(Text_Date);
+
     Text_Temperature.setPosition(546, 10, 105, 52);
     Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
     Text_Temperature.setLinespacing(0);
@@ -43,12 +51,6 @@ DiagnoseViewBase::DiagnoseViewBase() :
     Text_Temperature.setWildcard(Text_TemperatureBuffer);
     Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X1VW));
     container1.add(Text_Temperature);
-
-    Text_Date.setPosition(657, 36, 128, 24);
-    Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Text_Date.setLinespacing(0);
-    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L1QD));
-    container1.add(Text_Date);
 
     HomeIcon.setBitmap(touchgfx::Bitmap(BITMAP_HOME_ICON_ID));
     HomeIcon.setPosition(12, 9, 55, 55);

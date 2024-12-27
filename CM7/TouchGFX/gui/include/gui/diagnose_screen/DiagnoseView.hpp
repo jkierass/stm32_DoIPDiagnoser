@@ -13,6 +13,8 @@ public:
     virtual void tearDownScreen();
 
     void setTemperature(short int temperature);
+    void setDate(uint8_t day, uint8_t month, unsigned int year);
+    void setTime(uint8_t hour, uint8_t minute);
 protected:
 };
 

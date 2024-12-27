@@ -37,6 +37,8 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h \
+ ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
@@ -79,6 +81,7 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Common/Inc/cm_ipc.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/RTC/inc/RTCTask.h \
  ../../../STM32CubeIDE/CM7/Application/User/IPCDaemonProxy/inc/IPCDaemonProxyTask.h
 ../../../CM7/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
@@ -118,6 +121,8 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc.h:
+../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rtc_ex.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
@@ -161,4 +166,5 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Common/Inc/cm_ipc.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM7/Application/User/RTC/inc/RTCTask.h:
 ../../../STM32CubeIDE/CM7/Application/User/IPCDaemonProxy/inc/IPCDaemonProxyTask.h:

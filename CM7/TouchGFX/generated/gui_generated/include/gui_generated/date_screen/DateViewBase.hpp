@@ -13,11 +13,12 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/containers/scrollers/ScrollWheel.hpp>
 #include <gui/containers/DayElement.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/ModalWindow.hpp>
 
 class DateViewBase : public touchgfx::View<DatePresenter>
 {
@@ -51,6 +52,14 @@ public:
         // Override and implement this function in Date
     }
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void onConfirmedDate()
+    {
+        // Override and implement this function in Date
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -70,7 +79,7 @@ protected:
     touchgfx::Container container1;
     touchgfx::DigitalClock Clock;
     touchgfx::TextArea MainTitle;
-    touchgfx::TextArea Text_Date_1;
+    touchgfx::TextAreaWithOneWildcard Text_Date;
     touchgfx::Button HomeButton;
     touchgfx::TextAreaWithOneWildcard Text_Temperature;
     touchgfx::ScalableImage HomeIcon;
@@ -91,12 +100,19 @@ protected:
     touchgfx::TextArea text_Month;
     touchgfx::TextArea text_Year;
     touchgfx::ButtonWithLabel button_Confirm;
+    touchgfx::ModalWindow DateSetModalWindow;
+    touchgfx::TextAreaWithOneWildcard Text_Popup;
+    touchgfx::ButtonWithLabel ButtonHidePopup;
 
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TEXT_DATE_SIZE = 11;
+    touchgfx::Unicode::UnicodeChar Text_DateBuffer[TEXT_DATE_SIZE];
     static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
+    static const uint16_t TEXT_POPUP_SIZE = 46;
+    touchgfx::Unicode::UnicodeChar Text_PopupBuffer[TEXT_POPUP_SIZE];
 
 private:
 

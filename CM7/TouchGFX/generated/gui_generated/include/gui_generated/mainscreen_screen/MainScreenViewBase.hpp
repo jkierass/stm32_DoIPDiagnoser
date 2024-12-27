@@ -10,8 +10,8 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/Button.hpp>
 
@@ -34,14 +34,14 @@ protected:
     touchgfx::Box box1;
     touchgfx::ScalableImage backgroungImage;
     touchgfx::Container container1;
-    touchgfx::TextArea Text_Date_1;
     touchgfx::TextAreaWithOneWildcard Text_Temperature;
     touchgfx::TextArea MainTitle;
     touchgfx::DigitalClock Clock;
+    touchgfx::TextAreaWithOneWildcard Text_Date;
     touchgfx::ScalableImage DiagnoseIcon;
     touchgfx::TextArea Text_Diagnose;
     touchgfx::TextArea Text_Calculator;
-    touchgfx::TextArea Text_Date;
+    touchgfx::TextArea Text_DateAndTime;
     touchgfx::Button SwitchToDiagnose;
     touchgfx::ScalableImage CalculatorIcon;
     touchgfx::Button SwitchToCalculator;
@@ -53,6 +53,8 @@ protected:
      */
     static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
+    static const uint16_t TEXT_DATE_SIZE = 11;
+    touchgfx::Unicode::UnicodeChar Text_DateBuffer[TEXT_DATE_SIZE];
 
 private:
 

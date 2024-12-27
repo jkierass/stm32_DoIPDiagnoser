@@ -9,7 +9,7 @@
 #include <cmath>
 
 
-void Calculator::calculate(const unsigned char* request, unsigned char* result)
+void Calculator::calculate(unsigned char request[], unsigned char result[])
 {
 	char nullTerminatedRequest[17];
 	for(int i = 0; i < 16; i++)
@@ -17,7 +17,7 @@ void Calculator::calculate(const unsigned char* request, unsigned char* result)
 		nullTerminatedRequest[i] = request[i];
 	}
 	nullTerminatedRequest[16] = {'\0'};
-	double answer = te_interp(&nullTerminatedRequest[0], 0);
+	double answer = te_interp(nullTerminatedRequest, 0);
 
 	formatToPrint(answer, result);
 }
@@ -27,7 +27,7 @@ bool Calculator::isInt(double value)
     return (std::trunc(value) == value);
 }
 
-void Calculator::formatToPrint(double value, unsigned char* result)
+void Calculator::formatToPrint(double value, unsigned char result[])
 {
     char resultSigned[17] = { 0 }; // 17 to allow for null-termination
 

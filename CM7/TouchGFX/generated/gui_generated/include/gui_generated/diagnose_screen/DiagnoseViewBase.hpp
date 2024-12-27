@@ -38,8 +38,8 @@ protected:
     touchgfx::Box box2;
     touchgfx::DigitalClock Clock;
     touchgfx::TextArea MainTitle;
+    touchgfx::TextAreaWithOneWildcard Text_Date;
     touchgfx::TextAreaWithOneWildcard Text_Temperature;
-    touchgfx::TextArea Text_Date;
     touchgfx::ClickListener< touchgfx::ScalableImage > HomeIcon;
     touchgfx::Button HomeButton;
     touchgfx::ButtonWithLabel MotorButton;
@@ -52,6 +52,8 @@ protected:
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TEXT_DATE_SIZE = 11;
+    touchgfx::Unicode::UnicodeChar Text_DateBuffer[TEXT_DATE_SIZE];
     static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
 

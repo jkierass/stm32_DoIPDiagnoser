@@ -34,6 +34,7 @@ RM := rm -rf
 -include Application/User/Debug/Application/User/EdiabasConnectionManager/src/subdir.mk
 -include Application/User/Debug/Application/User/Core/subdir.mk
 -include Application/User/Debug/subdir.mk
+-include Application/User/Core/Logger/src/subdir.mk
 -include Application/User/Core/subdir.mk
 -include objects.mk
 

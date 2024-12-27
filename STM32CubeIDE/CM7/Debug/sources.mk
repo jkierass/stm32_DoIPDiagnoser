@@ -46,6 +46,7 @@ Application/User/Core \
 Application/User/EventManagerCM7/src \
 Application/User/IPCDaemonProxy/src \
 Application/User/LIBJPEG/App \
+Application/User/RTC/src \
 Application/User/Startup \
 Application/User/TouchGFX/App \
 Application/User/TouchGFX/target \

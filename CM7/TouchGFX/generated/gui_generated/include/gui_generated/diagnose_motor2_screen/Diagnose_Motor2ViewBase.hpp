@@ -13,10 +13,10 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Diagnose_Motor2ViewBase : public touchgfx::View<Diagnose_Motor2Presenter>
 {
@@ -45,7 +45,7 @@ protected:
     touchgfx::Box box2;
     touchgfx::DigitalClock Clock;
     touchgfx::TextArea Text_MotorTitile;
-    touchgfx::TextArea Text_Date;
+    touchgfx::TextAreaWithOneWildcard Text_Date;
     touchgfx::ClickListener< touchgfx::ScalableImage > HomeIcon;
     touchgfx::ClickListener< touchgfx::ScalableImage > ReturnIcon;
     touchgfx::ClickListener< touchgfx::ScalableImage > NextParameterIcon;
@@ -59,6 +59,8 @@ protected:
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TEXT_DATE_SIZE = 11;
+    touchgfx::Unicode::UnicodeChar Text_DateBuffer[TEXT_DATE_SIZE];
     static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
 

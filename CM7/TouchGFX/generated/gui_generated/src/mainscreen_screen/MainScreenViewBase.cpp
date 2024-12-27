@@ -23,12 +23,6 @@ MainScreenViewBase::MainScreenViewBase() :
     add(backgroungImage);
 
     container1.setPosition(0, 0, 800, 75);
-    Text_Date_1.setPosition(657, 36, 128, 24);
-    Text_Date_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Text_Date_1.setLinespacing(0);
-    Text_Date_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DGLN));
-    container1.add(Text_Date_1);
-
     Text_Temperature.setPosition(546, 10, 105, 52);
     Text_Temperature.setColor(touchgfx::Color::getColorFromRGB(247, 64, 174));
     Text_Temperature.setLinespacing(0);
@@ -51,6 +45,14 @@ MainScreenViewBase::MainScreenViewBase() :
     Clock.setTime24Hour(10, 10, 0);
     container1.add(Clock);
 
+    Text_Date.setPosition(657, 36, 128, 24);
+    Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_Date.setLinespacing(0);
+    Unicode::snprintf(Text_DateBuffer, TEXT_DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_XVFS).getText());
+    Text_Date.setWildcard(Text_DateBuffer);
+    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FZP7));
+    container1.add(Text_Date);
+
     add(container1);
 
     DiagnoseIcon.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_CROPPED_ID));
@@ -70,11 +72,11 @@ MainScreenViewBase::MainScreenViewBase() :
     Text_Calculator.setTypedText(touchgfx::TypedText(T___SINGLEUSE_10PZ));
     add(Text_Calculator);
 
-    Text_Date.setPosition(497, 288, 194, 33);
-    Text_Date.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
-    Text_Date.setLinespacing(0);
-    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CDWB));
-    add(Text_Date);
+    Text_DateAndTime.setPosition(497, 288, 194, 33);
+    Text_DateAndTime.setColor(touchgfx::Color::getColorFromRGB(163, 186, 255));
+    Text_DateAndTime.setLinespacing(0);
+    Text_DateAndTime.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CDWB));
+    add(Text_DateAndTime);
 
     SwitchToDiagnose.setXY(50, 107);
     SwitchToDiagnose.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_OUTLINE_DISABLED_ID));

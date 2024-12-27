@@ -50,7 +50,9 @@ Diagnose_Motor3ViewBase::Diagnose_Motor3ViewBase() :
     Text_Date.setPosition(657, 36, 128, 24);
     Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Text_Date.setLinespacing(0);
-    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CHN0));
+    Unicode::snprintf(Text_DateBuffer, TEXT_DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8P2M).getText());
+    Text_Date.setWildcard(Text_DateBuffer);
+    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_MRRY));
     container1.add(Text_Date);
 
     HomeIcon.setBitmap(touchgfx::Bitmap(BITMAP_HOME_ICON_ID));

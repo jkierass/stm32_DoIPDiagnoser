@@ -21,21 +21,10 @@ void StartTask_CTemp(void *argument)
 {
 	TemperatureTask TemperatureTaskInstance;
 
-    int periodMs = 2000;
-    TimeOut_t timeout;
-    TickType_t period_tick = pdMS_TO_TICKS(periodMs);
-    vTaskSetTimeOutState(&timeout);
-
     for (;;)
     {
-    	if(xTaskCheckForTimeOut(&timeout, &period_tick) != pdFALSE)
-        {
-    		vTaskSetTimeOutState(&timeout);
-            period_tick = pdMS_TO_TICKS(periodMs);
-
-            /* task */
-            TemperatureTaskInstance.process();
-        }
+    	TemperatureTaskInstance.process();
+    	osDelay(2000);
     }
 }
 

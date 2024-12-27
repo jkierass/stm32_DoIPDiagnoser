@@ -45,8 +45,8 @@
 #include "TemperatureTask.h"
 #include "EventManagerCM4Task.h"
 #include "cm_ipc.h"
-
 #include "IPCDaemonNativeTask.h"
+#include "EthernetConnMgrTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,7 +102,11 @@ const osThreadAttr_t Task_CTemp_attributes = {
   .priority = (osPriority_t) osPriorityLow,
 };
 /* USER CODE BEGIN PV */
-
+/* Definitions for printMutex */
+osMutexId_t printMutexHandle;
+const osMutexAttr_t printMutex_attributes = {
+  .name = "printMutex"
+};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -176,11 +180,12 @@ int main(void)
     osKernelInitialize();
 
     /* USER CODE BEGIN RTOS_MUTEX */
-    /* add mutexes, ... */
+    /* add mutexes, ... */\
+	printMutexHandle = osMutexNew(&printMutex_attributes);
     /* USER CODE END RTOS_MUTEX */
 
     /* USER CODE BEGIN RTOS_SEMAPHORES */
-    /* add semaphores, ... */
+    /* add semaphores, ... */\
     /* USER CODE END RTOS_SEMAPHORES */
 
     /* USER CODE BEGIN RTOS_TIMERS */
@@ -200,9 +205,6 @@ int main(void)
 
     /* creation of Task_EConnMgr */
     Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
-
-    /* creation of Task_CTemp */
-    Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
 
     /* creation of Task_CTemp */
     Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);
@@ -363,7 +365,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/**
+  * @brief  Retargets the C library printf function to the USART.
+  *   None
+  * @retval None
+  */
+extern "C" int __io_putchar(int ch)
+{
+    /* Place your implementation of fputc here */
+    /* e.g. write a character to the USART1 and Loop until the end of transmission */
+    HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
 
+    return ch;
+}
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartTask_EDaemonN */

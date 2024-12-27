@@ -7,3 +7,5 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/g
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:4:1:DiagnoseView::DiagnoseView()	8	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:9:6:virtual void DiagnoseView::setupScreen()	0	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:19:6:void DiagnoseView::setTemperature(short int)	8	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:25:6:void DiagnoseView::setDate(uint8_t, uint8_t, unsigned int)	16	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnoseView.cpp:31:6:void DiagnoseView::setTime(uint8_t, uint8_t)	8	static

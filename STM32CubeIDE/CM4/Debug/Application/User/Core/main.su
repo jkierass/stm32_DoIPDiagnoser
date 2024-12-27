@@ -1,10 +1,11 @@
-../Application/User/Core/main.cpp:116:5:int main()	16	static
-../Application/User/Core/main.cpp:219:13:void MX_I2C4_Init()	8	static
-../Application/User/Core/main.cpp:267:6:void MX_USART1_UART_Init()	8	static
-../Application/User/Core/main.cpp:313:13:void MX_MDMA_Init()	16	static
-../Application/User/Core/main.cpp:327:13:void MX_GPIO_Init()	40	static
-../Application/User/Core/main.cpp:356:13:void StartTask_EDaemonN(void*)	16	static
-../Application/User/Core/main.cpp:377:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
-../Application/User/Core/main.cpp:394:6:void Error_Handler()	4	static,ignoring_inline_asm
-../Application/User/Core/main.cpp:403:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Application/User/Core/main.cpp:403:1:cpp)	8	static
+../Application/User/Core/main.cpp:137:5:int main()	16	static
+../Application/User/Core/main.cpp:241:13:void MX_I2C4_Init()	8	static
+../Application/User/Core/main.cpp:289:6:void MX_USART1_UART_Init()	8	static
+../Application/User/Core/main.cpp:335:13:void MX_MDMA_Init()	16	static
+../Application/User/Core/main.cpp:349:13:void MX_GPIO_Init()	40	static
+../Application/User/Core/main.cpp:373:16:int __io_putchar(int)	16	static
+../Application/User/Core/main.cpp:390:13:void StartTask_EDaemonN(void*)	16	static
+../Application/User/Core/main.cpp:411:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	16	static
+../Application/User/Core/main.cpp:428:6:void Error_Handler()	4	static,ignoring_inline_asm
+../Application/User/Core/main.cpp:437:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Application/User/Core/main.cpp:437:1:cpp)	8	static

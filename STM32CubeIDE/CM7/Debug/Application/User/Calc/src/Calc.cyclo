@@ -8,6 +8,6 @@ C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.external
 C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\basic_string.h:3130:7:constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::substr(size_type, size_type) const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	2
 C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\basic_string.h:852:7:constexpr std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::operator=(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]	6
 ../Application/User/Calc/src/Calc.cpp:30:6:void Calculator::formatToPrint(double, unsigned char*)	10
-../Application/User/Calc/src/Calc.cpp:12:6:void Calculator::calculate(const unsigned char*, unsigned char*)	2
+../Application/User/Calc/src/Calc.cpp:12:6:void Calculator::calculate(unsigned char*, unsigned char*)	2
 ../Application/User/Calc/src/Calc.cpp:73:1:cpp)	1
 ../Application/User/Calc/src/Calc.cpp:73:1:cpp)	1

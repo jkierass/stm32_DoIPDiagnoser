@@ -32,6 +32,8 @@ public:
 private:
     MainScreenPresenter();
 
+    void loadCache();
+
     MainScreenView& view;
 };
 

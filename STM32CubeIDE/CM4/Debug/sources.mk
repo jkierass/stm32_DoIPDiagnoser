@@ -39,6 +39,7 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Application/User/Core/Logger/src \
 Application/User/Core \
 Application/User/Debug/Application/User/Core \
 Application/User/Debug/Application/User/EdiabasConnectionManager/src \

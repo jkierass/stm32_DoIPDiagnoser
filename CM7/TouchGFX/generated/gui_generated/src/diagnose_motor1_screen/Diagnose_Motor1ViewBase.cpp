@@ -47,12 +47,6 @@ Diagnose_Motor1ViewBase::Diagnose_Motor1ViewBase() :
     Text_MotorTitile.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2O72));
     container1.add(Text_MotorTitile);
 
-    Text_Date.setPosition(657, 36, 128, 24);
-    Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    Text_Date.setLinespacing(0);
-    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2LSX));
-    container1.add(Text_Date);
-
     HomeIcon.setBitmap(touchgfx::Bitmap(BITMAP_HOME_ICON_ID));
     HomeIcon.setPosition(12, 9, 55, 55);
     HomeIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
@@ -90,6 +84,14 @@ Diagnose_Motor1ViewBase::Diagnose_Motor1ViewBase() :
     Text_Temperature.setWildcard(Text_TemperatureBuffer);
     Text_Temperature.setTypedText(touchgfx::TypedText(T___SINGLEUSE_S3JG));
     container1.add(Text_Temperature);
+
+    Text_Date.setPosition(657, 36, 128, 24);
+    Text_Date.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_Date.setLinespacing(0);
+    Unicode::snprintf(Text_DateBuffer, TEXT_DATE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_I7C8).getText());
+    Text_Date.setWildcard(Text_DateBuffer);
+    Text_Date.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VZJ5));
+    container1.add(Text_Date);
 
     add(container1);
 }

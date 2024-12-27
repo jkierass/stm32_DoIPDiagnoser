@@ -4,10 +4,10 @@
 class Calculator
 {
 public:
-	void calculate(const unsigned char* request, unsigned char* result);
+	void calculate(unsigned char request[], unsigned char result[]);
 private:
 	bool isInt(double value);
-	void formatToPrint(double value, unsigned char* result);
+	void formatToPrint(double value, unsigned char result[]);
 };
 
 

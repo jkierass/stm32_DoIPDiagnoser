@@ -29,7 +29,12 @@
 #include <string.h>
 
 /* USER CODE BEGIN 0 */
+#include "cmsis_os.h"
+#include "FreeRTOS.h"
+#include "queue.h"
+#include "MessageDataTypes.h"
 
+extern QueueHandle_t queueToEventManagerCM4;
 /* USER CODE END 0 */
 /* Private function prototypes -----------------------------------------------*/
 static void ethernet_link_status_updated(struct netif *netif);
@@ -37,7 +42,6 @@ static void ethernet_link_status_updated(struct netif *netif);
 void Error_Handler(void);
 
 /* USER CODE BEGIN 1 */
-
 /* USER CODE END 1 */
 
 /* Variables Initialization */
@@ -63,13 +67,13 @@ osThreadAttr_t attributes;
 void MX_LWIP_Init(void)
 {
   /* IP addresses initialization */
-  IP_ADDRESS[0] = 192;
-  IP_ADDRESS[1] = 168;
+  IP_ADDRESS[0] = 169;
+  IP_ADDRESS[1] = 254;
   IP_ADDRESS[2] = 1;
-  IP_ADDRESS[3] = 11;
+  IP_ADDRESS[3] = 1;
   NETMASK_ADDRESS[0] = 255;
   NETMASK_ADDRESS[1] = 255;
-  NETMASK_ADDRESS[2] = 255;
+  NETMASK_ADDRESS[2] = 0;
   NETMASK_ADDRESS[3] = 0;
   GATEWAY_ADDRESS[0] = 0;
   GATEWAY_ADDRESS[1] = 0;
@@ -130,11 +134,24 @@ static void ethernet_link_status_updated(struct netif *netif)
   if (netif_is_up(netif))
   {
 /* USER CODE BEGIN 5 */
+	SMessage msg;
+	msg.event_type = EVENT_ETHERNET_PLUGGED;
+	msg.message_data.ethernet_plugged = true;
+	msg.event_sender = EVENT_CLIENT_LWIP_LINK_STATE_MANAGER;
+	msg.event_receiver = EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER;
+	xQueueSend(queueToEventManagerCM4, (void*)&msg, portMAX_DELAY);
 /* USER CODE END 5 */
   }
   else /* netif is down */
   {
 /* USER CODE BEGIN 6 */
+	//this code has to be duplicated because it has to fit in USER_CODE_* space.
+	SMessage msg;
+	msg.event_type = EVENT_ETHERNET_PLUGGED;
+	msg.message_data.ethernet_plugged = false;
+	msg.event_sender = EVENT_CLIENT_LWIP_LINK_STATE_MANAGER;
+	msg.event_receiver = EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER;
+    xQueueSend(queueToEventManagerCM4, (void*)&msg, portMAX_DELAY);
 /* USER CODE END 6 */
   }
 }

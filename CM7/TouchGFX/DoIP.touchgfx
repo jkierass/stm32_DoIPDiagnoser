@@ -29,21 +29,6 @@
             "Components": [
               {
                 "Type": "TextArea",
-                "Name": "Text_Date_1",
-                "X": 657,
-                "Y": 36,
-                "Width": 128,
-                "Height": 24,
-                "TextId": "__SingleUse_DGLN",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "TextArea",
                 "Name": "Text_Temperature",
                 "X": 546,
                 "Y": 10,
@@ -93,6 +78,26 @@
                 "DisplayLeadingZeroForHourIndicator": true,
                 "InitialHour": 10,
                 "InitialMinute": 10
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_FZP7",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_XVFS",
+                  "UseBuffer": true,
+                  "BufferSize": 11
+                }
               }
             ]
           },
@@ -138,7 +143,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "Text_Date",
+            "Name": "Text_DateAndTime",
             "X": 497,
             "Y": 288,
             "Width": 194,
@@ -301,6 +306,26 @@
               },
               {
                 "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_BR4U",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_BNDJ",
+                  "UseBuffer": true,
+                  "BufferSize": 11
+                }
+              },
+              {
+                "Type": "TextArea",
                 "Name": "Text_Temperature",
                 "X": 546,
                 "Y": 10,
@@ -317,21 +342,6 @@
                   "TextId": "__SingleUse_SASM",
                   "UseBuffer": true,
                   "BufferSize": 4
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "Text_Date",
-                "X": 657,
-                "Y": 36,
-                "Width": 128,
-                "Height": 24,
-                "TextId": "__SingleUse_L1QD",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
                 }
               },
               {
@@ -1535,7 +1545,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "Text_Date_1",
+                "Name": "Text_Date",
                 "X": 657,
                 "Y": 36,
                 "Width": 128,
@@ -1546,6 +1556,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_8JVG",
+                  "UseBuffer": true,
+                  "BufferSize": 11
                 }
               },
               {
@@ -1667,7 +1682,7 @@
             "Height": 80,
             "SelectedItemOffset": 15,
             "ItemTemplateName": "DayElement",
-            "NumberofItems": 100,
+            "NumberofItems": 50,
             "InitialElement": 1,
             "Easing": "Back",
             "EasingOption": "Out",
@@ -1786,6 +1801,60 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "ModalWindow",
+            "Name": "DateSetModalWindow",
+            "Width": 800,
+            "Height": 480,
+            "Visible": false,
+            "FileName": "__generated\\dark_theme_images_containers_large_wide_outlined_light.png",
+            "ModalX": 160,
+            "ModalY": 105,
+            "ModalWidth": 480,
+            "ModalHeight": 270,
+            "Alpha": 150,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "Text_Popup",
+                "X": 61,
+                "Y": 40,
+                "Width": 377,
+                "Height": 160,
+                "TextId": "__SingleUse_CHZX",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "__SingleUse_5IN1",
+                  "UseBuffer": true,
+                  "BufferSize": 46
+                },
+                "WideTextAction": 1
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ButtonHidePopup",
+                "X": 143,
+                "Y": 211,
+                "Width": 214,
+                "Height": 36,
+                "Pressed": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.png",
+                "Released": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_active.png",
+                "TextId": "__SingleUse_ZZLF",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "dark_theme\\presets\\button\\regular\\height_36\\medium_round_active.json"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -1799,6 +1868,28 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "MainScreen"
+            }
+          },
+          {
+            "InteractionName": "confirmedDate",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button_Confirm"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onConfirmedDate"
+            }
+          },
+          {
+            "InteractionName": "hidePopup",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonHidePopup"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "DateSetModalWindow"
             }
           }
         ]
@@ -1876,13 +1967,17 @@
                 "Y": 36,
                 "Width": 128,
                 "Height": 24,
-                "LockPosition": true,
-                "TextId": "__SingleUse_CHN0",
+                "TextId": "__SingleUse_MRRY",
                 "TextRotation": "0",
                 "Color": {
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_8P2M",
+                  "UseBuffer": true,
+                  "BufferSize": 11
                 }
               },
               {
@@ -2092,13 +2187,17 @@
                 "Y": 36,
                 "Width": 128,
                 "Height": 24,
-                "LockPosition": true,
-                "TextId": "__SingleUse_F8QU",
+                "TextId": "__SingleUse_R08T",
                 "TextRotation": "0",
                 "Color": {
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_AVVS",
+                  "UseBuffer": true,
+                  "BufferSize": 11
                 }
               },
               {
@@ -2338,22 +2437,6 @@
                 }
               },
               {
-                "Type": "TextArea",
-                "Name": "Text_Date",
-                "X": 657,
-                "Y": 36,
-                "Width": 128,
-                "Height": 24,
-                "LockPosition": true,
-                "TextId": "__SingleUse_2LSX",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
                 "Type": "ScalableImage",
                 "Name": "HomeIcon",
                 "X": 12,
@@ -2443,6 +2526,26 @@
                   "TextId": "__SingleUse_QW4M",
                   "UseBuffer": true,
                   "BufferSize": 4
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "Text_Date",
+                "X": 657,
+                "Y": 36,
+                "Width": 128,
+                "Height": 24,
+                "TextId": "__SingleUse_VZJ5",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_I7C8",
+                  "UseBuffer": true,
+                  "BufferSize": 11
                 }
               }
             ]
