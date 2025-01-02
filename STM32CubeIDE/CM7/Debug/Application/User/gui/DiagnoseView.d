@@ -74,7 +74,8 @@ Application/User/gui/DiagnoseView.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_screen/DiagnoseViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -150,3 +151,4 @@ Application/User/gui/DiagnoseView.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:

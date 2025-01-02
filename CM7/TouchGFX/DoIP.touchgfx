@@ -499,6 +499,60 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "ModalWindow",
+            "Name": "ConnectedModalWindow",
+            "Width": 800,
+            "Height": 480,
+            "Visible": false,
+            "FileName": "__generated\\dark_theme_images_containers_large_wide_outlined_light.png",
+            "ModalX": 160,
+            "ModalY": 105,
+            "ModalWidth": 480,
+            "ModalHeight": 270,
+            "Alpha": 150,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "Text_Popup",
+                "X": 61,
+                "Y": 40,
+                "Width": 377,
+                "Height": 160,
+                "TextId": "__SingleUse_1ID8",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "__SingleUse_VQV7",
+                  "UseBuffer": true,
+                  "BufferSize": 46
+                },
+                "WideTextAction": 1
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ButtonHidePopup",
+                "X": 143,
+                "Y": 211,
+                "Width": 214,
+                "Height": 36,
+                "Pressed": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.png",
+                "Released": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_active.png",
+                "TextId": "__SingleUse_23G3",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "dark_theme\\presets\\button\\regular\\height_36\\medium_round_active.json"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -524,6 +578,17 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Diagnose_Motor1"
+            }
+          },
+          {
+            "InteractionName": "hideConnectedPopup",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonHidePopup"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "ConnectedModalWindow"
             }
           }
         ]
@@ -1898,18 +1963,466 @@
         "Name": "Diagnose_Motor3",
         "Components": [
           {
-            "Type": "ScrollList",
-            "Name": "DiagnoseMotorList",
+            "Type": "Container",
+            "Name": "containerParameters",
             "Y": 74,
             "Width": 800,
             "Height": 406,
-            "ItemTemplateName": "ParameterListElement",
-            "NumberofItems": 9,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0,
-            "OverShootPercentage": 75
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1",
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2",
+                "Y": 44,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_BatteryVoltage",
+                "X": 10,
+                "Y": 9,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_G2PH",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_ValueBatteryVoltage",
+                "X": 410,
+                "Y": 9,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_IVKB",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_6NL7",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1",
+                "Y": 46,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1",
+                "Y": 90,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_EngineRotSpeed",
+                "X": 10,
+                "Y": 55,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_AUAL",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_ValueEngineRotSpeed",
+                "X": 410,
+                "Y": 55,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_VSAY",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_C30D",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1",
+                "Y": 92,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1",
+                "Y": 136,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1",
+                "X": 10,
+                "Y": 101,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_4RU5",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_TMJZ",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1",
+                "X": 410,
+                "Y": 101,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_YXPD",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_PH2P",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_1",
+                "Y": 138,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_1",
+                "Y": 182,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_1",
+                "X": 10,
+                "Y": 147,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_AXG7",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_QFB6",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_1",
+                "X": 410,
+                "Y": 147,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_7135",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_2QCM",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_2",
+                "Y": 183,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_2",
+                "Y": 227,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_2",
+                "X": 10,
+                "Y": 192,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_X712",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_1ZK9",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_2",
+                "X": 410,
+                "Y": 192,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_CRPM",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_7P48",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_3",
+                "Y": 229,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_3",
+                "Y": 273,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_3",
+                "X": 10,
+                "Y": 238,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_TWHF",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_DCZU",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_3",
+                "X": 410,
+                "Y": 238,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_F1QI",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_J2PG",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_4",
+                "Y": 275,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_4",
+                "Y": 319,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_4",
+                "X": 10,
+                "Y": 284,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_IIKH",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_YZNW",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_4",
+                "X": 410,
+                "Y": 284,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_SNKY",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_GWAZ",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_5",
+                "Y": 321,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_5",
+                "Y": 365,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_5",
+                "X": 10,
+                "Y": 330,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_0407",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_X5VK",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_5",
+                "X": 410,
+                "Y": 330,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_U6OD",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_I378",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              }
+            ]
           },
           {
             "Type": "Container",
@@ -2073,6 +2586,60 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "ModalWindow",
+            "Name": "ConnectedModalWindow",
+            "Width": 800,
+            "Height": 480,
+            "Visible": false,
+            "FileName": "__generated\\dark_theme_images_containers_large_wide_outlined_light.png",
+            "ModalX": 160,
+            "ModalY": 105,
+            "ModalWidth": 480,
+            "ModalHeight": 270,
+            "Alpha": 150,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "Text_Popup",
+                "X": 61,
+                "Y": 40,
+                "Width": 377,
+                "Height": 160,
+                "TextId": "__SingleUse_VBHU",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "__SingleUse_YSJP",
+                  "UseBuffer": true,
+                  "BufferSize": 46
+                },
+                "WideTextAction": 1
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ButtonHidePopup",
+                "X": 143,
+                "Y": 211,
+                "Width": 214,
+                "Height": 36,
+                "Pressed": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.png",
+                "Released": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_active.png",
+                "TextId": "__SingleUse_35KC",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "dark_theme\\presets\\button\\regular\\height_36\\medium_round_active.json"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2111,6 +2678,17 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Diagnose_Motor2"
             }
+          },
+          {
+            "InteractionName": "hideConnectedPopup",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonHidePopup"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "ConnectedModalWindow"
+            }
           }
         ]
       },
@@ -2118,18 +2696,466 @@
         "Name": "Diagnose_Motor2",
         "Components": [
           {
-            "Type": "ScrollList",
-            "Name": "DiagnoseMotorList",
+            "Type": "Container",
+            "Name": "containerParameters",
             "Y": 74,
             "Width": 800,
             "Height": 406,
-            "ItemTemplateName": "ParameterListElement",
-            "NumberofItems": 9,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0,
-            "OverShootPercentage": 75
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1",
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2",
+                "Y": 44,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_BatteryVoltage",
+                "X": 10,
+                "Y": 9,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_7W67",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_ValueBatteryVoltage",
+                "X": 410,
+                "Y": 9,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_0OTK",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_GTX1",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1",
+                "Y": 46,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1",
+                "Y": 90,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_EngineRotSpeed",
+                "X": 10,
+                "Y": 55,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_UNKX",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_ValueEngineRotSpeed",
+                "X": 410,
+                "Y": 55,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_4ZMC",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_175D",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1",
+                "Y": 92,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1",
+                "Y": 136,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1",
+                "X": 10,
+                "Y": 101,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_41FN",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_J65F",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1",
+                "X": 410,
+                "Y": 101,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_SBU4",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_720Q",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_1",
+                "Y": 138,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_1",
+                "Y": 182,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_1",
+                "X": 10,
+                "Y": 147,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_HCE8",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_F0S5",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_1",
+                "X": 410,
+                "Y": 147,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_BA1O",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_ZKC2",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_2",
+                "Y": 183,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_2",
+                "Y": 227,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_2",
+                "X": 10,
+                "Y": 192,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_2FXX",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_CXVO",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_2",
+                "X": 410,
+                "Y": 192,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_6B9I",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_I1AN",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_3",
+                "Y": 229,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_3",
+                "Y": 273,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_3",
+                "X": 10,
+                "Y": 238,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_TOI7",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_P7SN",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_3",
+                "X": 410,
+                "Y": 238,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_WRR9",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_4FBL",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_4",
+                "Y": 275,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_4",
+                "Y": 319,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_4",
+                "X": 10,
+                "Y": 284,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_BA1Q",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_KPXC",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_4",
+                "X": 410,
+                "Y": 284,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_ZPM1",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_ZJMG",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_5",
+                "Y": 321,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_5",
+                "Y": 365,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_5",
+                "X": 10,
+                "Y": 330,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_B4V3",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_AZJ3",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_5",
+                "X": 410,
+                "Y": 330,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_JW3I",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_TTGI",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              }
+            ]
           },
           {
             "Type": "Container",
@@ -2317,6 +3343,60 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "ModalWindow",
+            "Name": "ConnectedModalWindow",
+            "Width": 800,
+            "Height": 480,
+            "Visible": false,
+            "FileName": "__generated\\dark_theme_images_containers_large_wide_outlined_light.png",
+            "ModalX": 160,
+            "ModalY": 105,
+            "ModalWidth": 480,
+            "ModalHeight": 270,
+            "Alpha": 150,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "Text_Popup",
+                "X": 61,
+                "Y": 40,
+                "Width": 377,
+                "Height": 160,
+                "TextId": "__SingleUse_37QK",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "__SingleUse_09HL",
+                  "UseBuffer": true,
+                  "BufferSize": 46
+                },
+                "WideTextAction": 1
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ButtonHidePopup",
+                "X": 143,
+                "Y": 211,
+                "Width": 214,
+                "Height": 36,
+                "Pressed": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.png",
+                "Released": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_active.png",
+                "TextId": "__SingleUse_XKUX",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "dark_theme\\presets\\button\\regular\\height_36\\medium_round_active.json"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2367,6 +3447,17 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Diagnose_Motor3"
             }
+          },
+          {
+            "InteractionName": "hideConnectedPopup",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonHidePopup"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "ConnectedModalWindow"
+            }
           }
         ]
       },
@@ -2374,18 +3465,466 @@
         "Name": "Diagnose_Motor1",
         "Components": [
           {
-            "Type": "ScrollList",
-            "Name": "DiagnoseMotorList",
+            "Type": "Container",
+            "Name": "containerParameters",
             "Y": 74,
             "Width": 800,
             "Height": 406,
-            "ItemTemplateName": "ParameterListElement",
-            "NumberofItems": 9,
-            "Easing": "Back",
-            "EasingOption": "Out",
-            "SwipeAcceleration": 1.0,
-            "DragAcceleration": 1.0,
-            "OverShootPercentage": 75
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1",
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2",
+                "Y": 44,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_BatteryVoltage",
+                "X": 10,
+                "Y": 9,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_HJ7K",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_ValueBatteryVoltage",
+                "X": 410,
+                "Y": 9,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_117R",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_V9Z1",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1",
+                "Y": 46,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1",
+                "Y": 90,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_EngineRotSpeed",
+                "X": 10,
+                "Y": 55,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_22Y0",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_ValueEngineRotSpeed",
+                "X": 410,
+                "Y": 55,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_3D0G",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_74NS",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1",
+                "Y": 92,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1",
+                "Y": 136,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1",
+                "X": 10,
+                "Y": 101,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_2XDW",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_2FYX",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1",
+                "X": 410,
+                "Y": 101,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_5H0I",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_AQVY",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_1",
+                "Y": 138,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_1",
+                "Y": 182,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_1",
+                "X": 10,
+                "Y": 147,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_YO2G",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_78ZD",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_1",
+                "X": 410,
+                "Y": 147,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_X0QJ",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_90C3",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_2",
+                "Y": 183,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_2",
+                "Y": 227,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_2",
+                "X": 10,
+                "Y": 192,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_1LT9",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_6QRJ",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_2",
+                "X": 410,
+                "Y": 192,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_7UDE",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_3D1Z",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_3",
+                "Y": 229,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_3",
+                "Y": 273,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_3",
+                "X": 10,
+                "Y": 238,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_2F6T",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_3YSC",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_3",
+                "X": 410,
+                "Y": 238,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_WTNN",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_7B64",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_4",
+                "Y": 275,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_4",
+                "Y": 319,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_4",
+                "X": 10,
+                "Y": 284,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_3Y5Y",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_5H9B",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_4",
+                "X": 410,
+                "Y": 284,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_SPVR",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_M23C",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_5",
+                "Y": 321,
+                "Width": 800,
+                "Height": 44,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_5",
+                "Y": 365,
+                "Width": 800,
+                "Height": 2,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Parameter_1_1_5",
+                "X": 10,
+                "Y": 330,
+                "Width": 390,
+                "Height": 37,
+                "TextId": "__SingleUse_PVSQ",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_BBA4",
+                  "UseBuffer": true,
+                  "BufferSize": 40
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "text_Value_1_1_5",
+                "X": 410,
+                "Y": 330,
+                "Width": 390,
+                "Height": 35,
+                "TextId": "__SingleUse_GUQ2",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_CLLX",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              }
+            ]
           },
           {
             "Type": "Container",
@@ -2549,6 +4088,61 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "ModalWindow",
+            "Name": "ConnectedModalWindow",
+            "Width": 800,
+            "Height": 480,
+            "Visible": false,
+            "LockPosition": true,
+            "FileName": "__generated\\dark_theme_images_containers_large_wide_outlined_light.png",
+            "ModalX": 160,
+            "ModalY": 105,
+            "ModalWidth": 480,
+            "ModalHeight": 270,
+            "Alpha": 150,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "Text_Popup",
+                "X": 61,
+                "Y": 40,
+                "Width": 377,
+                "Height": 160,
+                "TextId": "__SingleUse_TKO5",
+                "TextRotation": "0",
+                "Wildcard1": {
+                  "TextId": "__SingleUse_I6TS",
+                  "UseBuffer": true,
+                  "BufferSize": 46
+                },
+                "WideTextAction": 1
+              },
+              {
+                "Type": "ButtonWithLabel",
+                "Name": "ButtonHidePopup",
+                "X": 143,
+                "Y": 211,
+                "Width": 214,
+                "Height": 36,
+                "Pressed": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.png",
+                "Released": "__generated\\dark_theme_images_widgets_button_regular_height_36_medium_round_active.png",
+                "TextId": "__SingleUse_U25L",
+                "ReleasedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "PressedColor": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "TextRotation": "0",
+                "Preset": "dark_theme\\presets\\button\\regular\\height_36\\medium_round_active.json"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -2586,6 +4180,17 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Diagnose_Motor2"
+            }
+          },
+          {
+            "InteractionName": "hideConnectedPopup",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ButtonHidePopup"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "ConnectedModalWindow"
             }
           }
         ]

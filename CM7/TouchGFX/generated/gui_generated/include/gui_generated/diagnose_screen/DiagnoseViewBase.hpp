@@ -16,6 +16,7 @@
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/containers/ModalWindow.hpp>
 
 class DiagnoseViewBase : public touchgfx::View<DiagnosePresenter>
 {
@@ -48,6 +49,9 @@ protected:
     touchgfx::ButtonWithLabel ErrorsButton;
     touchgfx::ButtonWithLabel ClimateButton;
     touchgfx::ButtonWithLabel DSCButton;
+    touchgfx::ModalWindow ConnectedModalWindow;
+    touchgfx::TextAreaWithOneWildcard Text_Popup;
+    touchgfx::ButtonWithLabel ButtonHidePopup;
 
     /*
      * Wildcard Buffers
@@ -56,6 +60,8 @@ protected:
     touchgfx::Unicode::UnicodeChar Text_DateBuffer[TEXT_DATE_SIZE];
     static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
+    static const uint16_t TEXT_POPUP_SIZE = 46;
+    touchgfx::Unicode::UnicodeChar Text_PopupBuffer[TEXT_POPUP_SIZE];
 
 private:
 

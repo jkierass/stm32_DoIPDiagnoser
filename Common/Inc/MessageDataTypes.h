@@ -2,6 +2,7 @@
 #define __MESSAGEDATATYPES_H__
 
 #include <stdbool.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C"
@@ -64,13 +65,13 @@ typedef enum
 	EVENT_DATA_UPDATE_PART_FILTER_REGENERATION,
 	EVENT_DATA_UPDATE_PART_FILTER_UNBLOCK_REGENERATION,
 	EVENT_DATA_UPDATE_BREAK_LIGHT,
-	EVENT_DATA_UPDATE_PEDAL_VALUE,
+	EVENT_DATA_UPDATE_RPM,
 	EVENT_DATA_UPDATE_SPEED,
 	EVENT_DATA_UPDATE_ACCELERATION,
 	EVENT_DATA_UPDATE_OIL_TEMPERATURE,
     EVENT_DATA_MOTOR_ECU_END = EVENT_DATA_UPDATE_OIL_TEMPERATURE,
 
-	EVENT_DATA_UPDATE_END = 255,	   // maximal numeric value of event related to data
+	EVENT_DATA_UPDATE_END = 127,	   // maximal numeric value of event related to data
 
     EVENT_ECU_CONNECTION_INITIALISED,
 
@@ -105,7 +106,7 @@ typedef union
 {
 	/**
 	 * 1st 		[index 0] 	   byte is a number from 1 to 15 indicating for how many events clients is subscribing
-	 * 2nd-16th [indexes 1-16] bytes are EEventType enum values from EVENT_DATA_UPDATE range (0-255) that client want to subscribe for
+	 * 2nd-16th [indexes 1-16] bytes are EEventType enum values from EVENT_DATA_UPDATE range (0-63) that client want to subscribe for
 	 */
 	uint8_t event_subscriptions[17]; //EVENT_DATA_SUBSCRIBE, EVENT_DATA_UNSUBSCRIBE
 
@@ -135,9 +136,10 @@ typedef union
     bool ret_set_date_and_time;            //ASYNC_COMPLETED_SET_DATE_AND_TIME
 
 
-    char ecu_connected_vin[17];         //EVENT_ECU_CONNECTION_INITIALISED
+    char ecu_connected_vin[17];            //EVENT_ECU_CONNECTION_INITIALISED
 
-    float battery_voltage;                 //EVENT_DATA_UPDATE_BATTERY_VOLTAGE
+    uint8_t battery_voltage;               //EVENT_DATA_UPDATE_BATTERY_VOLTAGE
+    uint16_t rpm;                          //EVENT_DATA_UPDATE_RPM
     float motor_temperature;               //EVENT_DATA_UPDATE_MOTOR_TEMPERATURE
     float air_mass;                        //EVENT_DATA_UPDATE_AIR_MASS
     float intake_air_temperature;          //EVENT_DATA_UPDATE_INTAKE_AIR_TEMPERATURE

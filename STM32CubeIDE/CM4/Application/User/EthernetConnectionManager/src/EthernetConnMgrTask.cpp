@@ -51,7 +51,6 @@ extern "C" void udpRecvCb(void *arg, struct udp_pcb *pcb, struct pbuf *p, const 
 EthernetConnectionManagerTask::EthernetConnectionManagerTask() : event_bus(EventBus(queueToEthernetConnMgr, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER))
 {
 	MX_LWIP_Init();
-	current_connection_state = STATE_ETHERNET_DISCONNECTED;
     connection_events_internal_queue = xQueueCreate(16, sizeof(EConnectionEvent));
 }
 
@@ -67,15 +66,65 @@ void EthernetConnectionManagerTask::OnEvent(EEventType event, UMessageData msg, 
         }
         case EVENT_DATA_SUBSCRIBE:
         {
+            onEventDataSubscribe(msg);
             break;
         }
 	    case EVENT_DATA_UNSUBSCRIBE:
         {
+            onEventDataUnsubscribe(msg);
             break;
         }
 		default:
 			break;
 	}
+}
+
+void EthernetConnectionManagerTask::onEventDataSubscribe(const UMessageData& data)
+{
+    for(int i = 1; i <= data.event_subscriptions[0]; i++)
+    {
+        if(data.event_subscriptions[i] > 63)
+        {
+            subscribed_data[1] |= 1ULL << (data.event_subscriptions[i] - 64);
+            if(currentlyProcessedRequest == REQUEST_INVALID)
+            {
+                currentlyProcessedRequest = static_cast<EDoIPRequest>(data.event_subscriptions[i]);
+            }
+        }
+        else
+        {
+            subscribed_data[0] |= 1ULL << data.event_subscriptions[i];
+            if(currentlyProcessedRequest == REQUEST_INVALID)
+            {
+                currentlyProcessedRequest = static_cast<EDoIPRequest>(data.event_subscriptions[i]);
+            }
+        }
+    }
+
+    EConnectionEvent connEvent = EVENT_DATA_REQUESTED;
+    xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(10000));
+}
+
+void EthernetConnectionManagerTask::onEventDataUnsubscribe(const UMessageData& data)
+{
+    for (int i = 1; i <= data.event_subscriptions[0]; i++)
+    {
+        if (data.event_subscriptions[i] > 63)
+        {
+            subscribed_data[1] &= 0ULL << (data.event_subscriptions[i] - 64);
+        }
+        else
+        {
+            subscribed_data[0] &= 0ULL << data.event_subscriptions[i];
+        }
+    }
+
+    if(subscribed_data[0] == 0ULL && subscribed_data[1] == 0ULL)
+    {
+        currentlyProcessedRequest = REQUEST_INVALID;
+        EConnectionEvent connEvent = EVENT_NO_DATA_TO_REQUEST;
+        xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(10000));
+    }
 }
 
 void EthernetConnectionManagerTask::processConnection()
@@ -94,19 +143,20 @@ void EthernetConnectionManagerTask::processConnection()
         }
         case STATE_CONNECTING_TCP:
         {
-            // do not do anything, wait for events and info if connection is successfull (it is handled in transition code)
+            // do not do anything, wait for events and info if connection is successfull (it is handled in onEvent code)
             break;
         }
-        case STATE_CONNECTED_ECU_DEFAULT:
+        case STATE_CONNECTED_ECU:
         {
-            processStateConnectedECUDefault();
+            // do not do anything, wait for events
             break;
         }
-        case STATE_CONNECTED_ECU_MOTOR:
+        case STATE_WAITING_FOR_DATA_FROM_ECU:
         {
-            processStateConnectedECUMotor();
+            // do not do anything, wait for events
             break;
         }
+
     }
 }
 
@@ -129,7 +179,7 @@ void EthernetConnectionManagerTask::process()
             {
                 // transtition happened
                 current_connection_state = newState;
-                // Process again so that after every transition the processing state code is called at least once.
+                // Process again so that after every onEvent the processing state code is called at least once.
                 // The chance of this happening is minimal, but not zero. 
                 processConnection();
             }
@@ -168,14 +218,33 @@ void EthernetConnectionManagerTask::processStateDiscovery()
 
 }
 
-void EthernetConnectionManagerTask::processStateConnectedECUDefault()
+void EthernetConnectionManagerTask::sendNextRequest()
 {
-    // TODO
-}
-
-void EthernetConnectionManagerTask::processStateConnectedECUMotor()
-{
-    // TODO (if needed?????)
+    for (int i = currentlyProcessedRequest + 1; i < 129; i++) //it is 129 on purpose, because after 127th param is processed we will restart index to 0
+    {
+        if(i > 127)
+        {
+            i = 0;
+        }
+        if(i < 64)
+        {
+            if (subscribed_data[0] & (1ULL << i))
+            {
+                auto dataType = static_cast<EDoIPRequest>(i);
+                sendRequestForData(dataType);
+                break;
+            }
+        }
+        else
+        {
+            if (subscribed_data[1] & (1ULL << (i - 64)))
+            {
+                auto dataType = static_cast<EDoIPRequest>(i - 64);
+                sendRequestForData(dataType);
+                break;
+            }
+        }
+    }
 }
 
 EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::onConnectionEvent(EConnectionEvent event)
@@ -184,35 +253,34 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::o
     {
         case STATE_ETHERNET_DISCONNECTED:
         {
-            return transitionEthDisconnected(event);
+            return onEventEthDisconnected(event);
             break;
         }
         case STATE_SERVICE_DISCOVERY:
         {
-            return transitionDiscovery(event);
+            return onEventDiscovery(event);
             break;
         }
         case STATE_CONNECTING_TCP:
         {
-            return transitionConnectingTCP(event);
+            return onEventConnectingTCP(event);
             break;
         }
-        case STATE_CONNECTED_ECU_DEFAULT:
+        case STATE_CONNECTED_ECU:
         {
-            return transitionConnectedECUDefault(event);
+            return onEventConnectedECUDefault(event);
             break;
         }
-        case STATE_CONNECTED_ECU_MOTOR:
+        case STATE_WAITING_FOR_DATA_FROM_ECU:
         {
-            return transitionConnectedECUMotor(event);
-            break;
+            return onEventWaitingForDataFromECU(event);
         }
         default:
             return STATE_ETHERNET_DISCONNECTED;
     }
 }
 
-EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::transitionEthDisconnected(EConnectionEvent event)
+EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::onEventEthDisconnected(EConnectionEvent event)
 {
     switch(event)
     {
@@ -230,7 +298,7 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
     }
 }
 
-EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::transitionDiscovery(EConnectionEvent event)
+EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::onEventDiscovery(EConnectionEvent event)
 {
     switch(event)
     {
@@ -242,13 +310,7 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
         case EVENT_DISCOVERY_COMPLETED:
         {
             udpDisconnect();
-
-            if(!tcpConnect())
-            {
-                // if connection not successfull, go back to discovery
-                return STATE_SERVICE_DISCOVERY;
-            }
-
+            tcpConnect();
             return STATE_CONNECTING_TCP;
         }
         default:
@@ -260,7 +322,7 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
     }
 }
 
-EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::transitionConnectingTCP(EConnectionEvent event)
+EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::onEventConnectingTCP(EConnectionEvent event)
 {
     switch(event)
     {
@@ -271,16 +333,18 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
         }
         case EVENT_TCP_CONNECTION_FAILED:
         {
-            if(!tcpConnect())
-            {
-                // if connection not successfull, go back to discovery
-                return STATE_SERVICE_DISCOVERY;
-            }
-            return STATE_CONNECTING_TCP;
+            tcpDisconnect();
+            udpConnect();
+            return STATE_SERVICE_DISCOVERY;
         }
         case EVENT_TCP_CONNECTED:
         {
-            return STATE_CONNECTED_ECU_DEFAULT;
+        	if((subscribed_data[0] != 0ULL) || (subscribed_data[1] != 0ULL))
+        	{
+        		EConnectionEvent connEvent = EVENT_DATA_REQUESTED;
+        		xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(10000));
+        	}
+            return STATE_CONNECTED_ECU;
         }
         default:
         {
@@ -291,13 +355,32 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
     }
 }
 
-EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::transitionConnectedECUDefault(EConnectionEvent event)
+EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::onEventConnectedECUDefault(EConnectionEvent event)
 {
     switch(event)
     {
-        case EVENT_ETHERNET_DISCONNECTED:
+		case EVENT_ETHERNET_DISCONNECTED:
+		{
+			tcpDisconnect();
+			return STATE_ETHERNET_DISCONNECTED;
+		}
+        case EVENT_TCP_CONNECTION_FAILED:
         {
-            return STATE_ETHERNET_DISCONNECTED;
+            tcpDisconnect();
+            udpConnect();
+            return STATE_SERVICE_DISCOVERY;
+        }
+        case EVENT_DATA_REQUESTED:
+        {
+            if(subscribed_data[0] == 0ULL && subscribed_data[1] == 0ULL)
+            {
+                return STATE_CONNECTED_ECU;
+            }
+            else
+            {
+                sendNextRequest();
+            }
+            return STATE_WAITING_FOR_DATA_FROM_ECU;
         }
         default:
         {
@@ -308,7 +391,7 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
     }
 }
 
-EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::transitionConnectedECUMotor(EConnectionEvent event)
+EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::onEventWaitingForDataFromECU(EConnectionEvent event)
 {
     switch(event)
     {
@@ -316,11 +399,32 @@ EthernetConnectionManagerTask::EConnectionState EthernetConnectionManagerTask::t
         {
             return STATE_ETHERNET_DISCONNECTED;
         }
+        case EVENT_TCP_CONNECTION_FAILED:
+        {
+            tcpDisconnect();
+            udpConnect();
+            return STATE_SERVICE_DISCOVERY;
+        }
+        case EVENT_TCP_READ_DATA_BY_ID_RECEIVED:
+        {
+            if(subscribed_data[0] == 0ULL && subscribed_data[1] == 0ULL)
+            {
+                return STATE_CONNECTED_ECU;
+            }
+            else
+            {
+                sendNextRequest();
+            }
+            return STATE_WAITING_FOR_DATA_FROM_ECU;
+        }
+        case EVENT_NO_DATA_TO_REQUEST:
+        {
+            return STATE_CONNECTED_ECU;
+        }
         default:
         {
             //no transition
             return current_connection_state;
-            break;
         }
     }
     
@@ -410,7 +514,7 @@ bool EthernetConnectionManagerTask::sendSLP()
 
 bool EthernetConnectionManagerTask::sendDoIPInit()
 {
-const char doip_request[] = "\x00\x00\x00\x00\x00\x11";
+    const char doip_request[] = "\x00\x00\x00\x00\x00\x11";
     ip_addr_t broadcast_ip;
     struct pbuf *p;
 
@@ -446,6 +550,7 @@ void EthernetConnectionManagerTask::HandleUdpRecvCb(void *arg, struct udp_pcb *p
     if (!p)
     {
         LOG_DEBUG("No data received, connection might be closed.");
+
         return;
     }
 
@@ -610,8 +715,8 @@ void EthernetConnectionManagerTask::udpDisconnect()
 
 bool EthernetConnectionManagerTask::tcpConnect()
 {
-	tcp_pcb = tcp_new();
     LOCK_TCPIP_CORE();
+	tcp_pcb = tcp_new();
     if (!tcp_pcb)
     {
         LOG_DEBUG("Failed to create TCP PCB.");
@@ -619,10 +724,20 @@ bool EthernetConnectionManagerTask::tcpConnect()
         return false;
     }
 
+    err_t bind_err = tcp_bind(tcp_pcb, IP_ADDR_ANY, 0); // Automatically assign port number
+    if (bind_err != ERR_OK)
+    {
+        LOG_DEBUG("Failed to bind TCP PCB: %d", bind_err);
+        tcpDisconnect();
+        UNLOCK_TCPIP_CORE();
+        return false;
+    }
     // callback registration
     tcp_arg(tcp_pcb, NULL);
     tcp_recv(tcp_pcb, tcpRecvCb);
     tcp_err(tcp_pcb, tcpErrCb);
+
+    tcp_nagle_disable(tcp_pcb);
 
     // establishing connection
     err_t err = tcp_connect(tcp_pcb, &ecu_ip_addr, TCP_PORT_ECU, tcpConnectCb);
@@ -667,19 +782,80 @@ void EthernetConnectionManagerTask::HandleTcpRecvCb(void *arg, struct tcp_pcb *t
 {
     if (!p || err != ERR_OK)
     {
-        tcp_close(tpcb);
+        tcp_arg(tcp_pcb, nullptr);
+        tcp_recv(tcp_pcb, nullptr);
+        tcp_err(tcp_pcb, nullptr);
+        // Close connection
+        tcp_close(tcp_pcb);
+        tcp_pcb = nullptr;
         LOG_DEBUG("Connection closed or error occurred.");
+        EConnectionEvent connEvent = EVENT_TCP_CONNECTION_FAILED;
+        if(xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
+        {
+            LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
+        }
         return;
     }
 
-    // TODO process data
     LOG_DEBUG("Received %d bytes of data:", p->len);
     uint8_t *data = (uint8_t *)p->payload;
-    for (int i = 0; i < p->len; i++)
+
+    const uint32_t udsPayloadLen = (data[0] << 24) | (data[1] << 16) | (data[2] << 8) | data[3];
+
+    // check if declared payload length is correct (4 bytes length, 2 bytes checksum(?))
+    if (udsPayloadLen + 6 > p->len)
     {
-        LOG_DEBUG("%02X ", data[i]);
+        LOG_DEBUG("Data length mismatch: declared %u, received %u.", udsPayloadLen, p->len);
+        tcp_recved(tcp_pcb, p->len);
+        pbuf_free(p);
+        return;
     }
 
+    // we skip 2 bytes becuase it is a checksum (?) used in confirmation frame
+    const EECUAddress sourceAddr = static_cast<EECUAddress>(data[6]);
+    const EECUAddress targetAddr = static_cast<EECUAddress>(data[7]);
+
+    if(static_cast<uint8_t>(targetAddr) != DIAGNOSTIC_TOOL_INTERNAL_ADDR)
+    {
+        // it means that it is echoed confirmation frame, discard.
+    	tcp_recved(tcp_pcb, p->len);
+        pbuf_free(p);
+        return;
+    }
+
+    EUDSResponseSID SID = static_cast<EUDSResponseSID>(data[8]);
+    switch(SID)
+    {
+        case EUDSResponseSID::READ_DATA_BY_IDENTIFIER:
+        {
+            // the size refers to 2 bytes of source and target addr + 1 byte of SID + 2 bytes of DID, which gives 5 bytes that we are not interested in 
+            handleReadDataByIdentifier(&data[11], udsPayloadLen - 5); 
+            negativeResponseCount = 0;
+            break;
+        }
+        case EUDSResponseSID::DYNAMICALLY_DEFINE_DATA_IDENTIFIER:
+        {
+            handleDynamicallyDefineDataIdentifier(&data[9], sourceAddr);
+            negativeResponseCount = 0;
+            break;
+        }
+        case EUDSResponseSID::NEGATIVE_RESPONSE:
+        {
+            // in case of negative response just move on, could be some temporary error.
+            // only if negative response count reaches 20, then try to reset the whole connection
+            negativeResponseCount++;
+            if(negativeResponseCount >= 20)
+            {
+                EConnectionEvent connEvent = EVENT_TCP_CONNECTION_FAILED;
+                xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(10000));
+            }
+        }
+        default:
+            // none other messages types are needed to be handled, so discard
+            break;
+    }
+
+    tcp_recved(tcp_pcb, p->len);
     pbuf_free(p);
 }
 
@@ -693,7 +869,6 @@ void EthernetConnectionManagerTask::HandleTcpConnectCb(void *arg, struct tcp_pcb
         if(xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
         {
             LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
-            configASSERT(0);
         }
     }
     else
@@ -703,7 +878,6 @@ void EthernetConnectionManagerTask::HandleTcpConnectCb(void *arg, struct tcp_pcb
         if(xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
         {
             LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
-            configASSERT(0);
         }
     }
 }
@@ -711,20 +885,220 @@ void EthernetConnectionManagerTask::HandleTcpConnectCb(void *arg, struct tcp_pcb
 void EthernetConnectionManagerTask::HandleTcpErrCb(void *arg, err_t err)
 {
     LOG_DEBUG("TCP connection error: %d", err);
+    EConnectionEvent connEvent = EVENT_TCP_CONNECTION_FAILED;
+    if(xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
+    {
+        LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
+    }
 }
 
-bool EthernetConnectionManagerTask::tcpSend(uint8_t udsRequest[], size_t sizeOfUdsRequest)
+bool EthernetConnectionManagerTask::tcpSend(uint8_t udsRequest[], size_t sizeOfUdsRequest, const bool tcpipThreadContext)
 {
-    LOCK_TCPIP_CORE();
+    if(!tcpipThreadContext)
+    {
+        LOCK_TCPIP_CORE();
+    }
     err_t res = tcp_write(tcp_pcb, udsRequest, sizeOfUdsRequest, TCP_WRITE_FLAG_COPY);
     if (res != ERR_OK)
     {
         LOG_DEBUG("Failed to send UDS request: %d", res);
-        UNLOCK_TCPIP_CORE();
+        if(!tcpipThreadContext)
+        {
+            UNLOCK_TCPIP_CORE();
+        }
         return false;
     }
 
     tcp_output(tcp_pcb);
-    UNLOCK_TCPIP_CORE();
+    if(!tcpipThreadContext)
+    {
+        UNLOCK_TCPIP_CORE();
+    }
     return true;
+}
+
+void EthernetConnectionManagerTask::handleReadDataByIdentifier(uint8_t dataPayload[], uint32_t size)
+{
+    const char* mismatchingSizeLog = "Mismatching data size! Read data by identifier could not be read!";
+    switch(currentlyProcessedRequest)
+    {
+        case BATTERY_VOLTAGE:
+        {
+            if(size != 1)
+            {
+                LOG_DEBUG(mismatchingSizeLog);
+            }
+            else
+            {
+                UMessageData data;
+                data.battery_voltage = dataPayload[0]; // skip 2 bytes because it is DID, which does not interest us as we know what data to expect and how to interpret it
+                event_bus.send(EVENT_DATA_UPDATE_BATTERY_VOLTAGE, data, EVENT_CLIENT_FRONTEND);
+            }
+            break;
+        }
+        case RPM:
+        {
+            if(size != 2)
+            {
+                LOG_DEBUG(mismatchingSizeLog);
+            }
+            else
+            {
+                UMessageData data;
+                data.rpm = (dataPayload[0] << 8) | dataPayload[1];
+                event_bus.send(EVENT_DATA_UPDATE_RPM, data, EVENT_CLIENT_FRONTEND);
+            }
+            break;
+        }
+        default:
+            // return, because if data was successfully read then we always need to send an internat event
+            return;
+    }
+    EConnectionEvent connEvent = EVENT_TCP_READ_DATA_BY_ID_RECEIVED;
+    if(xQueueSend(connection_events_internal_queue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
+    {
+        LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
+    }
+}
+
+void EthernetConnectionManagerTask::handleDynamicallyDefineDataIdentifier(uint8_t dataPayload[], EECUAddress sourceEcuAddr)
+{
+    const uint8_t subSID = dataPayload[0];
+    switch(subSID)
+    {
+        case 0x03:
+        {
+            const size_t totalUDSRequestSize = secondReqDynDataSize + 6;
+            uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
+            // response for the first dynamic assign sequence, so send next dynamic assign sequence packet
+            prepareSecondRequestForDynamicData(payloadToSend, sourceEcuAddr, EDynamicDataIndentifierRequestCode::BATTERY_VOLTAGE); //TODO BATTERY_VOLTAGE na sztywno
+            tcpSend(payloadToSend, totalUDSRequestSize, true);
+            break;
+        }
+        case 0x01:
+        {
+            const size_t totalUDSRequestSize = dataReqDataSize + 6;
+            uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
+            // response for the second dynamic assign sequence, so send request for data
+            prepareDataRequest(payloadToSend, sourceEcuAddr, EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0);
+            tcpSend(payloadToSend, totalUDSRequestSize, true);
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+void EthernetConnectionManagerTask::sendRequestForData(EDoIPRequest request)
+{
+    currentlyProcessedRequest = request;
+    switch(request)
+    {
+        case BATTERY_VOLTAGE:
+        {
+            const size_t totalUDSRequestSize = firstReqDynDataSize + 6;
+            uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
+            prepareFirstRequestForDynamicData(payloadToSend, EECUAddress::ECU_DME_INTERNAL_ADDR);
+            tcpSend(payloadToSend, totalUDSRequestSize, false);
+            break;
+        }
+        case RPM:
+        {
+            const size_t totalUDSRequestSize = dataReqDataSize + 6;
+            uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
+            prepareDataRequest(payloadToSend, EECUAddress::ECU_KOMBI_INTERNAL_ADDR, EUDSDID::KOMBI_RPM);
+            tcpSend(payloadToSend, totalUDSRequestSize, false);
+            break;
+        }
+        case REQUEST_INVALID:
+        {
+            LOG_DEBUG("Requested to send data of type REQUEST_INVALID.");
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+void EthernetConnectionManagerTask::prepareDataRequest(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EUDSDID did)
+{
+    // data len
+    preparedPayload[0] = 0x00;
+    preparedPayload[1] = 0x00;
+    preparedPayload[2] = 0x00;
+    preparedPayload[3] = dataReqDataSize;
+
+    // "checksum"
+    preparedPayload[4] = 0x00;
+    preparedPayload[5] = 0x01;
+
+    // addresses
+    preparedPayload[6] = DIAGNOSTIC_TOOL_INTERNAL_ADDR;
+    preparedPayload[7] = static_cast<uint8_t>(targetEcuAddr);
+
+    // SID
+    preparedPayload[8] = static_cast<uint8_t>(EUDSRequestSID::READ_DATA_BY_IDENTIFIER);
+
+    // DID
+    preparedPayload[9] = static_cast<uint8_t>((static_cast<uint16_t>(did) & 0xFF00) >> 8);
+    preparedPayload[10] = static_cast<uint8_t>(static_cast<uint16_t>(did) & 0x00FF);
+    
+}
+
+void EthernetConnectionManagerTask::prepareFirstRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr)
+{
+    // data len
+    preparedPayload[0] = 0x00;
+    preparedPayload[1] = 0x00;
+    preparedPayload[2] = 0x00;
+    preparedPayload[3] = firstReqDynDataSize;
+
+    // "checksum"
+    preparedPayload[4] = 0x00;
+    preparedPayload[5] = 0x01;
+
+    // addresses
+    preparedPayload[6] = DIAGNOSTIC_TOOL_INTERNAL_ADDR;
+    preparedPayload[7] = static_cast<uint8_t>(targetEcuAddr);
+
+    // SID
+    preparedPayload[8] = static_cast<uint8_t>(EUDSRequestSID::DYNAMICALLY_DEFINE_DATA_IDENTIFIER);
+    // sub SID
+    preparedPayload[9] = 0x03;
+
+    // DID
+    preparedPayload[10] = static_cast<uint8_t>((static_cast<uint16_t>(EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0) & 0xFF00) >> 8);
+    preparedPayload[11] = static_cast<uint8_t>(static_cast<uint16_t>(EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0) & 0x00FF);
+}
+
+void EthernetConnectionManagerTask::prepareSecondRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EDynamicDataIndentifierRequestCode ddirCode)
+{
+    // data len
+    preparedPayload[0] = 0x00;
+    preparedPayload[1] = 0x00;
+    preparedPayload[2] = 0x00;
+    preparedPayload[3] = secondReqDynDataSize;
+
+    // "checksum"
+    preparedPayload[4] = 0x00;
+    preparedPayload[5] = 0x01;
+
+    // addresses
+    preparedPayload[6] = DIAGNOSTIC_TOOL_INTERNAL_ADDR;
+    preparedPayload[7] = static_cast<uint8_t>(targetEcuAddr);
+
+    // SID
+    preparedPayload[8] = static_cast<uint8_t>(EUDSRequestSID::DYNAMICALLY_DEFINE_DATA_IDENTIFIER);
+    // sub SID
+    preparedPayload[9] = 0x01;
+
+    // DID
+    preparedPayload[10] = static_cast<uint8_t>((static_cast<uint16_t>(EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0) & 0xFF00) >> 8);
+    preparedPayload[11] = static_cast<uint8_t>(static_cast<uint16_t>(EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0) & 0x00FF);
+
+    // Dynamic data identifier request code
+    preparedPayload[12] = static_cast<uint8_t>((static_cast<uint32_t>(ddirCode) & 0xFF000000) >> 24);
+    preparedPayload[13] = static_cast<uint8_t>((static_cast<uint32_t>(ddirCode) & 0x00FF0000) >> 16);
+    preparedPayload[14] = static_cast<uint8_t>((static_cast<uint32_t>(ddirCode) & 0x0000FF00) >> 8);
+    preparedPayload[15] = static_cast<uint8_t>(static_cast<uint32_t>(ddirCode) & 0x000000FF);
 }

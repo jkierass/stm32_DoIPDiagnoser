@@ -1,5 +1,7 @@
 #include <gui/diagnose_screen/DiagnoseView.hpp>
 #include <gui/diagnose_screen/DiagnosePresenter.hpp>
+#include <cstring>
+#include <cstdio>
 
 DiagnosePresenter::DiagnosePresenter(DiagnoseView& v)
     : view(v)
@@ -30,6 +32,14 @@ void DiagnosePresenter::OnEvent(EEventType event, UMessageData msg, EEventClient
 {
     switch(event)
     {
+        case EVENT_ECU_CONNECTION_INITIALISED:
+        {
+            uint8_t message[46] = {0};
+            std::memcpy(&message[0], "Connected to vehicle, VIN: ", 27);
+            std::memcpy(&message[27], msg.ecu_connected_vin, 17);
+            view.showPopup(message, 46);
+            break;
+        }
         case EVENT_UPDATE_ROOM_TEMPERATURE:
             view.setTemperature(msg.room_temperature);
             model->auxDataCache.room_temperature = msg.room_temperature;

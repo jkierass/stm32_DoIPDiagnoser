@@ -3,30 +3,222 @@
 /*********************************************************************************/
 #include <gui_generated/diagnose_motor1_screen/Diagnose_Motor1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Diagnose_Motor1ViewBase::Diagnose_Motor1ViewBase() :
-    updateItemCallback(this, &Diagnose_Motor1ViewBase::updateItemCallbackHandler),
     buttonCallback(this, &Diagnose_Motor1ViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    DiagnoseMotorList.setPosition(0, 74, 800, 406);
-    DiagnoseMotorList.setHorizontal(false);
-    DiagnoseMotorList.setCircular(false);
-    DiagnoseMotorList.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
-    DiagnoseMotorList.setSwipeAcceleration(10);
-    DiagnoseMotorList.setDragAcceleration(10);
-    DiagnoseMotorList.setNumberOfItems(9);
-    DiagnoseMotorList.setPadding(0, 0);
-    DiagnoseMotorList.setSnapping(false);
-    DiagnoseMotorList.setOvershootPercentage(75);
-    DiagnoseMotorList.setDrawableSize(44, 0);
-    DiagnoseMotorList.setDrawables(DiagnoseMotorListListItems, updateItemCallback);
-    add(DiagnoseMotorList);
+    containerParameters.setPosition(0, 74, 800, 406);
+    scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1.setPosition(0, 0, 800, 44);
+    scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1);
+
+    scalableImage2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2.setPosition(0, 44, 800, 2);
+    scalableImage2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2);
+
+    text_BatteryVoltage.setPosition(10, 9, 390, 37);
+    text_BatteryVoltage.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_BatteryVoltage.setLinespacing(0);
+    text_BatteryVoltage.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HJ7K));
+    containerParameters.add(text_BatteryVoltage);
+
+    text_ValueBatteryVoltage.setPosition(410, 9, 390, 35);
+    text_ValueBatteryVoltage.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_ValueBatteryVoltage.setLinespacing(0);
+    Unicode::snprintf(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V9Z1).getText());
+    text_ValueBatteryVoltage.setWildcard(text_ValueBatteryVoltageBuffer);
+    text_ValueBatteryVoltage.setTypedText(touchgfx::TypedText(T___SINGLEUSE_117R));
+    containerParameters.add(text_ValueBatteryVoltage);
+
+    scalableImage1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1.setPosition(0, 46, 800, 44);
+    scalableImage1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1);
+
+    scalableImage2_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1.setPosition(0, 90, 800, 2);
+    scalableImage2_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1);
+
+    text_EngineRotSpeed.setPosition(10, 55, 390, 37);
+    text_EngineRotSpeed.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_EngineRotSpeed.setLinespacing(0);
+    text_EngineRotSpeed.setTypedText(touchgfx::TypedText(T___SINGLEUSE_22Y0));
+    containerParameters.add(text_EngineRotSpeed);
+
+    text_ValueEngineRotSpeed.setPosition(410, 55, 390, 35);
+    text_ValueEngineRotSpeed.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_ValueEngineRotSpeed.setLinespacing(0);
+    Unicode::snprintf(text_ValueEngineRotSpeedBuffer, TEXT_VALUEENGINEROTSPEED_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_74NS).getText());
+    text_ValueEngineRotSpeed.setWildcard(text_ValueEngineRotSpeedBuffer);
+    text_ValueEngineRotSpeed.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3D0G));
+    containerParameters.add(text_ValueEngineRotSpeed);
+
+    scalableImage1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1.setPosition(0, 92, 800, 44);
+    scalableImage1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1);
+
+    scalableImage2_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1.setPosition(0, 136, 800, 2);
+    scalableImage2_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1);
+
+    text_Parameter_1_1.setPosition(10, 101, 390, 37);
+    text_Parameter_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Parameter_1_1.setLinespacing(0);
+    Unicode::snprintf(text_Parameter_1_1Buffer, TEXT_PARAMETER_1_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2FYX).getText());
+    text_Parameter_1_1.setWildcard(text_Parameter_1_1Buffer);
+    text_Parameter_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2XDW));
+    containerParameters.add(text_Parameter_1_1);
+
+    text_Value_1_1.setPosition(410, 101, 390, 35);
+    text_Value_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Value_1_1.setLinespacing(0);
+    Unicode::snprintf(text_Value_1_1Buffer, TEXT_VALUE_1_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_AQVY).getText());
+    text_Value_1_1.setWildcard(text_Value_1_1Buffer);
+    text_Value_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_5H0I));
+    containerParameters.add(text_Value_1_1);
+
+    scalableImage1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_1.setPosition(0, 138, 800, 44);
+    scalableImage1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_1);
+
+    scalableImage2_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_1.setPosition(0, 182, 800, 2);
+    scalableImage2_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_1);
+
+    text_Parameter_1_1_1.setPosition(10, 147, 390, 37);
+    text_Parameter_1_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Parameter_1_1_1.setLinespacing(0);
+    Unicode::snprintf(text_Parameter_1_1_1Buffer, TEXT_PARAMETER_1_1_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_78ZD).getText());
+    text_Parameter_1_1_1.setWildcard(text_Parameter_1_1_1Buffer);
+    text_Parameter_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YO2G));
+    containerParameters.add(text_Parameter_1_1_1);
+
+    text_Value_1_1_1.setPosition(410, 147, 390, 35);
+    text_Value_1_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Value_1_1_1.setLinespacing(0);
+    Unicode::snprintf(text_Value_1_1_1Buffer, TEXT_VALUE_1_1_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_90C3).getText());
+    text_Value_1_1_1.setWildcard(text_Value_1_1_1Buffer);
+    text_Value_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X0QJ));
+    containerParameters.add(text_Value_1_1_1);
+
+    scalableImage1_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_2.setPosition(0, 183, 800, 44);
+    scalableImage1_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_2);
+
+    scalableImage2_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_2.setPosition(0, 227, 800, 2);
+    scalableImage2_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_2);
+
+    text_Parameter_1_1_2.setPosition(10, 192, 390, 37);
+    text_Parameter_1_1_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Parameter_1_1_2.setLinespacing(0);
+    Unicode::snprintf(text_Parameter_1_1_2Buffer, TEXT_PARAMETER_1_1_2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_6QRJ).getText());
+    text_Parameter_1_1_2.setWildcard(text_Parameter_1_1_2Buffer);
+    text_Parameter_1_1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1LT9));
+    containerParameters.add(text_Parameter_1_1_2);
+
+    text_Value_1_1_2.setPosition(410, 192, 390, 35);
+    text_Value_1_1_2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Value_1_1_2.setLinespacing(0);
+    Unicode::snprintf(text_Value_1_1_2Buffer, TEXT_VALUE_1_1_2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3D1Z).getText());
+    text_Value_1_1_2.setWildcard(text_Value_1_1_2Buffer);
+    text_Value_1_1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7UDE));
+    containerParameters.add(text_Value_1_1_2);
+
+    scalableImage1_1_1_3.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_3.setPosition(0, 229, 800, 44);
+    scalableImage1_1_1_3.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_3);
+
+    scalableImage2_1_1_3.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_3.setPosition(0, 273, 800, 2);
+    scalableImage2_1_1_3.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_3);
+
+    text_Parameter_1_1_3.setPosition(10, 238, 390, 37);
+    text_Parameter_1_1_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Parameter_1_1_3.setLinespacing(0);
+    Unicode::snprintf(text_Parameter_1_1_3Buffer, TEXT_PARAMETER_1_1_3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_3YSC).getText());
+    text_Parameter_1_1_3.setWildcard(text_Parameter_1_1_3Buffer);
+    text_Parameter_1_1_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2F6T));
+    containerParameters.add(text_Parameter_1_1_3);
+
+    text_Value_1_1_3.setPosition(410, 238, 390, 35);
+    text_Value_1_1_3.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Value_1_1_3.setLinespacing(0);
+    Unicode::snprintf(text_Value_1_1_3Buffer, TEXT_VALUE_1_1_3_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_7B64).getText());
+    text_Value_1_1_3.setWildcard(text_Value_1_1_3Buffer);
+    text_Value_1_1_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WTNN));
+    containerParameters.add(text_Value_1_1_3);
+
+    scalableImage1_1_1_4.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_4.setPosition(0, 275, 800, 44);
+    scalableImage1_1_1_4.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_4);
+
+    scalableImage2_1_1_4.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_4.setPosition(0, 319, 800, 2);
+    scalableImage2_1_1_4.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_4);
+
+    text_Parameter_1_1_4.setPosition(10, 284, 390, 37);
+    text_Parameter_1_1_4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Parameter_1_1_4.setLinespacing(0);
+    Unicode::snprintf(text_Parameter_1_1_4Buffer, TEXT_PARAMETER_1_1_4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_5H9B).getText());
+    text_Parameter_1_1_4.setWildcard(text_Parameter_1_1_4Buffer);
+    text_Parameter_1_1_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3Y5Y));
+    containerParameters.add(text_Parameter_1_1_4);
+
+    text_Value_1_1_4.setPosition(410, 284, 390, 35);
+    text_Value_1_1_4.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Value_1_1_4.setLinespacing(0);
+    Unicode::snprintf(text_Value_1_1_4Buffer, TEXT_VALUE_1_1_4_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_M23C).getText());
+    text_Value_1_1_4.setWildcard(text_Value_1_1_4Buffer);
+    text_Value_1_1_4.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SPVR));
+    containerParameters.add(text_Value_1_1_4);
+
+    scalableImage1_1_1_5.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_5.setPosition(0, 321, 800, 44);
+    scalableImage1_1_1_5.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_5);
+
+    scalableImage2_1_1_5.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_5.setPosition(0, 365, 800, 2);
+    scalableImage2_1_1_5.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_5);
+
+    text_Parameter_1_1_5.setPosition(10, 330, 390, 37);
+    text_Parameter_1_1_5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Parameter_1_1_5.setLinespacing(0);
+    Unicode::snprintf(text_Parameter_1_1_5Buffer, TEXT_PARAMETER_1_1_5_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_BBA4).getText());
+    text_Parameter_1_1_5.setWildcard(text_Parameter_1_1_5Buffer);
+    text_Parameter_1_1_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PVSQ));
+    containerParameters.add(text_Parameter_1_1_5);
+
+    text_Value_1_1_5.setPosition(410, 330, 390, 35);
+    text_Value_1_1_5.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    text_Value_1_1_5.setLinespacing(0);
+    Unicode::snprintf(text_Value_1_1_5Buffer, TEXT_VALUE_1_1_5_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_CLLX).getText());
+    text_Value_1_1_5.setWildcard(text_Value_1_1_5Buffer);
+    text_Value_1_1_5.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GUQ2));
+    containerParameters.add(text_Value_1_1_5);
+
+    add(containerParameters);
 
     container1.setPosition(0, 0, 800, 75);
     box2.setPosition(0, -1, 800, 75);
@@ -94,6 +286,28 @@ Diagnose_Motor1ViewBase::Diagnose_Motor1ViewBase() :
     container1.add(Text_Date);
 
     add(container1);
+
+    ConnectedModalWindow.setBackground(touchgfx::BitmapId(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_WIDE_OUTLINED_LIGHT_ID), 160, 105);
+    ConnectedModalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    ConnectedModalWindow.hide();
+    Text_Popup.setPosition(61, 40, 377, 160);
+    Text_Popup.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Text_Popup.setLinespacing(0);
+    Text_Popup.setWideTextAction(WIDE_TEXT_WORDWRAP);
+    Unicode::snprintf(Text_PopupBuffer, TEXT_POPUP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_I6TS).getText());
+    Text_Popup.setWildcard(Text_PopupBuffer);
+    Text_Popup.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TKO5));
+    ConnectedModalWindow.add(Text_Popup);
+
+    ButtonHidePopup.setXY(143, 211);
+    ButtonHidePopup.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUND_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUND_PRESSED_ID));
+    ButtonHidePopup.setLabelText(touchgfx::TypedText(T___SINGLEUSE_U25L));
+    ButtonHidePopup.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ButtonHidePopup.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ButtonHidePopup.setAction(buttonCallback);
+    ConnectedModalWindow.add(ButtonHidePopup);
+
+    add(ConnectedModalWindow);
 }
 
 Diagnose_Motor1ViewBase::~Diagnose_Motor1ViewBase()
@@ -103,11 +317,7 @@ Diagnose_Motor1ViewBase::~Diagnose_Motor1ViewBase()
 
 void Diagnose_Motor1ViewBase::setupScreen()
 {
-    DiagnoseMotorList.initialize();
-    for (int i = 0; i < DiagnoseMotorListListItems.getNumberOfDrawables(); i++)
-    {
-        DiagnoseMotorListListItems[i].initialize();
-    }
+
 }
 
 void Diagnose_Motor1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
@@ -133,12 +343,12 @@ void Diagnose_Motor1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButt
         //Go to Diagnose_Motor2 with no screen transition
         application().gotoDiagnose_Motor2ScreenNoTransition();
     }
-}
-
-void Diagnose_Motor1ViewBase::updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex)
-{
-    if (items == &DiagnoseMotorListListItems)
+    if (&src == &ButtonHidePopup)
     {
-        DiagnoseMotorListUpdateItem(DiagnoseMotorListListItems[containerIndex], itemIndex);
+        //hideConnectedPopup
+        //When ButtonHidePopup clicked hide ConnectedModalWindow
+        //Hide ConnectedModalWindow
+        ConnectedModalWindow.setVisible(false);
+        ConnectedModalWindow.invalidate();
     }
 }

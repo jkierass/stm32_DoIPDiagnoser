@@ -15,6 +15,6 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/g
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:31:32:touchgfx::Unicode::UnicodeChar touchgfx::TextProvider::getNextLigature(touchgfx::TextDirection)	8	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:45:6:void touchgfx::TextProvider::initializeInternal()	0	static
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:50:6:)	32	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:132:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	16	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:162:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	0	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:167:39:const touchgfx::Unicode::UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:134:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	16	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:164:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/texts/src/Texts.cpp:169:39:const touchgfx::Unicode::UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	0	static

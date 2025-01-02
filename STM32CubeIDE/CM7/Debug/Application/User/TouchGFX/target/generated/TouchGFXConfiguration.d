@@ -86,6 +86,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnosePresenter.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp \
@@ -100,13 +101,9 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/DayElement.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/DayElementBase.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor3_screen/Diagnose_Motor3ViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ParameterListElement.hpp \
- ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/ParameterListElementBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor2_screen/Diagnose_Motor2ViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp \
@@ -166,8 +163,6 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
  ../../../CM7/TouchGFX/target/STM32TouchController.hpp
 ../../CM7/../../CM7/TouchGFX/generated/texts/include/texts/TypedTextDatabase.hpp:
@@ -256,6 +251,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnosePresenter.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp:
@@ -270,13 +266,9 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/DayElement.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/DayElementBase.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor3_screen/Diagnose_Motor3ViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollList.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/ParameterListElement.hpp:
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/ParameterListElementBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor2_screen/Diagnose_Motor2ViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp:
@@ -336,7 +328,5 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:
 ../../../CM7/TouchGFX/target/STM32TouchController.hpp:

@@ -1,5 +1,7 @@
 #include <gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp>
 #include <gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp>
+#include <cstring>
+#include <cstdio>
 
 Diagnose_Motor1Presenter::Diagnose_Motor1Presenter(Diagnose_Motor1View& v)
     : view(v)
@@ -12,11 +14,21 @@ void Diagnose_Motor1Presenter::activate()
     model->sendEvent(EVENT_FORCE_UPDATE_DATE, UMessageData{}, EVENT_CLIENT_RTC);
     model->sendEvent(EVENT_FORCE_UPDATE_TIME, UMessageData{}, EVENT_CLIENT_RTC);
     loadCache();
+    
+    UMessageData msg;
+    msg.event_subscriptions[0] = 2;
+    msg.event_subscriptions[1] = EVENT_DATA_UPDATE_BATTERY_VOLTAGE;
+    msg.event_subscriptions[2] = EVENT_DATA_UPDATE_RPM;
+    model->sendEvent(EVENT_DATA_SUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_Motor1Presenter::deactivate()
 {
-
+    UMessageData msg;
+    msg.event_subscriptions[0] = 2;
+    msg.event_subscriptions[1] = EVENT_DATA_UPDATE_BATTERY_VOLTAGE;
+    msg.event_subscriptions[2] = EVENT_DATA_UPDATE_RPM;
+    model->sendEvent(EVENT_DATA_UNSUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_Motor1Presenter::loadCache()
@@ -32,7 +44,7 @@ void Diagnose_Motor1Presenter::OnEvent(EEventType event, UMessageData msg, EEven
     {
         case EVENT_DATA_UPDATE_BATTERY_VOLTAGE:
             [[fallthrough]];
-        case EVENT_DATA_UPDATE_MOTOR_TEMPERATURE:
+        case EVENT_DATA_UPDATE_RPM:
             [[fallthrough]];
         case EVENT_DATA_UPDATE_AIR_MASS:
             [[fallthrough]];
@@ -53,6 +65,14 @@ void Diagnose_Motor1Presenter::OnEvent(EEventType event, UMessageData msg, EEven
             view.setTemperature(msg.room_temperature);
             model->auxDataCache.room_temperature = msg.room_temperature;
             break;
+        case EVENT_ECU_CONNECTION_INITIALISED:
+        {
+            uint8_t message[46] = {0};
+            std::memcpy(&message[0], "Connected to vehicle, VIN: ", 27);
+            std::memcpy(&message[27], msg.ecu_connected_vin, 17);
+            view.showPopup(message, 46);
+            break;
+        }
         case EVENT_UPDATE_DATE:
         {
             uint8_t day = msg.updated_date[0];

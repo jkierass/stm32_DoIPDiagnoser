@@ -8,15 +8,15 @@
 #include <mvp/View.hpp>
 #include <gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/containers/scrollers/ScrollList.hpp>
-#include <gui/containers/ParameterListElement.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/containers/clock/DigitalClock.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/ModalWindow.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 
 class Diagnose_Motor1ViewBase : public touchgfx::View<Diagnose_Motor1Presenter>
 {
@@ -24,11 +24,6 @@ public:
     Diagnose_Motor1ViewBase();
     virtual ~Diagnose_Motor1ViewBase();
     virtual void setupScreen();
-
-    virtual void DiagnoseMotorListUpdateItem(ParameterListElement& item, int16_t itemIndex)
-    {
-        // Override and implement this function in Diagnose_Motor1
-    }
 
 protected:
     FrontendApplication& application() {
@@ -39,8 +34,39 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScrollList DiagnoseMotorList;
-    touchgfx::DrawableListItems<ParameterListElement, 11> DiagnoseMotorListListItems;
+    touchgfx::Container containerParameters;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScalableImage scalableImage2;
+    touchgfx::TextArea text_BatteryVoltage;
+    touchgfx::TextAreaWithOneWildcard text_ValueBatteryVoltage;
+    touchgfx::ScalableImage scalableImage1_1;
+    touchgfx::ScalableImage scalableImage2_1;
+    touchgfx::TextArea text_EngineRotSpeed;
+    touchgfx::TextAreaWithOneWildcard text_ValueEngineRotSpeed;
+    touchgfx::ScalableImage scalableImage1_1_1;
+    touchgfx::ScalableImage scalableImage2_1_1;
+    touchgfx::TextAreaWithOneWildcard text_Parameter_1_1;
+    touchgfx::TextAreaWithOneWildcard text_Value_1_1;
+    touchgfx::ScalableImage scalableImage1_1_1_1;
+    touchgfx::ScalableImage scalableImage2_1_1_1;
+    touchgfx::TextAreaWithOneWildcard text_Parameter_1_1_1;
+    touchgfx::TextAreaWithOneWildcard text_Value_1_1_1;
+    touchgfx::ScalableImage scalableImage1_1_1_2;
+    touchgfx::ScalableImage scalableImage2_1_1_2;
+    touchgfx::TextAreaWithOneWildcard text_Parameter_1_1_2;
+    touchgfx::TextAreaWithOneWildcard text_Value_1_1_2;
+    touchgfx::ScalableImage scalableImage1_1_1_3;
+    touchgfx::ScalableImage scalableImage2_1_1_3;
+    touchgfx::TextAreaWithOneWildcard text_Parameter_1_1_3;
+    touchgfx::TextAreaWithOneWildcard text_Value_1_1_3;
+    touchgfx::ScalableImage scalableImage1_1_1_4;
+    touchgfx::ScalableImage scalableImage2_1_1_4;
+    touchgfx::TextAreaWithOneWildcard text_Parameter_1_1_4;
+    touchgfx::TextAreaWithOneWildcard text_Value_1_1_4;
+    touchgfx::ScalableImage scalableImage1_1_1_5;
+    touchgfx::ScalableImage scalableImage2_1_1_5;
+    touchgfx::TextAreaWithOneWildcard text_Parameter_1_1_5;
+    touchgfx::TextAreaWithOneWildcard text_Value_1_1_5;
     touchgfx::Container container1;
     touchgfx::Box box2;
     touchgfx::DigitalClock Clock;
@@ -53,27 +79,58 @@ protected:
     touchgfx::Button NextParameter;
     touchgfx::TextAreaWithOneWildcard Text_Temperature;
     touchgfx::TextAreaWithOneWildcard Text_Date;
+    touchgfx::ModalWindow ConnectedModalWindow;
+    touchgfx::TextAreaWithOneWildcard Text_Popup;
+    touchgfx::ButtonWithLabel ButtonHidePopup;
 
     /*
      * Wildcard Buffers
      */
+    static const uint16_t TEXT_VALUEBATTERYVOLTAGE_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_ValueBatteryVoltageBuffer[TEXT_VALUEBATTERYVOLTAGE_SIZE];
+    static const uint16_t TEXT_VALUEENGINEROTSPEED_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_ValueEngineRotSpeedBuffer[TEXT_VALUEENGINEROTSPEED_SIZE];
+    static const uint16_t TEXT_PARAMETER_1_1_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar text_Parameter_1_1Buffer[TEXT_PARAMETER_1_1_SIZE];
+    static const uint16_t TEXT_VALUE_1_1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_Value_1_1Buffer[TEXT_VALUE_1_1_SIZE];
+    static const uint16_t TEXT_PARAMETER_1_1_1_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar text_Parameter_1_1_1Buffer[TEXT_PARAMETER_1_1_1_SIZE];
+    static const uint16_t TEXT_VALUE_1_1_1_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_Value_1_1_1Buffer[TEXT_VALUE_1_1_1_SIZE];
+    static const uint16_t TEXT_PARAMETER_1_1_2_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar text_Parameter_1_1_2Buffer[TEXT_PARAMETER_1_1_2_SIZE];
+    static const uint16_t TEXT_VALUE_1_1_2_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_Value_1_1_2Buffer[TEXT_VALUE_1_1_2_SIZE];
+    static const uint16_t TEXT_PARAMETER_1_1_3_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar text_Parameter_1_1_3Buffer[TEXT_PARAMETER_1_1_3_SIZE];
+    static const uint16_t TEXT_VALUE_1_1_3_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_Value_1_1_3Buffer[TEXT_VALUE_1_1_3_SIZE];
+    static const uint16_t TEXT_PARAMETER_1_1_4_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar text_Parameter_1_1_4Buffer[TEXT_PARAMETER_1_1_4_SIZE];
+    static const uint16_t TEXT_VALUE_1_1_4_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_Value_1_1_4Buffer[TEXT_VALUE_1_1_4_SIZE];
+    static const uint16_t TEXT_PARAMETER_1_1_5_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar text_Parameter_1_1_5Buffer[TEXT_PARAMETER_1_1_5_SIZE];
+    static const uint16_t TEXT_VALUE_1_1_5_SIZE = 20;
+    touchgfx::Unicode::UnicodeChar text_Value_1_1_5Buffer[TEXT_VALUE_1_1_5_SIZE];
     static const uint16_t TEXT_TEMPERATURE_SIZE = 4;
     touchgfx::Unicode::UnicodeChar Text_TemperatureBuffer[TEXT_TEMPERATURE_SIZE];
     static const uint16_t TEXT_DATE_SIZE = 11;
     touchgfx::Unicode::UnicodeChar Text_DateBuffer[TEXT_DATE_SIZE];
+    static const uint16_t TEXT_POPUP_SIZE = 46;
+    touchgfx::Unicode::UnicodeChar Text_PopupBuffer[TEXT_POPUP_SIZE];
 
 private:
 
     /*
      * Callback Declarations
      */
-    touchgfx::Callback<Diagnose_Motor1ViewBase, touchgfx::DrawableListItemsInterface*, int16_t, int16_t> updateItemCallback;
     touchgfx::Callback<Diagnose_Motor1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
     /*
      * Callback Handler Declarations
      */
-    void updateItemCallbackHandler(touchgfx::DrawableListItemsInterface* items, int16_t containerIndex, int16_t itemIndex);
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };

@@ -15,11 +15,6 @@ void Diagnose_Motor3View::tearDownScreen()
     Diagnose_Motor3ViewBase::tearDownScreen();
 }
 
-void Diagnose_Motor3View::DiagnoseMotorListUpdateItem(ParameterListElement& item, int16_t itemIndex)
-{
-
-}
-
 void Diagnose_Motor3View::UpdateParameterValue(EEventType eventType, const UMessageData& data)
 {
 
@@ -41,4 +36,13 @@ void Diagnose_Motor3View::setTime(uint8_t hour, uint8_t minute)
 {
     Clock.setTime24Hour(hour, minute, 0);
     Clock.invalidate();
+}
+
+void Diagnose_Motor3View::showPopup(uint8_t message[], size_t msgSize)
+{
+    touchgfx::Unicode::UnicodeChar new_buf[TEXT_POPUP_SIZE] = {0};
+	touchgfx::Unicode::fromUTF8(message, new_buf, msgSize);
+	touchgfx::Unicode::strncpy(Text_PopupBuffer, new_buf, TEXT_POPUP_SIZE);
+	Text_Popup.invalidate();
+    ConnectedModalWindow.show();
 }

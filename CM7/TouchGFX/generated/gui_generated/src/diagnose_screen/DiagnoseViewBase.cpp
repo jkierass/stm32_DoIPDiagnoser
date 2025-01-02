@@ -106,6 +106,28 @@ DiagnoseViewBase::DiagnoseViewBase() :
     DSCButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     DSCButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     add(DSCButton);
+
+    ConnectedModalWindow.setBackground(touchgfx::BitmapId(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_WIDE_OUTLINED_LIGHT_ID), 160, 105);
+    ConnectedModalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    ConnectedModalWindow.hide();
+    Text_Popup.setPosition(61, 40, 377, 160);
+    Text_Popup.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Text_Popup.setLinespacing(0);
+    Text_Popup.setWideTextAction(WIDE_TEXT_WORDWRAP);
+    Unicode::snprintf(Text_PopupBuffer, TEXT_POPUP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_VQV7).getText());
+    Text_Popup.setWildcard(Text_PopupBuffer);
+    Text_Popup.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1ID8));
+    ConnectedModalWindow.add(Text_Popup);
+
+    ButtonHidePopup.setXY(143, 211);
+    ButtonHidePopup.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUND_ACTIVE_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_36_MEDIUM_ROUND_PRESSED_ID));
+    ButtonHidePopup.setLabelText(touchgfx::TypedText(T___SINGLEUSE_23G3));
+    ButtonHidePopup.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ButtonHidePopup.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    ButtonHidePopup.setAction(buttonCallback);
+    ConnectedModalWindow.add(ButtonHidePopup);
+
+    add(ConnectedModalWindow);
 }
 
 DiagnoseViewBase::~DiagnoseViewBase()
@@ -133,5 +155,13 @@ void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When MotorButton clicked change screen to Diagnose_Motor1
         //Go to Diagnose_Motor1 with no screen transition
         application().gotoDiagnose_Motor1ScreenNoTransition();
+    }
+    if (&src == &ButtonHidePopup)
+    {
+        //hideConnectedPopup
+        //When ButtonHidePopup clicked hide ConnectedModalWindow
+        //Hide ConnectedModalWindow
+        ConnectedModalWindow.setVisible(false);
+        ConnectedModalWindow.invalidate();
     }
 }

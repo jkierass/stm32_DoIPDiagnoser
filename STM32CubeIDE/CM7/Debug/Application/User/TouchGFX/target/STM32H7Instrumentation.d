@@ -43,8 +43,6 @@ Application/User/TouchGFX/target/STM32H7Instrumentation.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
@@ -118,8 +116,6 @@ Application/User/TouchGFX/target/STM32H7Instrumentation.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:

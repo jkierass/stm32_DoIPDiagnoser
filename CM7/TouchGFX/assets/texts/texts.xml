@@ -6,6 +6,312 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_I378" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_U6OD" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_X5VK" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_0407" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_GWAZ" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_SNKY" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YZNW" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_IIKH" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_J2PG" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_F1QI" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_DCZU" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_TWHF" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_7P48" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_CRPM" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1ZK9" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_X712" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_2QCM" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_7135" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QFB6" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_AXG7" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_PH2P" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_YXPD" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_TMJZ" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_4RU5" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_C30D" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_VSAY" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AUAL" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Engine rotational speed [RPM]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_6NL7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_IVKB" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_G2PH" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Battery voltage [V]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_TTGI" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_JW3I" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AZJ3" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_B4V3" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZJMG" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZPM1" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KPXC" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_BA1Q" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_4FBL" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_WRR9" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_P7SN" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_TOI7" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_I1AN" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_6B9I" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_CXVO" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_2FXX" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZKC2" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_BA1O" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_F0S5" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_HCE8" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_720Q" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_SBU4" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_J65F" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_41FN" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_175D" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_4ZMC" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UNKX" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Engine rotational speed [RPM]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_GTX1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_0OTK" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_7W67" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Battery voltage [V]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_V9Z1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_BBA4" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_PVSQ" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_CLLX" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_GUQ2" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5H9B" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_3Y5Y" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_M23C" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_SPVR" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3YSC" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_2F6T" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_7B64" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_WTNN" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_6QRJ" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_1LT9" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_3D1Z" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_7UDE" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_78ZD" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_YO2G" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_90C3" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_X0QJ" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2FYX" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Parameter</Translation>
+      </Text>
+      <Text Id="__SingleUse_2XDW" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;:</Translation>
+      </Text>
+      <Text Id="__SingleUse_AQVY" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_5H0I" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_22Y0" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Engine rotational speed [RPM]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_74NS" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_3D0G" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HJ7K" Alignment="Left" TypographyId="Typography_02">
+        <Translation Language="GB">Battery voltage [V]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_117R" Alignment="Right" TypographyId="Typography_02">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_U25L" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Ok</Translation>
+      </Text>
+      <Text Id="__SingleUse_I6TS" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Popup</Translation>
+      </Text>
+      <Text Id="__SingleUse_TKO5" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XKUX" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Ok</Translation>
+      </Text>
+      <Text Id="__SingleUse_09HL" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Popup</Translation>
+      </Text>
+      <Text Id="__SingleUse_37QK" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_35KC" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Ok</Translation>
+      </Text>
+      <Text Id="__SingleUse_YSJP" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Popup</Translation>
+      </Text>
+      <Text Id="__SingleUse_VBHU" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_23G3" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Ok</Translation>
+      </Text>
+      <Text Id="__SingleUse_VQV7" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Popup</Translation>
+      </Text>
+      <Text Id="__SingleUse_1ID8" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_5IN1" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">Popup</Translation>
       </Text>

@@ -44,8 +44,6 @@ Application/User/Core/stm32h7xx_hal_msp.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h \
@@ -103,8 +101,6 @@ Application/User/Core/stm32h7xx_hal_msp.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_errno.h:

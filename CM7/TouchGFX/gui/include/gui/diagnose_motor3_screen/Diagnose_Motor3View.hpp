@@ -15,16 +15,15 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    virtual void DiagnoseMotorListUpdateItem(ParameterListElement& item, int16_t itemIndex) override;
     void UpdateParameterValue(EEventType eventType, const UMessageData& data);
 
     void setTemperature(short int temperature);
     void setDate(uint8_t day, uint8_t month, unsigned int year);
     void setTime(uint8_t hour, uint8_t minute);
 
-protected:
+    void showPopup(uint8_t message[], size_t msgSize);
 
-    std::unordered_map<EEventType, UMessageData> currentParamData;
+protected:
 };
 
 #endif // DIAGNOSE_MOTOR3VIEW_HPP

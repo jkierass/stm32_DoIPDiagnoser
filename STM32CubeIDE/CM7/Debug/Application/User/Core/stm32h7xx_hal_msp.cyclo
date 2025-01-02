@@ -13,7 +13,5 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/s
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:569:6:HAL_QSPI_MspDeInit	2
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:614:6:HAL_RTC_MspInit	3
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:648:6:HAL_RTC_MspDeInit	2
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:670:6:HAL_UART_MspInit	3
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:718:6:HAL_UART_MspDeInit	2
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:894:6:HAL_SDRAM_MspInit	3
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:1005:6:HAL_SDRAM_MspDeInit	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:817:6:HAL_SDRAM_MspInit	3
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/Core/Src/stm32h7xx_hal_msp.c:928:6:HAL_SDRAM_MspDeInit	2

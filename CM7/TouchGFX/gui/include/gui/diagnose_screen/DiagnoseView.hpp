@@ -15,6 +15,8 @@ public:
     void setTemperature(short int temperature);
     void setDate(uint8_t day, uint8_t month, unsigned int year);
     void setTime(uint8_t hour, uint8_t minute);
+
+    void showPopup(uint8_t message[], size_t msgSize);
 protected:
 };
 

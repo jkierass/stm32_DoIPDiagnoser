@@ -72,9 +72,9 @@
 /*----- Value in opt.h for LWIP_NETIF_LINK_CALLBACK: 0 -----*/
 #define LWIP_NETIF_LINK_CALLBACK 1
 /*----- Value in opt.h for TCPIP_THREAD_STACKSIZE: 0 -----*/
-#define TCPIP_THREAD_STACKSIZE 1024
+#define TCPIP_THREAD_STACKSIZE 2048
 /*----- Value in opt.h for TCPIP_THREAD_PRIO: 1 -----*/
-#define TCPIP_THREAD_PRIO 1
+#define TCPIP_THREAD_PRIO 50
 /*----- Value in opt.h for TCPIP_MBOX_SIZE: 0 -----*/
 #define TCPIP_MBOX_SIZE 6
 /*----- Value in opt.h for SLIPIF_THREAD_STACKSIZE: 0 -----*/
@@ -120,11 +120,25 @@
 #define LWIP_DHCP                     0   // Turn DHCP off (use static IP)
 #define IP_REASSEMBLY                 1
 #define IP_FRAG                       1
-#define MEMP_NUM_TCP_PCB              10
 #define LWIP_TCPIP_CORE_LOCKING_INPUT 1
 #define LWIP_TCP_KEEPALIVE            1
 #define LWIP_ARP                      1
 #define ARP_QUEUEING                  1
+#define ETHARP_SUPPORT_STATIC_ENTRIES 1
+
+#define LWIP_DEBUG                      1  // Włącza debugowanie w LWIP
+
+#ifdef DEBUG
+#define TCP_DEBUG                       LWIP_DBG_ON
+#define UDP_DEBUG                       LWIP_DBG_ON
+#define ETHARP_DEBUG                    LWIP_DBG_ON
+#define IP_DEBUG                        LWIP_DBG_ON
+#define SYS_DEBUG                       LWIP_DBG_ON
+#define NETIF_DEBUG                     LWIP_DBG_ON
+
+#define LWIP_DBG_TYPES_ON               (LWIP_DBG_ON | LWIP_DBG_TRACE | LWIP_DBG_STATE | LWIP_DBG_FRESH)
+#define LWIP_PLATFORM_DIAG(x) do {printf x; printf("\r");} while(0)
+#endif
 /* USER CODE END 1 */
 
 #ifdef __cplusplus

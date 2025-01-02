@@ -44,8 +44,6 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h \
  ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
- ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/target/../../Core/Inc/main.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.h \
  ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h \
@@ -104,8 +102,6 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
-../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
 C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/target/../../Core/Inc/main.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_qspi.h:
 ../../../Drivers/BSP/STM32H747I-Discovery/stm32h747i_discovery_conf.h:

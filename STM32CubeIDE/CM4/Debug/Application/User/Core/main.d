@@ -100,7 +100,8 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h \
- ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h
+ ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/EthernetConnectionManager/inc/UDSDataType.h
 ../../../CM4/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM4/Core/Inc/stm32h7xx_hal_conf.h:
@@ -204,3 +205,4 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/EthernetConnectionManager/inc/UDSDataType.h:

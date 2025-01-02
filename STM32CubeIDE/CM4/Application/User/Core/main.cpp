@@ -78,21 +78,21 @@ osThreadId_t Task_EDaemonNHandle;
 const osThreadAttr_t Task_EDaemonN_attributes = {
   .name = "Task_EDaemonN",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityHigh,
+  .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* Definitions for Task_EventMgrM4 */
 osThreadId_t Task_EventMgrM4Handle;
 const osThreadAttr_t Task_EventMgrM4_attributes = {
   .name = "Task_EventMgrM4",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for Task_EConnMgr */
 osThreadId_t Task_EConnMgrHandle;
 const osThreadAttr_t Task_EConnMgr_attributes = {
   .name = "Task_EConnMgr",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityRealtime,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for Task_CTemp */
 osThreadId_t Task_CTempHandle;
@@ -172,6 +172,7 @@ int main(void)
     MX_MDMA_Init();
     MX_GPIO_Init();
     MX_I2C4_Init();
+    MX_USART1_UART_Init();
     /* USER CODE BEGIN 2 */
     ipc_init();
     /* USER CODE END 2 */

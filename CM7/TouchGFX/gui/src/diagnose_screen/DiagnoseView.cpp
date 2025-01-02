@@ -33,3 +33,12 @@ void DiagnoseView::setTime(uint8_t hour, uint8_t minute)
     Clock.setTime24Hour(hour, minute, 0);
     Clock.invalidate();
 }
+
+void DiagnoseView::showPopup(uint8_t message[], size_t msgSize)
+{
+    touchgfx::Unicode::UnicodeChar new_buf[TEXT_POPUP_SIZE] = {0};
+	touchgfx::Unicode::fromUTF8(message, new_buf, msgSize);
+	touchgfx::Unicode::strncpy(Text_PopupBuffer, new_buf, TEXT_POPUP_SIZE);
+	Text_Popup.invalidate();
+    ConnectedModalWindow.show();
+}
