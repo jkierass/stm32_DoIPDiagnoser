@@ -17,9 +17,7 @@ Application/User/gui/Model.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../../../Common/Inc/MessageDataTypes.h \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp \
- ../../../Common/Inc/MessageDataTypes.h \
- ../../../STM32CubeIDE/CM7/Application/User/Core/Logger/inc/Logger.h \
- ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+ ../../../Common/Inc/MessageDataTypes.h
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp:
 ../../../Common/Inc/EventBus.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
@@ -38,5 +36,3 @@ Application/User/gui/Model.o: \
 ../../../Common/Inc/MessageDataTypes.h:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../../Common/Inc/MessageDataTypes.h:
-../../../STM32CubeIDE/CM7/Application/User/Core/Logger/inc/Logger.h:
-../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:

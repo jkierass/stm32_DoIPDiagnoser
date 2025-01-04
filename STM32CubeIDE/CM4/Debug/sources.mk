@@ -54,7 +54,7 @@ Application/User/Debug/Drivers/STM32H7xx_HAL_Driver \
 Application/User/Debug/Middlewares/FreeRTOS \
 Application/User/Debug/Middlewares/LwIP \
 Application/User/Debug \
-Application/User/EthernetConnectionManager/src \
+Application/User/DoIP/src \
 Application/User/EventManagerCM4/src \
 Application/User/IPCDaemonNative/src \
 Application/User/LWIP/App \

@@ -1,7 +1,5 @@
 #include "EventBus.h"
 
-#include "Logger.h"
-
 extern QueueHandle_t queueToEventManagerCM7;
 
 EventBus::EventBus(QueueHandle_t queueSelf, EEventClient senderSelf)

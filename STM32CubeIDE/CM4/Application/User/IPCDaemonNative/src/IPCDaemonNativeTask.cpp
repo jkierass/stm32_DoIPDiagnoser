@@ -31,7 +31,7 @@ void IPCDaemonNativeTask::OnEvent(EEventType event, UMessageData msg, EEventClie
 		sMsg.event_sender = eventSender;
 		sMsg.event_receiver = eventReceiver;
 		size_t len = sizeof(sMsg);
-		size_t ret = ipc_sendmsg(&sMsg, len, 1000);
+		ipc_sendmsg(&sMsg, len, 1000);
 		break;
 	}
 	// if recipient is on CM4 side, then forward to event manager.

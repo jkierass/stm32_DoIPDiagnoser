@@ -2,7 +2,6 @@
 #include "touchgfx/Unicode.hpp"
 #include <string.h>
 
-#include "Logger.h"
 #include "MessageDataTypes.h"
 
 

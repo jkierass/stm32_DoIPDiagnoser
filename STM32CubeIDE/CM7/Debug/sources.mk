@@ -41,7 +41,6 @@ CPP_DEPS :=
 SUBDIRS := \
 Application/User/Calc/src \
 Application/User/Calc/tinyexpr \
-Application/User/Core/Logger/src \
 Application/User/Core \
 Application/User/EventManagerCM7/src \
 Application/User/IPCDaemonProxy/src \

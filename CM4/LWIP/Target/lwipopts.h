@@ -64,9 +64,9 @@
 /*----- Value in opt.h for LWIP_DNS_SECURE: (LWIP_DNS_SECURE_RAND_XID | LWIP_DNS_SECURE_NO_MULTIPLE_OUTSTANDING | LWIP_DNS_SECURE_RAND_SRC_PORT) -*/
 #define LWIP_DNS_SECURE 7
 /*----- Default Value for TCP_MSS: 536 ---*/
-#define TCP_MSS 1460
+#define TCP_MSS 536 //1460
 /*----- Default Value for TCP_SND_BUF: 2920 ---*/
-#define TCP_SND_BUF 5840
+#define TCP_SND_BUF (2 * TCP_MSS)
 /*----- Default Value for TCP_SND_QUEUELEN: 17 ---*/
 #define TCP_SND_QUEUELEN 16
 /*----- Value in opt.h for LWIP_NETIF_LINK_CALLBACK: 0 -----*/
@@ -125,20 +125,23 @@
 #define LWIP_ARP                      1
 #define ARP_QUEUEING                  1
 #define ETHARP_SUPPORT_STATIC_ENTRIES 1
+#define TCP_TMR_INTERVAL              10
+#define MEMP_SANITY_CHECK             0
 
-#define LWIP_DEBUG                      1  // Włącza debugowanie w LWIP
+#define TCP_WND_UPDATE_THRESHOLD      1
 
-#ifdef DEBUG
-#define TCP_DEBUG                       LWIP_DBG_ON
-#define UDP_DEBUG                       LWIP_DBG_ON
-#define ETHARP_DEBUG                    LWIP_DBG_ON
-#define IP_DEBUG                        LWIP_DBG_ON
-#define SYS_DEBUG                       LWIP_DBG_ON
-#define NETIF_DEBUG                     LWIP_DBG_ON
+// #ifdef DEBUG
+// #define LWIP_DEBUG                      1  // Włącza debugowanie w LWIP
+// #define TCP_DEBUG                       LWIP_DBG_ON
+// #define UDP_DEBUG                       LWIP_DBG_ON
+// #define ETHARP_DEBUG                    LWIP_DBG_ON
+// #define IP_DEBUG                        LWIP_DBG_ON
+// #define SYS_DEBUG                       LWIP_DBG_ON
+// #define NETIF_DEBUG                     LWIP_DBG_ON
 
-#define LWIP_DBG_TYPES_ON               (LWIP_DBG_ON | LWIP_DBG_TRACE | LWIP_DBG_STATE | LWIP_DBG_FRESH)
-#define LWIP_PLATFORM_DIAG(x) do {printf x; printf("\r");} while(0)
-#endif
+// #define LWIP_DBG_TYPES_ON               (LWIP_DBG_ON | LWIP_DBG_TRACE | LWIP_DBG_STATE | LWIP_DBG_FRESH)
+// #define LWIP_PLATFORM_DIAG(x) do {printf x; printf("\r");} while(0)
+// #endif
 /* USER CODE END 1 */
 
 #ifdef __cplusplus

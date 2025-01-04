@@ -20,7 +20,7 @@ RM := rm -rf
 -include Application/User/LWIP/App/subdir.mk
 -include Application/User/IPCDaemonNative/src/subdir.mk
 -include Application/User/EventManagerCM4/src/subdir.mk
--include Application/User/EthernetConnectionManager/src/subdir.mk
+-include Application/User/DoIP/src/subdir.mk
 -include Application/User/Debug/Middlewares/LwIP/subdir.mk
 -include Application/User/Debug/Middlewares/FreeRTOS/subdir.mk
 -include Application/User/Debug/Drivers/STM32H7xx_HAL_Driver/subdir.mk

@@ -1,7 +1,6 @@
 "./Application/User/Calc/src/Calc.o"
 "./Application/User/Calc/src/CalcTask.o"
 "./Application/User/Calc/tinyexpr/tinyexpr.o"
-"./Application/User/Core/Logger/src/Logger.o"
 "./Application/User/Core/cm_ipc.o"
 "./Application/User/Core/freertos.o"
 "./Application/User/Core/main.o"

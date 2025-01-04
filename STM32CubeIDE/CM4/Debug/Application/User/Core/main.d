@@ -91,7 +91,10 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h \
  ../../../STM32CubeIDE/CM4/Application/User/IPCDaemonNative/inc/IPCDaemonNativeTask.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/EthernetConnectionManager/inc/EthernetConnMgrTask.h \
+ ../Application/User/Core/../DoIP/inc/DoIPDaemonTask.h \
+ ../Application/User/Core/../DoIP/inc/APIDoIP.h \
+ ../Application/User/Core/../DoIP/inc/UDSDataType.h \
+ ../Application/User/Core/../DoIP/inc/ConnectionManager.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpbase.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/ip.h \
@@ -100,8 +103,7 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/icmp.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h \
- ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/EthernetConnectionManager/inc/UDSDataType.h
+ ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h
 ../../../CM4/Core/Inc/main.h:
 ../../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../../CM4/Core/Inc/stm32h7xx_hal_conf.h:
@@ -195,7 +197,10 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h:
 ../../../STM32CubeIDE/CM4/Application/User/IPCDaemonNative/inc/IPCDaemonNativeTask.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/EthernetConnectionManager/inc/EthernetConnMgrTask.h:
+../Application/User/Core/../DoIP/inc/DoIPDaemonTask.h:
+../Application/User/Core/../DoIP/inc/APIDoIP.h:
+../Application/User/Core/../DoIP/inc/UDSDataType.h:
+../Application/User/Core/../DoIP/inc/ConnectionManager.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpbase.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/ip.h:
@@ -205,4 +210,3 @@ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/C
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/icmp.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/udp.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/prot/udp.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/EthernetConnectionManager/inc/UDSDataType.h:

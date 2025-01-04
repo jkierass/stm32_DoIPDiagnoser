@@ -26,7 +26,6 @@ RM := rm -rf
 -include Application/User/LIBJPEG/App/subdir.mk
 -include Application/User/IPCDaemonProxy/src/subdir.mk
 -include Application/User/EventManagerCM7/src/subdir.mk
--include Application/User/Core/Logger/src/subdir.mk
 -include Application/User/Core/subdir.mk
 -include Application/User/Calc/tinyexpr/subdir.mk
 -include Application/User/Calc/src/subdir.mk

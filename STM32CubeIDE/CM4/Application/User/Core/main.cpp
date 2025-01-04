@@ -46,7 +46,8 @@
 #include "EventManagerCM4Task.h"
 #include "cm_ipc.h"
 #include "IPCDaemonNativeTask.h"
-#include "EthernetConnMgrTask.h"
+
+#include "../DoIP/inc/DoIPDaemonTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -78,7 +79,7 @@ osThreadId_t Task_EDaemonNHandle;
 const osThreadAttr_t Task_EDaemonN_attributes = {
   .name = "Task_EDaemonN",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for Task_EventMgrM4 */
 osThreadId_t Task_EventMgrM4Handle;
@@ -87,12 +88,12 @@ const osThreadAttr_t Task_EventMgrM4_attributes = {
   .stack_size = 1028 * 4,
   .priority = (osPriority_t) osPriorityBelowNormal,
 };
-/* Definitions for Task_EConnMgr */
-osThreadId_t Task_EConnMgrHandle;
-const osThreadAttr_t Task_EConnMgr_attributes = {
-  .name = "Task_EConnMgr",
+/* Definitions for Task_DPDaemon */
+osThreadId_t Task_DPDaemonHandle;
+const osThreadAttr_t Task_DPDaemon_attributes = {
+  .name = "Task_DPDaemon",
   .stack_size = 1028 * 4,
-  .priority = (osPriority_t) osPriorityHigh,
+  .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for Task_CTemp */
 osThreadId_t Task_CTempHandle;
@@ -115,7 +116,7 @@ static void MX_GPIO_Init(void);
 static void MX_I2C4_Init(void);
 void StartTask_EDaemonN(void *argument);
 extern void StartTask_EventMgrM4(void *argument);
-extern void StartTask_EthernetConnMgr(void *argument);
+extern void StartTask_DoIPDaemonTask(void *argument);
 extern void StartTask_CTemp(void *argument);
 
 /* USER CODE BEGIN PFP */
@@ -126,7 +127,7 @@ extern void StartTask_CTemp(void *argument);
 /* USER CODE BEGIN 0 */
 QueueHandle_t queueToEventManagerCM4 = xQueueCreate(64, sizeof(SMessage));
 QueueHandle_t queueToNativeDaemon = xQueueCreate(16, sizeof(SMessage));
-QueueHandle_t queueToEthernetConnMgr = xQueueCreate(16, sizeof(SMessage));
+QueueHandle_t queueToDoIPDaemonTask = xQueueCreate(16, sizeof(SMessage));
 QueueHandle_t queueToTemperature = xQueueCreate(4, sizeof(SMessage));
 /* USER CODE END 0 */
 
@@ -204,8 +205,8 @@ int main(void)
     /* creation of Task_EventMgrM4 */
     Task_EventMgrM4Handle = osThreadNew(StartTask_EventMgrM4, NULL, &Task_EventMgrM4_attributes);
 
-    /* creation of Task_EConnMgr */
-    Task_EConnMgrHandle = osThreadNew(StartTask_EthernetConnMgr, NULL, &Task_EConnMgr_attributes);
+    /* creation of Task_DPDaemon */
+    Task_DPDaemonHandle = osThreadNew(StartTask_DoIPDaemonTask, NULL, &Task_DPDaemon_attributes);
 
     /* creation of Task_CTemp */
     Task_CTempHandle = osThreadNew(StartTask_CTemp, NULL, &Task_CTemp_attributes);

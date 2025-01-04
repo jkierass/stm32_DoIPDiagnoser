@@ -1,5 +1,4 @@
 #include <EventManagerCM7Task.h>
-#include "Logger.h"
 
 extern QueueHandle_t queueToFrontend;
 extern QueueHandle_t queueToEventManagerCM7;
@@ -54,16 +53,6 @@ std::vector<SMessage> EventManagerCM7Task::receive()
 		}
 	} while(ret == pdTRUE);
 
-#ifdef DEBUG
-	if(receivedMessages.size() > 0)
-	{
-		for(auto msg : receivedMessages)
-		{
-			LOG_DEBUG("EVENT_MANAGER: Received message. r[%d], s[%d], e[%d]", msg.event_receiver, msg.event_sender, msg.event_type);
-		}
-	}
-#endif
-
 	return receivedMessages;
 }
 
@@ -89,10 +78,7 @@ void EventManagerCM7Task::send(const std::vector<SMessage>& messages)
 		if(targetQueue)
 		{
 			auto ret = xQueueSend(targetQueue, static_cast<void*>(&msg), portMAX_DELAY);
-#ifdef DEBUG
-			LOG_DEBUG("msg sent[%d], type[%d], sender[%d], receiver[%d]", static_cast<int>(ret), msg.event_type, msg.event_sender, msg.event_receiver);
-#endif
-		}
+        }
 	}
 }
 

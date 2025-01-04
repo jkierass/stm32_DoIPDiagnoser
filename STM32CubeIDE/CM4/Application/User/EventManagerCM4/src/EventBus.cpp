@@ -27,7 +27,6 @@ void EventBus::receive(OnEventFunction on_event_function)
 	if(queue_self)
 	{
 		SMessage msg;
-		BaseType_t ret = pdTRUE;
 
 		while(xQueueReceive(queue_self, &(msg), static_cast<TickType_t>(0)) == pdTRUE)
 		{

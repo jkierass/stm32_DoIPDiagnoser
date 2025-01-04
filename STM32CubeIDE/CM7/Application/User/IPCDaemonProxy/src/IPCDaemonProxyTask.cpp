@@ -1,7 +1,6 @@
 #include "IPCDaemonProxyTask.h"
 
 #include "cm_ipc.h"
-#include "Logger.h"
 
 extern QueueHandle_t queueToProxyDaemon;
 
@@ -34,11 +33,7 @@ void IPCDaemonProxyTask::OnEvent(EEventType event, UMessageData msg, EEventClien
 		sMsg.event_sender = eventSender;
 		sMsg.event_receiver = eventReceiver;
 		size_t len = sizeof(sMsg);
-		size_t ret = ipc_sendmsg(&sMsg, len, 10);
-		if(ret != len)
-		{
-			LOG_DEBUG("[FATAL] IPC ERROR, MESSAGE NOT SEND - msg size[%u], bytes sent[%u]", len, ret);
-		}
+		ipc_sendmsg(&sMsg, len, 10);
 		break;
 	}
 	// if recipient is on CM7 side, then forward to event manager.
