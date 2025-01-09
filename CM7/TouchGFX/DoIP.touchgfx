@@ -370,9 +370,9 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "MotorButton",
+            "Name": "DMEButton",
             "X": 82,
-            "Y": 96,
+            "Y": 184,
             "Width": 176,
             "Height": 175,
             "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
@@ -392,9 +392,9 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "PowerMgmntButton",
-            "X": 312,
-            "Y": 96,
+            "Name": "KOMBIButton",
+            "X": 320,
+            "Y": 184,
             "Width": 176,
             "Height": 175,
             "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
@@ -414,80 +414,14 @@
           },
           {
             "Type": "ButtonWithLabel",
-            "Name": "GPSButton",
-            "X": 545,
-            "Y": 96,
+            "Name": "IHKAButton",
+            "X": 563,
+            "Y": 184,
             "Width": 176,
             "Height": 175,
             "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
             "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
             "TextId": "__SingleUse_2C73",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "ErrorsButton",
-            "X": 546,
-            "Y": 287,
-            "Width": 176,
-            "Height": 175,
-            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
-            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
-            "TextId": "__SingleUse_1B3O",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "ClimateButton",
-            "X": 82,
-            "Y": 287,
-            "Width": 176,
-            "Height": 175,
-            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
-            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
-            "TextId": "__SingleUse_TRKD",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "DSCButton",
-            "X": 312,
-            "Y": 287,
-            "Width": 176,
-            "Height": 175,
-            "Pressed": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_action.png",
-            "Released": "__generated\\dark_theme_images_widgets_button_icon_rounded_large_fill_normal.png",
-            "TextId": "__SingleUse_TL8J",
             "ReleasedColor": {
               "Red": 255,
               "Green": 255,
@@ -569,15 +503,15 @@
             }
           },
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "ChangeToDME",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "MotorButton"
+              "TriggerComponent": "DMEButton"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Diagnose_Motor1"
+              "ActionComponent": "Diagnose_DME"
             }
           },
           {
@@ -589,6 +523,30 @@
             "Action": {
               "Type": "ActionHide",
               "ActionComponent": "ConnectedModalWindow"
+            }
+          },
+          {
+            "InteractionName": "ChangeToKOMBI",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "KOMBIButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_KOMBI"
+            }
+          },
+          {
+            "InteractionName": "ChangeToIHKA",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "IHKAButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Diagnose_IHKA"
             }
           }
         ]
@@ -1960,7 +1918,7 @@
         ]
       },
       {
-        "Name": "Diagnose_Motor3",
+        "Name": "Diagnose_DME",
         "Components": [
           {
             "Type": "Container",
@@ -2043,7 +2001,7 @@
                 "Type": "TextArea",
                 "Name": "text_EngineRotSpeed",
                 "X": 10,
-                "Y": 55,
+                "Y": 54,
                 "Width": 390,
                 "Height": 37,
                 "TextId": "__SingleUse_AUAL",
@@ -2094,7 +2052,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1",
+                "Name": "text_CoolantTemp",
                 "X": 10,
                 "Y": 101,
                 "Width": 390,
@@ -2105,16 +2063,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_TMJZ",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1",
+                "Name": "text_ValueCoolantTemp",
                 "X": 410,
                 "Y": 101,
                 "Width": 390,
@@ -2152,7 +2105,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_1",
+                "Name": "text_OilTemp",
                 "X": 10,
                 "Y": 147,
                 "Width": 390,
@@ -2163,16 +2116,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_QFB6",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_1",
+                "Name": "text_ValueOilTemp",
                 "X": 410,
                 "Y": 147,
                 "Width": 390,
@@ -2210,7 +2158,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_2",
+                "Name": "text_AmbientTemp",
                 "X": 10,
                 "Y": 192,
                 "Width": 390,
@@ -2221,16 +2169,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_1ZK9",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_2",
+                "Name": "text_ValueAmbientTemp",
                 "X": 410,
                 "Y": 192,
                 "Width": 390,
@@ -2268,7 +2211,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_3",
+                "Name": "text_AirMass",
                 "X": 10,
                 "Y": 238,
                 "Width": 390,
@@ -2279,16 +2222,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_DCZU",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_3",
+                "Name": "text_ValueAirMass",
                 "X": 410,
                 "Y": 238,
                 "Width": 390,
@@ -2326,7 +2264,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_4",
+                "Name": "text_RailPress",
                 "X": 10,
                 "Y": 284,
                 "Width": 390,
@@ -2337,16 +2275,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_YZNW",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_4",
+                "Name": "text_ValueRailPress",
                 "X": 410,
                 "Y": 284,
                 "Width": 390,
@@ -2384,7 +2317,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_5",
+                "Name": "text_Pedal",
                 "X": 10,
                 "Y": 330,
                 "Width": 390,
@@ -2395,16 +2328,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_X5VK",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_5",
+                "Name": "text_ValuePedal",
                 "X": 410,
                 "Y": 330,
                 "Width": 390,
@@ -2459,7 +2387,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "Text_MotorTitile",
+                "Name": "Text_DME",
                 "X": 198,
                 "Y": 12,
                 "Width": 240,
@@ -2518,18 +2446,6 @@
                 "Clickable": true
               },
               {
-                "Type": "ScalableImage",
-                "Name": "PrevParameterIcon",
-                "X": 373,
-                "Y": 12,
-                "Width": 55,
-                "Height": 55,
-                "LockPosition": true,
-                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_66A3FF.svg.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Clickable": true
-              },
-              {
                 "Type": "Button",
                 "Name": "HomeButton",
                 "X": 12,
@@ -2546,18 +2462,6 @@
                 "Name": "ReturnButton",
                 "X": 83,
                 "Y": 6,
-                "Width": 60,
-                "Height": 60,
-                "LockPosition": true,
-                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
-              },
-              {
-                "Type": "Button",
-                "Name": "PrevParameter",
-                "X": 370,
-                "Y": 9,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
@@ -2668,18 +2572,6 @@
             }
           },
           {
-            "InteractionName": "PrevParam",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PrevParameter"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Diagnose_Motor2"
-            }
-          },
-          {
             "InteractionName": "hideConnectedPopup",
             "Trigger": {
               "Type": "TriggerClicked",
@@ -2693,7 +2585,7 @@
         ]
       },
       {
-        "Name": "Diagnose_Motor2",
+        "Name": "Diagnose_KOMBI",
         "Components": [
           {
             "Type": "Container",
@@ -2721,7 +2613,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_BatteryVoltage",
+                "Name": "text_TotalDist",
                 "X": 10,
                 "Y": 9,
                 "Width": 390,
@@ -2736,7 +2628,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_ValueBatteryVoltage",
+                "Name": "text_ValueTotalDist",
                 "X": 410,
                 "Y": 9,
                 "Width": 390,
@@ -2774,7 +2666,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_EngineRotSpeed",
+                "Name": "text_Speed",
                 "X": 10,
                 "Y": 55,
                 "Width": 390,
@@ -2789,7 +2681,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_ValueEngineRotSpeed",
+                "Name": "text_ValueSpeed",
                 "X": 410,
                 "Y": 55,
                 "Width": 390,
@@ -2827,7 +2719,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1",
+                "Name": "text_OutsideTemp",
                 "X": 10,
                 "Y": 101,
                 "Width": 390,
@@ -2838,16 +2730,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_J65F",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1",
+                "Name": "text_ValueOutsideTemp",
                 "X": 410,
                 "Y": 101,
                 "Width": 390,
@@ -2885,7 +2772,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_1",
+                "Name": "text_RPMOnDisp",
                 "X": 10,
                 "Y": 147,
                 "Width": 390,
@@ -2896,16 +2783,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_F0S5",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_1",
+                "Name": "text_ValueRPMOnDisp",
                 "X": 410,
                 "Y": 147,
                 "Width": 390,
@@ -2943,7 +2825,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_2",
+                "Name": "text_FuelLeft",
                 "X": 10,
                 "Y": 192,
                 "Width": 390,
@@ -2954,16 +2836,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_CXVO",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_2",
+                "Name": "text_ValueFuelLeft",
                 "X": 410,
                 "Y": 192,
                 "Width": 390,
@@ -3001,7 +2878,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_3",
+                "Name": "text_FuelRight",
                 "X": 10,
                 "Y": 238,
                 "Width": 390,
@@ -3012,16 +2889,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_P7SN",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_3",
+                "Name": "text_ValueFuelRight",
                 "X": 410,
                 "Y": 238,
                 "Width": 390,
@@ -3059,7 +2931,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_4",
+                "Name": "text_FuelSum",
                 "X": 10,
                 "Y": 284,
                 "Width": 390,
@@ -3070,16 +2942,11 @@
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_KPXC",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_4",
+                "Name": "text_ValueFuelSum",
                 "X": 410,
                 "Y": 284,
                 "Width": 390,
@@ -3093,64 +2960,6 @@
                 },
                 "Wildcard1": {
                   "TextId": "__SingleUse_ZJMG",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_5",
-                "Y": 321,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_5",
-                "Y": 365,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Parameter_1_1_5",
-                "X": 10,
-                "Y": 330,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_B4V3",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_AZJ3",
-                  "UseBuffer": true,
-                  "BufferSize": 40
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Value_1_1_5",
-                "X": 410,
-                "Y": 330,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_JW3I",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_TTGI",
                   "UseBuffer": true,
                   "BufferSize": 20
                 }
@@ -3192,7 +3001,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "Text_MotorTitile",
+                "Name": "Text_KombiTitile",
                 "X": 198,
                 "Y": 12,
                 "Width": 240,
@@ -3251,30 +3060,6 @@
                 "Clickable": true
               },
               {
-                "Type": "ScalableImage",
-                "Name": "NextParameterIcon",
-                "X": 441,
-                "Y": 11,
-                "Width": 55,
-                "Height": 55,
-                "LockPosition": true,
-                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_66A3FF.svg.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Clickable": true
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "PrevParameterIcon",
-                "X": 373,
-                "Y": 12,
-                "Width": 55,
-                "Height": 55,
-                "LockPosition": true,
-                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_left_50_50_66A3FF.svg.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Clickable": true
-              },
-              {
                 "Type": "Button",
                 "Name": "HomeButton",
                 "X": 12,
@@ -3291,30 +3076,6 @@
                 "Name": "ReturnButton",
                 "X": 83,
                 "Y": 6,
-                "Width": 60,
-                "Height": 60,
-                "LockPosition": true,
-                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
-              },
-              {
-                "Type": "Button",
-                "Name": "PrevParameter",
-                "X": 370,
-                "Y": 9,
-                "Width": 60,
-                "Height": 60,
-                "LockPosition": true,
-                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
-              },
-              {
-                "Type": "Button",
-                "Name": "NextParameter",
-                "X": 438,
-                "Y": 9,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
@@ -3425,30 +3186,6 @@
             }
           },
           {
-            "InteractionName": "PrevParam",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "PrevParameter"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Diagnose_Motor1"
-            }
-          },
-          {
-            "InteractionName": "NextParam",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "NextParameter"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Diagnose_Motor3"
-            }
-          },
-          {
             "InteractionName": "hideConnectedPopup",
             "Trigger": {
               "Type": "TriggerClicked",
@@ -3462,39 +3199,49 @@
         ]
       },
       {
-        "Name": "Diagnose_Motor1",
+        "Name": "Diagnose_IHKA",
         "Components": [
           {
             "Type": "Container",
             "Name": "containerParameters",
-            "Y": 74,
+            "Y": 75,
             "Width": 800,
-            "Height": 406,
+            "Height": 405,
+            "LockPosition": true,
             "Components": [
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage1",
+                "Name": "scalableImage2",
                 "Width": 800,
-                "Height": 44,
+                "Height": 4,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_1",
+                "Y": 88,
+                "Width": 800,
+                "Height": 80,
                 "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage2",
-                "Y": 44,
+                "Name": "scalableImage1_1_1_1_1",
+                "Y": 4,
                 "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "Height": 80,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "TextArea",
-                "Name": "text_BatteryVoltage",
-                "X": 10,
-                "Y": 9,
-                "Width": 390,
-                "Height": 37,
+                "Name": "text_Evap",
+                "X": 12,
+                "Y": 22,
+                "Width": 576,
+                "Height": 44,
                 "TextId": "__SingleUse_HJ7K",
                 "TextRotation": "0",
                 "Color": {
@@ -3505,11 +3252,11 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_ValueBatteryVoltage",
-                "X": 410,
-                "Y": 9,
-                "Width": 390,
-                "Height": 35,
+                "Name": "text_ValueEvap",
+                "X": 643,
+                "Y": 21,
+                "Width": 142,
+                "Height": 45,
                 "TextId": "__SingleUse_117R",
                 "TextRotation": "0",
                 "Color": {
@@ -3525,29 +3272,20 @@
               },
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage1_1",
-                "Y": 46,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
                 "Name": "scalableImage2_1",
-                "Y": 90,
+                "Y": 84,
                 "Width": 800,
-                "Height": 2,
+                "Height": 4,
                 "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "TextArea",
-                "Name": "text_EngineRotSpeed",
-                "X": 10,
-                "Y": 55,
-                "Width": 390,
-                "Height": 37,
+                "Name": "text_VentTemp",
+                "X": 12,
+                "Y": 107,
+                "Width": 483,
+                "Height": 43,
                 "TextId": "__SingleUse_22Y0",
                 "TextRotation": "0",
                 "Color": {
@@ -3558,11 +3296,11 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "text_ValueEngineRotSpeed",
-                "X": 410,
-                "Y": 55,
-                "Width": 390,
-                "Height": 35,
+                "Name": "text_ValueVentTemp",
+                "X": 614,
+                "Y": 107,
+                "Width": 171,
+                "Height": 43,
                 "TextId": "__SingleUse_3D0G",
                 "TextRotation": "0",
                 "Color": {
@@ -3579,48 +3317,52 @@
               {
                 "Type": "ScalableImage",
                 "Name": "scalableImage1_1_1",
-                "Y": 92,
+                "Y": 172,
                 "Width": 800,
-                "Height": 44,
+                "Height": 80,
                 "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1",
-                "Y": 136,
+                "Name": "scalableImage2_1_1_1",
+                "Y": 168,
                 "Width": 800,
-                "Height": 2,
+                "Height": 4,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_1_1",
+                "Y": 252,
+                "Width": 800,
+                "Height": 4,
                 "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1",
-                "X": 10,
-                "Y": 101,
-                "Width": 390,
-                "Height": 37,
+                "Name": "text_TempSelectLeft",
+                "X": 12,
+                "Y": 194,
+                "Width": 555,
+                "Height": 45,
                 "TextId": "__SingleUse_2XDW",
                 "TextRotation": "0",
                 "Color": {
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_2FYX",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1",
-                "X": 410,
-                "Y": 101,
-                "Width": 390,
-                "Height": 35,
+                "Name": "text_ValueTempSelectorLeft",
+                "X": 651,
+                "Y": 196,
+                "Width": 134,
+                "Height": 43,
                 "TextId": "__SingleUse_5H0I",
                 "TextRotation": "0",
                 "Color": {
@@ -3636,146 +3378,45 @@
               },
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_1",
-                "Y": 138,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_1",
-                "Y": 182,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Parameter_1_1_1",
-                "X": 10,
-                "Y": 147,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_YO2G",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_78ZD",
-                  "UseBuffer": true,
-                  "BufferSize": 40
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Value_1_1_1",
-                "X": 410,
-                "Y": 147,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_X0QJ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_90C3",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
                 "Name": "scalableImage1_1_1_2",
-                "Y": 183,
+                "Y": 256,
                 "Width": 800,
-                "Height": 44,
+                "Height": 80,
                 "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_2",
-                "Y": 227,
+                "Name": "scalableImage2_1_1_1_1_1",
+                "Y": 336,
                 "Width": 800,
-                "Height": 2,
+                "Height": 4,
                 "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Parameter_1_1_2",
-                "X": 10,
-                "Y": 192,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_1LT9",
+                "Name": "text_TempSelectRight",
+                "X": 13,
+                "Y": 278,
+                "Width": 533,
+                "Height": 46,
+                "TextId": "__SingleUse_OPG0",
                 "TextRotation": "0",
                 "Color": {
                   "Red": 255,
                   "Green": 255,
                   "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_6QRJ",
-                  "UseBuffer": true,
-                  "BufferSize": 40
                 }
               },
               {
                 "Type": "TextArea",
-                "Name": "text_Value_1_1_2",
-                "X": 410,
-                "Y": 192,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_7UDE",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_3D1Z",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_3",
-                "Y": 229,
-                "Width": 800,
+                "Name": "text_ValueTempSelectorRight",
+                "X": 659,
+                "Y": 280,
+                "Width": 124,
                 "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_3",
-                "Y": 273,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Parameter_1_1_3",
-                "X": 10,
-                "Y": 238,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_2F6T",
+                "TextId": "__SingleUse_TP5P",
                 "TextRotation": "0",
                 "Color": {
                   "Red": 255,
@@ -3783,143 +3424,7 @@
                   "Blue": 255
                 },
                 "Wildcard1": {
-                  "TextId": "__SingleUse_3YSC",
-                  "UseBuffer": true,
-                  "BufferSize": 40
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Value_1_1_3",
-                "X": 410,
-                "Y": 238,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_WTNN",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_7B64",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_4",
-                "Y": 275,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_4",
-                "Y": 319,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Parameter_1_1_4",
-                "X": 10,
-                "Y": 284,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_3Y5Y",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_5H9B",
-                  "UseBuffer": true,
-                  "BufferSize": 40
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Value_1_1_4",
-                "X": 410,
-                "Y": 284,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_SPVR",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_M23C",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_5",
-                "Y": 321,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_5",
-                "Y": 365,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Parameter_1_1_5",
-                "X": 10,
-                "Y": 330,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_PVSQ",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_BBA4",
-                  "UseBuffer": true,
-                  "BufferSize": 40
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_Value_1_1_5",
-                "X": 410,
-                "Y": 330,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_GUQ2",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_CLLX",
+                  "TextId": "__SingleUse_84AF",
                   "UseBuffer": true,
                   "BufferSize": 20
                 }
@@ -3961,7 +3466,7 @@
               },
               {
                 "Type": "TextArea",
-                "Name": "Text_MotorTitile",
+                "Name": "Text_IHKA",
                 "X": 198,
                 "Y": 12,
                 "Width": 240,
@@ -4000,18 +3505,6 @@
                 "Clickable": true
               },
               {
-                "Type": "ScalableImage",
-                "Name": "NextParameterIcon",
-                "X": 441,
-                "Y": 11,
-                "Width": 55,
-                "Height": 55,
-                "LockPosition": true,
-                "Filename": "__generated\\icon_theme_images_hardware_keyboard_arrow_right_50_50_66A3FF.svg.png",
-                "ScalingAlgorithm": "Nearest-neighbor",
-                "Clickable": true
-              },
-              {
                 "Type": "Button",
                 "Name": "HomeButton",
                 "X": 12,
@@ -4028,18 +3521,6 @@
                 "Name": "ReturnButton",
                 "X": 83,
                 "Y": 6,
-                "Width": 60,
-                "Height": 60,
-                "LockPosition": true,
-                "Pressed": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Released": "__generated\\alternate_theme_images_widgets_button_icon_rounded_tiny_outline_disabled.png",
-                "Preset": "alternate_theme\\presets\\button\\icon\\rounded\\tiny_outline_disabled.json"
-              },
-              {
-                "Type": "Button",
-                "Name": "NextParameter",
-                "X": 438,
-                "Y": 9,
                 "Width": 60,
                 "Height": 60,
                 "LockPosition": true,
@@ -4168,18 +3649,6 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Diagnose"
-            }
-          },
-          {
-            "InteractionName": "NextParams",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "NextParameter"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Diagnose_Motor2"
             }
           },
           {

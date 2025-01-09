@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/list.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/list.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/Middlewares/Third_Party/FreeRTOS/Source/list.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM4/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

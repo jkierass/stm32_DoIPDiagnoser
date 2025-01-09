@@ -81,7 +81,7 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../CM4/LWIP/Target/ethernetif.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc/TemperatureTask.h \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc/TemperatureTask.h \
  ../../../Common/Inc/EventBus.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
@@ -186,7 +186,7 @@ Application/User/Core/main.o: ../Application/User/Core/main.cpp \
 ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../../../CM4/LWIP/Target/ethernetif.h:
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h:
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc/TemperatureTask.h:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc/TemperatureTask.h:
 ../../../Common/Inc/EventBus.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 ../../../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:

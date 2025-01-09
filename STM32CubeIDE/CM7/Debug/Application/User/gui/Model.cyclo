@@ -1,5 +1,5 @@
 C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\std_function.h:267:7:), _Functor>::_M_manager(std::_Any_data&, const std::_Any_data&, std::_Manager_operation) [with _Res = void; _Functor = Model::tick()::<lambda(EEventType, UMessageData, EEventClient, EEventClient)>; _ArgTypes = {EEventType, UMessageData, EEventClient, EEventClient}]	5
 C:\ST\STM32CubeIDE_1.16.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\bits\std_function.h:288:7:) [with _Res = void; _Functor = Model::tick()::<lambda(EEventType, UMessageData, EEventClient, EEventClient)>; _ArgTypes = {EEventType, UMessageData, EEventClient, EEventClient}]	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp:6:1:Model::Model()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp:11:6:bool Model::sendEvent(EEventType, UMessageData, EEventClient)	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	3
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp:6:1:Model::Model()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp:11:6:bool Model::sendEvent(EEventType, UMessageData, EEventClient)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp:16:6:void Model::tick()	3

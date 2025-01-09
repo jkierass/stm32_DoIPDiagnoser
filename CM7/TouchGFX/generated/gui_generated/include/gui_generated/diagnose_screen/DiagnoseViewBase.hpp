@@ -43,12 +43,9 @@ protected:
     touchgfx::TextAreaWithOneWildcard Text_Temperature;
     touchgfx::ClickListener< touchgfx::ScalableImage > HomeIcon;
     touchgfx::Button HomeButton;
-    touchgfx::ButtonWithLabel MotorButton;
-    touchgfx::ButtonWithLabel PowerMgmntButton;
-    touchgfx::ButtonWithLabel GPSButton;
-    touchgfx::ButtonWithLabel ErrorsButton;
-    touchgfx::ButtonWithLabel ClimateButton;
-    touchgfx::ButtonWithLabel DSCButton;
+    touchgfx::ButtonWithLabel DMEButton;
+    touchgfx::ButtonWithLabel KOMBIButton;
+    touchgfx::ButtonWithLabel IHKAButton;
     touchgfx::ModalWindow ConnectedModalWindow;
     touchgfx::TextAreaWithOneWildcard Text_Popup;
     touchgfx::ButtonWithLabel ButtonHidePopup;

@@ -637,34 +637,34 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/date_screen/DateView.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Diagnose_Motor1Presenter.cpp</name>
+			<name>Application/User/gui/Diagnose_DMEPresenter.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_motor1_screen/Diagnose_Motor1Presenter.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_dme_screen/Diagnose_DMEPresenter.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Diagnose_Motor1View.cpp</name>
+			<name>Application/User/gui/Diagnose_DMEView.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_motor1_screen/Diagnose_Motor1View.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_dme_screen/Diagnose_DMEView.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Diagnose_Motor2Presenter.cpp</name>
+			<name>Application/User/gui/Diagnose_IHKAPresenter.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_motor2_screen/Diagnose_Motor2Presenter.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_ihka_screen/Diagnose_IHKAPresenter.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Diagnose_Motor2View.cpp</name>
+			<name>Application/User/gui/Diagnose_IHKAView.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_motor2_screen/Diagnose_Motor2View.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_ihka_screen/Diagnose_IHKAView.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Diagnose_Motor3Presenter.cpp</name>
+			<name>Application/User/gui/Diagnose_KOMBIPresenter.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_motor3_screen/Diagnose_Motor3Presenter.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_kombi_screen/Diagnose_KOMBIPresenter.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Diagnose_Motor3View.cpp</name>
+			<name>Application/User/gui/Diagnose_KOMBIView.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_motor3_screen/Diagnose_Motor3View.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_kombi_screen/Diagnose_KOMBIView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/DiagnosePresenter.cpp</name>
@@ -837,19 +837,19 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/date_screen/DateViewBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Diagnose_Motor1ViewBase.cpp</name>
+			<name>Application/User/generated/Diagnose_DMEViewBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_motor1_screen/Diagnose_Motor1ViewBase.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_dme_screen/Diagnose_DMEViewBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Diagnose_Motor2ViewBase.cpp</name>
+			<name>Application/User/generated/Diagnose_IHKAViewBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_motor2_screen/Diagnose_Motor2ViewBase.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_ihka_screen/Diagnose_IHKAViewBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Diagnose_Motor3ViewBase.cpp</name>
+			<name>Application/User/generated/Diagnose_KOMBIViewBase.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_motor3_screen/Diagnose_Motor3ViewBase.cpp</locationURI>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_kombi_screen/Diagnose_KOMBIViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/DiagnoseViewBase.cpp</name>
@@ -970,16 +970,6 @@
 			<name>Application/User/generated/image_dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_icon_theme_images_hardware_keyboard_arrow_left_50_50_66A3FF.svg.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_icon_theme_images_hardware_keyboard_arrow_left_50_50_66A3FF.svg.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_icon_theme_images_hardware_keyboard_arrow_right_50_50_66A3FF.svg.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_icon_theme_images_hardware_keyboard_arrow_right_50_50_66A3FF.svg.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_light_theme_images_widgets_button_icon_rounded_small_outline_disabled.cpp</name>

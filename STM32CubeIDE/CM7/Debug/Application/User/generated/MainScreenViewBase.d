@@ -1,5 +1,5 @@
 Application/User/generated/MainScreenViewBase.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/generated/gui_generated/src/mainscreen_screen/MainScreenViewBase.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/mainscreen_screen/MainScreenViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

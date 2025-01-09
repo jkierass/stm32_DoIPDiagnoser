@@ -1,5 +1,5 @@
 Application/User/gui/DiagnosePresenter.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnosePresenter.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/diagnose_screen/DiagnosePresenter.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_screen/DiagnoseViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

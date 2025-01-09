@@ -1,7 +1,7 @@
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp:30:13:CalculatorPresenter::~CalculatorPresenter()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:10:6:virtual void CalculatorPresenter::activate()	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:10:6:virtual void CalculatorPresenter::activate()	1
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp:30:13:virtual CalculatorPresenter::~CalculatorPresenter()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:25:6:virtual void CalculatorPresenter::OnEvent(EEventType, UMessageData, EEventClient, EEventClient)	2
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:25:6:virtual void CalculatorPresenter::OnEvent(EEventType, UMessageData, EEventClient, EEventClient)	2
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorPresenter.hpp:30:13:virtual void* CalculatorPresenter::_ZThn4_N19CalculatorPresenterD1Ev()	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:4:1:CalculatorPresenter::CalculatorPresenter(CalculatorView&)	1
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:20:6:bool CalculatorPresenter::sendEvent(EEventType, UMessageData, EEventClient)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:4:1:CalculatorPresenter::CalculatorPresenter(CalculatorView&)	1
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/calculator_screen/CalculatorPresenter.cpp:20:6:bool CalculatorPresenter::sendEvent(EEventType, UMessageData, EEventClient)	1

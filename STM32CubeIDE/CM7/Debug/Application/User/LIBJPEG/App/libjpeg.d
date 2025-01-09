@@ -1,6 +1,6 @@
 Application/User/LIBJPEG/App/libjpeg.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/LIBJPEG/App/libjpeg.c \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/LIBJPEG/App/libjpeg.h \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/LIBJPEG/App/libjpeg.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/LIBJPEG/App/libjpeg.h \
  ../../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h \
  ../../../CM7/LIBJPEG/Target/jconfig.h \
  ../../../CM7/LIBJPEG/Target/jdata_conf.h \
@@ -16,7 +16,7 @@ Application/User/LIBJPEG/App/libjpeg.o: \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../../../CM7/LIBJPEG/Target/jmorecfg.h
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/LIBJPEG/App/libjpeg.h:
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/LIBJPEG/App/libjpeg.h:
 ../../../Middlewares/Third_Party/LibJPEG/include/jpeglib.h:
 ../../../CM7/LIBJPEG/Target/jconfig.h:
 ../../../CM7/LIBJPEG/Target/jdata_conf.h:

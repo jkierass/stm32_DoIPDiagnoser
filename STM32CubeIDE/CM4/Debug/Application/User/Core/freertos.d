@@ -1,5 +1,5 @@
 Application/User/Core/freertos.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM4/Core/Src/freertos.c \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM4/Core/Src/freertos.c \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../CM4/Core/Inc/FreeRTOSConfig.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

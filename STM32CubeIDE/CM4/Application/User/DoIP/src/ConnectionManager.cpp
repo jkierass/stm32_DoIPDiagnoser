@@ -214,18 +214,24 @@ void ConnectionManager::HandleUdpRecvCb(void *arg, struct udp_pcb *pcb, struct p
                 char macAddressStr[13] = {0};
                 strncpy(macAddressStr, macStart, 12);
 
-                //convert to format accepted by lwip arp
+                LOG_DEBUG("Extracted MAC address: %s", macAddressStr);
+
                 uint8_t ecuMac[6] = {0};
                 for (int i = 0; i < 6; i++)
                 {
-                    if (sscanf(&macAddressStr[i * 2], "%2hhx", &ecuMac[i]) != 1)
+                    char byteStr[3] = { macAddressStr[i * 2], macAddressStr[i * 2 + 1], '\0' };
+                    char *endPtr;
+                    long byteValue = strtol(byteStr, &endPtr, 16);
+
+                    if (*endPtr != '\0' || byteValue < 0 || byteValue > 0xFF)
                     {
-                        LOG_DEBUG("Failed to parse MAC address.");
+                        LOG_DEBUG("Failed to parse MAC address byte: %s", byteStr);
                         pbuf_free(p);
                         return;
                     }
+
+                    ecuMac[i] = static_cast<uint8_t>(byteValue);
                 }
-                LOG_DEBUG("Extracted MAC Address: %s", macAddressStr);
 
                 // Add a static ARP entry for ECU
                 struct eth_addr ethMac;
@@ -523,12 +529,11 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
     {
         SMessage msg = optMsg.value();
         xQueueSend(queueToEventManagerCM4, &(msg), static_cast<TickType_t>(10000));
-
-        EConnectionEvent connEvent = EVENT_TCP_READ_DATA_BY_ID_RECEIVED;
-        if(xQueueSend(connectionEventsQueue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
-        {
-            LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
-        }
+    }
+    EConnectionEvent connEvent = EVENT_TCP_READ_DATA_BY_ID_RECEIVED;
+    if(xQueueSend(connectionEventsQueue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
+    {
+        LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
     }
 }
 
@@ -537,7 +542,7 @@ void ConnectionManager::handleDynamicallyDefineDataIdentifier(uint8_t dataPayloa
     const auto subSID = static_cast<DynamicallyAssignDataSubSID>(dataPayload[0]);
     switch(subSID)
     {
-        case DynamicallyAssignDataSubSID::REQUEST_CLEAR:
+        case DynamicallyAssignDataSubSID::REQUEST_FIRST:
         {
             const size_t totalUDSRequestSize = APIDoIP::secondReqDynDataSize + 6;
             uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 

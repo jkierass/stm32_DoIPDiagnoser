@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
  ../../../CM7/TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
@@ -100,15 +100,15 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/DayElement.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/DayElementBase.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp \
- ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor3_screen/Diagnose_Motor3ViewBase.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp \
- ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor2_screen/Diagnose_Motor2ViewBase.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp \
- ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor1_screen/Diagnose_Motor1ViewBase.hpp \
- ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEView.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_dme_screen/Diagnose_DMEViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEPresenter.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIView.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_kombi_screen/Diagnose_KOMBIViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_ihka_screen/Diagnose_IHKAViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
@@ -282,15 +282,15 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/DayElement.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/DayElementBase.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp:
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor3_screen/Diagnose_Motor3ViewBase.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp:
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor2_screen/Diagnose_Motor2ViewBase.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp:
-../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_motor1_screen/Diagnose_Motor1ViewBase.hpp:
-../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEView.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_dme_screen/Diagnose_DMEViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEPresenter.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIView.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_kombi_screen/Diagnose_KOMBIViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_ihka_screen/Diagnose_IHKAViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:

@@ -17,12 +17,12 @@
 #include <gui/calculator_screen/CalculatorPresenter.hpp>
 #include <gui/date_screen/DateView.hpp>
 #include <gui/date_screen/DatePresenter.hpp>
-#include <gui/diagnose_motor3_screen/Diagnose_Motor3View.hpp>
-#include <gui/diagnose_motor3_screen/Diagnose_Motor3Presenter.hpp>
-#include <gui/diagnose_motor2_screen/Diagnose_Motor2View.hpp>
-#include <gui/diagnose_motor2_screen/Diagnose_Motor2Presenter.hpp>
-#include <gui/diagnose_motor1_screen/Diagnose_Motor1View.hpp>
-#include <gui/diagnose_motor1_screen/Diagnose_Motor1Presenter.hpp>
+#include <gui/diagnose_dme_screen/Diagnose_DMEView.hpp>
+#include <gui/diagnose_dme_screen/Diagnose_DMEPresenter.hpp>
+#include <gui/diagnose_kombi_screen/Diagnose_KOMBIView.hpp>
+#include <gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp>
+#include <gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp>
+#include <gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -95,41 +95,41 @@ void FrontendApplicationBase::gotoDateScreenNoTransitionImpl()
     touchgfx::makeTransition<DateView, DatePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Diagnose_Motor3
+// Diagnose_DME
 
-void FrontendApplicationBase::gotoDiagnose_Motor3ScreenNoTransition()
+void FrontendApplicationBase::gotoDiagnose_DMEScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_Motor3ScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_DMEScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoDiagnose_Motor3ScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoDiagnose_DMEScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<Diagnose_Motor3View, Diagnose_Motor3Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<Diagnose_DMEView, Diagnose_DMEPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Diagnose_Motor2
+// Diagnose_KOMBI
 
-void FrontendApplicationBase::gotoDiagnose_Motor2ScreenNoTransition()
+void FrontendApplicationBase::gotoDiagnose_KOMBIScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_Motor2ScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_KOMBIScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoDiagnose_Motor2ScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoDiagnose_KOMBIScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<Diagnose_Motor2View, Diagnose_Motor2Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<Diagnose_KOMBIView, Diagnose_KOMBIPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Diagnose_Motor1
+// Diagnose_IHKA
 
-void FrontendApplicationBase::gotoDiagnose_Motor1ScreenNoTransition()
+void FrontendApplicationBase::gotoDiagnose_IHKAScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_Motor1ScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_IHKAScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoDiagnose_Motor1ScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoDiagnose_IHKAScreenNoTransitionImpl()
 {
-    touchgfx::makeTransition<Diagnose_Motor1View, Diagnose_Motor1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<Diagnose_IHKAView, Diagnose_IHKAPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

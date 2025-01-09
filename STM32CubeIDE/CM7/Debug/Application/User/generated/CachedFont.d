@@ -1,5 +1,5 @@
 Application/User/generated/CachedFont.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/generated/fonts/src/CachedFont.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/generated/fonts/src/CachedFont.cpp \
  ../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/CachedFont.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/fonts/include/fonts/FontCache.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

@@ -1,5 +1,5 @@
 Application/User/gui/Model.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/gui/src/model/Model.cpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/model/Model.hpp \
  ../../../Common/Inc/EventBus.h \
  ../../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \

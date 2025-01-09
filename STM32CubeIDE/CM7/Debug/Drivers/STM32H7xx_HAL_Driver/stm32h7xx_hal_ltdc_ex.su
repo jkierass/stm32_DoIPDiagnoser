@@ -1,2 +1,2 @@
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c:70:19:HAL_LTDCEx_StructInitFromVideoConfig	0	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c:111:19:HAL_LTDCEx_StructInitFromAdaptedCommandConfig	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c:70:19:HAL_LTDCEx_StructInitFromVideoConfig	0	static
+C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ltdc_ex.c:111:19:HAL_LTDCEx_StructInitFromAdaptedCommandConfig	0	static

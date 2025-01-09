@@ -16,7 +16,7 @@ OBJS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Application/User/Startup/%.o: ../Application/User/Startup/%.s Application/User/Startup/subdir.mk
-	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Utilities/inc" -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc" -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/Core/Logger/inc" -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/STM32CubeIDE/CM4/Application/User/DoIP/inc" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/STM32CubeIDE/CM4/Application/User/Utilities/inc" -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/STM32CubeIDE/CM4/Application/User/Temperature/inc" -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/STM32CubeIDE/CM4/Application/User/Core/Logger/inc" -I"C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/STM32CubeIDE/CM4/Application/User/DoIP/inc" -x assembler-with-cpp -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
 
 clean: clean-Application-2f-User-2f-Startup
 

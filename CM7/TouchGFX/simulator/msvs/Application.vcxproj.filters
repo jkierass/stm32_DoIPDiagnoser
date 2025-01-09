@@ -232,41 +232,41 @@
     <Filter Include="Header Files\generated\gui_generated\date_screen">
       <UniqueIdentifier>6B47DE96-236A-C939-C196-53348D24EAE4</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\diagnose_motor3_screen">
-      <UniqueIdentifier>E40B2EC0-5585-590D-96CC-B76DA34B1437</UniqueIdentifier>
+    <Filter Include="Header Files\gui\diagnose_kombi_screen">
+      <UniqueIdentifier>D2D27324-742E-9336-1534-389E53B1E55D</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\diagnose_motor3_screen">
-      <UniqueIdentifier>F342D9BE-D570-4AF5-11A7-2C6F11EE15BE</UniqueIdentifier>
+    <Filter Include="Source Files\gui\diagnose_kombi_screen">
+      <UniqueIdentifier>1230592D-28B9-FA4B-39D5-B16846B6CFA4</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\diagnose_motor2_screen">
-      <UniqueIdentifier>78C97953-6A05-201E-0BB9-AC9CB8BEB60A</UniqueIdentifier>
+    <Filter Include="Header Files\gui\diagnose_ihka_screen">
+      <UniqueIdentifier>55A15FD3-8255-78DD-88FB-FAF37F68AB7E</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\diagnose_motor2_screen">
-      <UniqueIdentifier>B9E585F1-142D-5834-2D10-B70E40267200</UniqueIdentifier>
+    <Filter Include="Source Files\gui\diagnose_ihka_screen">
+      <UniqueIdentifier>9C5B2EBB-00B5-6F98-217C-B35ECC30F198</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\diagnose_motor1_screen">
-      <UniqueIdentifier>FEE6B0D1-85CC-52EB-E64C-64F931655606</UniqueIdentifier>
+    <Filter Include="Header Files\gui\diagnose_dme_screen">
+      <UniqueIdentifier>D1BACA2D-77E7-4E04-6FA2-6DA8D71AE2B1</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\diagnose_motor1_screen">
-      <UniqueIdentifier>796C8ACF-96A3-BEB9-BE2C-70DCBC06B4AB</UniqueIdentifier>
+    <Filter Include="Source Files\gui\diagnose_dme_screen">
+      <UniqueIdentifier>293A78F2-E381-50EF-A522-F2BBD26134E5</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\diagnose_motor1_screen">
-      <UniqueIdentifier>DB9F78C1-4EB3-877D-ACBD-5579CC5855F9</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\diagnose_dme_screen">
+      <UniqueIdentifier>6EAC218F-C98C-373E-80EB-0574F110CA07</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\diagnose_motor1_screen">
-      <UniqueIdentifier>050EF97E-9083-E6E9-3EF6-9C5799874CDD</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\diagnose_dme_screen">
+      <UniqueIdentifier>1C459AC4-E0B2-EC70-72A9-3174A0517D7F</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\diagnose_motor2_screen">
-      <UniqueIdentifier>A61C3778-41AC-5AED-D5D2-0BD027FF0884</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\diagnose_ihka_screen">
+      <UniqueIdentifier>C6BA0DF4-16E6-DE78-FF0B-4FAF4E41036D</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\diagnose_motor2_screen">
-      <UniqueIdentifier>0FA58775-2A84-4648-C50F-928B7818465D</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\diagnose_ihka_screen">
+      <UniqueIdentifier>5FA4C74F-CA73-15E1-8DF0-EB72A0A6B9A6</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\diagnose_motor3_screen">
-      <UniqueIdentifier>0F6A0876-32F7-7F4C-0F3D-5B9E7BC8E7BE</UniqueIdentifier>
+    <Filter Include="Source Files\generated\gui_generated\diagnose_kombi_screen">
+      <UniqueIdentifier>3139BB2C-F124-5415-973B-0820E1FF73A2</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\generated\gui_generated\diagnose_motor3_screen">
-      <UniqueIdentifier>EAD488FB-2EAA-3985-C294-93A4EB02FDA2</UniqueIdentifier>
+    <Filter Include="Header Files\generated\gui_generated\diagnose_kombi_screen">
+      <UniqueIdentifier>523C742D-DB9D-FB00-1425-2DA24049B4B5</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -348,32 +348,32 @@
     <ClCompile Include="..\..\generated\gui_generated\src\containers\ParameterListElementBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\diagnose_motor1_screen\Diagnose_Motor1Presenter.cpp">
-      <Filter>Source Files\gui\diagnose_motor1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\diagnose_dme_screen\Diagnose_DMEPresenter.cpp">
+      <Filter>Source Files\gui\diagnose_dme_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\diagnose_motor1_screen\Diagnose_Motor1View.cpp">
-      <Filter>Source Files\gui\diagnose_motor1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\diagnose_dme_screen\Diagnose_DMEView.cpp">
+      <Filter>Source Files\gui\diagnose_dme_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_motor1_screen\Diagnose_Motor1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\diagnose_motor1_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_dme_screen\Diagnose_DMEViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\diagnose_dme_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\diagnose_motor2_screen\Diagnose_Motor2Presenter.cpp">
-      <Filter>Source Files\gui\diagnose_motor2_screen</Filter>
+    <ClCompile Include="..\..\gui\src\diagnose_ihka_screen\Diagnose_IHKAPresenter.cpp">
+      <Filter>Source Files\gui\diagnose_ihka_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\diagnose_motor2_screen\Diagnose_Motor2View.cpp">
-      <Filter>Source Files\gui\diagnose_motor2_screen</Filter>
+    <ClCompile Include="..\..\gui\src\diagnose_ihka_screen\Diagnose_IHKAView.cpp">
+      <Filter>Source Files\gui\diagnose_ihka_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_motor2_screen\Diagnose_Motor2ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\diagnose_motor2_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_ihka_screen\Diagnose_IHKAViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\diagnose_ihka_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\diagnose_motor3_screen\Diagnose_Motor3Presenter.cpp">
-      <Filter>Source Files\gui\diagnose_motor3_screen</Filter>
+    <ClCompile Include="..\..\gui\src\diagnose_kombi_screen\Diagnose_KOMBIPresenter.cpp">
+      <Filter>Source Files\gui\diagnose_kombi_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\gui\src\diagnose_motor3_screen\Diagnose_Motor3View.cpp">
-      <Filter>Source Files\gui\diagnose_motor3_screen</Filter>
+    <ClCompile Include="..\..\gui\src\diagnose_kombi_screen\Diagnose_KOMBIView.cpp">
+      <Filter>Source Files\gui\diagnose_kombi_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_motor3_screen\Diagnose_Motor3ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\diagnose_motor3_screen</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_kombi_screen\Diagnose_KOMBIViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\diagnose_kombi_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -865,32 +865,32 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ParameterListElementBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\diagnose_motor1_screen\Diagnose_Motor1Presenter.hpp">
-      <Filter>Header Files\gui\diagnose_motor1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_dme_screen\Diagnose_DMEPresenter.hpp">
+      <Filter>Header Files\gui\diagnose_dme_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\diagnose_motor1_screen\Diagnose_Motor1View.hpp">
-      <Filter>Header Files\gui\diagnose_motor1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_dme_screen\Diagnose_DMEView.hpp">
+      <Filter>Header Files\gui\diagnose_dme_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_motor1_screen\Diagnose_Motor1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\diagnose_motor1_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_dme_screen\Diagnose_DMEViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\diagnose_dme_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\diagnose_motor2_screen\Diagnose_Motor2Presenter.hpp">
-      <Filter>Header Files\gui\diagnose_motor2_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_ihka_screen\Diagnose_IHKAPresenter.hpp">
+      <Filter>Header Files\gui\diagnose_ihka_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\diagnose_motor2_screen\Diagnose_Motor2View.hpp">
-      <Filter>Header Files\gui\diagnose_motor2_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_ihka_screen\Diagnose_IHKAView.hpp">
+      <Filter>Header Files\gui\diagnose_ihka_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_motor2_screen\Diagnose_Motor2ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\diagnose_motor2_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_ihka_screen\Diagnose_IHKAViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\diagnose_ihka_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\diagnose_motor3_screen\Diagnose_Motor3Presenter.hpp">
-      <Filter>Header Files\gui\diagnose_motor3_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_kombi_screen\Diagnose_KOMBIPresenter.hpp">
+      <Filter>Header Files\gui\diagnose_kombi_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\diagnose_motor3_screen\Diagnose_Motor3View.hpp">
-      <Filter>Header Files\gui\diagnose_motor3_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_kombi_screen\Diagnose_KOMBIView.hpp">
+      <Filter>Header Files\gui\diagnose_kombi_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_motor3_screen\Diagnose_Motor3ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\diagnose_motor3_screen</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_kombi_screen\Diagnose_KOMBIViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\diagnose_kombi_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

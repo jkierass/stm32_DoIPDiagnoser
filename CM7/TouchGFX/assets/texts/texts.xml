@@ -6,17 +6,50 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_OPG0" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Temperature selector (right) [°C]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_84AF" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_TP5P" Alignment="Right" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AQVY" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_5H0I" Alignment="Right" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_2XDW" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Temperature selector (left) [°C]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_74NS" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_3D0G" Alignment="Right" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_22Y0" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Ventillation temperature [°C]:</Translation>
+      </Text>
+      <Text Id="__SingleUse_V9Z1" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">value</Translation>
+      </Text>
+      <Text Id="__SingleUse_117R" Alignment="Right" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HJ7K" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">Evaporator temperature sensor [°C]:</Translation>
+      </Text>
       <Text Id="__SingleUse_I378" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
       </Text>
       <Text Id="__SingleUse_U6OD" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_X5VK" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_0407" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Accelerator pedal (position) [%]:</Translation>
       </Text>
       <Text Id="__SingleUse_GWAZ" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -24,11 +57,8 @@
       <Text Id="__SingleUse_SNKY" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_YZNW" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_IIKH" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Rail pressure [hPa]:</Translation>
       </Text>
       <Text Id="__SingleUse_J2PG" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -36,11 +66,8 @@
       <Text Id="__SingleUse_F1QI" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_DCZU" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_TWHF" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Air mass [kg/h]:</Translation>
       </Text>
       <Text Id="__SingleUse_7P48" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -48,11 +75,8 @@
       <Text Id="__SingleUse_CRPM" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_1ZK9" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_X712" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Ambient temperature [°C]:</Translation>
       </Text>
       <Text Id="__SingleUse_2QCM" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -60,11 +84,8 @@
       <Text Id="__SingleUse_7135" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_QFB6" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_AXG7" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Engine oil temperature [°C]:</Translation>
       </Text>
       <Text Id="__SingleUse_PH2P" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -72,11 +93,8 @@
       <Text Id="__SingleUse_YXPD" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_TMJZ" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_4RU5" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Coolant temperature [°C]:</Translation>
       </Text>
       <Text Id="__SingleUse_C30D" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -96,29 +114,14 @@
       <Text Id="__SingleUse_G2PH" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">Battery voltage [V]:</Translation>
       </Text>
-      <Text Id="__SingleUse_TTGI" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_JW3I" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_AZJ3" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_B4V3" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
       <Text Id="__SingleUse_ZJMG" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
       </Text>
       <Text Id="__SingleUse_ZPM1" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_KPXC" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_BA1Q" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Fuel level both sensors (sum) [L]:</Translation>
       </Text>
       <Text Id="__SingleUse_4FBL" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -126,11 +129,8 @@
       <Text Id="__SingleUse_WRR9" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_P7SN" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_TOI7" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Fuel level right sensor [L]:</Translation>
       </Text>
       <Text Id="__SingleUse_I1AN" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -138,11 +138,8 @@
       <Text Id="__SingleUse_6B9I" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_CXVO" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_2FXX" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Fuel level left sensor [L]:</Translation>
       </Text>
       <Text Id="__SingleUse_ZKC2" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -150,11 +147,8 @@
       <Text Id="__SingleUse_BA1O" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_F0S5" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_HCE8" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Engine speed on display [RPM]:</Translation>
       </Text>
       <Text Id="__SingleUse_720Q" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -162,11 +156,8 @@
       <Text Id="__SingleUse_SBU4" Alignment="Right" TypographyId="Typography_02">
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_J65F" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
       <Text Id="__SingleUse_41FN" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
+        <Translation Language="GB">Outside temperature sensor [°C]:</Translation>
       </Text>
       <Text Id="__SingleUse_175D" Alignment="Left" TypographyId="Typography_02">
         <Translation Language="GB">value</Translation>
@@ -175,7 +166,7 @@
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_UNKX" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Engine rotational speed [RPM]:</Translation>
+        <Translation Language="GB">Speed [km/h]:</Translation>
       </Text>
       <Text Id="__SingleUse_GTX1" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">value</Translation>
@@ -184,97 +175,7 @@
         <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_7W67" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Battery voltage [V]:</Translation>
-      </Text>
-      <Text Id="__SingleUse_V9Z1" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_BBA4" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_PVSQ" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
-      <Text Id="__SingleUse_CLLX" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_GUQ2" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_5H9B" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_3Y5Y" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
-      <Text Id="__SingleUse_M23C" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_SPVR" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_3YSC" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_2F6T" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
-      <Text Id="__SingleUse_7B64" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_WTNN" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_6QRJ" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_1LT9" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
-      <Text Id="__SingleUse_3D1Z" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_7UDE" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_78ZD" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_YO2G" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
-      <Text Id="__SingleUse_90C3" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_X0QJ" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_2FYX" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Parameter</Translation>
-      </Text>
-      <Text Id="__SingleUse_2XDW" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;:</Translation>
-      </Text>
-      <Text Id="__SingleUse_AQVY" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_5H0I" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_22Y0" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Engine rotational speed [RPM]:</Translation>
-      </Text>
-      <Text Id="__SingleUse_74NS" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_3D0G" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_HJ7K" Alignment="Left" TypographyId="Typography_02">
-        <Translation Language="GB">Battery voltage [V]:</Translation>
-      </Text>
-      <Text Id="__SingleUse_117R" Alignment="Right" TypographyId="Typography_02">
-        <Translation Language="GB">&lt;value&gt;</Translation>
+        <Translation Language="GB">Total Distance [km]:</Translation>
       </Text>
       <Text Id="__SingleUse_U25L" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Ok</Translation>
@@ -385,37 +286,28 @@
         <Translation Language="GB">23</Translation>
       </Text>
       <Text Id="__SingleUse_6BK9" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Motor</Translation>
+        <Translation Language="GB">DME</Translation>
       </Text>
       <Text Id="__SingleUse_JBCV" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_RA9L" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Motor</Translation>
+        <Translation Language="GB">KOMBI</Translation>
       </Text>
       <Text Id="__SingleUse_JQ0U" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_TL8J" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Dynamic&#10;Stability&#10;Control</Translation>
-      </Text>
-      <Text Id="__SingleUse_TRKD" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Climate</Translation>
-      </Text>
-      <Text Id="__SingleUse_1B3O" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Errors</Translation>
-      </Text>
       <Text Id="__SingleUse_2C73" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">GPS</Translation>
+        <Translation Language="GB">IHKA&#10;&#10;(Integrated&#10;automatic&#10;heating/air&#10;conditioning&#10;system)</Translation>
       </Text>
       <Text Id="__SingleUse_V2G9" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Power&#10;Management</Translation>
+        <Translation Language="GB">KOMBI&#10;&#10;(Instrument&#10;cluster)&#10;&#10;&#10;</Translation>
       </Text>
       <Text Id="__SingleUse_JS26" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Motor</Translation>
+        <Translation Language="GB">DME&#10;&#10;(Digital&#10;Motor&#10;Electronics)&#10;&#10;</Translation>
       </Text>
       <Text Id="__SingleUse_2O72" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">Motor</Translation>
+        <Translation Language="GB">IHKA</Translation>
       </Text>
       <Text Id="__SingleUse_GF6Z" Alignment="Right" TypographyId="Default">
         <Translation Language="GB">&lt;&gt;</Translation>

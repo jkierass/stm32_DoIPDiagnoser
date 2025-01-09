@@ -32,14 +32,14 @@ public:
     // Date
     void gotoDateScreenNoTransition();
 
-    // Diagnose_Motor3
-    void gotoDiagnose_Motor3ScreenNoTransition();
+    // Diagnose_DME
+    void gotoDiagnose_DMEScreenNoTransition();
 
-    // Diagnose_Motor2
-    void gotoDiagnose_Motor2ScreenNoTransition();
+    // Diagnose_KOMBI
+    void gotoDiagnose_KOMBIScreenNoTransition();
 
-    // Diagnose_Motor1
-    void gotoDiagnose_Motor1ScreenNoTransition();
+    // Diagnose_IHKA
+    void gotoDiagnose_IHKAScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -58,14 +58,14 @@ protected:
     // Date
     void gotoDateScreenNoTransitionImpl();
 
-    // Diagnose_Motor3
-    void gotoDiagnose_Motor3ScreenNoTransitionImpl();
+    // Diagnose_DME
+    void gotoDiagnose_DMEScreenNoTransitionImpl();
 
-    // Diagnose_Motor2
-    void gotoDiagnose_Motor2ScreenNoTransitionImpl();
+    // Diagnose_KOMBI
+    void gotoDiagnose_KOMBIScreenNoTransitionImpl();
 
-    // Diagnose_Motor1
-    void gotoDiagnose_Motor1ScreenNoTransitionImpl();
+    // Diagnose_IHKA
+    void gotoDiagnose_IHKAScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

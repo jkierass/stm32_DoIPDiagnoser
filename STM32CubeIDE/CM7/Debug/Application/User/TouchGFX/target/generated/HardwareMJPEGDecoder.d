@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/HardwareMJPEGDecoder.o: \
- C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/ediabasdiagnoser/CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.cpp \
+ C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.cpp \
  ../../../CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.hpp \
  ../../../CM7/TouchGFX/target/generated/MJPEGDecoder.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

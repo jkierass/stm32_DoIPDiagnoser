@@ -111,8 +111,8 @@ all: main-build
 main-build: STM32H747I-DISCO_CM4.elf secondary-outputs
 
 # Tool invocations
-STM32H747I-DISCO_CM4.elf STM32H747I-DISCO_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\ediabasdiagnoser\STM32CubeIDE\CM4\STM32H747XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "STM32H747I-DISCO_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\ediabasdiagnoser\STM32CubeIDE\CM4\STM32H747XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H747I-DISCO_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+STM32H747I-DISCO_CM4.elf STM32H747I-DISCO_CM4.map: $(OBJS) $(USER_OBJS) C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\stm32_doipdiagnoser\STM32CubeIDE\CM4\STM32H747XIHX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "STM32H747I-DISCO_CM4.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\jakub\Desktop\Praca_inz\stm32_workspace\stm32_doipdiagnoser\STM32CubeIDE\CM4\STM32H747XIHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32H747I-DISCO_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -64,48 +64,29 @@ DiagnoseViewBase::DiagnoseViewBase() :
 
     add(container1);
 
-    MotorButton.setXY(82, 96);
-    MotorButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
-    MotorButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JS26));
-    MotorButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    MotorButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    MotorButton.setAction(buttonCallback);
-    add(MotorButton);
+    DMEButton.setXY(82, 184);
+    DMEButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
+    DMEButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JS26));
+    DMEButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DMEButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    DMEButton.setAction(buttonCallback);
+    add(DMEButton);
 
-    PowerMgmntButton.setXY(312, 96);
-    PowerMgmntButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
-    PowerMgmntButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_V2G9));
-    PowerMgmntButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    PowerMgmntButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(PowerMgmntButton);
+    KOMBIButton.setXY(320, 184);
+    KOMBIButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
+    KOMBIButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_V2G9));
+    KOMBIButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    KOMBIButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    KOMBIButton.setAction(buttonCallback);
+    add(KOMBIButton);
 
-    GPSButton.setXY(545, 96);
-    GPSButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
-    GPSButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2C73));
-    GPSButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    GPSButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(GPSButton);
-
-    ErrorsButton.setXY(546, 287);
-    ErrorsButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
-    ErrorsButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_1B3O));
-    ErrorsButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ErrorsButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(ErrorsButton);
-
-    ClimateButton.setXY(82, 287);
-    ClimateButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
-    ClimateButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_TRKD));
-    ClimateButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    ClimateButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(ClimateButton);
-
-    DSCButton.setXY(312, 287);
-    DSCButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
-    DSCButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_TL8J));
-    DSCButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    DSCButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(DSCButton);
+    IHKAButton.setXY(563, 184);
+    IHKAButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
+    IHKAButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2C73));
+    IHKAButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    IHKAButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    IHKAButton.setAction(buttonCallback);
+    add(IHKAButton);
 
     ConnectedModalWindow.setBackground(touchgfx::BitmapId(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_WIDE_OUTLINED_LIGHT_ID), 160, 105);
     ConnectedModalWindow.setShadeColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -149,12 +130,12 @@ void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //Go to MainScreen with no screen transition
         application().gotoMainScreenScreenNoTransition();
     }
-    if (&src == &MotorButton)
+    if (&src == &DMEButton)
     {
-        //Interaction1
-        //When MotorButton clicked change screen to Diagnose_Motor1
-        //Go to Diagnose_Motor1 with no screen transition
-        application().gotoDiagnose_Motor1ScreenNoTransition();
+        //ChangeToDME
+        //When DMEButton clicked change screen to Diagnose_DME
+        //Go to Diagnose_DME with no screen transition
+        application().gotoDiagnose_DMEScreenNoTransition();
     }
     if (&src == &ButtonHidePopup)
     {
@@ -163,5 +144,19 @@ void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //Hide ConnectedModalWindow
         ConnectedModalWindow.setVisible(false);
         ConnectedModalWindow.invalidate();
+    }
+    if (&src == &KOMBIButton)
+    {
+        //ChangeToKOMBI
+        //When KOMBIButton clicked change screen to Diagnose_KOMBI
+        //Go to Diagnose_KOMBI with no screen transition
+        application().gotoDiagnose_KOMBIScreenNoTransition();
+    }
+    if (&src == &IHKAButton)
+    {
+        //ChangeToIHKA
+        //When IHKAButton clicked change screen to Diagnose_IHKA
+        //Go to Diagnose_IHKA with no screen transition
+        application().gotoDiagnose_IHKAScreenNoTransition();
     }
 }

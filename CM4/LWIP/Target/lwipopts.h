@@ -125,7 +125,7 @@
 #define LWIP_ARP                      1
 #define ARP_QUEUEING                  1
 #define ETHARP_SUPPORT_STATIC_ENTRIES 1
-#define TCP_TMR_INTERVAL              10
+#define TCP_TMR_INTERVAL              50
 #define MEMP_SANITY_CHECK             0
 
 #define TCP_WND_UPDATE_THRESHOLD      1
