@@ -42,7 +42,6 @@ typedef enum
 	/* Subscribable data update events */
 	EVENT_DATA_UPDATE_START = 0,	   // minimal numeric value of event related to data
 
-	//Motor related parameters
     EVENT_DATA_DME_ECU_START = EVENT_DATA_UPDATE_START,
 	EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE = EVENT_DATA_DME_ECU_START,
 	EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED,
@@ -77,6 +76,7 @@ typedef enum
 
 	/* Connection events */
 	EVENT_ETHERNET_PLUGGED,
+    EVENT_LAST_REQUEST_CYCLE_TOOK_MS,
 
 	/* Calculator requests*/
 	ASYNC_REQUEST_CALCULATE,
@@ -154,6 +154,8 @@ typedef union
 	bool ethernet_plugged;				   //EVENT_ETHERNET_PLUGGED
 
 	short int room_temperature;
+
+    uint16_t last_request_cycle_ms;
 } UMessageData;
 
 typedef struct

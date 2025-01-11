@@ -9,9 +9,10 @@
 #include <gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
@@ -25,6 +26,14 @@ public:
     virtual ~Diagnose_IHKAViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void ButtonUartClicked()
+    {
+        // Override and implement this function in Diagnose_IHKA
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -34,17 +43,16 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Container ContainterAdditionalData;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger >  >  Button_SendUart;
+    touchgfx::TextAreaWithOneWildcard Text_LastReqCycle;
     touchgfx::Container containerParameters;
     touchgfx::ScalableImage scalableImage2;
-    touchgfx::ScalableImage scalableImage1_1_1_1;
     touchgfx::ScalableImage scalableImage1_1_1_1_1;
     touchgfx::TextArea text_Evap;
     touchgfx::TextAreaWithOneWildcard text_ValueEvap;
     touchgfx::ScalableImage scalableImage2_1;
-    touchgfx::TextArea text_VentTemp;
-    touchgfx::TextAreaWithOneWildcard text_ValueVentTemp;
     touchgfx::ScalableImage scalableImage1_1_1;
-    touchgfx::ScalableImage scalableImage2_1_1_1;
     touchgfx::ScalableImage scalableImage2_1_1_1_1;
     touchgfx::TextArea text_TempSelectLeft;
     touchgfx::TextAreaWithOneWildcard text_ValueTempSelectorLeft;
@@ -69,10 +77,12 @@ protected:
     /*
      * Wildcard Buffers
      */
+    static const uint16_t BUTTON_SENDUART_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar Button_SendUartBuffer[BUTTON_SENDUART_SIZE];
+    static const uint16_t TEXT_LASTREQCYCLE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Text_LastReqCycleBuffer[TEXT_LASTREQCYCLE_SIZE];
     static const uint16_t TEXT_VALUEEVAP_SIZE = 20;
     touchgfx::Unicode::UnicodeChar text_ValueEvapBuffer[TEXT_VALUEEVAP_SIZE];
-    static const uint16_t TEXT_VALUEVENTTEMP_SIZE = 20;
-    touchgfx::Unicode::UnicodeChar text_ValueVentTempBuffer[TEXT_VALUEVENTTEMP_SIZE];
     static const uint16_t TEXT_VALUETEMPSELECTORLEFT_SIZE = 20;
     touchgfx::Unicode::UnicodeChar text_ValueTempSelectorLeftBuffer[TEXT_VALUETEMPSELECTORLEFT_SIZE];
     static const uint16_t TEXT_VALUETEMPSELECTORRIGHT_SIZE = 20;
@@ -90,11 +100,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<Diagnose_IHKAViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<Diagnose_IHKAViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

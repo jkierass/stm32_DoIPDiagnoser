@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/diagnose_screen/DiagnosePresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
@@ -15,7 +16,6 @@
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/containers/ModalWindow.hpp>
 
 class DiagnoseViewBase : public touchgfx::View<DiagnosePresenter>
@@ -35,6 +35,7 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::ButtonWithLabel SwitchToExtraVisual;
     touchgfx::Container container1;
     touchgfx::Box box2;
     touchgfx::DigitalClock Clock;

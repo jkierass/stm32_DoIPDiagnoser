@@ -125,23 +125,23 @@
 #define LWIP_ARP                      1
 #define ARP_QUEUEING                  1
 #define ETHARP_SUPPORT_STATIC_ENTRIES 1
-#define TCP_TMR_INTERVAL              50
+#define TCP_TMR_INTERVAL              10
 #define MEMP_SANITY_CHECK             0
 
 #define TCP_WND_UPDATE_THRESHOLD      1
 
-// #ifdef DEBUG
-// #define LWIP_DEBUG                      1  // Włącza debugowanie w LWIP
-// #define TCP_DEBUG                       LWIP_DBG_ON
-// #define UDP_DEBUG                       LWIP_DBG_ON
-// #define ETHARP_DEBUG                    LWIP_DBG_ON
-// #define IP_DEBUG                        LWIP_DBG_ON
-// #define SYS_DEBUG                       LWIP_DBG_ON
-// #define NETIF_DEBUG                     LWIP_DBG_ON
+#ifdef LWIP_DEBUG_TURN_ON
+#define LWIP_DEBUG                      1 
+#define TCP_DEBUG                       LWIP_DBG_ON
+#define UDP_DEBUG                       LWIP_DBG_ON
+#define ETHARP_DEBUG                    LWIP_DBG_ON
+#define IP_DEBUG                        LWIP_DBG_ON
+#define SYS_DEBUG                       LWIP_DBG_ON
+#define NETIF_DEBUG                     LWIP_DBG_ON
 
-// #define LWIP_DBG_TYPES_ON               (LWIP_DBG_ON | LWIP_DBG_TRACE | LWIP_DBG_STATE | LWIP_DBG_FRESH)
-// #define LWIP_PLATFORM_DIAG(x) do {printf x; printf("\r");} while(0)
-// #endif
+#define LWIP_DBG_TYPES_ON               (LWIP_DBG_ON | LWIP_DBG_TRACE | LWIP_DBG_STATE | LWIP_DBG_FRESH)
+#define LWIP_PLATFORM_DIAG(x) do {printf x; printf("\r");} while(0)
+#endif
 /* USER CODE END 1 */
 
 #ifdef __cplusplus

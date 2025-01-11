@@ -3,17 +3,41 @@
 /*********************************************************************************/
 #include <gui_generated/diagnose_dme_screen/Diagnose_DMEViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 Diagnose_DMEViewBase::Diagnose_DMEViewBase() :
-    buttonCallback(this, &Diagnose_DMEViewBase::buttonCallbackHandler)
+    buttonCallback(this, &Diagnose_DMEViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &Diagnose_DMEViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    containerParameters.setPosition(0, 74, 800, 406);
+    ContainterAdditionalData.setPosition(0, 441, 800, 39);
+    Button_SendUart.setBoxWithBorderPosition(0, 0, 334, 38);
+    Button_SendUart.setBorderSize(4);
+    Button_SendUart.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(186, 2, 112), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(15, 255, 255));
+    Button_SendUart.setWildcardText(TypedText(T___SINGLEUSE_R009));
+    Unicode::snprintf(Button_SendUartBuffer, BUTTON_SENDUART_SIZE, "%s", TypedText(T___SINGLEUSE_SOLX).getText());
+    Button_SendUart.setWildcardTextBuffer(Button_SendUartBuffer);
+    Button_SendUart.setWildcardTextPosition(0, 7, 334, 38);
+    Button_SendUart.setWildcardTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Button_SendUart.setAction(flexButtonCallback);
+    Button_SendUart.setPosition(466, 0, 334, 38);
+    ContainterAdditionalData.add(Button_SendUart);
+
+    Text_LastReqCycle.setPosition(10, 6, 409, 32);
+    Text_LastReqCycle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_LastReqCycle.setLinespacing(0);
+    Unicode::snprintf(Text_LastReqCycleBuffer, TEXT_LASTREQCYCLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_FXNA).getText());
+    Text_LastReqCycle.setWildcard(Text_LastReqCycleBuffer);
+    Text_LastReqCycle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_XO5J));
+    ContainterAdditionalData.add(Text_LastReqCycle);
+
+    add(ContainterAdditionalData);
+
+    containerParameters.setPosition(0, 74, 800, 367);
     scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
     scalableImage1.setPosition(0, 0, 800, 44);
     scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
@@ -321,5 +345,16 @@ void Diagnose_DMEViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&
         //Hide ConnectedModalWindow
         ConnectedModalWindow.setVisible(false);
         ConnectedModalWindow.invalidate();
+    }
+}
+
+void Diagnose_DMEViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &Button_SendUart)
+    {
+        //ButtonUartClicked
+        //When Button_SendUart clicked call virtual function
+        //Call ButtonUartClicked
+        ButtonUartClicked();
     }
 }

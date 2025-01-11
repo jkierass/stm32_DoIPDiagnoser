@@ -1,6 +1,4 @@
 #include <gui/diagnose_dme_screen/Diagnose_DMEView.hpp>
-#include <sstream>
-#include <iomanip>
 
 Diagnose_DMEView::Diagnose_DMEView()
 {
@@ -68,12 +66,8 @@ void Diagnose_DMEView::UpdateParameterValue(EEventType eventType, const UMessage
         }
         case EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION:
         {
-            // Floating point formatting with precision control
-            float positionInFloat = data.dme_accelerator_pedal_position / 2.55;
-            std::ostringstream oss;
-            oss << std::fixed << std::setprecision(2) << positionInFloat;
-            std::string valStr = oss.str();
-            touchgfx::Unicode::snprintf(text_ValuePedalBuffer, TEXT_VALUEPEDAL_SIZE, "%s", valStr.c_str());
+            float positionInFloat = static_cast<float>(data.dme_accelerator_pedal_position) / 2.55;
+            touchgfx::Unicode::snprintfFloat(text_ValuePedalBuffer, TEXT_VALUEPEDAL_SIZE, "%.2f", positionInFloat);
             text_ValuePedal.invalidate();
             break;
         }

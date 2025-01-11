@@ -3,15 +3,39 @@
 /*********************************************************************************/
 #include <gui_generated/diagnose_kombi_screen/Diagnose_KOMBIViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 Diagnose_KOMBIViewBase::Diagnose_KOMBIViewBase() :
-    buttonCallback(this, &Diagnose_KOMBIViewBase::buttonCallbackHandler)
+    buttonCallback(this, &Diagnose_KOMBIViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &Diagnose_KOMBIViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
+
+    ContainterAdditionalData.setPosition(0, 441, 800, 39);
+    Button_SendUart.setBoxWithBorderPosition(0, 0, 334, 38);
+    Button_SendUart.setBorderSize(4);
+    Button_SendUart.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(186, 2, 112), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(15, 255, 255));
+    Button_SendUart.setWildcardText(TypedText(T___SINGLEUSE_56SM));
+    Unicode::snprintf(Button_SendUartBuffer, BUTTON_SENDUART_SIZE, "%s", TypedText(T___SINGLEUSE_K59Q).getText());
+    Button_SendUart.setWildcardTextBuffer(Button_SendUartBuffer);
+    Button_SendUart.setWildcardTextPosition(0, 7, 334, 38);
+    Button_SendUart.setWildcardTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Button_SendUart.setAction(flexButtonCallback);
+    Button_SendUart.setPosition(466, 0, 334, 38);
+    ContainterAdditionalData.add(Button_SendUart);
+
+    Text_LastReqCycle.setPosition(10, 6, 428, 32);
+    Text_LastReqCycle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_LastReqCycle.setLinespacing(0);
+    Unicode::snprintf(Text_LastReqCycleBuffer, TEXT_LASTREQCYCLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OQ0U).getText());
+    Text_LastReqCycle.setWildcard(Text_LastReqCycleBuffer);
+    Text_LastReqCycle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NUPY));
+    ContainterAdditionalData.add(Text_LastReqCycle);
+
+    add(ContainterAdditionalData);
 
     containerParameters.setPosition(0, 74, 800, 406);
     scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
@@ -297,5 +321,16 @@ void Diagnose_KOMBIViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //Hide ConnectedModalWindow
         ConnectedModalWindow.setVisible(false);
         ConnectedModalWindow.invalidate();
+    }
+}
+
+void Diagnose_KOMBIViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &Button_SendUart)
+    {
+        //ButtonUartClicked
+        //When Button_SendUart clicked call virtual function
+        //Call ButtonUartClicked
+        ButtonUartClicked();
     }
 }

@@ -41,6 +41,9 @@ public:
     // Diagnose_IHKA
     void gotoDiagnose_IHKAScreenNoTransition();
 
+    // Diagnose_ExtraVisual
+    void gotoDiagnose_ExtraVisualScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -66,6 +69,9 @@ protected:
 
     // Diagnose_IHKA
     void gotoDiagnose_IHKAScreenNoTransitionImpl();
+
+    // Diagnose_ExtraVisual
+    void gotoDiagnose_ExtraVisualScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

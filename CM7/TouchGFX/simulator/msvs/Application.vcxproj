@@ -46,6 +46,11 @@
     <ClCompile Include="..\..\gui\src\diagnose_kombi_screen\Diagnose_KOMBIPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\diagnose_kombi_screen\Diagnose_KOMBIView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\diagnose_kombi_screen\Diagnose_KOMBIViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\diagnose_extravisual_screen\Diagnose_ExtraVisualPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\diagnose_extravisual_screen\Diagnose_ExtraVisualView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\diagnose_extravisual_screen\Diagnose_ExtraVisualViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\graphValueWidget.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\graphValueWidgetBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -221,6 +226,11 @@
     <ClInclude Include="..\..\gui\include\gui\diagnose_kombi_screen\Diagnose_KOMBIPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\diagnose_kombi_screen\Diagnose_KOMBIView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_kombi_screen\Diagnose_KOMBIViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_extravisual_screen\Diagnose_ExtraVisualPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\diagnose_extravisual_screen\Diagnose_ExtraVisualView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\diagnose_extravisual_screen\Diagnose_ExtraVisualViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\graphValueWidget.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\graphValueWidgetBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

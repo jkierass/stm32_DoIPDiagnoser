@@ -26,6 +26,8 @@
 #include <gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp>
 #include <gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp>
 #include <gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp>
+#include <gui/diagnose_extravisual_screen/Diagnose_ExtraVisualView.hpp>
+#include <gui/diagnose_extravisual_screen/Diagnose_ExtraVisualPresenter.hpp>
 
 
 /**
@@ -55,7 +57,8 @@ public:
             touchgfx::meta::TypeList< Diagnose_DMEView,
             touchgfx::meta::TypeList< Diagnose_KOMBIView,
             touchgfx::meta::TypeList< Diagnose_IHKAView,
-            touchgfx::meta::Nil > > > > > >
+            touchgfx::meta::TypeList< Diagnose_ExtraVisualView,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -74,7 +77,8 @@ public:
             touchgfx::meta::TypeList< Diagnose_DMEPresenter,
             touchgfx::meta::TypeList< Diagnose_KOMBIPresenter,
             touchgfx::meta::TypeList< Diagnose_IHKAPresenter,
-            touchgfx::meta::Nil > > > > > >
+            touchgfx::meta::TypeList< Diagnose_ExtraVisualPresenter,
+            touchgfx::meta::Nil > > > > > > >
             > GeneratedPresenterTypes;
 
     /**

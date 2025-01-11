@@ -83,8 +83,8 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_screen/DiagnoseViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnosePresenter.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp \
@@ -103,26 +103,57 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_dme_screen/Diagnose_DMEViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEPresenter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_kombi_screen/Diagnose_KOMBIViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp \
  ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_ihka_screen/Diagnose_IHKAViewBase.hpp \
  ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_extravisual_screen/Diagnose_ExtraVisualView.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_extravisual_screen/Diagnose_ExtraVisualViewBase.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_extravisual_screen/Diagnose_ExtraVisualPresenter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphWrapAndClear.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphElements.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphLabels.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
+ ../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/graphValueWidget.hpp \
+ ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/graphValueWidgetBase.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp \
+ ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
@@ -130,8 +161,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp \
- ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp \
  ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888LinearGradient.hpp \
  ../../../CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.hpp \
  ../../../CM7/TouchGFX/target/generated/MJPEGDecoder.hpp \
@@ -265,8 +294,8 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnoseView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_screen/DiagnoseViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_screen/DiagnosePresenter.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ModalWindow.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/calculator_screen/CalculatorView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/calculator_screen/CalculatorViewBase.hpp:
@@ -285,26 +314,57 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_dme_screen/Diagnose_DMEViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_dme_screen/Diagnose_DMEPresenter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_kombi_screen/Diagnose_KOMBIViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp:
 ../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_ihka_screen/Diagnose_IHKAViewBase.hpp:
 ../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_extravisual_screen/Diagnose_ExtraVisualView.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/diagnose_extravisual_screen/Diagnose_ExtraVisualViewBase.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/diagnose_extravisual_screen/Diagnose_ExtraVisualPresenter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Gauge.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Circle.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Canvas.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphWrapAndClear.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/AbstractDataGraph.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphElements.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/graph/GraphLabels.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
+../../CM7/../../CM7/TouchGFX/gui/include/gui/containers/graphValueWidget.hpp:
+../../CM7/../../CM7/TouchGFX/generated/gui_generated/include/gui_generated/containers/graphValueWidgetBase.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterLinearGradient.hpp:
+../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterARGB8888.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterARGB8888LinearGradient.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
@@ -312,8 +372,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565LinearGradient.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888.hpp:
-../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB888.hpp:
 ../../CM7/../../CM7/Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB888LinearGradient.hpp:
 ../../../CM7/TouchGFX/target/generated/HardwareMJPEGDecoder.hpp:
 ../../../CM7/TouchGFX/target/generated/MJPEGDecoder.hpp:

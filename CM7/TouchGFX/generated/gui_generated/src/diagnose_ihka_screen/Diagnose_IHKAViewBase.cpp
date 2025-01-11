@@ -3,26 +3,45 @@
 /*********************************************************************************/
 #include <gui_generated/diagnose_ihka_screen/Diagnose_IHKAViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 Diagnose_IHKAViewBase::Diagnose_IHKAViewBase() :
-    buttonCallback(this, &Diagnose_IHKAViewBase::buttonCallbackHandler)
+    buttonCallback(this, &Diagnose_IHKAViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &Diagnose_IHKAViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 800, 480);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
+
+    ContainterAdditionalData.setPosition(0, 441, 800, 39);
+    Button_SendUart.setBoxWithBorderPosition(0, 0, 334, 38);
+    Button_SendUart.setBorderSize(4);
+    Button_SendUart.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(186, 2, 112), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(15, 255, 255));
+    Button_SendUart.setWildcardText(TypedText(T___SINGLEUSE_0VNF));
+    Unicode::snprintf(Button_SendUartBuffer, BUTTON_SENDUART_SIZE, "%s", TypedText(T___SINGLEUSE_NLIC).getText());
+    Button_SendUart.setWildcardTextBuffer(Button_SendUartBuffer);
+    Button_SendUart.setWildcardTextPosition(0, 7, 334, 38);
+    Button_SendUart.setWildcardTextColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Button_SendUart.setAction(flexButtonCallback);
+    Button_SendUart.setPosition(466, 0, 334, 38);
+    ContainterAdditionalData.add(Button_SendUart);
+
+    Text_LastReqCycle.setPosition(12, 4, 454, 35);
+    Text_LastReqCycle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Text_LastReqCycle.setLinespacing(0);
+    Unicode::snprintf(Text_LastReqCycleBuffer, TEXT_LASTREQCYCLE_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OEQM).getText());
+    Text_LastReqCycle.setWildcard(Text_LastReqCycleBuffer);
+    Text_LastReqCycle.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UCSD));
+    ContainterAdditionalData.add(Text_LastReqCycle);
+
+    add(ContainterAdditionalData);
 
     containerParameters.setPosition(0, 75, 800, 405);
     scalableImage2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
     scalableImage2.setPosition(0, 0, 800, 4);
     scalableImage2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     containerParameters.add(scalableImage2);
-
-    scalableImage1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1_1.setPosition(0, 88, 800, 80);
-    scalableImage1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1_1_1);
 
     scalableImage1_1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
     scalableImage1_1_1_1_1.setPosition(0, 4, 800, 80);
@@ -48,42 +67,23 @@ Diagnose_IHKAViewBase::Diagnose_IHKAViewBase() :
     scalableImage2_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     containerParameters.add(scalableImage2_1);
 
-    text_VentTemp.setPosition(12, 107, 483, 43);
-    text_VentTemp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_VentTemp.setLinespacing(0);
-    text_VentTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_22Y0));
-    containerParameters.add(text_VentTemp);
-
-    text_ValueVentTemp.setPosition(614, 107, 171, 43);
-    text_ValueVentTemp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_ValueVentTemp.setLinespacing(0);
-    Unicode::snprintf(text_ValueVentTempBuffer, TEXT_VALUEVENTTEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_74NS).getText());
-    text_ValueVentTemp.setWildcard(text_ValueVentTempBuffer);
-    text_ValueVentTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3D0G));
-    containerParameters.add(text_ValueVentTemp);
-
     scalableImage1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1.setPosition(0, 172, 800, 80);
+    scalableImage1_1_1.setPosition(0, 88, 800, 80);
     scalableImage1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     containerParameters.add(scalableImage1_1_1);
 
-    scalableImage2_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_1.setPosition(0, 168, 800, 4);
-    scalableImage2_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1_1_1);
-
     scalableImage2_1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_1_1.setPosition(0, 252, 800, 4);
+    scalableImage2_1_1_1_1.setPosition(0, 168, 800, 4);
     scalableImage2_1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     containerParameters.add(scalableImage2_1_1_1_1);
 
-    text_TempSelectLeft.setPosition(12, 194, 555, 45);
+    text_TempSelectLeft.setPosition(12, 110, 555, 45);
     text_TempSelectLeft.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_TempSelectLeft.setLinespacing(0);
     text_TempSelectLeft.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2XDW));
     containerParameters.add(text_TempSelectLeft);
 
-    text_ValueTempSelectorLeft.setPosition(651, 196, 134, 43);
+    text_ValueTempSelectorLeft.setPosition(651, 112, 134, 43);
     text_ValueTempSelectorLeft.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_ValueTempSelectorLeft.setLinespacing(0);
     Unicode::snprintf(text_ValueTempSelectorLeftBuffer, TEXT_VALUETEMPSELECTORLEFT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_AQVY).getText());
@@ -92,22 +92,22 @@ Diagnose_IHKAViewBase::Diagnose_IHKAViewBase() :
     containerParameters.add(text_ValueTempSelectorLeft);
 
     scalableImage1_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1_2.setPosition(0, 256, 800, 80);
+    scalableImage1_1_1_2.setPosition(0, 172, 800, 80);
     scalableImage1_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     containerParameters.add(scalableImage1_1_1_2);
 
     scalableImage2_1_1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_1_1_1.setPosition(0, 336, 800, 4);
+    scalableImage2_1_1_1_1_1.setPosition(0, 252, 800, 4);
     scalableImage2_1_1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     containerParameters.add(scalableImage2_1_1_1_1_1);
 
-    text_TempSelectRight.setPosition(13, 278, 533, 46);
+    text_TempSelectRight.setPosition(13, 194, 533, 46);
     text_TempSelectRight.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_TempSelectRight.setLinespacing(0);
     text_TempSelectRight.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OPG0));
     containerParameters.add(text_TempSelectRight);
 
-    text_ValueTempSelectorRight.setPosition(659, 280, 124, 44);
+    text_ValueTempSelectorRight.setPosition(659, 196, 124, 44);
     text_ValueTempSelectorRight.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_ValueTempSelectorRight.setLinespacing(0);
     Unicode::snprintf(text_ValueTempSelectorRightBuffer, TEXT_VALUETEMPSELECTORRIGHT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_84AF).getText());
@@ -230,5 +230,16 @@ void Diagnose_IHKAViewBase::buttonCallbackHandler(const touchgfx::AbstractButton
         //Hide ConnectedModalWindow
         ConnectedModalWindow.setVisible(false);
         ConnectedModalWindow.invalidate();
+    }
+}
+
+void Diagnose_IHKAViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &Button_SendUart)
+    {
+        //ButtonUartClicked
+        //When Button_SendUart clicked call virtual function
+        //Call ButtonUartClicked
+        ButtonUartClicked();
     }
 }

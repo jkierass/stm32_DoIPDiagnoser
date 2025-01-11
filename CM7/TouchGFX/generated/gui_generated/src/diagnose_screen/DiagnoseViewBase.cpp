@@ -3,8 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/diagnose_screen/DiagnoseViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 DiagnoseViewBase::DiagnoseViewBase() :
     buttonCallback(this, &DiagnoseViewBase::buttonCallbackHandler)
@@ -16,6 +16,14 @@ DiagnoseViewBase::DiagnoseViewBase() :
     box1.setPosition(0, 0, 800, 480);
     box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(box1);
+
+    SwitchToExtraVisual.setXY(160, 340);
+    SwitchToExtraVisual.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_LARGE_ROUND_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_LARGE_ROUND_PRESSED_ID));
+    SwitchToExtraVisual.setLabelText(touchgfx::TypedText(T___SINGLEUSE_4NY5));
+    SwitchToExtraVisual.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    SwitchToExtraVisual.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    SwitchToExtraVisual.setAction(buttonCallback);
+    add(SwitchToExtraVisual);
 
     container1.setPosition(0, 0, 800, 75);
     box2.setPosition(0, 0, 800, 75);
@@ -64,7 +72,7 @@ DiagnoseViewBase::DiagnoseViewBase() :
 
     add(container1);
 
-    DMEButton.setXY(82, 184);
+    DMEButton.setXY(82, 107);
     DMEButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
     DMEButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JS26));
     DMEButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -72,7 +80,7 @@ DiagnoseViewBase::DiagnoseViewBase() :
     DMEButton.setAction(buttonCallback);
     add(DMEButton);
 
-    KOMBIButton.setXY(320, 184);
+    KOMBIButton.setXY(312, 107);
     KOMBIButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
     KOMBIButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_V2G9));
     KOMBIButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -80,7 +88,7 @@ DiagnoseViewBase::DiagnoseViewBase() :
     KOMBIButton.setAction(buttonCallback);
     add(KOMBIButton);
 
-    IHKAButton.setXY(563, 184);
+    IHKAButton.setXY(546, 107);
     IHKAButton.setBitmaps(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_NORMAL_ID), touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_LARGE_FILL_ACTION_ID));
     IHKAButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_2C73));
     IHKAButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -158,5 +166,12 @@ void DiagnoseViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
         //When IHKAButton clicked change screen to Diagnose_IHKA
         //Go to Diagnose_IHKA with no screen transition
         application().gotoDiagnose_IHKAScreenNoTransition();
+    }
+    if (&src == &SwitchToExtraVisual)
+    {
+        //SwitchToExtraVisual
+        //When SwitchToExtraVisual clicked change screen to Diagnose_ExtraVisual
+        //Go to Diagnose_ExtraVisual with no screen transition
+        application().gotoDiagnose_ExtraVisualScreenNoTransition();
     }
 }

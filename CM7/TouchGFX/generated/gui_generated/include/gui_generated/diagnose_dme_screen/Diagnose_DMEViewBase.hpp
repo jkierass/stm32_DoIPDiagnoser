@@ -9,9 +9,10 @@
 #include <gui/diagnose_dme_screen/Diagnose_DMEPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/clock/DigitalClock.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 #include <touchgfx/widgets/Button.hpp>
@@ -25,6 +26,14 @@ public:
     virtual ~Diagnose_DMEViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void ButtonUartClicked()
+    {
+        // Override and implement this function in Diagnose_DME
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -34,6 +43,9 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Container ContainterAdditionalData;
+    touchgfx::WildcardTextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger >  >  Button_SendUart;
+    touchgfx::TextAreaWithOneWildcard Text_LastReqCycle;
     touchgfx::Container containerParameters;
     touchgfx::ScalableImage scalableImage1;
     touchgfx::ScalableImage scalableImage2;
@@ -84,6 +96,10 @@ protected:
     /*
      * Wildcard Buffers
      */
+    static const uint16_t BUTTON_SENDUART_SIZE = 40;
+    touchgfx::Unicode::UnicodeChar Button_SendUartBuffer[BUTTON_SENDUART_SIZE];
+    static const uint16_t TEXT_LASTREQCYCLE_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar Text_LastReqCycleBuffer[TEXT_LASTREQCYCLE_SIZE];
     static const uint16_t TEXT_VALUEBATTERYVOLTAGE_SIZE = 20;
     touchgfx::Unicode::UnicodeChar text_ValueBatteryVoltageBuffer[TEXT_VALUEBATTERYVOLTAGE_SIZE];
     static const uint16_t TEXT_VALUEENGINEROTSPEED_SIZE = 20;
@@ -113,11 +129,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<Diagnose_DMEViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<Diagnose_DMEViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

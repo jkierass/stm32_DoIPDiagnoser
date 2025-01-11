@@ -287,6 +287,8 @@ void DoIPDaemonTask::onEventDataSubscribe(const UMessageData& data)
             if(currently_processed_request == REQUEST_INVALID)
             {
                 currently_processed_request = static_cast<EDoIPRequest>(data.event_subscriptions[i]);
+                first_in_cycle = currently_processed_request;
+                last_start_cycle_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
             }
         }
         else
@@ -295,6 +297,8 @@ void DoIPDaemonTask::onEventDataSubscribe(const UMessageData& data)
             if(currently_processed_request == REQUEST_INVALID)
             {
                 currently_processed_request = static_cast<EDoIPRequest>(data.event_subscriptions[i]);
+                first_in_cycle = currently_processed_request;
+                last_start_cycle_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
             }
         }
     }
@@ -320,8 +324,31 @@ void DoIPDaemonTask::onEventDataUnsubscribe(const UMessageData& data)
     if(subscribed_data[0] == 0ULL && subscribed_data[1] == 0ULL)
     {
         currently_processed_request = REQUEST_INVALID;
+        first_in_cycle = REQUEST_INVALID;
         CM::EConnectionEvent connEvent = CM::EConnectionEvent::EVENT_NO_DATA_TO_REQUEST;
         xQueueSend(connectionEventsQueue, &(connEvent), static_cast<TickType_t>(10000));
+    }
+    else
+    {
+        for(int i = 1; i <= 128; i++)
+        {
+            if(i < 64)
+            {
+                if(subscribed_data[0] & (1ULL << i))
+                {
+                    first_in_cycle = static_cast<EDoIPRequest>(i);
+                    break;
+                }
+            }
+            else
+            {
+                if(subscribed_data[1] & (1ULL << (i - 64)))
+                {
+                    first_in_cycle = static_cast<EDoIPRequest>(i);
+                    break;
+                }
+            }
+        }
     }
 }
 
@@ -340,6 +367,15 @@ void DoIPDaemonTask::sendNextRequest()
             {
                 auto dataType = static_cast<EDoIPRequest>(i);
                 currently_processed_request = dataType;
+                if(currently_processed_request == first_in_cycle)
+                {
+                    auto current_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+                    auto ms_diff = current_timestamp - last_start_cycle_timestamp;
+                    last_start_cycle_timestamp = current_timestamp;
+                    UMessageData data;
+                    data.last_request_cycle_ms = static_cast<uint16_t>(ms_diff);
+                    event_bus.send(EVENT_LAST_REQUEST_CYCLE_TOOK_MS, data, EVENT_CLIENT_FRONTEND);
+                }
                 conn_mgr.sendRequestForData(dataType);
                 break;
             }

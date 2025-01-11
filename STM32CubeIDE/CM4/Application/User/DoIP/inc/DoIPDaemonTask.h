@@ -48,9 +48,11 @@ private:
 
 	EConnectionState current_connection_state = STATE_ETHERNET_DISCONNECTED;
 
-    unsigned long long subscribed_data[2] = {0ULL};
+    uint64_t subscribed_data[2] = {0ULL};
 
     APIDoIP::EDoIPRequest currently_processed_request = APIDoIP::REQUEST_INVALID;
+    APIDoIP::EDoIPRequest first_in_cycle = APIDoIP::REQUEST_INVALID;
+    TickType_t last_start_cycle_timestamp = 0;
 
     ConnectionManager& conn_mgr;
 };

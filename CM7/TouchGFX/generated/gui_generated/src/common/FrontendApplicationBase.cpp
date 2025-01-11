@@ -23,6 +23,8 @@
 #include <gui/diagnose_kombi_screen/Diagnose_KOMBIPresenter.hpp>
 #include <gui/diagnose_ihka_screen/Diagnose_IHKAView.hpp>
 #include <gui/diagnose_ihka_screen/Diagnose_IHKAPresenter.hpp>
+#include <gui/diagnose_extravisual_screen/Diagnose_ExtraVisualView.hpp>
+#include <gui/diagnose_extravisual_screen/Diagnose_ExtraVisualPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -132,4 +134,17 @@ void FrontendApplicationBase::gotoDiagnose_IHKAScreenNoTransition()
 void FrontendApplicationBase::gotoDiagnose_IHKAScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Diagnose_IHKAView, Diagnose_IHKAPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Diagnose_ExtraVisual
+
+void FrontendApplicationBase::gotoDiagnose_ExtraVisualScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoDiagnose_ExtraVisualScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDiagnose_ExtraVisualScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Diagnose_ExtraVisualView, Diagnose_ExtraVisualPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

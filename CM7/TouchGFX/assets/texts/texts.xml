@@ -6,6 +6,111 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_NQVZ" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">101.1</Translation>
+      </Text>
+      <Text Id="__SingleUse_2EDI" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FXNA" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_OQ0U" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_OEQM" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_RX7V" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_R7X6" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_4NY5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Extra Visual (for DME ECU)</Translation>
+      </Text>
+      <Text Id="__SingleUse_B4LU" Alignment="Right" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5GGV" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_EG5Y" Alignment="Right" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_K8QD" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Engine oil temperature (request cycle) [°C]</Translation>
+      </Text>
+      <Text Id="__SingleUse_VB59" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Engine coolant temperature (request cycle) [°C]</Translation>
+      </Text>
+      <Text Id="__SingleUse_JMFH" Alignment="Center" TypographyId="Typography_03">
+        <Translation Language="GB">Engine rotational&#10;speed [RPM]&#10;x100</Translation>
+      </Text>
+      <Text Id="__SingleUse_UH2S" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Last request cycle took: &lt;value&gt; ms.</Translation>
+      </Text>
+      <Text Id="__SingleUse_GZKA" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Start sending data by UART</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q3XK" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_NT4E" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">01.01.2024</Translation>
+      </Text>
+      <Text Id="__SingleUse_JXXZ" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_83GD" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">23</Translation>
+      </Text>
+      <Text Id="__SingleUse_OP6M" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">&lt;value&gt;°C</Translation>
+      </Text>
+      <Text Id="__SingleUse_0UOO" Alignment="Left" TypographyId="Large">
+        <Translation Language="GB">Extra Visual DME</Translation>
+      </Text>
+      <Text Id="__SingleUse_UTO4" Alignment="Right" TypographyId="Default">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VWOP" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Ok</Translation>
+      </Text>
+      <Text Id="__SingleUse_TN38" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Popup</Translation>
+      </Text>
+      <Text Id="__SingleUse_QASI" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UCSD" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Last request cycle took: &lt;value&gt; ms.</Translation>
+      </Text>
+      <Text Id="__SingleUse_NLIC" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Start sending data by UART</Translation>
+      </Text>
+      <Text Id="__SingleUse_0VNF" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_NUPY" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Last request cycle took: &lt;value&gt; ms.</Translation>
+      </Text>
+      <Text Id="__SingleUse_K59Q" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Start sending data by UART</Translation>
+      </Text>
+      <Text Id="__SingleUse_56SM" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_SOLX" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Start sending data by UART</Translation>
+      </Text>
+      <Text Id="__SingleUse_R009" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_XO5J" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Last request cycle took: &lt;value&gt; ms.</Translation>
+      </Text>
       <Text Id="__SingleUse_OPG0" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">Temperature selector (right) [°C]:</Translation>
       </Text>
@@ -23,15 +128,6 @@
       </Text>
       <Text Id="__SingleUse_2XDW" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">Temperature selector (left) [°C]:</Translation>
-      </Text>
-      <Text Id="__SingleUse_74NS" Alignment="Left" TypographyId="Typography_00">
-        <Translation Language="GB">value</Translation>
-      </Text>
-      <Text Id="__SingleUse_3D0G" Alignment="Right" TypographyId="Typography_00">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_22Y0" Alignment="Left" TypographyId="Typography_00">
-        <Translation Language="GB">Ventillation temperature [°C]:</Translation>
       </Text>
       <Text Id="__SingleUse_V9Z1" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">value</Translation>
@@ -470,9 +566,10 @@
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="0123456789 :APM" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="-., 0123456789" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Typography_00" Font="verdana.ttf" Size="26" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Typography_01" Font="verdana.ttf" Size="30" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
     <Typography Id="Typography_02" Font="verdana.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x00-0xFF" />
+    <Typography Id="Typography_03" Font="verdana.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

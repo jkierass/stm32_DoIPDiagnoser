@@ -627,6 +627,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/containers/ParameterListElement.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/graphValueWidget.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/containers/graphValueWidget.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/gui/DatePresenter.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/date_screen/DatePresenter.cpp</locationURI>
@@ -645,6 +650,16 @@
 			<name>Application/User/gui/Diagnose_DMEView.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_dme_screen/Diagnose_DMEView.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/Diagnose_ExtraVisualPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_extravisual_screen/Diagnose_ExtraVisualPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/Diagnose_ExtraVisualView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/gui/src/diagnose_extravisual_screen/Diagnose_ExtraVisualView.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/gui/Diagnose_IHKAPresenter.cpp</name>
@@ -712,6 +727,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_10_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Font_verdana_14_4bpp_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_14_4bpp_0.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Font_verdana_20_4bpp_0.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Font_verdana_20_4bpp_0.cpp</locationURI>
@@ -747,6 +767,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_10_4bpp.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Kerning_verdana_14_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_14_4bpp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Kerning_verdana_20_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Kerning_verdana_20_4bpp.cpp</locationURI>
@@ -775,6 +800,11 @@
 			<name>Application/User/generated/Table_verdana_10_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Table_verdana_14_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/fonts/src/Table_verdana_14_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Table_verdana_20_4bpp.cpp</name>
@@ -832,6 +862,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/containers/ParameterListElementBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/graphValueWidgetBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/containers/graphValueWidgetBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/DateViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/date_screen/DateViewBase.cpp</locationURI>
@@ -840,6 +875,11 @@
 			<name>Application/User/generated/Diagnose_DMEViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_dme_screen/Diagnose_DMEViewBase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Diagnose_ExtraVisualViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/gui_generated/src/diagnose_extravisual_screen/Diagnose_ExtraVisualViewBase.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Diagnose_IHKAViewBase.cpp</name>
@@ -970,6 +1010,26 @@
 			<name>Application/User/generated/image_dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_button_regular_height_36_medium_round_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dark_theme_images_widgets_button_regular_height_60_large_round_normal.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_button_regular_height_60_large_round_normal.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dark_theme_images_widgets_button_regular_height_60_large_round_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_button_regular_height_60_large_round_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dark_theme_images_widgets_gauge_medium_backgrounds_active_precision.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_gauge_medium_backgrounds_active_precision.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_dark_theme_images_widgets_gauge_medium_needles_rough.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/CM7/TouchGFX/generated/images/src/__generated/image_dark_theme_images_widgets_gauge_medium_needles_rough.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_light_theme_images_widgets_button_icon_rounded_small_outline_disabled.cpp</name>
