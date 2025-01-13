@@ -56,6 +56,8 @@ public:
 
     void processUdpDicovery();
 
+    void setSendingDataByUART(bool onoff);
+
 private:
 
     ConnectionManager(){};
@@ -80,6 +82,9 @@ private:
     APIDoIP::EDoIPRequest currently_processed_request = APIDoIP::REQUEST_INVALID;
 
     uint8_t negativeResponseCount = 0;
+
+    bool sending_data_by_uart = false;
+    TickType_t starting_timestamp_for_data_UART = 0;
 };
 
 #endif /*__CONNECTIONMANAGER_H__*/

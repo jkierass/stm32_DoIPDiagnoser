@@ -20,16 +20,20 @@ void Diagnose_ExtraVisualPresenter::activate()
     msg.event_subscriptions[2] = EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED;
     msg.event_subscriptions[3] = EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE;
     model->sendEvent(EVENT_DATA_SUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_SUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_ExtraVisualPresenter::deactivate()
 {
-UMessageData msg;
+    UMessageData msg;
     msg.event_subscriptions[0] = 3;
     msg.event_subscriptions[1] = EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE;
     msg.event_subscriptions[2] = EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED;
     msg.event_subscriptions[3] = EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE; 
     model->sendEvent(EVENT_DATA_UNSUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_UNSUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_STOP_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+
 }
 
 void Diagnose_ExtraVisualPresenter::loadCache()
@@ -53,6 +57,9 @@ void Diagnose_ExtraVisualPresenter::OnEvent(EEventType event, UMessageData msg, 
         case EVENT_UPDATE_ROOM_TEMPERATURE:
             view.setTemperature(msg.room_temperature);
             model->auxDataCache.room_temperature = msg.room_temperature;
+            break;
+        case EVENT_LAST_REQUEST_CYCLE_TOOK_MS:
+            view.setRequestCycleTime(msg.last_request_cycle_ms);
             break;
         case EVENT_ECU_CONNECTION_INITIALISED:
         {
@@ -85,4 +92,9 @@ void Diagnose_ExtraVisualPresenter::OnEvent(EEventType event, UMessageData msg, 
         default:
             break;
     }
+}
+
+bool Diagnose_ExtraVisualPresenter::sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver)
+{
+    return model->sendEvent(event, message, eventReceiver);
 }

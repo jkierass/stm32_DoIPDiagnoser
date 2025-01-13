@@ -529,6 +529,63 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
     {
         SMessage msg = optMsg.value();
         xQueueSend(queueToEventManagerCM4, &(msg), static_cast<TickType_t>(10000));
+        if(sending_data_by_uart)
+        {
+            TickType_t currentTick = (xTaskGetTickCount() * (1000/configTICK_RATE_HZ));
+            uint16_t diff = currentTick - starting_timestamp_for_data_UART;
+
+            const char* paramStr = APIDoIP::EDoIPRequest_ToCStringMap.at(static_cast<APIDoIP::EDoIPRequest>(msg.event_type));
+            switch(msg.event_type)
+            {
+                case EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_AIR_MASS:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_RAIL_PRESSURE:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_KOMBI_TOTAL_DISTANCE:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_KOMBI_SPEED:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR:
+                {
+                    // we can take any uint16_t type from the message
+                    SEND_DATA_UART("%s,%u,%u", paramStr, diff, msg.message_data.dme_engine_rotational_speed);
+                    break;
+                }
+                case EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_AMBIENT_TEMPERATURE:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION:
+                {
+                    // we can take any uint8_t type from the message
+                    SEND_DATA_UART("%s,%u,%u", paramStr, diff, msg.message_data.dme_battery_voltage);
+                    break;
+                }
+                case EVENT_DATA_UPDATE_KOMBI_FUEL:
+                {
+                    // we can take any uint8_t type from the message
+                    SEND_DATA_UART("%s,%u,%u,%u,%u", paramStr, diff, msg.message_data.kombi_fuel_level[0], msg.message_data.kombi_fuel_level[1], msg.message_data.kombi_fuel_level[2]);
+                    break;
+                }
+                case EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR:
+                {
+                    SEND_DATA_UART("%s,%u,%u,%u", paramStr, diff, msg.message_data.ihka_temperature_selector[0], msg.message_data.ihka_temperature_selector[1]);
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
     }
     EConnectionEvent connEvent = EVENT_TCP_READ_DATA_BY_ID_RECEIVED;
     if(xQueueSend(connectionEventsQueue, &(connEvent), static_cast<TickType_t>(100000)) != pdPASS)
@@ -611,4 +668,13 @@ void ConnectionManager::processUdpDicovery()
     sendSLP();
     sendDoIPInit();
     osDelay(300);
+}
+
+void ConnectionManager::setSendingDataByUART(bool onoff)
+{
+    sending_data_by_uart = onoff;
+    if(onoff)
+    {
+        starting_timestamp_for_data_UART = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+    }
 }

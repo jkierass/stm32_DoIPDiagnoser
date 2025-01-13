@@ -25,6 +25,7 @@ void Diagnose_DMEPresenter::activate()
     msg.event_subscriptions[7] = EVENT_DATA_UPDATE_DME_RAIL_PRESSURE;
     msg.event_subscriptions[8] = EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION;
     model->sendEvent(EVENT_DATA_SUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_SUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_DMEPresenter::deactivate()
@@ -40,6 +41,8 @@ void Diagnose_DMEPresenter::deactivate()
     msg.event_subscriptions[7] = EVENT_DATA_UPDATE_DME_RAIL_PRESSURE;
     msg.event_subscriptions[8] = EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION;
     model->sendEvent(EVENT_DATA_UNSUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_UNSUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_STOP_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_DMEPresenter::loadCache()
@@ -74,6 +77,9 @@ void Diagnose_DMEPresenter::OnEvent(EEventType event, UMessageData msg, EEventCl
             view.setTemperature(msg.room_temperature);
             model->auxDataCache.room_temperature = msg.room_temperature;
             break;
+        case EVENT_LAST_REQUEST_CYCLE_TOOK_MS:
+            view.setRequestCycleTime(msg.last_request_cycle_ms);
+            break;
         case EVENT_ECU_CONNECTION_INITIALISED:
         {
             uint8_t message[46] = {0};
@@ -105,4 +111,9 @@ void Diagnose_DMEPresenter::OnEvent(EEventType event, UMessageData msg, EEventCl
         default:
             break;
     }
+}
+
+bool Diagnose_DMEPresenter::sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver)
+{
+    return model->sendEvent(event, message, eventReceiver);
 }

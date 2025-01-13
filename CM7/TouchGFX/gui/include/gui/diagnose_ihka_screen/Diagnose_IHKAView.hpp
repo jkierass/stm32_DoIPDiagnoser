@@ -20,7 +20,13 @@ public:
 
     void showPopup(uint8_t message[], size_t msgSize);
 
+    void setRequestCycleTime(uint16_t cycleMs);
+
+    void ButtonUartClicked() override;
+
 protected:
+
+    bool button_uart_click_state = false;
 };
 
 #endif // DIAGNOSE_IHKAVIEW_HPP

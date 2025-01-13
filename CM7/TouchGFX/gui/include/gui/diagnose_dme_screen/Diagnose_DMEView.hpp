@@ -18,8 +18,14 @@ public:
     void setDate(uint8_t day, uint8_t month, unsigned int year);
     void setTime(uint8_t hour, uint8_t minute);
 
+    void setRequestCycleTime(uint16_t cycleMs);
+
     void showPopup(uint8_t message[], size_t msgSize);
+
+    void ButtonUartClicked() override;
 protected:
+
+    bool button_uart_click_state = false;
 };
 
 #endif // DIAGNOSE_DMEVIEW_HPP

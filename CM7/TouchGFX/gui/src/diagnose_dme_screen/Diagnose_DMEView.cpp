@@ -1,4 +1,5 @@
 #include <gui/diagnose_dme_screen/Diagnose_DMEView.hpp>
+#include <cstring>
 
 Diagnose_DMEView::Diagnose_DMEView()
 {
@@ -34,7 +35,7 @@ void Diagnose_DMEView::UpdateParameterValue(EEventType eventType, const UMessage
         }
         case EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE:
         {
-            touchgfx::Unicode::snprintf(text_ValueCoolantTempBuffer, TEXT_VALUECOOLANTTEMP_SIZE, "! %u", data.dme_coolant_temperature);
+            touchgfx::Unicode::snprintfFloat(text_ValueCoolantTempBuffer, TEXT_VALUECOOLANTTEMP_SIZE, "%.2f", static_cast<float>(data.dme_coolant_temperature) - 100);
             text_ValueCoolantTemp.invalidate();
             break;
         }
@@ -101,4 +102,33 @@ void Diagnose_DMEView::showPopup(uint8_t message[], size_t msgSize)
 	touchgfx::Unicode::strncpy(Text_PopupBuffer, new_buf, TEXT_POPUP_SIZE);
 	Text_Popup.invalidate();
     ConnectedModalWindow.show();
+}
+
+void Diagnose_DMEView::ButtonUartClicked()
+{
+    // toggle
+    button_uart_click_state = !button_uart_click_state;
+
+    uint8_t message[BUTTON_SENDUART_SIZE] = {0};
+    if(button_uart_click_state)
+    {
+        presenter->sendEvent(EVENT_START_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+        std::memcpy(&message[0], "Stop sending data by UART", 25);
+    }
+    else
+    {
+        presenter->sendEvent(EVENT_STOP_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+        std::memcpy(&message[0], "Start sending data by UART", 26);
+    }
+    // it is kind of unefficient, but unfortunately has to be done this way 
+    touchgfx::Unicode::UnicodeChar new_buf[BUTTON_SENDUART_SIZE] = {0};
+	touchgfx::Unicode::fromUTF8(message, new_buf, BUTTON_SENDUART_SIZE);
+	touchgfx::Unicode::strncpy(Button_SendUartBuffer, new_buf, BUTTON_SENDUART_SIZE);
+    Button_SendUart.invalidate();
+}
+
+void Diagnose_DMEView::setRequestCycleTime(uint16_t cycleMs)
+{
+    touchgfx::Unicode::snprintf(Text_LastReqCycleBuffer, TEXT_LASTREQCYCLE_SIZE, "%u", cycleMs);
+    Text_LastReqCycle.invalidate();
 }

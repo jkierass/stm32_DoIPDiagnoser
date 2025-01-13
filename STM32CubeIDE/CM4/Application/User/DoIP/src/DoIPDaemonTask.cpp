@@ -51,6 +51,27 @@ void DoIPDaemonTask::OnEvent(EEventType event, UMessageData msg, EEventClient ev
             onEventDataUnsubscribe(msg);
             break;
         }
+        case EVENT_REQUEST_CYCLE_SUSBCRIBE:
+        {
+            subscribed_for_cycle_time = true;
+            last_start_cycle_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+            break;
+        }
+        case EVENT_REQUEST_CYCLE_UNSUSBCRIBE:
+        {
+            subscribed_for_cycle_time = false;
+            break;
+        }
+        case EVENT_START_SENDING_DATA_UART:
+        {
+            conn_mgr.setSendingDataByUART(true);
+            break;
+        }
+        case EVENT_STOP_SENDING_DATA_UART:
+        {
+            conn_mgr.setSendingDataByUART(false);
+            break;
+        }
 		default:
 			break;
 	}
@@ -367,7 +388,7 @@ void DoIPDaemonTask::sendNextRequest()
             {
                 auto dataType = static_cast<EDoIPRequest>(i);
                 currently_processed_request = dataType;
-                if(currently_processed_request == first_in_cycle)
+                if(currently_processed_request == first_in_cycle && subscribed_for_cycle_time)
                 {
                     auto current_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
                     auto ms_diff = current_timestamp - last_start_cycle_timestamp;

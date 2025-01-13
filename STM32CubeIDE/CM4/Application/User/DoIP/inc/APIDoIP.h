@@ -65,6 +65,25 @@ namespace APIDoIP
     void prepareSecondRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EDynamicDataIndentifierRequestCode ddirCode);
 
     std::optional<SMessage> extractDataFromResponse(const uint8_t dataPayload[], size_t size, EDoIPRequest dataType);
+
+    const std::unordered_map<EDoIPRequest, const char*> EDoIPRequest_ToCStringMap = 
+    {
+        {DME_ENGINE_OIL_TEMPERATURE, "DME_ENG_OIL_TEMP"},
+        {DME_ENGINE_ROTATIONAL_SPEED, "DME_ENG_ROT_SPEED"},
+        {DME_COOLANT_TEMPERATURE, "DME_COOL_TEMP"},
+        {DME_BATTERY_VOLTAGE, "DME_BAT_VOL"},
+        {DME_AMBIENT_TEMPERATURE, "DME_AMB_TEMP"},
+        {DME_AIR_MASS, "DME_AIR_MASS"},
+        {DME_RAIL_PRESSURE, "DME_RAIL_PRES"},
+        {DME_ACCELERATOR_PEDAL_POSITION, "DME_ACC_PEDAL_POS"},
+        {KOMBI_TOTAL_DISTANCE, "KOMBI_DIST"},
+        {KOMBI_SPEED, "KOMBI_SPEED"},
+        {KOMBI_OUTSIDE_TEMP_SENSOR, "KOMBI_OUT_TEMP"},
+        {KOMBI_ENGINE_SPEED_ON_DISP, "KOMBI_ENG_SPEED_DISP"},
+        {KOMBI_FUEL_LEVEL, "KOMBI_FUEL_LEVEL"},
+        {IHKA_EVAPORATOR_TEMPERATURE_SENSOR, "IHKA_EVAP_TEMP"},
+        {IHKA_TEMPERATURE_SELECTOR, "IHKA_TEMP_SEL"}
+    };
 };
 
 #endif /* __APIDOIP_H__ */

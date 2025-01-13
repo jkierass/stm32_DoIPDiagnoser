@@ -23,6 +23,7 @@ void Diagnose_KOMBIPresenter::activate()
     msg.event_subscriptions[4] = EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP;
     msg.event_subscriptions[5] = EVENT_DATA_UPDATE_KOMBI_FUEL;
     model->sendEvent(EVENT_DATA_SUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_SUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_KOMBIPresenter::deactivate()
@@ -35,6 +36,8 @@ void Diagnose_KOMBIPresenter::deactivate()
     msg.event_subscriptions[4] = EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP;
     msg.event_subscriptions[5] = EVENT_DATA_UPDATE_KOMBI_FUEL;
     model->sendEvent(EVENT_DATA_UNSUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_UNSUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_STOP_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_KOMBIPresenter::loadCache()
@@ -62,6 +65,9 @@ void Diagnose_KOMBIPresenter::OnEvent(EEventType event, UMessageData msg, EEvent
         case EVENT_UPDATE_ROOM_TEMPERATURE:
             view.setTemperature(msg.room_temperature);
             model->auxDataCache.room_temperature = msg.room_temperature;
+            break;
+        case EVENT_LAST_REQUEST_CYCLE_TOOK_MS:
+            view.setRequestCycleTime(msg.last_request_cycle_ms);
             break;
         case EVENT_ECU_CONNECTION_INITIALISED:
         {
@@ -94,4 +100,9 @@ void Diagnose_KOMBIPresenter::OnEvent(EEventType event, UMessageData msg, EEvent
         default:
             break;
     }
+}
+
+bool Diagnose_KOMBIPresenter::sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver)
+{
+    return model->sendEvent(event, message, eventReceiver);
 }

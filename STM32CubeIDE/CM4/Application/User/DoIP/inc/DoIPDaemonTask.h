@@ -49,6 +49,7 @@ private:
 	EConnectionState current_connection_state = STATE_ETHERNET_DISCONNECTED;
 
     uint64_t subscribed_data[2] = {0ULL};
+    bool subscribed_for_cycle_time = false;
 
     APIDoIP::EDoIPRequest currently_processed_request = APIDoIP::REQUEST_INVALID;
     APIDoIP::EDoIPRequest first_in_cycle = APIDoIP::REQUEST_INVALID;

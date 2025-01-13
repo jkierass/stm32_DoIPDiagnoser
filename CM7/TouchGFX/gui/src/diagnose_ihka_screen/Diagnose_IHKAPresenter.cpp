@@ -20,6 +20,7 @@ void Diagnose_IHKAPresenter::activate()
     msg.event_subscriptions[1] = EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR;
     msg.event_subscriptions[2] = EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR;
     model->sendEvent(EVENT_DATA_SUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_SUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_IHKAPresenter::deactivate()
@@ -29,6 +30,8 @@ void Diagnose_IHKAPresenter::deactivate()
     msg.event_subscriptions[1] = EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR;
     msg.event_subscriptions[2] = EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR;
     model->sendEvent(EVENT_DATA_UNSUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_REQUEST_CYCLE_UNSUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
+    model->sendEvent(EVENT_STOP_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
 
 void Diagnose_IHKAPresenter::loadCache()
@@ -50,6 +53,9 @@ void Diagnose_IHKAPresenter::OnEvent(EEventType event, UMessageData msg, EEventC
         case EVENT_UPDATE_ROOM_TEMPERATURE:
             view.setTemperature(msg.room_temperature);
             model->auxDataCache.room_temperature = msg.room_temperature;
+            break;
+        case EVENT_LAST_REQUEST_CYCLE_TOOK_MS:
+            view.setRequestCycleTime(msg.last_request_cycle_ms);
             break;
         case EVENT_ECU_CONNECTION_INITIALISED:
         {
@@ -82,4 +88,9 @@ void Diagnose_IHKAPresenter::OnEvent(EEventType event, UMessageData msg, EEventC
         default:
             break;
     }
+}
+
+bool Diagnose_IHKAPresenter::sendEvent(EEventType event, UMessageData message, EEventClient eventReceiver)
+{
+    return model->sendEvent(event, message, eventReceiver);
 }

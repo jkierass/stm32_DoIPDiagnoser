@@ -18,6 +18,7 @@ class LogPrinter
 public:
 	static LogPrinter& instance();
 	void printDebug(const char* format, ...);
+    void printUART(const char* format, ...);
 
 private:
 	LogPrinter();
@@ -34,6 +35,14 @@ private:
             	if (DEBUG_ENABLED)\
 				{\
             		LogPrinter::instance().printDebug(fmt, ##__VA_ARGS__);\
+				}\
+			} while (0)
+
+#define SEND_DATA_UART(fmt, ...) \
+            do {\
+            	if (DEBUG_ENABLED)\
+				{\
+            		LogPrinter::instance().printUART(fmt, ##__VA_ARGS__);\
 				}\
 			} while (0)
 

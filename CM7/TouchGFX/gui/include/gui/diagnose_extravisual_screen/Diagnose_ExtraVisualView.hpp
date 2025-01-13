@@ -26,12 +26,15 @@ public:
     void graphOil_Dragged(AbstractDataGraph::GraphDragEvent value) override;
     void graphCoolant_Dragged(AbstractDataGraph::GraphDragEvent value) override;
 
+    void setRequestCycleTime(uint16_t cycleMs);
 protected:
     void updateInfoWidgetPosision_Oil();
     void updateInfoWidgetPosision_Coolant();
 
     int lastIndexOil = -1;
     int lastIndexCoolant = -1;
+
+    bool button_uart_click_state = false;
 };
 
 #endif // DIAGNOSE_EXTRAVISUALVIEW_HPP
