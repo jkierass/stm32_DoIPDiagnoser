@@ -4,6 +4,7 @@
 #include "cmsis_os.h"
 #include "FreeRTOS.h"
 #include "queue.h"
+#include "projdefs.h"
 
 #include "lwip/etharp.h"
 
@@ -11,6 +12,12 @@
 
 extern QueueHandle_t queueToEventManagerCM4;
 extern QueueHandle_t connectionEventsQueue;
+
+static float getSystickInSeconds()
+{
+    return static_cast<float>(pdTICKS_TO_MS(xTaskGetTickCount())) / 1000.0f;
+}
+
 
 extern "C" err_t tcpRecvCb(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
 {
@@ -531,8 +538,8 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
         xQueueSend(queueToEventManagerCM4, &(msg), static_cast<TickType_t>(10000));
         if(sending_data_by_uart)
         {
-            TickType_t currentTick = (xTaskGetTickCount() * (1000/configTICK_RATE_HZ));
-            uint16_t diff = currentTick - starting_timestamp_for_data_UART;
+            float currentTick = getSystickInSeconds();
+            float diff = currentTick - starting_timestamp_for_data_UART;
 
             const char* paramStr = APIDoIP::EDoIPRequest_ToCStringMap.at(static_cast<APIDoIP::EDoIPRequest>(msg.event_type));
             switch(msg.event_type)
@@ -556,7 +563,7 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
                 case EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR:
                 {
                     // we can take any uint16_t type from the message
-                    SEND_DATA_UART("%s,%u,%u", paramStr, diff, msg.message_data.dme_engine_rotational_speed);
+                    SEND_DATA_UART("%s,%.2f,%u", paramStr, diff, msg.message_data.dme_engine_rotational_speed);
                     break;
                 }
                 case EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE:
@@ -568,18 +575,17 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
                 case EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION:
                 {
                     // we can take any uint8_t type from the message
-                    SEND_DATA_UART("%s,%u,%u", paramStr, diff, msg.message_data.dme_battery_voltage);
+                    SEND_DATA_UART("%s,%.2f,%u", paramStr, diff, msg.message_data.dme_battery_voltage);
                     break;
                 }
                 case EVENT_DATA_UPDATE_KOMBI_FUEL:
                 {
-                    // we can take any uint8_t type from the message
-                    SEND_DATA_UART("%s,%u,%u,%u,%u", paramStr, diff, msg.message_data.kombi_fuel_level[0], msg.message_data.kombi_fuel_level[1], msg.message_data.kombi_fuel_level[2]);
+                    SEND_DATA_UART("%s,%.2f,%u,%u,%u", paramStr, diff, msg.message_data.kombi_fuel_level[0], msg.message_data.kombi_fuel_level[1], msg.message_data.kombi_fuel_level[2]);
                     break;
                 }
                 case EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR:
                 {
-                    SEND_DATA_UART("%s,%u,%u,%u", paramStr, diff, msg.message_data.ihka_temperature_selector[0], msg.message_data.ihka_temperature_selector[1]);
+                    SEND_DATA_UART("%s,%.2f,%u,%u", paramStr, diff, msg.message_data.ihka_temperature_selector[0], msg.message_data.ihka_temperature_selector[1]);
                     break;
                 }
                 default:
@@ -675,6 +681,6 @@ void ConnectionManager::setSendingDataByUART(bool onoff)
     sending_data_by_uart = onoff;
     if(onoff)
     {
-        starting_timestamp_for_data_UART = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+        starting_timestamp_for_data_UART = getSystickInSeconds();
     }
 }

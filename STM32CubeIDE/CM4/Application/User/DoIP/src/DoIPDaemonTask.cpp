@@ -1,10 +1,9 @@
-#include "../inc/DoIPDaemonTask.h"
+#include "DoIPDaemonTask.h"
 
 #include <lwip.h>
 #include "ethernetif.h"
+#include "projdefs.h"
 
-#include "FreeRTOS.h"
-#include "task.h"
 #include "Logger.h"
 
 #include <cstring>
@@ -54,7 +53,7 @@ void DoIPDaemonTask::OnEvent(EEventType event, UMessageData msg, EEventClient ev
         case EVENT_REQUEST_CYCLE_SUSBCRIBE:
         {
             subscribed_for_cycle_time = true;
-            last_start_cycle_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+            last_start_cycle_timestamp = pdTICKS_TO_MS(xTaskGetTickCount());
             break;
         }
         case EVENT_REQUEST_CYCLE_UNSUSBCRIBE:
@@ -309,7 +308,7 @@ void DoIPDaemonTask::onEventDataSubscribe(const UMessageData& data)
             {
                 currently_processed_request = static_cast<EDoIPRequest>(data.event_subscriptions[i]);
                 first_in_cycle = currently_processed_request;
-                last_start_cycle_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+                last_start_cycle_timestamp = pdTICKS_TO_MS(xTaskGetTickCount());
             }
         }
         else
@@ -319,7 +318,7 @@ void DoIPDaemonTask::onEventDataSubscribe(const UMessageData& data)
             {
                 currently_processed_request = static_cast<EDoIPRequest>(data.event_subscriptions[i]);
                 first_in_cycle = currently_processed_request;
-                last_start_cycle_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+                last_start_cycle_timestamp = pdTICKS_TO_MS(xTaskGetTickCount());
             }
         }
     }
@@ -390,7 +389,7 @@ void DoIPDaemonTask::sendNextRequest()
                 currently_processed_request = dataType;
                 if(currently_processed_request == first_in_cycle && subscribed_for_cycle_time)
                 {
-                    auto current_timestamp = xTaskGetTickCount() * (1000/configTICK_RATE_HZ);
+                    auto current_timestamp = pdTICKS_TO_MS(xTaskGetTickCount());
                     auto ms_diff = current_timestamp - last_start_cycle_timestamp;
                     last_start_cycle_timestamp = current_timestamp;
                     UMessageData data;

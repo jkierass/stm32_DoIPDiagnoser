@@ -1,8 +1,0 @@
-../Application/User/Core/cm_ipc.c:71:6:HAL_HSEM_FreeCallback	3
-../Application/User/Core/cm_ipc.c:90:5:ipc_init	1
-../Application/User/Core/cm_ipc.c:102:5:ipc_start	1
-../Application/User/Core/cm_ipc.c:108:13:prvCoreInterruptHandler	3
-../Application/User/Core/cm_ipc.c:126:13:prvCoreWakeupInterruptHandler	3
-../Application/User/Core/cm_ipc.c:144:6:vGenerateRemoteInterrupt	5
-../Application/User/Core/cm_ipc.c:170:8:ipc_sendmsg	3
-../Application/User/Core/cm_ipc.c:185:8:ipc_recvmsg	2

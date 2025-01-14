@@ -29,7 +29,6 @@ public:
 		EVENT_DISCOVERY_COMPLETED,
 		EVENT_TCP_CONNECTED,
         EVENT_TCP_CONNECTION_FAILED,
-		EVENT_REQUESTED_DEFAULT_ECU,
 
         EVENT_DATA_REQUESTED,
         EVENT_NO_DATA_TO_REQUEST,
@@ -84,7 +83,7 @@ private:
     uint8_t negativeResponseCount = 0;
 
     bool sending_data_by_uart = false;
-    TickType_t starting_timestamp_for_data_UART = 0;
+    float starting_timestamp_for_data_UART = 0;
 };
 
 #endif /*__CONNECTIONMANAGER_H__*/

@@ -2,33 +2,22 @@
 /**
   ******************************************************************************
   * @file           : main.cpp
-  * @brief          : Main file for the CM4 core in the "DoIP Diagnostics Tool" project.
+  * @brief          : Main file for the CM7 core in the "DoIP Diagnostics Tool" project.
   * @author         : Jakub Kierasiński
   * @date           : 2024
   ******************************************************************************
   * @attention
   *
-  * This software is provided under the MIT License.
-  *
-  * Copyright (c) 2024 Jakub Kierasiński
-  *
-  * Permission is hereby granted, free of charge, to any person obtaining a copy
-  * of this software and associated documentation files (the "Software"), to deal
-  * in the Software without restriction, including without limitation the rights
-  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  * copies of the Software, and to permit persons to whom the Software is
-  * furnished to do so, subject to the following conditions:
-  *
-  * The above copyright notice and this permission notice shall be included in
-  * all copies or substantial portions of the Software.
-  *
-  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  * THE SOFTWARE.
+  * This is the main file of the project "DoIP Diagnoser". It consists of two
+  * programs running on CM4 and CM7 core separately. This core, i.e. CM7, is
+  * reponsible for LCD screen handling (with TouchGFX framework used), GUI, as well
+  * as running RTC and Calculator applications.
+  * 
+  * Whole projects uses FreeRTOS as an operating system. IPC implementation is
+  * based on FreeRTOS message buffers (xMessageBuffer).
+  * 
+  * Most of the user implementation is written in C++, with elements in C.
+  * 
   *
   ******************************************************************************
   */

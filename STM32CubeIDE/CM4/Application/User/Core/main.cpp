@@ -8,27 +8,18 @@
   ******************************************************************************
   * @attention
   *
-  * This software is provided under the MIT License.
-  *
-  * Copyright (c) 2024 Jakub Kierasiński
-  *
-  * Permission is hereby granted, free of charge, to any person obtaining a copy
-  * of this software and associated documentation files (the "Software"), to deal
-  * in the Software without restriction, including without limitation the rights
-  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  * copies of the Software, and to permit persons to whom the Software is
-  * furnished to do so, subject to the following conditions:
-  *
-  * The above copyright notice and this permission notice shall be included in
-  * all copies or substantial portions of the Software.
-  *
-  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  * THE SOFTWARE.
+  * This is the main file of the project "DoIP Diagnoser". It consists of two
+  * programs running on CM4 and CM7 core separately. This core, i.e. CM4, is
+  * reponsible for handling ethernet port communication with TCP/IP stack
+  * using LwIP library to communicate with a car's ECU in order to fetch
+  * diagnostic data through DoIP protocol. It also handles measuring current air
+  * temperature using MCP9808 I2C Grove sensor.
+  * 
+  * Whole projects uses FreeRTOS as an operating system. IPC implementation is
+  * based on FreeRTOS message buffers (xMessageBuffer).
+  * 
+  * Most of the user implementation is written in C++, with elements in C.
+  * 
   *
   ******************************************************************************
   */
@@ -47,7 +38,7 @@
 #include "cm_ipc.h"
 #include "IPCDaemonNativeTask.h"
 
-#include "../DoIP/inc/DoIPDaemonTask.h"
+#include "DoIPDaemonTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

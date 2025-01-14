@@ -60,12 +60,6 @@ namespace APIDoIP
         {IHKA_TEMPERATURE_SELECTOR, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::IHKA_TEMP_SELECTOR), EECUAddress::ECU_IHKA_INTERNAL_ADDR}}
     };
 
-    void prepareDataRequest(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EUDSDID did);
-    void prepareFirstRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr);
-    void prepareSecondRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EDynamicDataIndentifierRequestCode ddirCode);
-
-    std::optional<SMessage> extractDataFromResponse(const uint8_t dataPayload[], size_t size, EDoIPRequest dataType);
-
     const std::unordered_map<EDoIPRequest, const char*> EDoIPRequest_ToCStringMap = 
     {
         {DME_ENGINE_OIL_TEMPERATURE, "DME_ENG_OIL_TEMP"},
@@ -84,6 +78,12 @@ namespace APIDoIP
         {IHKA_EVAPORATOR_TEMPERATURE_SENSOR, "IHKA_EVAP_TEMP"},
         {IHKA_TEMPERATURE_SELECTOR, "IHKA_TEMP_SEL"}
     };
+
+    void prepareDataRequest(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EUDSDID did);
+    void prepareFirstRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr);
+    void prepareSecondRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EDynamicDataIndentifierRequestCode ddirCode);
+
+    std::optional<SMessage> extractDataFromResponse(const uint8_t dataPayload[], size_t size, EDoIPRequest dataType);
 };
 
 #endif /* __APIDOIP_H__ */

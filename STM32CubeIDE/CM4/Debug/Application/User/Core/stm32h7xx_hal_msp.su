@@ -1,5 +1,0 @@
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM4/Core/Src/stm32h7xx_hal_msp.c:65:6:HAL_MspInit	16	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM4/Core/Src/stm32h7xx_hal_msp.c:94:6:HAL_I2C_MspInit	248	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM4/Core/Src/stm32h7xx_hal_msp.c:141:6:HAL_I2C_MspDeInit	16	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM4/Core/Src/stm32h7xx_hal_msp.c:172:6:HAL_UART_MspInit	248	static
-C:/Users/jakub/Desktop/Praca_inz/stm32_workspace/stm32_doipdiagnoser/CM4/Core/Src/stm32h7xx_hal_msp.c:220:6:HAL_UART_MspDeInit	16	static

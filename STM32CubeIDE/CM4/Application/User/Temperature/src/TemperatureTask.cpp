@@ -24,7 +24,7 @@ void StartTask_CTemp(void *argument)
     for (;;)
     {
     	TemperatureTaskInstance.process();
-    	osDelay(2000);
+    	osDelay(20000);
     }
 }
 

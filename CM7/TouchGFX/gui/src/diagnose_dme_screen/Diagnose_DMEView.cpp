@@ -41,9 +41,12 @@ void Diagnose_DMEView::UpdateParameterValue(EEventType eventType, const UMessage
         }
         case EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE:
         {
-            int whole = data.dme_battery_voltage / 10;
-            int rest = data.dme_battery_voltage % 10;
-            touchgfx::Unicode::snprintf(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%d.%d", static_cast<int>(whole), static_cast<int>(rest));
+            // int whole = data.dme_battery_voltage / 10;
+            // int rest = data.dme_battery_voltage % 10;
+            // touchgfx::Unicode::snprintf(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%d.%d", static_cast<int>(whole), static_cast<int>(rest));
+            constexpr float scaling_factor = (19.21f - 9.0f)/255.0f;
+            float decodedValue = static_cast<float>(data.dme_battery_voltage) * scaling_factor + 9.0f;
+            touchgfx::Unicode::snprintfFloat(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%.2f", decodedValue);
             text_ValueBatteryVoltage.invalidate();
             break;
         }
@@ -61,7 +64,9 @@ void Diagnose_DMEView::UpdateParameterValue(EEventType eventType, const UMessage
         }
         case EVENT_DATA_UPDATE_DME_RAIL_PRESSURE:
         {
-            touchgfx::Unicode::snprintf(text_ValueRailPressBuffer, TEXT_VALUERAILPRESS_SIZE, "! %u", data.dme_rail_pressure);
+            constexpr float scaling_factor = 5.318f;
+            float decodedValue = static_cast<float>(data.dme_rail_pressure) * scaling_factor;
+            touchgfx::Unicode::snprintfFloat(text_ValueRailPressBuffer, TEXT_VALUERAILPRESS_SIZE, "%.2f", decodedValue);
             text_ValueRailPress.invalidate();
             break;
         }
