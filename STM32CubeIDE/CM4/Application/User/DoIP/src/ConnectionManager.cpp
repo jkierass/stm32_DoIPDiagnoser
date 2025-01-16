@@ -10,14 +10,34 @@
 
 #include <cstring>
 
+using namespace APIDoIP;
+
 extern QueueHandle_t queueToEventManagerCM4;
 extern QueueHandle_t connectionEventsQueue;
+
+std::unordered_map<EDoIPRequest, const char*> EDoIPRequest_ToCStringMap =
+{
+    {DME_ENGINE_OIL_TEMPERATURE, "DME_ENG_OIL_TEMP"},
+    {DME_ENGINE_ROTATIONAL_SPEED, "DME_ENG_ROT_SPEED"},
+    {DME_COOLANT_TEMPERATURE, "DME_COOL_TEMP"},
+    {DME_BATTERY_VOLTAGE, "DME_BAT_VOL"},
+    {DME_AMBIENT_TEMPERATURE, "DME_AMB_TEMP"},
+    {DME_AIR_MASS, "DME_AIR_MASS"},
+    {DME_RAIL_PRESSURE, "DME_RAIL_PRES"},
+    {DME_ACCELERATOR_PEDAL_POSITION, "DME_ACC_PEDAL_POS"},
+    {KOMBI_TOTAL_DISTANCE, "KOMBI_DIST"},
+    {KOMBI_SPEED, "KOMBI_SPEED"},
+    {KOMBI_OUTSIDE_TEMP_SENSOR, "KOMBI_OUT_TEMP"},
+    {KOMBI_ENGINE_SPEED_ON_DISP, "KOMBI_ENG_SPEED_DISP"},
+    {KOMBI_FUEL_LEVEL, "KOMBI_FUEL_LEVEL"},
+    {IHKA_EVAPORATOR_TEMPERATURE_SENSOR, "IHKA_EVAP_TEMP"},
+    {IHKA_TEMPERATURE_SELECTOR, "IHKA_TEMP_SEL"}
+};
 
 static float getSystickInSeconds()
 {
     return static_cast<float>(pdTICKS_TO_MS(xTaskGetTickCount())) / 1000.0f;
 }
-
 
 extern "C" err_t tcpRecvCb(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err)
 {
@@ -270,6 +290,7 @@ void ConnectionManager::HandleUdpRecvCb(void *arg, struct udp_pcb *pcb, struct p
                 {
                     //In this case do not notify app and just wait for another message from ecu to try on the next call
                     LOG_DEBUG("[FATAL ERROR] Could not send internal connection event: %d", connEvent);
+                    pbuf_free(p);
                     return;
                 }
                 
@@ -444,22 +465,22 @@ void ConnectionManager::HandleTcpRecvCb(void *arg, struct tcp_pcb *tpcb, struct 
         case EUDSResponseSID::READ_DATA_BY_IDENTIFIER:
         {
             // the size refers to 2 bytes of source and target addr + 1 byte of SID + 2 bytes of DID, which gives 5 bytes that we are not interested in 
-            handleReadDataByIdentifier(&data[11], udsPayloadLen - 5); 
-            negativeResponseCount = 0;
+            handleReadDataByIdentifierCB(&data[11], udsPayloadLen - 5); 
+            negative_response_count = 0;
             break;
         }
         case EUDSResponseSID::DYNAMICALLY_DEFINE_DATA_IDENTIFIER:
         {
-            handleDynamicallyDefineDataIdentifier(&data[9], sourceAddr);
-            negativeResponseCount = 0;
+            handleDynamicallyDefineDataIdentifierCB(&data[9], sourceAddr);
+            negative_response_count = 0;
             break;
         }
         case EUDSResponseSID::NEGATIVE_RESPONSE:
         {
             // in case of negative response just move on, could be some temporary error.
             // only if negative response count reaches 10, then try to reset the whole connection
-            negativeResponseCount++;
-            if(negativeResponseCount >= 10)
+            negative_response_count++;
+            if(negative_response_count >= 10)
             {
                 EConnectionEvent connEvent = EVENT_TCP_CONNECTION_FAILED;
                 xQueueSend(connectionEventsQueue, &(connEvent), static_cast<TickType_t>(10000));
@@ -529,9 +550,9 @@ bool ConnectionManager::tcpSend(uint8_t udsRequest[], size_t sizeOfUdsRequest, c
     return true;
 }
 
-void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32_t size)
+void ConnectionManager::handleReadDataByIdentifierCB(uint8_t dataPayload[], uint32_t size)
 {
-    std::optional<SMessage> optMsg = APIDoIP::extractDataFromResponse(dataPayload, size, currently_processed_request);
+    std::optional<SMessage> optMsg = extractDataFromResponse(dataPayload, size, currently_processed_request);
     if(optMsg.has_value())
     {
         SMessage msg = optMsg.value();
@@ -539,9 +560,9 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
         if(sending_data_by_uart)
         {
             float currentTick = getSystickInSeconds();
-            float diff = currentTick - starting_timestamp_for_data_UART;
+            float diff = currentTick - starting_timestamp_for_data_uart;
 
-            const char* paramStr = APIDoIP::EDoIPRequest_ToCStringMap.at(static_cast<APIDoIP::EDoIPRequest>(msg.event_type));
+            const char* paramStr = EDoIPRequest_ToCStringMap.at(static_cast<EDoIPRequest>(msg.event_type));
             switch(msg.event_type)
             {
                 case EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE:
@@ -600,19 +621,19 @@ void ConnectionManager::handleReadDataByIdentifier(uint8_t dataPayload[], uint32
     }
 }
 
-void ConnectionManager::handleDynamicallyDefineDataIdentifier(uint8_t dataPayload[], EECUAddress sourceEcuAddr)
+void ConnectionManager::handleDynamicallyDefineDataIdentifierCB(uint8_t dataPayload[], EECUAddress sourceEcuAddr)
 {
     const auto subSID = static_cast<DynamicallyAssignDataSubSID>(dataPayload[0]);
     switch(subSID)
     {
         case DynamicallyAssignDataSubSID::REQUEST_FIRST:
         {
-            const size_t totalUDSRequestSize = APIDoIP::secondReqDynDataSize + 6;
+            const size_t totalUDSRequestSize = secondReqDynDataSize + 6;
             uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
             // response for the first dynamic assign sequence, so send next dynamic assign sequence packet
 
-            auto identifierEntry = APIDoIP::dataIdentifierMap.find(currently_processed_request);
-            if(identifierEntry == APIDoIP::dataIdentifierMap.end())
+            auto identifierEntry = dataIdentifierMap.find(currently_processed_request);
+            if(identifierEntry == dataIdentifierMap.end())
             {
                 LOG_DEBUG("[FATAL ERROR] currently processed request invalid: %d", currently_processed_request);
                 return;
@@ -623,16 +644,16 @@ void ConnectionManager::handleDynamicallyDefineDataIdentifier(uint8_t dataPayloa
                 LOG_DEBUG("[FATAL ERROR] currently processed request has wrong DID assignment: %d", currently_processed_request);
                 return;
             }
-            APIDoIP::prepareSecondRequestForDynamicData(payloadToSend, sourceEcuAddr, std::get<EDynamicDataIndentifierRequestCode>(idenidentifierAttributes.first)); //TODO BATTERY_VOLTAGE na sztywno
+            prepareSecondRequestForDynamicData(payloadToSend, sourceEcuAddr, std::get<EDynamicDataIndentifierRequestCode>(idenidentifierAttributes.first)); //TODO BATTERY_VOLTAGE na sztywno
             tcpSend(payloadToSend, totalUDSRequestSize, true);
             break;
         }
         case DynamicallyAssignDataSubSID::REQUEST_ASSIGN:
         {
-            const size_t totalUDSRequestSize = APIDoIP::dataReqDataSize + 6;
+            const size_t totalUDSRequestSize = dataReqDataSize + 6;
             uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
             // response for the second dynamic assign sequence, so send request for data
-            APIDoIP::prepareDataRequest(payloadToSend, sourceEcuAddr, EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0);
+            prepareDataRequest(payloadToSend, sourceEcuAddr, EUDSDID::DYNAMICALLY_DEFINED_DATA_IDENTIFIER_0);
             tcpSend(payloadToSend, totalUDSRequestSize, true);
             break;
         }
@@ -641,11 +662,11 @@ void ConnectionManager::handleDynamicallyDefineDataIdentifier(uint8_t dataPayloa
     }
 }
 
-void ConnectionManager::sendRequestForData(APIDoIP::EDoIPRequest request)
+void ConnectionManager::sendRequestForData(EDoIPRequest request)
 {
     currently_processed_request = request;
-    auto identifierEntry = APIDoIP::dataIdentifierMap.find(request);
-    if(identifierEntry == APIDoIP::dataIdentifierMap.end())
+    auto identifierEntry = dataIdentifierMap.find(request);
+    if(identifierEntry == dataIdentifierMap.end())
     {
         LOG_DEBUG("Requested data identifier invalid: %d", request);
         return;
@@ -654,16 +675,16 @@ void ConnectionManager::sendRequestForData(APIDoIP::EDoIPRequest request)
     auto idenidentifierAttributes = identifierEntry->second;
     if(std::holds_alternative<EUDSDID>(idenidentifierAttributes.first))
     {
-        const size_t totalUDSRequestSize = APIDoIP::dataReqDataSize + 6;
+        const size_t totalUDSRequestSize = dataReqDataSize + 6;
         uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
-        APIDoIP::prepareDataRequest(payloadToSend, idenidentifierAttributes.second, std::get<EUDSDID>(idenidentifierAttributes.first));
+        prepareDataRequest(payloadToSend, idenidentifierAttributes.second, std::get<EUDSDID>(idenidentifierAttributes.first));
         tcpSend(payloadToSend, totalUDSRequestSize, false);
     }
     else
     {
-        const size_t totalUDSRequestSize = APIDoIP::firstReqDynDataSize + 6;
+        const size_t totalUDSRequestSize = firstReqDynDataSize + 6;
         uint8_t payloadToSend[totalUDSRequestSize] = {0}; // + 4 for data len and +2 for "checksum" 
-        APIDoIP::prepareFirstRequestForDynamicData(payloadToSend, idenidentifierAttributes.second);
+        prepareFirstRequestForDynamicData(payloadToSend, idenidentifierAttributes.second);
         tcpSend(payloadToSend, totalUDSRequestSize, false);
     }
 }
@@ -681,6 +702,6 @@ void ConnectionManager::setSendingDataByUART(bool onoff)
     sending_data_by_uart = onoff;
     if(onoff)
     {
-        starting_timestamp_for_data_UART = getSystickInSeconds();
+        starting_timestamp_for_data_uart = getSystickInSeconds();
     }
 }

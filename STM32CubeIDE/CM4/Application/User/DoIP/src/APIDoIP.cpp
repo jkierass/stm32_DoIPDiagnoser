@@ -1,6 +1,30 @@
 #include "APIDoIP.h"
 #include "Logger.h"
 
+using namespace APIDoIP;
+
+std::unordered_map<APIDoIP::EDoIPRequest, std::pair<std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>, EECUAddress>> APIDoIP::dataIdentifierMap =
+{
+    // DME
+    {DME_ENGINE_OIL_TEMPERATURE, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::ENGINE_OIL_TEMPERATURE), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_ENGINE_ROTATIONAL_SPEED, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::ENGINE_SPEED), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_COOLANT_TEMPERATURE, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::COOLANT_TEMPERATURE), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_BATTERY_VOLTAGE, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::BATTERY_VOLTAGE), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_AMBIENT_TEMPERATURE, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::AMBIENT_TEMPERATURE), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_AIR_MASS, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::AIR_MASS), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_RAIL_PRESSURE, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::RAIL_PRESSURE), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    {DME_ACCELERATOR_PEDAL_POSITION, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EDynamicDataIndentifierRequestCode::ACCELERATOR_PEDAL_POSITION), EECUAddress::ECU_DME_INTERNAL_ADDR}},
+    // KOMBI
+    {KOMBI_TOTAL_DISTANCE, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::KOMBI_DISTANCE), EECUAddress::ECU_KOMBI_INTERNAL_ADDR}},
+    {KOMBI_SPEED, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::KOMBI_SPEED), EECUAddress::ECU_KOMBI_INTERNAL_ADDR}},
+    {KOMBI_OUTSIDE_TEMP_SENSOR, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::KOMBI_TEMP), EECUAddress::ECU_KOMBI_INTERNAL_ADDR}},
+    {KOMBI_ENGINE_SPEED_ON_DISP, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::KOMBI_RPM), EECUAddress::ECU_KOMBI_INTERNAL_ADDR}},
+    {KOMBI_FUEL_LEVEL, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::KOMBI_FUEL), EECUAddress::ECU_KOMBI_INTERNAL_ADDR}},
+    // IHKA
+    {IHKA_EVAPORATOR_TEMPERATURE_SENSOR, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::IHKA_EVAPORATOR), EECUAddress::ECU_IHKA_INTERNAL_ADDR}},
+    {IHKA_TEMPERATURE_SELECTOR, {std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>(EUDSDID::IHKA_TEMP_SELECTOR), EECUAddress::ECU_IHKA_INTERNAL_ADDR}}
+};
+
 void APIDoIP::prepareDataRequest(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EUDSDID did)
 {
     // data len

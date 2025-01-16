@@ -71,8 +71,8 @@ private:
 
     bool tcpSend(uint8_t udsRequest[], size_t sizeOfUdsRequest, const bool tcpipThreadContext);
 
-    void handleReadDataByIdentifier(uint8_t dataPayload[], uint32_t size);
-    void handleDynamicallyDefineDataIdentifier(uint8_t dataPayload[], EECUAddress sourceEcuAddr);
+    void handleReadDataByIdentifierCB(uint8_t dataPayload[], uint32_t size);
+    void handleDynamicallyDefineDataIdentifierCB(uint8_t dataPayload[], EECUAddress sourceEcuAddr);
 
     ip_addr_t ecu_ip_addr;
     struct udp_pcb* udp_pcb = nullptr;
@@ -80,10 +80,10 @@ private:
 
     APIDoIP::EDoIPRequest currently_processed_request = APIDoIP::REQUEST_INVALID;
 
-    uint8_t negativeResponseCount = 0;
+    uint8_t negative_response_count = 0;
 
     bool sending_data_by_uart = false;
-    float starting_timestamp_for_data_UART = 0;
+    float starting_timestamp_for_data_uart = 0;
 };
 
 #endif /*__CONNECTIONMANAGER_H__*/
