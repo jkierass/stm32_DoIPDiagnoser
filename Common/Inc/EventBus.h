@@ -23,6 +23,12 @@ public:
 	 */
 	typedef std::function<void(EEventType, UMessageData, EEventClient, EEventClient)> OnEventFunction;
 
+    /**
+     * @brief Construct a new EventBus object
+     * 
+     * @param queueSelf self queue handle
+     * @param senderSelf self sender
+     */
 	EventBus(QueueHandle_t queueSelf, EEventClient senderSelf);
 
 	EventBus() = delete;
@@ -31,8 +37,22 @@ public:
 	EventBus(EventBus&&) = default;
 	EventBus& operator=(EventBus&&) = delete;
 
+    /**
+     * @brief Send event
+     * 
+     * @param event event type
+     * @param message message data
+     * @param eventReceiver event receiver
+     * @return true if success
+     */
 	bool send(EEventType event, UMessageData message, EEventClient eventReceiver);
-	void receive(OnEventFunction on_event_function);
+
+    /**
+     * @brief Receive all incoming events
+     * 
+     * @param onEventFunction on event function (will be called for every incoming event)
+     */
+	void receive(OnEventFunction onEventFunction);
 
 protected:
 

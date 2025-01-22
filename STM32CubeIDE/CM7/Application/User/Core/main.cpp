@@ -30,13 +30,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "FreeRTOS.h"
 #include "queue.h"
 #include "MessageDataTypes.h"
-#include "EventManagerCM7Task.h"
-#include "CalcTask.h"
 #include "cm_ipc.h"
-#include "RTCTask.h"
-#include "IPCDaemonProxyTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,7 +93,7 @@ osThreadId_t Task_EventMgrM7Handle;
 const osThreadAttr_t Task_EventMgrM7_attributes = {
   .name = "Task_EventMgrM7",
   .stack_size = 1024 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for Task_Calculator */
 osThreadId_t Task_CalculatorHandle;
@@ -110,7 +107,7 @@ osThreadId_t Task_EDaemonPHandle;
 const osThreadAttr_t Task_EDaemonP_attributes = {
   .name = "Task_EDaemonP",
   .stack_size = 1024 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+  .priority = (osPriority_t) osPriorityBelowNormal,
 };
 /* Definitions for Task_RTC */
 osThreadId_t Task_RTCHandle;
@@ -118,11 +115,6 @@ const osThreadAttr_t Task_RTC_attributes = {
   .name = "Task_RTC",
   .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityLow,
-};
-/* Definitions for printMutex */
-osMutexId_t printMutexHandle;
-const osMutexAttr_t printMutex_attributes = {
-  .name = "printMutex"
 };
 /* USER CODE BEGIN PV */
 OTM8009A_Object_t OTM8009AObj;
@@ -227,7 +219,7 @@ int main(void)
     /* USER CODE END Boot_Mode_Sequence_2 */
 
     /* USER CODE BEGIN SysInit */
-    ipc_init(); //init ipc after CM4 core started to synchronise initialization.
+    ipc_init();
     /* USER CODE END SysInit */
 
     /* Initialize all configured peripherals */
@@ -250,7 +242,6 @@ int main(void)
     osKernelInitialize();
     /* Create the mutex(es) */
     /* creation of printMutex */
-    printMutexHandle = osMutexNew(&printMutex_attributes);
 
     /* USER CODE BEGIN RTOS_MUTEX */
     /* add mutexes, ... */
@@ -265,7 +256,6 @@ int main(void)
     /* USER CODE END RTOS_TIMERS */
 
     /* USER CODE BEGIN RTOS_QUEUES */
-    /* add queues, ... */
     /* USER CODE END RTOS_QUEUES */
 
     /* Create the thread(s) */

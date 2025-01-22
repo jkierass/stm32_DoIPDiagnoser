@@ -22,9 +22,7 @@ void Diagnose_ExtraVisualView::UpdateParameterValue(EEventType eventType, const 
 	{
         case EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE:
         {
-            float value = static_cast<float>(data.dme_engine_oil_temperature);
-            value = value / 10;
-            int newIndex = dynamicGraph_Oil.addDataPoint(value);
+            int newIndex = dynamicGraph_Oil.addDataPoint(data.dme_engine_oil_temperature);
             if(newIndex == 0)
             {
                 lastIndexOil = -1;
@@ -40,7 +38,7 @@ void Diagnose_ExtraVisualView::UpdateParameterValue(EEventType eventType, const 
         }
         case EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE:
         {
-            int newIndex = dynamicGraph_Coolant.addDataPoint(static_cast<float>(data.dme_coolant_temperature) - 100);
+            int newIndex = dynamicGraph_Coolant.addDataPoint(data.dme_coolant_temperature);
             if(newIndex == 0)
             {
                 lastIndexCoolant = -1;

@@ -67,39 +67,33 @@ def main():
                         timestamp = data_list[1]
                         data_dict[param_name_str]['time'].append(timestamp)
                         if param_name_str == param_string_dict[EDoIPRequest.DME_ENGINE_OIL_TEMPERATURE]:
-                            data_dict[param_name_str]['value'].append(float(data_list[2]))# / 10)
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_ENGINE_ROTATIONAL_SPEED]:
                             data_dict[param_name_str]['value'].append(int(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_COOLANT_TEMPERATURE]:
-                            data_dict[param_name_str]['value'].append(float(data_list[2]))# - 100)
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_BATTERY_VOLTAGE]:
-                            data_dict[param_name_str]['value'].append(float(data_list[2]))# / 10)
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_AMBIENT_TEMPERATURE]:
-                            # @TODO
-                            data_dict[param_name_str]['value'].append(int(data_list[2]))
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_AIR_MASS]:
-                            # @TODO
-                            data_dict[param_name_str]['value'].append(int(data_list[2]))
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_RAIL_PRESSURE]:
-                            # @TODO
-                            data_dict[param_name_str]['value'].append(int(data_list[2]))
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.DME_ACCELERATOR_PEDAL_POSITION]:
                             data_dict[param_name_str]['value'].append(float(data_list[2]))# / 2.55)
                         elif param_name_str == param_string_dict[EDoIPRequest.KOMBI_TOTAL_DISTANCE]:
                             data_dict[param_name_str]['value'].append(int(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.KOMBI_SPEED]:
-                            # @TODO ?
-                            data_dict[param_name_str]['value'].append(int(data_list[2]))
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.KOMBI_OUTSIDE_TEMP_SENSOR]:
-                            # @TODO
-                            data_dict[param_name_str]['value'].append(int(data_list[2]))
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.KOMBI_ENGINE_SPEED_ON_DISP]:
                             data_dict[param_name_str]['value'].append(int(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.KOMBI_FUEL_LEVEL]:
                             data_dict[param_name_str]['value'].append((int(data_list[2]), int(data_list[3]), int(data_list[4])))
                         elif param_name_str == param_string_dict[EDoIPRequest.IHKA_EVAPORATOR_TEMPERATURE_SENSOR]:
-                            # @TODO
-                            data_dict[param_name_str]['value'].append(int(data_list[2]))
+                            data_dict[param_name_str]['value'].append(float(data_list[2]))
                         elif param_name_str == param_string_dict[EDoIPRequest.IHKA_TEMPERATURE_SELECTOR]:
                             data_dict[param_name_str]['value'].append((int(data_list[2]), int(data_list[3])))
         except KeyboardInterrupt:

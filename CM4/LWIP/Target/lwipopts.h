@@ -127,6 +127,7 @@
 #define ETHARP_SUPPORT_STATIC_ENTRIES 1
 #define TCP_TMR_INTERVAL              10
 #define MEMP_SANITY_CHECK             0
+#define LWIP_CALLBACK_API             1
 
 #define TCP_WND_UPDATE_THRESHOLD      1
 

@@ -77,7 +77,7 @@ void EventManagerCM7Task::send(const std::vector<SMessage>& messages)
 
 		if(targetQueue)
 		{
-			auto ret = xQueueSend(targetQueue, static_cast<void*>(&msg), portMAX_DELAY);
+			xQueueSend(targetQueue, static_cast<void*>(&msg), portMAX_DELAY);
         }
 	}
 }

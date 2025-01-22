@@ -138,22 +138,22 @@ typedef union
     bool ret_set_date_and_time;                 //ASYNC_COMPLETED_SET_DATE_AND_TIME
 
     uint16_t dme_engine_rotational_speed;            //EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED
-    uint8_t dme_coolant_temperature;                 //EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE
-    uint16_t dme_engine_oil_temperature;             //EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE
-    uint8_t dme_battery_voltage;                     //EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE
-    uint8_t dme_ambient_temperature;                 //EVENT_DATA_UPDATE_DME_AMBIENT_TEMPERATURE
-    uint16_t dme_air_mass;                           //EVENT_DATA_UPDATE_DME_AIR_MASS
-    uint16_t dme_rail_pressure;                      //EVENT_DATA_UPDATE_DME_RAIL_PRESSURE
-    uint8_t dme_accelerator_pedal_position;          //EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION
+    float dme_coolant_temperature;                 //EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE
+    float dme_engine_oil_temperature;             //EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE
+    float dme_battery_voltage;                     //EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE
+    float dme_ambient_temperature;                 //EVENT_DATA_UPDATE_DME_AMBIENT_TEMPERATURE
+    float dme_air_mass;                           //EVENT_DATA_UPDATE_DME_AIR_MASS
+    float dme_rail_pressure;                      //EVENT_DATA_UPDATE_DME_RAIL_PRESSURE
+    float dme_accelerator_pedal_position;          //EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION
     
     uint32_t kombi_total_distance;                   //EVENT_DATA_UPDATE_KOMBI_TOTAL_DISTANCE
-    uint16_t kombi_speed;                            //EVENT_DATA_UPDATE_KOMBI_SPEED
-    uint16_t kombi_outside_temp_sensor;              //EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR
+    float kombi_speed;                            //EVENT_DATA_UPDATE_KOMBI_SPEED
+    float kombi_outside_temp_sensor;              //EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR
     uint16_t kombi_engine_speed_on_disp;             //EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP
     uint32_t kombi_fuel_level[3];                    //EVENT_DATA_UPDATE_KOMBI_FUEL_LEVEL
     
-    uint16_t ihka_evaporator_temperature_sensor;     //EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR
-    uint16_t ihka_temperature_selector[2];           //EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR
+    float ihka_evaporator_temperature_sensor;     //EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR
+    uint8_t ihka_temperature_selector[2];           //EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR
 
     char ecu_connected_vin[17];            //EVENT_ECU_CONNECTION_INITIALISED
 	bool ethernet_plugged;				   //EVENT_ETHERNET_PLUGGED

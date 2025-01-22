@@ -125,7 +125,8 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE;
-                msg.message_data.dme_engine_oil_temperature = (dataPayload[0] << 8) | dataPayload[1];
+                uint16_t engineOilTemperatureRaw = (dataPayload[0] << 8) | dataPayload[1];
+                msg.message_data.dme_engine_oil_temperature = static_cast<float>(engineOilTemperatureRaw)*0.10;
             }
             break;
         }
@@ -151,7 +152,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE;
-                msg.message_data.dme_coolant_temperature = dataPayload[0];
+                msg.message_data.dme_coolant_temperature = static_cast<float>(dataPayload[0])*0.75 - 48.00;
             }
             break;
         }
@@ -164,7 +165,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE;
-                msg.message_data.dme_battery_voltage = dataPayload[0];
+                msg.message_data.dme_battery_voltage = static_cast<float>(dataPayload[0])*0.102 - 0.039;
             }
             break;
         }
@@ -190,7 +191,8 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_AIR_MASS;
-                msg.message_data.dme_air_mass = (dataPayload[0] << 8) | dataPayload[1];
+                uint16_t rawAirMass = (dataPayload[0] << 8) | dataPayload[1];
+                msg.message_data.dme_air_mass = static_cast<float>(rawAirMass)*0.03 + 0.59;
             }
             break;
         }
@@ -203,7 +205,8 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_RAIL_PRESSURE;
-                msg.message_data.dme_rail_pressure = (dataPayload[0] << 8) | dataPayload[1];
+                uint16_t rawRailPressure = (dataPayload[0] << 8) | dataPayload[1];
+                msg.message_data.dme_rail_pressure = rawRailPressure*5.015 + 2669.34;
             }
             break;
         }
@@ -216,7 +219,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION;
-                msg.message_data.dme_accelerator_pedal_position = dataPayload[0];
+                msg.message_data.dme_accelerator_pedal_position = static_cast<float>(dataPayload[0]) / 2.55;
             }
             break;
         }
@@ -242,7 +245,8 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_KOMBI_SPEED;
-                msg.message_data.kombi_speed = (dataPayload[0] << 8) | dataPayload[1];
+                uint16_t rawSpeed = (dataPayload[0] << 8) | dataPayload[1];
+                msg.message_data.kombi_speed = static_cast<float>(rawSpeed)*0.03 + 2.05;
             }
             break;
         }
@@ -255,7 +259,8 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR;
-                msg.message_data.kombi_outside_temp_sensor = (dataPayload[0] << 8) | dataPayload[1];
+                uint16_t rawOutsideTemp = (dataPayload[0] << 8) | dataPayload[1];
+                msg.message_data.kombi_outside_temp_sensor = static_cast<float>(rawOutsideTemp);
             }
             break;
         }
@@ -296,7 +301,8 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR;
-                msg.message_data.ihka_evaporator_temperature_sensor = (dataPayload[0] << 8) | dataPayload[1];
+                uint16_t rawEvap = (dataPayload[0] << 8) | dataPayload[1];
+                msg.message_data.ihka_evaporator_temperature_sensor = static_cast<float>(rawEvap)*0.2 - 10.00;
             }
             break;
         }

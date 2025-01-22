@@ -4,13 +4,31 @@
 #include "EventBus.h"
 #include "Calc.h"
 
+/**
+ * @brief Class for handling calculator task
+ */
 class CalculatorTask
 {
 public:
+
+    /**
+     * @brief Construct a new CalculatorTask object
+     */
 	CalculatorTask();
 
+    /**
+     * @brief Process the calculator task
+     */
 	void process();
 
+    /**
+     * @brief Handle the event
+     * 
+     * @param event event type
+     * @param msg message data
+     * @param eventSender event sender
+     * @param eventReceiver event receiver
+     */
 	void OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, EEventClient eventReceiver);
 
 	CalculatorTask(CalculatorTask const&) = delete;

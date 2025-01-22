@@ -13,14 +13,40 @@
 #define DEBUG_ENABLED 0
 #endif
 
+/**
+ * @brief Class for printing messages
+ */
 class LogPrinter
 {
 public:
+    /**
+     * @brief Get the instance of the LogPrinter
+     * 
+     * @return LogPrinter& instance of the LogPrinter
+     */
 	static LogPrinter& instance();
+
+    /**
+     * @brief Print debug message
+     * 
+     * @param format format of the message
+     * @param ... arguments
+     */
 	void printDebug(const char* format, ...);
+
+    /**
+     * @brief Print UART message
+     * 
+     * @param format format of the message
+     * @param ... arguments
+     */
     void printUART(const char* format, ...);
 
 private:
+
+    /**
+     * @brief Construct a new Log Printer object
+     */
 	LogPrinter();
 	LogPrinter(LogPrinter const&) = delete;
 	LogPrinter& operator=(LogPrinter const&) = delete;

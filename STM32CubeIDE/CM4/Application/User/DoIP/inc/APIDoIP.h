@@ -9,12 +9,18 @@
 #include "MessageDataTypes.h"
 #include "UDSDataType.h"
 
+/**
+ * @brief Class for generating/interpreting DoIP communication
+ */
 namespace APIDoIP
 {
     constexpr uint8_t dataReqDataSize = 0x05;
     constexpr uint8_t firstReqDynDataSize = 0x06;
     constexpr uint8_t secondReqDynDataSize = 0x0a;
 
+    /**
+     * @brief Enum for DoIP request types
+     */
     enum EDoIPRequest
     {
         REQUEST_INVALID = -1,
@@ -38,12 +44,46 @@ namespace APIDoIP
         IHKA_TEMPERATURE_SELECTOR = EVENT_DATA_UPDATE_IHKA_TEMPERATURE_SELECTOR,
     };
 
+    /**
+     * @brief Map for DoIP request types and their corresponding UDS Data Identifiers (DID or memory address)
+     */
     extern std::unordered_map<EDoIPRequest, std::pair<std::variant<EUDSDID, EDynamicDataIndentifierRequestCode>, EECUAddress>> dataIdentifierMap;
 
+    /**
+     * @brief Prepare DoIP message asking for diagnostic data
+     * 
+     * @param [out] preparedPayload prepared payload for the message
+     * @param targetEcuAddr target ECU address
+     * @param did Data Identifier
+     */
     void prepareDataRequest(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EUDSDID did);
+
+    /**
+     * @brief Prepare DoIP message asking for dynamic data assing (first sequence)
+     * 
+     * @param [out] preparedPayload prepared payload for the message
+     * @param targetEcuAddr target ECU address
+     */
     void prepareFirstRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr);
+
+    /**
+     * @brief Prepare DoIP message asking for dynamic data assing (second sequence with memory address assignment)
+     * 
+     * @param [out] preparedPayload prepared payload for the message
+     * @param targetEcuAddr target ECU address
+     * @param ddirCode Dynamic Data Identifier Request Code (memory address of diagnostic param)
+     */
     void prepareSecondRequestForDynamicData(uint8_t preparedPayload[], EECUAddress targetEcuAddr, EDynamicDataIndentifierRequestCode ddirCode);
 
+
+    /**
+     * @brief Extract data from DoIP response
+     * 
+     * @param dataPayload payload of the response
+     * @param size size of the payload
+     * @param dataType type of the request
+     * @return extracted data if possible, otherwise std::nullopt
+     */
     std::optional<SMessage> extractDataFromResponse(const uint8_t dataPayload[], size_t size, EDoIPRequest dataType);
 };
 

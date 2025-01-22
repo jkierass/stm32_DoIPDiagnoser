@@ -21,7 +21,7 @@ void Diagnose_IHKAView::UpdateParameterValue(EEventType eventType, const UMessag
 	{
 	    case EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR:
         {
-            touchgfx::Unicode::snprintf(text_ValueEvapBuffer, TEXT_VALUEEVAP_SIZE, "! %u", data.ihka_evaporator_temperature_sensor);
+            touchgfx::Unicode::snprintfFloat(text_ValueEvapBuffer, TEXT_VALUEEVAP_SIZE, "%.2f", data.ihka_evaporator_temperature_sensor);
             text_ValueEvap.invalidate();
             break;
         }

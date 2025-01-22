@@ -27,13 +27,13 @@ void Diagnose_KOMBIView::UpdateParameterValue(EEventType eventType, const UMessa
         }
         case EVENT_DATA_UPDATE_KOMBI_SPEED:
         {
-            touchgfx::Unicode::snprintf(text_ValueSpeedBuffer, TEXT_VALUESPEED_SIZE, "%u", data.kombi_speed);
+            touchgfx::Unicode::snprintfFloat(text_ValueSpeedBuffer, TEXT_VALUESPEED_SIZE, "%.2f", data.kombi_speed);
             text_ValueSpeed.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR:
         {
-            touchgfx::Unicode::snprintf(text_ValueOutsideTempBuffer, TEXT_VALUEOUTSIDETEMP_SIZE, "! %u", data.kombi_outside_temp_sensor);
+            touchgfx::Unicode::snprintfFloat(text_ValueOutsideTempBuffer, TEXT_VALUEOUTSIDETEMP_SIZE, "%.2f", data.kombi_outside_temp_sensor);
             text_ValueOutsideTemp.invalidate();
             break;
         }

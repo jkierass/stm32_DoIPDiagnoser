@@ -33,12 +33,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "TemperatureTask.h"
-#include "EventManagerCM4Task.h"
+#include "FreeRTOS.h"
+#include "queue.h"
+#include "MessageDataTypes.h"
 #include "cm_ipc.h"
-#include "IPCDaemonNativeTask.h"
-
-#include "DoIPDaemonTask.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,10 +114,10 @@ extern void StartTask_CTemp(void *argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-QueueHandle_t queueToEventManagerCM4 = xQueueCreate(64, sizeof(SMessage));
-QueueHandle_t queueToNativeDaemon = xQueueCreate(16, sizeof(SMessage));
-QueueHandle_t queueToDoIPDaemonTask = xQueueCreate(16, sizeof(SMessage));
-QueueHandle_t queueToTemperature = xQueueCreate(4, sizeof(SMessage));
+QueueHandle_t queueToEventManagerCM4;
+QueueHandle_t queueToNativeDaemon;
+QueueHandle_t queueToDoIPDaemonTask;
+QueueHandle_t queueToTemperature;
 /* USER CODE END 0 */
 
 /**
@@ -186,7 +184,10 @@ int main(void)
     /* USER CODE END RTOS_TIMERS */
 
     /* USER CODE BEGIN RTOS_QUEUES */
-    /* add queues, ... */
+    queueToEventManagerCM4 = xQueueCreate(64, sizeof(SMessage));
+    queueToNativeDaemon = xQueueCreate(16, sizeof(SMessage));
+    queueToDoIPDaemonTask = xQueueCreate(16, sizeof(SMessage));
+    queueToTemperature = xQueueCreate(4, sizeof(SMessage));
     /* USER CODE END RTOS_QUEUES */
 
     /* Create the thread(s) */

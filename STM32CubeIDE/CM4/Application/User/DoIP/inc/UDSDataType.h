@@ -8,6 +8,9 @@
 
 constexpr uint8_t DIAGNOSTIC_TOOL_INTERNAL_ADDR = 0xF4;     // reference to this system (in UDS frame)
 
+/**
+ * @brief ECU addresses used in UDS frames
+ */
 enum class EECUAddress : uint8_t
 {
     ECU_MASTER_INTERNAL_ADDR = 0x10,
@@ -253,6 +256,9 @@ enum class EDynamicDataIndentifierRequestCode : uint32_t
     ACCELERATOR_PEDAL_POSITION = 0x4A290101
 };
 
+/**
+ * @brief Sub-SIDs used in Dynamically Define Data Identifier service
+ */
 enum class DynamicallyAssignDataSubSID : uint8_t
 {
     REQUEST_FIRST = 0x03,

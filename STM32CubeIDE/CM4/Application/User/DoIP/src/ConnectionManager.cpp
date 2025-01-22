@@ -1,6 +1,8 @@
 #include "ConnectionManager.h"
 #include "Logger.h"
 
+#include "ethernetif.h"
+
 #include "cmsis_os.h"
 #include "FreeRTOS.h"
 #include "queue.h"
@@ -63,6 +65,11 @@ extern "C" void udpRecvCb(void *arg, struct udp_pcb *pcb, struct pbuf *p, const 
 {
     ConnectionManager& connMgrInstance = ConnectionManager::instance();
     connMgrInstance.HandleUdpRecvCb(arg, pcb, p, addr, port);
+}
+
+ConnectionManager::ConnectionManager()
+{
+    MX_LWIP_Init();
 }
 
 bool ConnectionManager::sendSSDP()
@@ -567,36 +574,38 @@ void ConnectionManager::handleReadDataByIdentifierCB(uint8_t dataPayload[], uint
             {
                 case EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE:
                 [[fallthrough]];
-                case EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED:
-                [[fallthrough]];
                 case EVENT_DATA_UPDATE_DME_AIR_MASS:
                 [[fallthrough]];
                 case EVENT_DATA_UPDATE_DME_RAIL_PRESSURE:
-                [[fallthrough]];
-                case EVENT_DATA_UPDATE_KOMBI_TOTAL_DISTANCE:
                 [[fallthrough]];
                 case EVENT_DATA_UPDATE_KOMBI_SPEED:
                 [[fallthrough]];
                 case EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR:
                 [[fallthrough]];
-                case EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP:
-                [[fallthrough]];
-                case EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR:
-                {
-                    // we can take any uint16_t type from the message
-                    SEND_DATA_UART("%s,%.2f,%u", paramStr, diff, msg.message_data.dme_engine_rotational_speed);
-                    break;
-                }
                 case EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE:
                 [[fallthrough]];
                 case EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE:
                 [[fallthrough]];
                 case EVENT_DATA_UPDATE_DME_AMBIENT_TEMPERATURE:
                 [[fallthrough]];
-                case EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION:
+                case EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION:                
                 {
-                    // we can take any uint8_t type from the message
-                    SEND_DATA_UART("%s,%.2f,%u", paramStr, diff, msg.message_data.dme_battery_voltage);
+                    // we can take any float type from the message
+                    SEND_DATA_UART("%s,%.2f,%.2f", paramStr, diff, msg.message_data.dme_battery_voltage);
+                    break;
+                }
+                case EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED:
+                [[fallthrough]];
+                case EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP:
+                {
+                    SEND_DATA_UART("%s,%.2f,%u", paramStr, diff, msg.message_data.kombi_engine_speed_on_disp);
+                    break;
+                }
+                case EVENT_DATA_UPDATE_KOMBI_TOTAL_DISTANCE:
+                {
+                    SEND_DATA_UART("%s,%.2f,%u", paramStr, diff, msg.message_data.kombi_total_distance);
                     break;
                 }
                 case EVENT_DATA_UPDATE_KOMBI_FUEL:

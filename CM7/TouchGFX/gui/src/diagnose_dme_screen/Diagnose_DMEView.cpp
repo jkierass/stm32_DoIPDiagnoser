@@ -21,59 +21,49 @@ void Diagnose_DMEView::UpdateParameterValue(EEventType eventType, const UMessage
 	{
         case EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE:
         {
-            int whole = data.dme_engine_oil_temperature / 10;
-            int rest = data.dme_engine_oil_temperature % 10;
-            touchgfx::Unicode::snprintf(text_ValueOilTempBuffer, TEXT_VALUEOILTEMP_SIZE, "%d.%d", static_cast<int>(whole), static_cast<int>(rest));
+            touchgfx::Unicode::snprintfFloat(text_ValueOilTempBuffer, TEXT_VALUEOILTEMP_SIZE, "%.2f", data.dme_engine_oil_temperature);
             text_ValueOilTemp.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_ENGINE_ROTATIONAL_SPEED:
         {
-            touchgfx::Unicode::snprintf(text_ValueEngineRotSpeedBuffer, TEXT_VALUEENGINEROTSPEED_SIZE, "%d", data.dme_engine_rotational_speed);
+            touchgfx::Unicode::snprintf(text_ValueEngineRotSpeedBuffer, TEXT_VALUEENGINEROTSPEED_SIZE, "%u", data.dme_engine_rotational_speed);
             text_ValueEngineRotSpeed.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE:
         {
-            touchgfx::Unicode::snprintfFloat(text_ValueCoolantTempBuffer, TEXT_VALUECOOLANTTEMP_SIZE, "%.2f", static_cast<float>(data.dme_coolant_temperature) - 100);
+            touchgfx::Unicode::snprintfFloat(text_ValueCoolantTempBuffer, TEXT_VALUECOOLANTTEMP_SIZE, "%.2f", data.dme_coolant_temperature);
             text_ValueCoolantTemp.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE:
         {
-            // int whole = data.dme_battery_voltage / 10;
-            // int rest = data.dme_battery_voltage % 10;
-            // touchgfx::Unicode::snprintf(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%d.%d", static_cast<int>(whole), static_cast<int>(rest));
-            constexpr float scaling_factor = (19.21f - 9.0f)/255.0f;
-            float decodedValue = static_cast<float>(data.dme_battery_voltage) * scaling_factor + 9.0f;
-            touchgfx::Unicode::snprintfFloat(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%.2f", decodedValue);
+            touchgfx::Unicode::snprintfFloat(text_ValueBatteryVoltageBuffer, TEXT_VALUEBATTERYVOLTAGE_SIZE, "%.2f", data.dme_battery_voltage);
             text_ValueBatteryVoltage.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_AMBIENT_TEMPERATURE:
         {
-            touchgfx::Unicode::snprintf(text_ValueAmbientTempBuffer, TEXT_VALUEAMBIENTTEMP_SIZE, "! %u", data.dme_ambient_temperature);
+            touchgfx::Unicode::snprintfFloat(text_ValueAmbientTempBuffer, TEXT_VALUEAMBIENTTEMP_SIZE, "%.2f", data.dme_ambient_temperature);
             text_ValueAmbientTemp.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_AIR_MASS:
         {
-            touchgfx::Unicode::snprintf(text_ValueAirMassBuffer, TEXT_VALUEAIRMASS_SIZE, "! %u", data.dme_air_mass);
+            touchgfx::Unicode::snprintfFloat(text_ValueAirMassBuffer, TEXT_VALUEAIRMASS_SIZE, "%.2f", data.dme_air_mass);
             text_ValueAirMass.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_RAIL_PRESSURE:
         {
-            constexpr float scaling_factor = 5.318f;
-            float decodedValue = static_cast<float>(data.dme_rail_pressure) * scaling_factor;
-            touchgfx::Unicode::snprintfFloat(text_ValueRailPressBuffer, TEXT_VALUERAILPRESS_SIZE, "%.2f", decodedValue);
+            touchgfx::Unicode::snprintfFloat(text_ValueRailPressBuffer, TEXT_VALUERAILPRESS_SIZE, "%.2f", data.dme_rail_pressure);
             text_ValueRailPress.invalidate();
             break;
         }
         case EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION:
         {
-            float positionInFloat = static_cast<float>(data.dme_accelerator_pedal_position) / 2.55;
-            touchgfx::Unicode::snprintfFloat(text_ValuePedalBuffer, TEXT_VALUEPEDAL_SIZE, "%.2f", positionInFloat);
+            touchgfx::Unicode::snprintfFloat(text_ValuePedalBuffer, TEXT_VALUEPEDAL_SIZE, "%.2f", data.dme_accelerator_pedal_position);
             text_ValuePedal.invalidate();
             break;
         }

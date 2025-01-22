@@ -247,7 +247,7 @@ def get_next_data(id):
 
 if __name__ == "__main__":
     
-    df = pd.read_csv("tests_scripts/parameters_merged_for_sym.csv")
+    df = pd.read_csv("python_test_scripts/parameters_merged_for_sym_modified.csv")
     rows = len(df.index)
     
     udp_thread = threading.Thread(target=udp_server, daemon=True)

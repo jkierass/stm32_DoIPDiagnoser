@@ -1,7 +1,4 @@
 #include "DoIPDaemonTask.h"
-
-#include <lwip.h>
-#include "ethernetif.h"
 #include "projdefs.h"
 
 #include "Logger.h"
@@ -27,7 +24,6 @@ void StartTask_DoIPDaemonTask(void *argument)
 
 DoIPDaemonTask::DoIPDaemonTask() : event_bus(EventBus(queueToDoIPDaemonTask, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER)), conn_mgr(CM::instance())
 {
-    MX_LWIP_Init();
 }
 
 void DoIPDaemonTask::OnEvent(EEventType event, UMessageData msg, EEventClient eventSender, [[maybe_unused]] EEventClient eventReceiver)
