@@ -1,5 +1,7 @@
 changelog.txt
 .vscode/*
+CM4/TouchGFX/build/*
+CM7/TouchGFX/build/*
 
 #settings
 **/.settings/
