@@ -2818,18 +2818,54 @@
             "Components": [
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage1",
+                "Name": "scalableImage1_1_1_2_2",
+                "Y": 168,
                 "Width": 800,
-                "Height": 44,
+                "Height": 80,
                 "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
               {
                 "Type": "ScalableImage",
-                "Name": "scalableImage2",
-                "Y": 44,
+                "Name": "scalableImage2_1_1_1_1_1_2",
+                "Y": 248,
                 "Width": 800,
-                "Height": 2,
+                "Height": 4,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_2_1",
+                "Y": 84,
+                "Width": 800,
+                "Height": 80,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_1_1_1_1",
+                "Y": 164,
+                "Width": 800,
+                "Height": 4,
+                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage1_1_1_2",
+                "Width": 800,
+                "Height": 80,
+                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "scalableImage2_1_1_1_1_1",
+                "Y": 80,
+                "Width": 800,
+                "Height": 4,
                 "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
                 "ScalingAlgorithm": "Nearest-neighbor"
               },
@@ -2837,7 +2873,7 @@
                 "Type": "TextArea",
                 "Name": "text_TotalDist",
                 "X": 10,
-                "Y": 9,
+                "Y": 22,
                 "Width": 390,
                 "Height": 37,
                 "TextId": "__SingleUse_7W67",
@@ -2851,10 +2887,10 @@
               {
                 "Type": "TextArea",
                 "Name": "text_ValueTotalDist",
-                "X": 410,
-                "Y": 9,
-                "Width": 390,
-                "Height": 35,
+                "X": 491,
+                "Y": 22,
+                "Width": 300,
+                "Height": 37,
                 "TextId": "__SingleUse_0OTK",
                 "TextRotation": "0",
                 "Color": {
@@ -2869,28 +2905,10 @@
                 }
               },
               {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1",
-                "Y": 46,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1",
-                "Y": 90,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
                 "Type": "TextArea",
                 "Name": "text_Speed",
-                "X": 10,
-                "Y": 55,
+                "X": 12,
+                "Y": 105,
                 "Width": 390,
                 "Height": 37,
                 "TextId": "__SingleUse_UNKX",
@@ -2904,9 +2922,9 @@
               {
                 "Type": "TextArea",
                 "Name": "text_ValueSpeed",
-                "X": 410,
-                "Y": 55,
-                "Width": 390,
+                "X": 477,
+                "Y": 107,
+                "Width": 314,
                 "Height": 35,
                 "TextId": "__SingleUse_4ZMC",
                 "TextRotation": "0",
@@ -2922,83 +2940,12 @@
                 }
               },
               {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1",
-                "Y": 92,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1",
-                "Y": 136,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_OutsideTemp",
-                "X": 10,
-                "Y": 101,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_41FN",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_ValueOutsideTemp",
-                "X": 410,
-                "Y": 101,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_SBU4",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_720Q",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_1",
-                "Y": 138,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_1",
-                "Y": 182,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
                 "Type": "TextArea",
                 "Name": "text_RPMOnDisp",
                 "X": 10,
-                "Y": 147,
-                "Width": 390,
-                "Height": 37,
+                "Y": 190,
+                "Width": 428,
+                "Height": 36,
                 "TextId": "__SingleUse_HCE8",
                 "TextRotation": "0",
                 "Color": {
@@ -3010,9 +2957,9 @@
               {
                 "Type": "TextArea",
                 "Name": "text_ValueRPMOnDisp",
-                "X": 410,
-                "Y": 147,
-                "Width": 390,
+                "X": 500,
+                "Y": 191,
+                "Width": 291,
                 "Height": 35,
                 "TextId": "__SingleUse_BA1O",
                 "TextRotation": "0",
@@ -3023,165 +2970,6 @@
                 },
                 "Wildcard1": {
                   "TextId": "__SingleUse_ZKC2",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_2",
-                "Y": 183,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_2",
-                "Y": 227,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_FuelLeft",
-                "X": 10,
-                "Y": 192,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_2FXX",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_ValueFuelLeft",
-                "X": 410,
-                "Y": 192,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_6B9I",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_I1AN",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_3",
-                "Y": 229,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_3",
-                "Y": 273,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_FuelRight",
-                "X": 10,
-                "Y": 238,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_TOI7",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_ValueFuelRight",
-                "X": 410,
-                "Y": 238,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_WRR9",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_4FBL",
-                  "UseBuffer": true,
-                  "BufferSize": 20
-                }
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage1_1_1_4",
-                "Y": 275,
-                "Width": 800,
-                "Height": 44,
-                "Filename": "__generated\\dark_theme_images_bars_272x480_top_dim_dark.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "ScalableImage",
-                "Name": "scalableImage2_1_1_4",
-                "Y": 319,
-                "Width": 800,
-                "Height": 2,
-                "Filename": "__generated\\dark_theme_images_containers_large_narrow_neutral.png",
-                "ScalingAlgorithm": "Nearest-neighbor"
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_FuelSum",
-                "X": 10,
-                "Y": 284,
-                "Width": 390,
-                "Height": 37,
-                "TextId": "__SingleUse_BA1Q",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                }
-              },
-              {
-                "Type": "TextArea",
-                "Name": "text_ValueFuelSum",
-                "X": 410,
-                "Y": 284,
-                "Width": 390,
-                "Height": 35,
-                "TextId": "__SingleUse_ZPM1",
-                "TextRotation": "0",
-                "Color": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
-                },
-                "Wildcard1": {
-                  "TextId": "__SingleUse_ZJMG",
                   "UseBuffer": true,
                   "BufferSize": 20
                 }

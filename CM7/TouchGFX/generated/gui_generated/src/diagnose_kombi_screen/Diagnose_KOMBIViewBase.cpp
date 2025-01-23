@@ -38,23 +38,43 @@ Diagnose_KOMBIViewBase::Diagnose_KOMBIViewBase() :
     add(ContainterAdditionalData);
 
     containerParameters.setPosition(0, 74, 800, 406);
-    scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1.setPosition(0, 0, 800, 44);
-    scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1);
+    scalableImage1_1_1_2_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_2_2.setPosition(0, 168, 800, 80);
+    scalableImage1_1_1_2_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_2_2);
 
-    scalableImage2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2.setPosition(0, 44, 800, 2);
-    scalableImage2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2);
+    scalableImage2_1_1_1_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_1_1_1_2.setPosition(0, 248, 800, 4);
+    scalableImage2_1_1_1_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_1_1_1_2);
 
-    text_TotalDist.setPosition(10, 9, 390, 37);
+    scalableImage1_1_1_2_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_2_1.setPosition(0, 84, 800, 80);
+    scalableImage1_1_1_2_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_2_1);
+
+    scalableImage2_1_1_1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_1_1_1_1.setPosition(0, 164, 800, 4);
+    scalableImage2_1_1_1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_1_1_1_1);
+
+    scalableImage1_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
+    scalableImage1_1_1_2.setPosition(0, 0, 800, 80);
+    scalableImage1_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage1_1_1_2);
+
+    scalableImage2_1_1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
+    scalableImage2_1_1_1_1_1.setPosition(0, 80, 800, 4);
+    scalableImage2_1_1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    containerParameters.add(scalableImage2_1_1_1_1_1);
+
+    text_TotalDist.setPosition(10, 22, 390, 37);
     text_TotalDist.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_TotalDist.setLinespacing(0);
     text_TotalDist.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7W67));
     containerParameters.add(text_TotalDist);
 
-    text_ValueTotalDist.setPosition(410, 9, 390, 35);
+    text_ValueTotalDist.setPosition(491, 22, 300, 37);
     text_ValueTotalDist.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_ValueTotalDist.setLinespacing(0);
     Unicode::snprintf(text_ValueTotalDistBuffer, TEXT_VALUETOTALDIST_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GTX1).getText());
@@ -62,23 +82,13 @@ Diagnose_KOMBIViewBase::Diagnose_KOMBIViewBase() :
     text_ValueTotalDist.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0OTK));
     containerParameters.add(text_ValueTotalDist);
 
-    scalableImage1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1.setPosition(0, 46, 800, 44);
-    scalableImage1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1);
-
-    scalableImage2_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1.setPosition(0, 90, 800, 2);
-    scalableImage2_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1);
-
-    text_Speed.setPosition(10, 55, 390, 37);
+    text_Speed.setPosition(12, 105, 390, 37);
     text_Speed.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_Speed.setLinespacing(0);
     text_Speed.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UNKX));
     containerParameters.add(text_Speed);
 
-    text_ValueSpeed.setPosition(410, 55, 390, 35);
+    text_ValueSpeed.setPosition(477, 107, 314, 35);
     text_ValueSpeed.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_ValueSpeed.setLinespacing(0);
     Unicode::snprintf(text_ValueSpeedBuffer, TEXT_VALUESPEED_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_175D).getText());
@@ -86,125 +96,19 @@ Diagnose_KOMBIViewBase::Diagnose_KOMBIViewBase() :
     text_ValueSpeed.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4ZMC));
     containerParameters.add(text_ValueSpeed);
 
-    scalableImage1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1.setPosition(0, 92, 800, 44);
-    scalableImage1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1_1);
-
-    scalableImage2_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1.setPosition(0, 136, 800, 2);
-    scalableImage2_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1_1);
-
-    text_OutsideTemp.setPosition(10, 101, 390, 37);
-    text_OutsideTemp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_OutsideTemp.setLinespacing(0);
-    text_OutsideTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_41FN));
-    containerParameters.add(text_OutsideTemp);
-
-    text_ValueOutsideTemp.setPosition(410, 101, 390, 35);
-    text_ValueOutsideTemp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_ValueOutsideTemp.setLinespacing(0);
-    Unicode::snprintf(text_ValueOutsideTempBuffer, TEXT_VALUEOUTSIDETEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_720Q).getText());
-    text_ValueOutsideTemp.setWildcard(text_ValueOutsideTempBuffer);
-    text_ValueOutsideTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SBU4));
-    containerParameters.add(text_ValueOutsideTemp);
-
-    scalableImage1_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1_1.setPosition(0, 138, 800, 44);
-    scalableImage1_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1_1_1);
-
-    scalableImage2_1_1_1.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_1.setPosition(0, 182, 800, 2);
-    scalableImage2_1_1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1_1_1);
-
-    text_RPMOnDisp.setPosition(10, 147, 390, 37);
+    text_RPMOnDisp.setPosition(10, 190, 428, 36);
     text_RPMOnDisp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_RPMOnDisp.setLinespacing(0);
     text_RPMOnDisp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HCE8));
     containerParameters.add(text_RPMOnDisp);
 
-    text_ValueRPMOnDisp.setPosition(410, 147, 390, 35);
+    text_ValueRPMOnDisp.setPosition(500, 191, 291, 35);
     text_ValueRPMOnDisp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     text_ValueRPMOnDisp.setLinespacing(0);
     Unicode::snprintf(text_ValueRPMOnDispBuffer, TEXT_VALUERPMONDISP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZKC2).getText());
     text_ValueRPMOnDisp.setWildcard(text_ValueRPMOnDispBuffer);
     text_ValueRPMOnDisp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BA1O));
     containerParameters.add(text_ValueRPMOnDisp);
-
-    scalableImage1_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1_2.setPosition(0, 183, 800, 44);
-    scalableImage1_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1_1_2);
-
-    scalableImage2_1_1_2.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_2.setPosition(0, 227, 800, 2);
-    scalableImage2_1_1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1_1_2);
-
-    text_FuelLeft.setPosition(10, 192, 390, 37);
-    text_FuelLeft.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_FuelLeft.setLinespacing(0);
-    text_FuelLeft.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2FXX));
-    containerParameters.add(text_FuelLeft);
-
-    text_ValueFuelLeft.setPosition(410, 192, 390, 35);
-    text_ValueFuelLeft.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_ValueFuelLeft.setLinespacing(0);
-    Unicode::snprintf(text_ValueFuelLeftBuffer, TEXT_VALUEFUELLEFT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_I1AN).getText());
-    text_ValueFuelLeft.setWildcard(text_ValueFuelLeftBuffer);
-    text_ValueFuelLeft.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6B9I));
-    containerParameters.add(text_ValueFuelLeft);
-
-    scalableImage1_1_1_3.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1_3.setPosition(0, 229, 800, 44);
-    scalableImage1_1_1_3.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1_1_3);
-
-    scalableImage2_1_1_3.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_3.setPosition(0, 273, 800, 2);
-    scalableImage2_1_1_3.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1_1_3);
-
-    text_FuelRight.setPosition(10, 238, 390, 37);
-    text_FuelRight.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_FuelRight.setLinespacing(0);
-    text_FuelRight.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TOI7));
-    containerParameters.add(text_FuelRight);
-
-    text_ValueFuelRight.setPosition(410, 238, 390, 35);
-    text_ValueFuelRight.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_ValueFuelRight.setLinespacing(0);
-    Unicode::snprintf(text_ValueFuelRightBuffer, TEXT_VALUEFUELRIGHT_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_4FBL).getText());
-    text_ValueFuelRight.setWildcard(text_ValueFuelRightBuffer);
-    text_ValueFuelRight.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WRR9));
-    containerParameters.add(text_ValueFuelRight);
-
-    scalableImage1_1_1_4.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_BARS_272X480_TOP_DIM_DARK_ID));
-    scalableImage1_1_1_4.setPosition(0, 275, 800, 44);
-    scalableImage1_1_1_4.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage1_1_1_4);
-
-    scalableImage2_1_1_4.setBitmap(touchgfx::Bitmap(BITMAP_DARK_THEME_IMAGES_CONTAINERS_LARGE_NARROW_NEUTRAL_ID));
-    scalableImage2_1_1_4.setPosition(0, 319, 800, 2);
-    scalableImage2_1_1_4.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    containerParameters.add(scalableImage2_1_1_4);
-
-    text_FuelSum.setPosition(10, 284, 390, 37);
-    text_FuelSum.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_FuelSum.setLinespacing(0);
-    text_FuelSum.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BA1Q));
-    containerParameters.add(text_FuelSum);
-
-    text_ValueFuelSum.setPosition(410, 284, 390, 35);
-    text_ValueFuelSum.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    text_ValueFuelSum.setLinespacing(0);
-    Unicode::snprintf(text_ValueFuelSumBuffer, TEXT_VALUEFUELSUM_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_ZJMG).getText());
-    text_ValueFuelSum.setWildcard(text_ValueFuelSumBuffer);
-    text_ValueFuelSum.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZPM1));
-    containerParameters.add(text_ValueFuelSum);
 
     add(containerParameters);
 

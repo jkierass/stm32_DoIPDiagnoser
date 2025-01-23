@@ -31,27 +31,10 @@ void Diagnose_KOMBIView::UpdateParameterValue(EEventType eventType, const UMessa
             text_ValueSpeed.invalidate();
             break;
         }
-        case EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR:
-        {
-            touchgfx::Unicode::snprintfFloat(text_ValueOutsideTempBuffer, TEXT_VALUEOUTSIDETEMP_SIZE, "%.2f", data.kombi_outside_temp_sensor);
-            text_ValueOutsideTemp.invalidate();
-            break;
-        }
         case EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP:
         {
             touchgfx::Unicode::snprintf(text_ValueRPMOnDispBuffer, TEXT_VALUERPMONDISP_SIZE, "%u", data.kombi_engine_speed_on_disp);
             text_ValueRPMOnDisp.invalidate();
-            break;
-        }
-        case EVENT_DATA_UPDATE_KOMBI_FUEL:
-        {
-            touchgfx::Unicode::snprintf(text_ValueFuelRightBuffer, TEXT_VALUEFUELRIGHT_SIZE, "! %u", data.kombi_fuel_level[0]);
-            touchgfx::Unicode::snprintf(text_ValueFuelSumBuffer, TEXT_VALUEFUELSUM_SIZE, "! %u", data.kombi_fuel_level[1]);
-            touchgfx::Unicode::snprintf(text_ValueFuelLeftBuffer, TEXT_VALUEFUELLEFT_SIZE, "! %u", data.kombi_fuel_level[2]);
-            text_ValueFuelLeft.invalidate();
-            text_ValueFuelSum.invalidate();
-            text_ValueFuelRight.invalidate();
-            // JESZCZE SPROBOJ
             break;
         }
         default:

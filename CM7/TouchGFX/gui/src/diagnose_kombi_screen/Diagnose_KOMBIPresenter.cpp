@@ -19,9 +19,7 @@ void Diagnose_KOMBIPresenter::activate()
     msg.event_subscriptions[0] = 5;
     msg.event_subscriptions[1] = EVENT_DATA_UPDATE_KOMBI_TOTAL_DISTANCE;
     msg.event_subscriptions[2] = EVENT_DATA_UPDATE_KOMBI_SPEED;
-    msg.event_subscriptions[3] = EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR;
     msg.event_subscriptions[4] = EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP;
-    msg.event_subscriptions[5] = EVENT_DATA_UPDATE_KOMBI_FUEL;
     model->sendEvent(EVENT_DATA_SUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
     model->sendEvent(EVENT_REQUEST_CYCLE_SUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
 }
@@ -32,9 +30,7 @@ void Diagnose_KOMBIPresenter::deactivate()
     msg.event_subscriptions[0] = 5;
     msg.event_subscriptions[1] = EVENT_DATA_UPDATE_KOMBI_TOTAL_DISTANCE;
     msg.event_subscriptions[2] = EVENT_DATA_UPDATE_KOMBI_SPEED;
-    msg.event_subscriptions[3] = EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR;
     msg.event_subscriptions[4] = EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP;
-    msg.event_subscriptions[5] = EVENT_DATA_UPDATE_KOMBI_FUEL;
     model->sendEvent(EVENT_DATA_UNSUBSCRIBE, msg, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
     model->sendEvent(EVENT_REQUEST_CYCLE_UNSUSBCRIBE, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
     model->sendEvent(EVENT_STOP_SENDING_DATA_UART, UMessageData{}, EVENT_CLIENT_ETHERNET_CONNECTION_MANAGER);
@@ -55,11 +51,7 @@ void Diagnose_KOMBIPresenter::OnEvent(EEventType event, UMessageData msg, EEvent
             [[fallthrough]];
         case EVENT_DATA_UPDATE_KOMBI_SPEED:
             [[fallthrough]];
-        case EVENT_DATA_UPDATE_KOMBI_OUTSIDE_TEMP_SENSOR:
-            [[fallthrough]];
         case EVENT_DATA_UPDATE_KOMBI_ENGINE_SPEED_ON_DISP:
-            [[fallthrough]];
-        case EVENT_DATA_UPDATE_KOMBI_FUEL:
             view.UpdateParameterValue(event, msg);
             break;
         case EVENT_UPDATE_ROOM_TEMPERATURE:

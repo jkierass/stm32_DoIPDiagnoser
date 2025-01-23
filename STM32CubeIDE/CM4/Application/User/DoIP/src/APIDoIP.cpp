@@ -126,7 +126,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_ENGINE_OIL_TEMPERATURE;
                 uint16_t engineOilTemperatureRaw = (dataPayload[0] << 8) | dataPayload[1];
-                msg.message_data.dme_engine_oil_temperature = static_cast<float>(engineOilTemperatureRaw)*0.10;
+                msg.message_data.dme_engine_oil_temperature = static_cast<float>(engineOilTemperatureRaw) * 0.10f;
             }
             break;
         }
@@ -152,7 +152,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_COOLANT_TEMPERATURE;
-                msg.message_data.dme_coolant_temperature = static_cast<float>(dataPayload[0])*0.75 - 48.00;
+                msg.message_data.dme_coolant_temperature = static_cast<float>(dataPayload[0])*0.75f - 48.00f;
             }
             break;
         }
@@ -165,7 +165,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_BATTERY_VOLTAGE;
-                msg.message_data.dme_battery_voltage = static_cast<float>(dataPayload[0])*0.102 - 0.039;
+                msg.message_data.dme_battery_voltage = static_cast<float>(dataPayload[0])*0.102f - 0.039f;
             }
             break;
         }
@@ -178,7 +178,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_AMBIENT_TEMPERATURE;
-                msg.message_data.dme_ambient_temperature = dataPayload[0];
+                msg.message_data.dme_ambient_temperature = static_cast<float>(dataPayload[0]) * 0.75f - 48.0f;
             }
             break;
         }
@@ -192,7 +192,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_AIR_MASS;
                 uint16_t rawAirMass = (dataPayload[0] << 8) | dataPayload[1];
-                msg.message_data.dme_air_mass = static_cast<float>(rawAirMass)*0.03 + 0.59;
+                msg.message_data.dme_air_mass = static_cast<float>(rawAirMass) * 0.03f + 0.59f;
             }
             break;
         }
@@ -206,7 +206,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_RAIL_PRESSURE;
                 uint16_t rawRailPressure = (dataPayload[0] << 8) | dataPayload[1];
-                msg.message_data.dme_rail_pressure = rawRailPressure*5.015 + 2669.34;
+                msg.message_data.dme_rail_pressure = rawRailPressure * 5.015f + 2669.34f;
             }
             break;
         }
@@ -219,7 +219,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             else
             {
                 msg.event_type = EVENT_DATA_UPDATE_DME_ACCELERATOR_PEDAL_POSITION;
-                msg.message_data.dme_accelerator_pedal_position = static_cast<float>(dataPayload[0]) / 2.55;
+                msg.message_data.dme_accelerator_pedal_position = static_cast<float>(dataPayload[0]) / 2.55f;
             }
             break;
         }
@@ -246,7 +246,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             {
                 msg.event_type = EVENT_DATA_UPDATE_KOMBI_SPEED;
                 uint16_t rawSpeed = (dataPayload[0] << 8) | dataPayload[1];
-                msg.message_data.kombi_speed = static_cast<float>(rawSpeed)*0.03 + 2.05;
+                msg.message_data.kombi_speed = static_cast<float>(rawSpeed) * 0.056f;
             }
             break;
         }
@@ -302,7 +302,7 @@ std::optional<SMessage> APIDoIP::extractDataFromResponse(const uint8_t dataPaylo
             {
                 msg.event_type = EVENT_DATA_UPDATE_IHKA_EVAPORATOR_TEMPERATURE_SENSOR;
                 uint16_t rawEvap = (dataPayload[0] << 8) | dataPayload[1];
-                msg.message_data.ihka_evaporator_temperature_sensor = static_cast<float>(rawEvap)*0.2 - 10.00;
+                msg.message_data.ihka_evaporator_temperature_sensor = static_cast<float>(rawEvap) * 0.2f - 10.00f;
             }
             break;
         }
