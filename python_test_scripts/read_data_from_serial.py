@@ -1,6 +1,5 @@
 import serial
 import pandas as pd
-import numpy as np
 import enum
 
 # Configure serial port
