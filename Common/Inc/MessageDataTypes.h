@@ -1,3 +1,9 @@
+/**
+  * @file           : MessageDataTypes.h
+  * @brief          : Header for message data types used for communication in the system.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __MESSAGEDATATYPES_H__
 #define __MESSAGEDATATYPES_H__
 

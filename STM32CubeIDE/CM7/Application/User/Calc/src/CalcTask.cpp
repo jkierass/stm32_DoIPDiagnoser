@@ -1,3 +1,9 @@
+/**
+  * @file           : CalcTask.cpp
+  * @brief          : Implementation of class for handling calculator task.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "CalcTask.h"
 #include "Calc.h"
 

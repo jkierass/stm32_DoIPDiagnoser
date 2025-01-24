@@ -1,3 +1,9 @@
+/**
+  * @file           : Logger.h
+  * @brief          : Header for class used for printing messages.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __LOGGER_H__
 #define __LOGGER_H__
 

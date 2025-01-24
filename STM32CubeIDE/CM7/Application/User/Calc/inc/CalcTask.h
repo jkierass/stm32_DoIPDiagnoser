@@ -1,3 +1,9 @@
+/**
+  * @file           : CalcTask.h
+  * @brief          : Header for class for handling calculator task.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __CALCTASK_H__
 #define __CALCTASK_H__
 

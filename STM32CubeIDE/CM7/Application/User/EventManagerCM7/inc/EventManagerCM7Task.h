@@ -1,3 +1,9 @@
+/**
+  * @file           : EventManagerCM7Task.h
+  * @brief          : Header for class for managing events on CM7 side
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __EVENTMANAGERCM7TASK_H__
 #define __EVENTMANAGERCM7TASK_H__
 

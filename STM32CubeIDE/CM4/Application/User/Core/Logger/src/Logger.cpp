@@ -1,3 +1,9 @@
+/**
+  * @file           : Logger.cpp
+  * @brief          : Implementation of class used for printing messages.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "Logger.h"
 
 #include <stdarg.h> // Include this for va_list and related functions

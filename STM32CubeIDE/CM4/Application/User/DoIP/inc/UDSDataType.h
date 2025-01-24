@@ -1,3 +1,9 @@
+/**
+  * @file           : UDSDataType.h
+  * @brief          : Header for data types used in UDS communication.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __UDSDATATYPE_H__
 #define __UDSDATATYPE_H__
 

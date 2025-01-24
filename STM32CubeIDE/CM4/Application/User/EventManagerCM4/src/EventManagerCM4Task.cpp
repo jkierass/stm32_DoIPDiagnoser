@@ -1,3 +1,9 @@
+/**
+  * @file           : EventManagerCM4Task.cpp
+  * @brief          : Implementation of class for managing events on CM4 side.
+  * @author         : Jakub Kierasinski
+  */
+
 #include <EventManagerCM4Task.h>
 
 extern QueueHandle_t queueToEventManagerCM4;

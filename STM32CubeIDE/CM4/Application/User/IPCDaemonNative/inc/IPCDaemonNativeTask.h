@@ -1,3 +1,9 @@
+/**
+  * @file           : IPCDaemonNativeTask.h
+  * @brief          : Header for class for handling IPC communication task on CM4 side.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __IPCDAEMONNATIVETASK_H__
 #define __IPCDAEMONNATIVETASK_H__
 

@@ -1,3 +1,9 @@
+/**
+  * @file           : Calc.cpp
+  * @brief          : Implementation of class for calculating strings
+  * @author         : Jakub Kierasinski
+  */
+
 #include <tinyexpr.h>
 #include "Calc.h"
 

@@ -1,3 +1,10 @@
+/**
+  * @file           : DoIPDaemonTask.h
+  * @brief          : Header for DoIPDaemonTask class used for handling DoIP communication state machine.
+  * @author         : Jakub Kierasinski
+  */
+
+
 #ifndef __DOIPDAEMONTASK_H__
 #define __DOIPDAEMONTASK_H__
 

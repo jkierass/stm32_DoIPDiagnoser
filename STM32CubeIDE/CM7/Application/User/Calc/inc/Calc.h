@@ -1,3 +1,9 @@
+/**
+  * @file           : Calc.h
+  * @brief          : Header for class for calculating strings
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __CALC_H__
 #define __CALC_H__
 

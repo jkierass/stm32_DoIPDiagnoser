@@ -1,3 +1,9 @@
+/**
+  * @file           : TemperatureTask.cpp
+  * @brief          : Implementation of class for handling temperature measurement task.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "TemperatureTask.h"
 #include "cm_ipc.h"
 

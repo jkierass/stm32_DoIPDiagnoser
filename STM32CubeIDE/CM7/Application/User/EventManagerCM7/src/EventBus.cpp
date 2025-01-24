@@ -1,3 +1,9 @@
+/**
+  * @file           : EventBus.cpp
+  * @brief          : Implementation of EventBus, which is a wraper for freeRTOS message queues.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "EventBus.h"
 
 extern QueueHandle_t queueToEventManagerCM7;

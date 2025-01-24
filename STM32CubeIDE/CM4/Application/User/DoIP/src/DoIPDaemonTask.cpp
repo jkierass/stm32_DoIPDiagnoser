@@ -1,3 +1,9 @@
+/**
+  * @file           : DoIPDaemonTask.cpp
+  * @brief          : Implementation of class for handling DoIP communication state machine.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "DoIPDaemonTask.h"
 #include "projdefs.h"
 

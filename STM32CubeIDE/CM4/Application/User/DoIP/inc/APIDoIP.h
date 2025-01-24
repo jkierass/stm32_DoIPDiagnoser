@@ -1,3 +1,9 @@
+/**
+  * @file           : APIDoIP.h
+  * @brief          : Header for generating/interpreting DoIP communication.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __APIDOIP_H__
 #define __APIDOIP_H__
 

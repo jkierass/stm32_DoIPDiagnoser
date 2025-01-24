@@ -1,3 +1,10 @@
+/**
+  * @file           : IPCDaemonProxy.ch
+  * @brief          : Header for class for handling IPC communication task on CM7 side.
+  * @author         : Jakub Kierasinski
+  */
+
+
 #ifndef __IPCDAEMONPROXYTASK_H__
 #define __IPCDAEMONPROXYTASK_H__
 

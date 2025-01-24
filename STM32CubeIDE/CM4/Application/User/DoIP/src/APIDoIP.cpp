@@ -1,3 +1,10 @@
+/**
+  * @file           : APIDoIP.cpp
+  * @brief          : Implementation of class for generating/interpreting DoIP communication.
+  * @author         : Jakub Kierasinski
+  */
+
+
 #include "APIDoIP.h"
 #include "Logger.h"
 

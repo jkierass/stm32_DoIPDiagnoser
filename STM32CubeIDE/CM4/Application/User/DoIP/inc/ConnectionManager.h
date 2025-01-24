@@ -1,3 +1,9 @@
+/**
+  * @file           : ConnectionManager.h
+  * @brief          : Header for ConnectionManager class used for handling connection with ECU.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __CONNECTIONMANAGER_H__
 #define __CONNECTIONMANAGER_H__
 

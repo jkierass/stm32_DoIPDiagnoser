@@ -1,3 +1,9 @@
+/**
+  * @file           : EventManagerCM7Task.cpp
+  * @brief          : Implementation of class for managing events on CM7 side.
+  * @author         : Jakub Kierasinski
+  */
+
 #include <EventManagerCM7Task.h>
 
 extern QueueHandle_t queueToFrontend;

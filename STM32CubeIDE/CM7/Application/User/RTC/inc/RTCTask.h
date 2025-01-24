@@ -1,3 +1,10 @@
+/**
+  * @file           : RTCTask.h
+  * @brief          : Header for class handling RTC task.
+  * @author         : Jakub Kierasinski
+  */
+
+
 #ifndef __RTCTASK_H__
 #define __RTCTASK_H__
 

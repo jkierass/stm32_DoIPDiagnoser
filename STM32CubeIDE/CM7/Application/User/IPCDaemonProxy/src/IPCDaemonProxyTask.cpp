@@ -1,3 +1,9 @@
+/**
+  * @file           : IPCDaemonProxy.cpp
+  * @brief          : Implementation of class for handling IPC communication task on CM7 side.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "IPCDaemonProxyTask.h"
 
 #include "cm_ipc.h"

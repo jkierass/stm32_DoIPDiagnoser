@@ -1,3 +1,9 @@
+/**
+  * @file           : TemperatureTask.h
+  * @brief          : Header for handling temperature measurement task.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __TEMPERATURETASKTASK_H__
 #define __TEMPERATURETASKTASK_H__
 

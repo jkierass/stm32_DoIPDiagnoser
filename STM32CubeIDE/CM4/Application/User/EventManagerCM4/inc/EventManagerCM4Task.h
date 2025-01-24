@@ -1,3 +1,9 @@
+/**
+  * @file           : EventManagerCM4Task.h
+  * @brief          : Header for class for managing events on CM4 side.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __EVENTMANAGERCM4TASK_H__
 #define __EVENTMANAGERCM4TASK_H__
 

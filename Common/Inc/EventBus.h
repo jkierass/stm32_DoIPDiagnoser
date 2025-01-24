@@ -1,3 +1,9 @@
+/**
+  * @file           : EventBus.h
+  * @brief          : Header for EventBus implementation, which is a wraper for freeRTOS message queues.
+  * @author         : Jakub Kierasinski
+  */
+
 #ifndef __EventBus_H__
 #define __EventBus_H__
 

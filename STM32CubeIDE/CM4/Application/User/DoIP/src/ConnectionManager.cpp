@@ -1,3 +1,9 @@
+/**
+  * @file           : ConnectionManager.cpp
+  * @brief          : Implementation of class for handling connection with ECU.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "ConnectionManager.h"
 #include "Logger.h"
 

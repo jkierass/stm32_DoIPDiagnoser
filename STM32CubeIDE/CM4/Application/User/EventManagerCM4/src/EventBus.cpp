@@ -1,3 +1,9 @@
+/**
+  * @file           : EventBus.cpp
+  * @brief          : Implementation of EventBus class used for sending and receiving events between tasks.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "EventBus.h"
 
 extern QueueHandle_t queueToEventManagerCM4;

@@ -1,3 +1,9 @@
+/**
+  * @file           : IPCDaemonNativeTask.cpp
+  * @brief          : Implementation of class for handling IPC communication task on CM4 side.
+  * @author         : Jakub Kierasinski
+  */
+
 #include "IPCDaemonNativeTask.h"
 
 #include "cm_ipc.h"
