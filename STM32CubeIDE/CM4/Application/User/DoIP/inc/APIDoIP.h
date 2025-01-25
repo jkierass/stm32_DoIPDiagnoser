@@ -16,7 +16,7 @@
 #include "UDSDataType.h"
 
 /**
- * @brief Class for generating/interpreting DoIP communication
+ * @brief Namespace for generating/interpreting DoIP communication
  */
 namespace APIDoIP
 {
