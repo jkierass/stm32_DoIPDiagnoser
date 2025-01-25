@@ -1,0 +1,130 @@
+\hypertarget{class_diagnose___k_o_m_b_i_presenter}{}\doxysection{Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter Class Reference}
+\label{class_diagnose___k_o_m_b_i_presenter}\index{Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}}
+
+
+Presenter for Diagnose K\+O\+M\+BI screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+hpp$>$}
+
+
+
+Inherits Presenter, and Model\+Listener.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter_a1b33821e8a8ebc5c4912f6bf1fdb15a2}{Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter}} (\mbox{\hyperlink{class_diagnose___k_o_m_b_i_view}{Diagnose\+\_\+\+K\+O\+M\+B\+I\+View}} \&v)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter}{Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___k_o_m_b_i_presenter_aee90e8910c2fde66ffad5241cc29f734}\label{class_diagnose___k_o_m_b_i_presenter_aee90e8910c2fde66ffad5241cc29f734}} 
+virtual void \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter_aee90e8910c2fde66ffad5241cc29f734}{activate}} ()
+\begin{DoxyCompactList}\small\item\em The activate function is called automatically when this screen is \char`\"{}switched in\char`\"{} (ie. made active). Initialization logic can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___k_o_m_b_i_presenter_afed69c97e6c36d76941efe8bff724feb}\label{class_diagnose___k_o_m_b_i_presenter_afed69c97e6c36d76941efe8bff724feb}} 
+virtual void \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter_afed69c97e6c36d76941efe8bff724feb}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em The deactivate function is called automatically when this screen is \char`\"{}switched out\char`\"{} (ie. made inactive). Teardown functionality can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___k_o_m_b_i_presenter_a5e663bf651ae7fe37a8d36cc33f5057e}\label{class_diagnose___k_o_m_b_i_presenter_a5e663bf651ae7fe37a8d36cc33f5057e}} 
+virtual \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter_a5e663bf651ae7fe37a8d36cc33f5057e}{$\sim$\+Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter}{Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter_ad96c9c4b31facbd10df8a4974dacccce}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter_af1d118b1032ca6a3739772e7af37e188}{send\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} message, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Send event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Presenter for Diagnose K\+O\+M\+BI screen. 
+
+Definition at line 14 of file Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_diagnose___k_o_m_b_i_presenter_a1b33821e8a8ebc5c4912f6bf1fdb15a2}\label{class_diagnose___k_o_m_b_i_presenter_a1b33821e8a8ebc5c4912f6bf1fdb15a2}} 
+\index{Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}!Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}}
+\index{Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}!Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}}
+\doxysubsubsection{\texorpdfstring{Diagnose\_KOMBIPresenter()}{Diagnose\_KOMBIPresenter()}}
+{\footnotesize\ttfamily Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter\+::\+Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_diagnose___k_o_m_b_i_view}{Diagnose\+\_\+\+K\+O\+M\+B\+I\+View}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_diagnose___k_o_m_b_i_presenter}{Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+cpp.
+
+
+
+References Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter().
+
+
+
+Referenced by Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose___k_o_m_b_i_presenter_ad96c9c4b31facbd10df8a4974dacccce}\label{class_diagnose___k_o_m_b_i_presenter_ad96c9c4b31facbd10df8a4974dacccce}} 
+\index{Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___k_o_m_b_i_presenter_af1d118b1032ca6a3739772e7af37e188}\label{class_diagnose___k_o_m_b_i_presenter_af1d118b1032ca6a3739772e7af37e188}} 
+\index{Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}!sendEvent@{sendEvent}}
+\index{sendEvent@{sendEvent}!Diagnose\_KOMBIPresenter@{Diagnose\_KOMBIPresenter}}
+\doxysubsubsection{\texorpdfstring{sendEvent()}{sendEvent()}}
+{\footnotesize\ttfamily bool Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter\+::send\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{message,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Send event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em message} & message data \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+kombi\+\_\+screen/Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+kombi\+\_\+screen/Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter.\+cpp\end{DoxyCompactItemize}

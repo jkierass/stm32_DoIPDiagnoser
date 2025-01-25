@@ -1,0 +1,45 @@
+\hypertarget{_temperature_task_8cpp}{}\doxysection{Application/\+User/\+Temperature/src/\+Temperature\+Task.cpp File Reference}
+\label{_temperature_task_8cpp}\index{Application/User/Temperature/src/TemperatureTask.cpp@{Application/User/Temperature/src/TemperatureTask.cpp}}
+
+
+\+: Implementation of class for handling temperature measurement task.  
+
+
+{\ttfamily \#include \char`\"{}Temperature\+Task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cm\+\_\+ipc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32h7xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_temperature_task_8cpp_aa50035970ad4247fb585f2aa5f2d67c6}\label{_temperature_task_8cpp_aa50035970ad4247fb585f2aa5f2d67c6}} 
+void {\bfseries Start\+Task\+\_\+\+C\+Temp} (void $\ast$argument)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_temperature_task_8cpp_a818789480a74b70bbcaf6d73e8e763ed}\label{_temperature_task_8cpp_a818789480a74b70bbcaf6d73e8e763ed}} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c4}
+\item 
+\mbox{\Hypertarget{_temperature_task_8cpp_a2baf83e74047abe0c1f8c93deaeb4925}\label{_temperature_task_8cpp_a2baf83e74047abe0c1f8c93deaeb4925}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Temperature}
+\item 
+\mbox{\Hypertarget{_temperature_task_8cpp_a79b57339a50571dee79d1b2881808503}\label{_temperature_task_8cpp_a79b57339a50571dee79d1b2881808503}} 
+constexpr size\+\_\+t {\bfseries M\+E\+A\+S\+U\+R\+E\+M\+E\+N\+T\+S\+\_\+\+C\+O\+U\+NT} = 6
+\item 
+\mbox{\Hypertarget{_temperature_task_8cpp_a709c9c1e7462383014baaf7c44102016}\label{_temperature_task_8cpp_a709c9c1e7462383014baaf7c44102016}} 
+constexpr uint16\+\_\+t {\bfseries M\+C\+P9808\+\_\+\+I2\+C\+\_\+\+A\+D\+D\+R\+E\+SS} = 0x18 $<$$<$ 1
+\item 
+\mbox{\Hypertarget{_temperature_task_8cpp_a5c8267b2bd3bb219c39d9b6ce46eedf3}\label{_temperature_task_8cpp_a5c8267b2bd3bb219c39d9b6ce46eedf3}} 
+constexpr uint8\+\_\+t {\bfseries M\+C\+P9808\+\_\+\+T\+E\+M\+P\+\_\+\+R\+EG} = 0x05
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Implementation of class for handling temperature measurement task. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}

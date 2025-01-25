@@ -1,0 +1,102 @@
+\hypertarget{class_diagnose_presenter}{}\doxysection{Diagnose\+Presenter Class Reference}
+\label{class_diagnose_presenter}\index{DiagnosePresenter@{DiagnosePresenter}}
+
+
+Presenter for Diagnose screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+Presenter.\+hpp$>$}
+
+
+
+Inherits Presenter, and Model\+Listener.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diagnose_presenter_a7b062284e73b41cfcafab92b6b63cf5c}{Diagnose\+Presenter}} (\mbox{\hyperlink{class_diagnose_view}{Diagnose\+View}} \&v)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_diagnose_presenter}{Diagnose\+Presenter}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose_presenter_a58ca67dcae23dfdaf5037ef213181dfd}\label{class_diagnose_presenter_a58ca67dcae23dfdaf5037ef213181dfd}} 
+virtual void \mbox{\hyperlink{class_diagnose_presenter_a58ca67dcae23dfdaf5037ef213181dfd}{activate}} ()
+\begin{DoxyCompactList}\small\item\em The activate function is called automatically when this screen is \char`\"{}switched in\char`\"{} (ie. made active). Initialization logic can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose_presenter_aa1719f5053e874693b9b20d6a4aff6c7}\label{class_diagnose_presenter_aa1719f5053e874693b9b20d6a4aff6c7}} 
+virtual void \mbox{\hyperlink{class_diagnose_presenter_aa1719f5053e874693b9b20d6a4aff6c7}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em The deactivate function is called automatically when this screen is \char`\"{}switched out\char`\"{} (ie. made inactive). Teardown functionality can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose_presenter_a7c0f2c87a330c2580547bdd1b0a1bb83}\label{class_diagnose_presenter_a7c0f2c87a330c2580547bdd1b0a1bb83}} 
+virtual \mbox{\hyperlink{class_diagnose_presenter_a7c0f2c87a330c2580547bdd1b0a1bb83}{$\sim$\+Diagnose\+Presenter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_diagnose_presenter}{Diagnose\+Presenter}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose_presenter_a602c27dd40fd44daa014f1b8e48dcd32}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Presenter for Diagnose screen. 
+
+Definition at line 14 of file Diagnose\+Presenter.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_diagnose_presenter_a7b062284e73b41cfcafab92b6b63cf5c}\label{class_diagnose_presenter_a7b062284e73b41cfcafab92b6b63cf5c}} 
+\index{DiagnosePresenter@{DiagnosePresenter}!DiagnosePresenter@{DiagnosePresenter}}
+\index{DiagnosePresenter@{DiagnosePresenter}!DiagnosePresenter@{DiagnosePresenter}}
+\doxysubsubsection{\texorpdfstring{DiagnosePresenter()}{DiagnosePresenter()}}
+{\footnotesize\ttfamily Diagnose\+Presenter\+::\+Diagnose\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_diagnose_view}{Diagnose\+View}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_diagnose_presenter}{Diagnose\+Presenter}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Diagnose\+Presenter.\+cpp.
+
+
+
+References Diagnose\+Presenter().
+
+
+
+Referenced by Diagnose\+Presenter().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose_presenter_a602c27dd40fd44daa014f1b8e48dcd32}\label{class_diagnose_presenter_a602c27dd40fd44daa014f1b8e48dcd32}} 
+\index{DiagnosePresenter@{DiagnosePresenter}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!DiagnosePresenter@{DiagnosePresenter}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Diagnose\+Presenter\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Diagnose\+Presenter.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+screen/Diagnose\+Presenter.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+screen/Diagnose\+Presenter.\+cpp\end{DoxyCompactItemize}

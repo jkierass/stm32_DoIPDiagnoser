@@ -1,0 +1,185 @@
+\hypertarget{class_diagnose___i_h_k_a_view}{}\doxysection{Diagnose\+\_\+\+I\+H\+K\+A\+View Class Reference}
+\label{class_diagnose___i_h_k_a_view}\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+
+
+View for Diagnose I\+H\+KA screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+\_\+\+I\+H\+K\+A\+View.\+hpp$>$}
+
+
+
+Inherits Diagnose\+\_\+\+I\+H\+K\+A\+View\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_a402fbc3fdf0d2be714cc6887a6899732}\label{class_diagnose___i_h_k_a_view_a402fbc3fdf0d2be714cc6887a6899732}} 
+\mbox{\hyperlink{class_diagnose___i_h_k_a_view_a402fbc3fdf0d2be714cc6887a6899732}{Diagnose\+\_\+\+I\+H\+K\+A\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Diagnose I\+H\+K\+A\+View object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_a8c874394d8cd0818fdfbad0084cc91e9}\label{class_diagnose___i_h_k_a_view_a8c874394d8cd0818fdfbad0084cc91e9}} 
+virtual \mbox{\hyperlink{class_diagnose___i_h_k_a_view_a8c874394d8cd0818fdfbad0084cc91e9}{$\sim$\+Diagnose\+\_\+\+I\+H\+K\+A\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Diagnose I\+H\+K\+A\+View object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_acb93998f94dd3ba8d263de4db611db7f}\label{class_diagnose___i_h_k_a_view_acb93998f94dd3ba8d263de4db611db7f}} 
+virtual void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_acb93998f94dd3ba8d263de4db611db7f}{setup\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_aff901f7b9c9682105923453c0206df5b}\label{class_diagnose___i_h_k_a_view_aff901f7b9c9682105923453c0206df5b}} 
+virtual void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_aff901f7b9c9682105923453c0206df5b}{tear\+Down\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Tear down the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_ace394d7d67d6e18a8f61c9606ca336a1}{Update\+Parameter\+Value}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event\+Type, const \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Update the diagnostic parameter value on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_adb23642abd7b9ba84cb236a972062370}{set\+Temperature}} (short int temperature)
+\begin{DoxyCompactList}\small\item\em Set the temperature on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_ac710ba85f343cd5b1e8255c209ea501c}{set\+Date}} (uint8\+\_\+t day, uint8\+\_\+t month, unsigned int year)
+\begin{DoxyCompactList}\small\item\em Set the date on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_a09e0a9b1e49d413ed74e60dd8f0ba4ec}{set\+Time}} (uint8\+\_\+t hour, uint8\+\_\+t minute)
+\begin{DoxyCompactList}\small\item\em Set the time on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_afe2c200198a7a75364214b018a95fb2a}{show\+Popup}} (uint8\+\_\+t message\mbox{[}$\,$\mbox{]}, size\+\_\+t msg\+Size)
+\begin{DoxyCompactList}\small\item\em Show popup message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_aabefea64fcceaa6700afecadc5d8f18f}{set\+Request\+Cycle\+Time}} (uint16\+\_\+t cycle\+Ms)
+\begin{DoxyCompactList}\small\item\em Set request cycle time value on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_a6690285aed79fa680d7f0d9c2fca9b94}\label{class_diagnose___i_h_k_a_view_a6690285aed79fa680d7f0d9c2fca9b94}} 
+void \mbox{\hyperlink{class_diagnose___i_h_k_a_view_a6690285aed79fa680d7f0d9c2fca9b94}{Button\+Uart\+Clicked}} () override
+\begin{DoxyCompactList}\small\item\em Handle button U\+A\+RT clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for Diagnose I\+H\+KA screen. 
+
+Definition at line 10 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_ac710ba85f343cd5b1e8255c209ea501c}\label{class_diagnose___i_h_k_a_view_ac710ba85f343cd5b1e8255c209ea501c}} 
+\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}!setDate@{setDate}}
+\index{setDate@{setDate}!Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+I\+H\+K\+A\+View\+::set\+Date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day,  }\item[{uint8\+\_\+t}]{month,  }\item[{unsigned int}]{year }\end{DoxyParamCaption})}
+
+
+
+Set the date on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & day \\
+\hline
+{\em month} & month \\
+\hline
+{\em year} & year \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_aabefea64fcceaa6700afecadc5d8f18f}\label{class_diagnose___i_h_k_a_view_aabefea64fcceaa6700afecadc5d8f18f}} 
+\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}!setRequestCycleTime@{setRequestCycleTime}}
+\index{setRequestCycleTime@{setRequestCycleTime}!Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+\doxysubsubsection{\texorpdfstring{setRequestCycleTime()}{setRequestCycleTime()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+I\+H\+K\+A\+View\+::set\+Request\+Cycle\+Time (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{cycle\+Ms }\end{DoxyParamCaption})}
+
+
+
+Set request cycle time value on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycle\+Ms} & cycle duration is ms \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 93 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_adb23642abd7b9ba84cb236a972062370}\label{class_diagnose___i_h_k_a_view_adb23642abd7b9ba84cb236a972062370}} 
+\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+I\+H\+K\+A\+View\+::set\+Temperature (\begin{DoxyParamCaption}\item[{short int}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Set the temperature on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & temperature value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_a09e0a9b1e49d413ed74e60dd8f0ba4ec}\label{class_diagnose___i_h_k_a_view_a09e0a9b1e49d413ed74e60dd8f0ba4ec}} 
+\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}!setTime@{setTime}}
+\index{setTime@{setTime}!Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+I\+H\+K\+A\+View\+::set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{hour,  }\item[{uint8\+\_\+t}]{minute }\end{DoxyParamCaption})}
+
+
+
+Set the time on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & hour \\
+\hline
+{\em minute} & minute \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_afe2c200198a7a75364214b018a95fb2a}\label{class_diagnose___i_h_k_a_view_afe2c200198a7a75364214b018a95fb2a}} 
+\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}!showPopup@{showPopup}}
+\index{showPopup@{showPopup}!Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+\doxysubsubsection{\texorpdfstring{showPopup()}{showPopup()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+I\+H\+K\+A\+View\+::show\+Popup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{msg\+Size }\end{DoxyParamCaption})}
+
+
+
+Show popup message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message to show \\
+\hline
+{\em msg\+Size} & message size \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___i_h_k_a_view_ace394d7d67d6e18a8f61c9606ca336a1}\label{class_diagnose___i_h_k_a_view_ace394d7d67d6e18a8f61c9606ca336a1}} 
+\index{Diagnose\_IHKAView@{Diagnose\_IHKAView}!UpdateParameterValue@{UpdateParameterValue}}
+\index{UpdateParameterValue@{UpdateParameterValue}!Diagnose\_IHKAView@{Diagnose\_IHKAView}}
+\doxysubsubsection{\texorpdfstring{UpdateParameterValue()}{UpdateParameterValue()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+I\+H\+K\+A\+View\+::\+Update\+Parameter\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event\+Type,  }\item[{const \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Update the diagnostic parameter value on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Type} & event type \\
+\hline
+{\em data} & message data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+ihka\+\_\+screen/Diagnose\+\_\+\+I\+H\+K\+A\+View.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+ihka\+\_\+screen/Diagnose\+\_\+\+I\+H\+K\+A\+View.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{class_main_screen_view}{}\doxysection{Main\+Screen\+View Class Reference}
+\label{class_main_screen_view}\index{MainScreenView@{MainScreenView}}
+
+
+View for Main screen.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Screen\+View.\+hpp$>$}
+
+
+
+Inherits Main\+Screen\+View\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_screen_view_a8e060ad99342db3a7540764ea588e7b0}\label{class_main_screen_view_a8e060ad99342db3a7540764ea588e7b0}} 
+\mbox{\hyperlink{class_main_screen_view_a8e060ad99342db3a7540764ea588e7b0}{Main\+Screen\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_main_screen_view}{Main\+Screen\+View}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_screen_view_acfb2e48aba5a3d82a95404c8297cfe15}\label{class_main_screen_view_acfb2e48aba5a3d82a95404c8297cfe15}} 
+virtual \mbox{\hyperlink{class_main_screen_view_acfb2e48aba5a3d82a95404c8297cfe15}{$\sim$\+Main\+Screen\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_main_screen_view}{Main\+Screen\+View}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_screen_view_a39024eba2e8aada20a7a483f8956fccb}\label{class_main_screen_view_a39024eba2e8aada20a7a483f8956fccb}} 
+virtual void \mbox{\hyperlink{class_main_screen_view_a39024eba2e8aada20a7a483f8956fccb}{setup\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_screen_view_a524b20d1528853cdab6ec5893e23ef92}\label{class_main_screen_view_a524b20d1528853cdab6ec5893e23ef92}} 
+virtual void \mbox{\hyperlink{class_main_screen_view_a524b20d1528853cdab6ec5893e23ef92}{tear\+Down\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Tear down the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_screen_view_a7c0f0fd7d1ac9d023dd459e6fdb3a0f0}{set\+Temperature}} (short int temperature)
+\begin{DoxyCompactList}\small\item\em Set the temperature on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_screen_view_a9ed8ce4ffc0a6214fb0ebe55a43f4363}{set\+Date}} (uint8\+\_\+t day, uint8\+\_\+t month, unsigned int year)
+\begin{DoxyCompactList}\small\item\em Set the date on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_screen_view_a3daf6d8e496a318ca3f1d8be451774d0}{set\+Time}} (uint8\+\_\+t hour, uint8\+\_\+t minute)
+\begin{DoxyCompactList}\small\item\em Set the time on screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for Main screen. 
+
+Definition at line 10 of file Main\+Screen\+View.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_screen_view_a9ed8ce4ffc0a6214fb0ebe55a43f4363}\label{class_main_screen_view_a9ed8ce4ffc0a6214fb0ebe55a43f4363}} 
+\index{MainScreenView@{MainScreenView}!setDate@{setDate}}
+\index{setDate@{setDate}!MainScreenView@{MainScreenView}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Main\+Screen\+View\+::set\+Date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day,  }\item[{uint8\+\_\+t}]{month,  }\item[{unsigned int}]{year }\end{DoxyParamCaption})}
+
+
+
+Set the date on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & day \\
+\hline
+{\em month} & month \\
+\hline
+{\em year} & year \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Main\+Screen\+View.\+cpp.
+
+\mbox{\Hypertarget{class_main_screen_view_a7c0f0fd7d1ac9d023dd459e6fdb3a0f0}\label{class_main_screen_view_a7c0f0fd7d1ac9d023dd459e6fdb3a0f0}} 
+\index{MainScreenView@{MainScreenView}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!MainScreenView@{MainScreenView}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Main\+Screen\+View\+::set\+Temperature (\begin{DoxyParamCaption}\item[{short int}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Set the temperature on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & temperature value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Main\+Screen\+View.\+cpp.
+
+\mbox{\Hypertarget{class_main_screen_view_a3daf6d8e496a318ca3f1d8be451774d0}\label{class_main_screen_view_a3daf6d8e496a318ca3f1d8be451774d0}} 
+\index{MainScreenView@{MainScreenView}!setTime@{setTime}}
+\index{setTime@{setTime}!MainScreenView@{MainScreenView}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Main\+Screen\+View\+::set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{hour,  }\item[{uint8\+\_\+t}]{minute }\end{DoxyParamCaption})}
+
+
+
+Set the time on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & hour \\
+\hline
+{\em minute} & minute \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Main\+Screen\+View.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/mainscreen\+\_\+screen/Main\+Screen\+View.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/mainscreen\+\_\+screen/Main\+Screen\+View.\+cpp\end{DoxyCompactItemize}

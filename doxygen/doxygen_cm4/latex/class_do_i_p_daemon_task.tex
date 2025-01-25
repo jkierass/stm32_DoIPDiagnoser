@@ -1,0 +1,67 @@
+\hypertarget{class_do_i_p_daemon_task}{}\doxysection{Do\+I\+P\+Daemon\+Task Class Reference}
+\label{class_do_i_p_daemon_task}\index{DoIPDaemonTask@{DoIPDaemonTask}}
+
+
+Class for handling Do\+IP communication state machine.  
+
+
+
+
+{\ttfamily \#include $<$Do\+I\+P\+Daemon\+Task.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_do_i_p_daemon_task_a02862c88b284d49b77cf4f6215f86e4d}\label{class_do_i_p_daemon_task_a02862c88b284d49b77cf4f6215f86e4d}} 
+\mbox{\hyperlink{class_do_i_p_daemon_task_a02862c88b284d49b77cf4f6215f86e4d}{Do\+I\+P\+Daemon\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_do_i_p_daemon_task_ad8acdc68c9a4ffbb43e92dd0a5ad85af}\label{class_do_i_p_daemon_task_ad8acdc68c9a4ffbb43e92dd0a5ad85af}} 
+{\bfseries Do\+I\+P\+Daemon\+Task} (\mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_do_i_p_daemon_task_ad653d06dc3ef7420d0b50482d72ebdec}\label{class_do_i_p_daemon_task_ad653d06dc3ef7420d0b50482d72ebdec}} 
+\mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} \& {\bfseries operator=} (\mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_do_i_p_daemon_task_ac41ff886e5de87ed423d80367e03fc57}\label{class_do_i_p_daemon_task_ac41ff886e5de87ed423d80367e03fc57}} 
+{\bfseries Do\+I\+P\+Daemon\+Task} (\mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{class_do_i_p_daemon_task_a7b5b010b635c314c44786763d971b979}\label{class_do_i_p_daemon_task_a7b5b010b635c314c44786763d971b979}} 
+\mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} \& {\bfseries operator=} (\mbox{\hyperlink{class_do_i_p_daemon_task}{Do\+I\+P\+Daemon\+Task}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{class_do_i_p_daemon_task_a821246ecbe962d2717b1f0c3c357ec90}\label{class_do_i_p_daemon_task_a821246ecbe962d2717b1f0c3c357ec90}} 
+void \mbox{\hyperlink{class_do_i_p_daemon_task_a821246ecbe962d2717b1f0c3c357ec90}{process}} ()
+\begin{DoxyCompactList}\small\item\em Process the Do\+IP task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_do_i_p_daemon_task_aa1dd766b209646d54baad2e515907cb7}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for handling Do\+IP communication state machine. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_do_i_p_daemon_task_aa1dd766b209646d54baad2e515907cb7}\label{class_do_i_p_daemon_task_aa1dd766b209646d54baad2e515907cb7}} 
+\index{DoIPDaemonTask@{DoIPDaemonTask}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!DoIPDaemonTask@{DoIPDaemonTask}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Do\+I\+P\+Daemon\+Task\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/\+User/\+Do\+I\+P/inc/\mbox{\hyperlink{_do_i_p_daemon_task_8h}{Do\+I\+P\+Daemon\+Task.\+h}}\item 
+Application/\+User/\+Do\+I\+P/src/\mbox{\hyperlink{_do_i_p_daemon_task_8cpp}{Do\+I\+P\+Daemon\+Task.\+cpp}}\end{DoxyCompactItemize}

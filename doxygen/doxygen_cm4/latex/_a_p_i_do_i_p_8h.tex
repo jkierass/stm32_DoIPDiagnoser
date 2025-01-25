@@ -1,0 +1,77 @@
+\hypertarget{_a_p_i_do_i_p_8h}{}\doxysection{Application/\+User/\+Do\+I\+P/inc/\+A\+P\+I\+Do\+IP.h File Reference}
+\label{_a_p_i_do_i_p_8h}\index{Application/User/DoIP/inc/APIDoIP.h@{Application/User/DoIP/inc/APIDoIP.h}}
+
+
+\+: Header for generating/interpreting Do\+IP communication.  
+
+
+{\ttfamily \#include $<$variant$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+{\ttfamily \#include \char`\"{}Message\+Data\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+D\+S\+Data\+Type.\+h\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_a_p_i_do_i_p}{A\+P\+I\+Do\+IP}}
+\begin{DoxyCompactList}\small\item\em Namespace for generating/interpreting Do\+IP communication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}\label{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}} 
+enum \mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{A\+P\+I\+Do\+I\+P\+::\+E\+Do\+I\+P\+Request}} \{ \newline
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+I\+N\+V\+A\+L\+ID} = -\/1, 
+{\bfseries D\+M\+E\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+O\+I\+L\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+O\+I\+L\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE, 
+{\bfseries D\+M\+E\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+A\+L\+\_\+\+S\+P\+E\+ED} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+A\+L\+\_\+\+S\+P\+E\+ED, 
+{\bfseries D\+M\+E\+\_\+\+C\+O\+O\+L\+A\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+C\+O\+O\+L\+A\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE, 
+\newline
+{\bfseries D\+M\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+V\+O\+L\+T\+A\+GE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+V\+O\+L\+T\+A\+GE, 
+{\bfseries D\+M\+E\+\_\+\+A\+M\+B\+I\+E\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+M\+B\+I\+E\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE, 
+{\bfseries D\+M\+E\+\_\+\+A\+I\+R\+\_\+\+M\+A\+SS} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+I\+R\+\_\+\+M\+A\+SS, 
+{\bfseries D\+M\+E\+\_\+\+R\+A\+I\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+R\+A\+I\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE, 
+\newline
+{\bfseries D\+M\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+O\+R\+\_\+\+P\+E\+D\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+ON} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+O\+R\+\_\+\+P\+E\+D\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+ON, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+T\+O\+T\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+T\+O\+T\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+S\+P\+E\+ED} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+S\+P\+E\+ED, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+O\+U\+T\+S\+I\+D\+E\+\_\+\+T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+OR} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+O\+U\+T\+S\+I\+D\+E\+\_\+\+T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+OR, 
+\newline
+{\bfseries K\+O\+M\+B\+I\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+O\+N\+\_\+\+D\+I\+SP} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+O\+N\+\_\+\+D\+I\+SP, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+F\+U\+E\+L\+\_\+\+L\+E\+V\+EL} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+F\+U\+EL, 
+{\bfseries I\+H\+K\+A\+\_\+\+E\+V\+A\+P\+O\+R\+A\+T\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+OR} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+I\+H\+K\+A\+\_\+\+E\+V\+A\+P\+O\+R\+A\+T\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+OR, 
+{\bfseries I\+H\+K\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+L\+E\+C\+T\+OR} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+I\+H\+K\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+L\+E\+C\+T\+OR
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for Do\+IP request types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_a_p_i_do_i_p_a6e02c201b7a6a3a1630a6214b1c8357c}{A\+P\+I\+Do\+I\+P\+::prepare\+Data\+Request}} (uint8\+\_\+t prepared\+Payload\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}{E\+E\+C\+U\+Address}} target\+Ecu\+Addr, \mbox{\hyperlink{_u_d_s_data_type_8h_aa195b6fd6f36ee3b12ebc0b49a0822f4}{E\+U\+D\+S\+D\+ID}} did)
+\begin{DoxyCompactList}\small\item\em Prepare Do\+IP message asking for diagnostic data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_a_p_i_do_i_p_a3e2b0f099db34828bd3f02734c7b7bba}{A\+P\+I\+Do\+I\+P\+::prepare\+First\+Request\+For\+Dynamic\+Data}} (uint8\+\_\+t prepared\+Payload\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}{E\+E\+C\+U\+Address}} target\+Ecu\+Addr)
+\begin{DoxyCompactList}\small\item\em Prepare Do\+IP message asking for dynamic data assing (first sequence) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_a_p_i_do_i_p_ac50e7a519fe8b6a3b6d7f5624d8f71ff}{A\+P\+I\+Do\+I\+P\+::prepare\+Second\+Request\+For\+Dynamic\+Data}} (uint8\+\_\+t prepared\+Payload\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}{E\+E\+C\+U\+Address}} target\+Ecu\+Addr, \mbox{\hyperlink{_u_d_s_data_type_8h_a1e68f353cba0383d545b5a479ef44556}{E\+Dynamic\+Data\+Indentifier\+Request\+Code}} ddir\+Code)
+\begin{DoxyCompactList}\small\item\em Prepare Do\+IP message asking for dynamic data assing (second sequence with memory address assignment) \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{struct_s_message}{S\+Message}} $>$ \mbox{\hyperlink{namespace_a_p_i_do_i_p_abab7bc42a957a4df99c7f0d49080c614}{A\+P\+I\+Do\+I\+P\+::extract\+Data\+From\+Response}} (const uint8\+\_\+t data\+Payload\mbox{[}$\,$\mbox{]}, size\+\_\+t size, \mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{E\+Do\+I\+P\+Request}} data\+Type)
+\begin{DoxyCompactList}\small\item\em Extract data from Do\+IP response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_a_p_i_do_i_p_a0d35f0250899094dff01f0d4c7949f8a}\label{namespace_a_p_i_do_i_p_a0d35f0250899094dff01f0d4c7949f8a}} 
+constexpr uint8\+\_\+t {\bfseries A\+P\+I\+Do\+I\+P\+::data\+Req\+Data\+Size} = 0x05
+\item 
+\mbox{\Hypertarget{namespace_a_p_i_do_i_p_a8ab462c952f4cae24641efa92d2b9632}\label{namespace_a_p_i_do_i_p_a8ab462c952f4cae24641efa92d2b9632}} 
+constexpr uint8\+\_\+t {\bfseries A\+P\+I\+Do\+I\+P\+::first\+Req\+Dyn\+Data\+Size} = 0x06
+\item 
+\mbox{\Hypertarget{namespace_a_p_i_do_i_p_afdf85ad99eed742faaebf34b4a8c08e1}\label{namespace_a_p_i_do_i_p_afdf85ad99eed742faaebf34b4a8c08e1}} 
+constexpr uint8\+\_\+t {\bfseries A\+P\+I\+Do\+I\+P\+::second\+Req\+Dyn\+Data\+Size} = 0x0a
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{E\+Do\+I\+P\+Request}}, std\+::pair$<$ std\+::variant$<$ \mbox{\hyperlink{_u_d_s_data_type_8h_aa195b6fd6f36ee3b12ebc0b49a0822f4}{E\+U\+D\+S\+D\+ID}}, \mbox{\hyperlink{_u_d_s_data_type_8h_a1e68f353cba0383d545b5a479ef44556}{E\+Dynamic\+Data\+Indentifier\+Request\+Code}} $>$, \mbox{\hyperlink{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}{E\+E\+C\+U\+Address}} $>$ $>$ \mbox{\hyperlink{namespace_a_p_i_do_i_p_adecd9d411d172a9e3d338e777154ae12}{A\+P\+I\+Do\+I\+P\+::data\+Identifier\+Map}}
+\begin{DoxyCompactList}\small\item\em Map for Do\+IP request types and their corresponding U\+DS Data Identifiers (D\+ID or memory address) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for generating/interpreting Do\+IP communication. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}

@@ -1,0 +1,69 @@
+\hypertarget{class_model}{}\doxysection{Model Class Reference}
+\label{class_model}\index{Model@{Model}}
+
+
+\mbox{\hyperlink{class_model}{Model}} class.  
+
+
+
+
+{\ttfamily \#include $<$Model.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_model_1_1_s_aux_data_cache}{S\+Aux\+Data\+Cache}}
+\begin{DoxyCompactList}\small\item\em struct for caching auxiliary data (date, time, room temperature) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_ae3b375de5f6df4faf74a95d64748e048}\label{class_model_ae3b375de5f6df4faf74a95d64748e048}} 
+\mbox{\hyperlink{class_model_ae3b375de5f6df4faf74a95d64748e048}{Model}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_model}{Model}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_model_a2cfd5ef77bc9acf4c57fbaceaca7c7b1}{send\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} message, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Send forward the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_model}{Model}} class. 
+
+Definition at line 11 of file Model.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_a2cfd5ef77bc9acf4c57fbaceaca7c7b1}\label{class_model_a2cfd5ef77bc9acf4c57fbaceaca7c7b1}} 
+\index{Model@{Model}!sendEvent@{sendEvent}}
+\index{sendEvent@{sendEvent}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{sendEvent()}{sendEvent()}}
+{\footnotesize\ttfamily bool Model\+::send\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{message,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Send forward the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file Model.\+cpp.
+
+
+
+References Event\+Bus\+::send().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/model/Model.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/model/Model.\+cpp\end{DoxyCompactItemize}

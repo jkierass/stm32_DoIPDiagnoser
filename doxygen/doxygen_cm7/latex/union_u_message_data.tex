@@ -1,0 +1,95 @@
+\hypertarget{union_u_message_data}{}\doxysection{U\+Message\+Data Union Reference}
+\label{union_u_message_data}\index{UMessageData@{UMessageData}}
+
+
+Union structure holding event\textquotesingle{}s data. Each event should have its own declared variable variant in this union.  
+
+
+
+
+{\ttfamily \#include $<$Message\+Data\+Types.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a839d563879885ae23518f9d6c92f6b27}{event\+\_\+subscriptions}} \mbox{[}17\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a2cceea75c2b469dc8a618b8a574e443a}{updated\+\_\+date}} \mbox{[}3\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a536da5e625b528144f49c3894943bb1f}{updated\+\_\+time}} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a4027ed162901d235c13a56de970c9205}{new\+\_\+date\+\_\+and\+\_\+time}} \mbox{[}5\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Union structure holding event\textquotesingle{}s data. Each event should have its own declared variable variant in this union. 
+
+\begin{DoxyNote}{Note}
+Types should not be bigger that 17 bytes. 
+\end{DoxyNote}
+
+
+Definition at line 113 of file Message\+Data\+Types.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{union_u_message_data_a839d563879885ae23518f9d6c92f6b27}\label{union_u_message_data_a839d563879885ae23518f9d6c92f6b27}} 
+\index{UMessageData@{UMessageData}!event\_subscriptions@{event\_subscriptions}}
+\index{event\_subscriptions@{event\_subscriptions}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{event\_subscriptions}{event\_subscriptions}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::event\+\_\+subscriptions\mbox{[}17\mbox{]}}
+
+1st \mbox{[}index 0\mbox{]} byte is a number from 1 to 15 indicating for how many events clients is subscribing 2nd-\/16th \mbox{[}indexes 1-\/16\mbox{]} bytes are E\+Event\+Type enum values from E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+TE range (0-\/63) that client want to subscribe for 
+
+Definition at line 119 of file Message\+Data\+Types.\+h.
+
+
+
+Referenced by Diagnose\+\_\+\+D\+M\+E\+Presenter\+::deactivate(), Diagnose\+\_\+\+Extra\+Visual\+Presenter\+::deactivate(), Diagnose\+\_\+\+K\+O\+M\+B\+I\+Presenter\+::deactivate(), and Diagnose\+\_\+\+I\+H\+K\+A\+Presenter\+::deactivate().
+
+\mbox{\Hypertarget{union_u_message_data_a4027ed162901d235c13a56de970c9205}\label{union_u_message_data_a4027ed162901d235c13a56de970c9205}} 
+\index{UMessageData@{UMessageData}!new\_date\_and\_time@{new\_date\_and\_time}}
+\index{new\_date\_and\_time@{new\_date\_and\_time}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{new\_date\_and\_time}{new\_date\_and\_time}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::new\+\_\+date\+\_\+and\+\_\+time\mbox{[}5\mbox{]}}
+
+\mbox{[}HM\mbox{]}\mbox{[}D\+MY\mbox{]} \begin{DoxyNote}{Note}
+Y -\/ year, minimal possible value to set is 0 which corresponds to 2000. Value of this field should be last 2 numbers from real year value (for example if 2024 then it should be 24 etc.) 
+\end{DoxyNote}
+
+
+Definition at line 143 of file Message\+Data\+Types.\+h.
+
+\mbox{\Hypertarget{union_u_message_data_a2cceea75c2b469dc8a618b8a574e443a}\label{union_u_message_data_a2cceea75c2b469dc8a618b8a574e443a}} 
+\index{UMessageData@{UMessageData}!updated\_date@{updated\_date}}
+\index{updated\_date@{updated\_date}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{updated\_date}{updated\_date}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::updated\+\_\+date\mbox{[}3\mbox{]}}
+
+\mbox{[}D\+MY\mbox{]} \begin{DoxyNote}{Note}
+Y -\/ year, minimal possible value to set is 0 which corresponds to 2000. Value of this field should be last 2 numbers from real year value (for example if 2024 then it should be 24 etc.) 
+\end{DoxyNote}
+
+
+Definition at line 129 of file Message\+Data\+Types.\+h.
+
+\mbox{\Hypertarget{union_u_message_data_a536da5e625b528144f49c3894943bb1f}\label{union_u_message_data_a536da5e625b528144f49c3894943bb1f}} 
+\index{UMessageData@{UMessageData}!updated\_time@{updated\_time}}
+\index{updated\_time@{updated\_time}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{updated\_time}{updated\_time}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::updated\+\_\+time\mbox{[}2\mbox{]}}
+
+\mbox{[}HM\mbox{]} \begin{DoxyNote}{Note}
+Y -\/ year, minimal possible value to set is 0 which corresponds to 2000. Value of this field should be last 2 numbers from real year value (for example if 2024 then it should be 24 etc.) 
+\end{DoxyNote}
+
+
+Definition at line 136 of file Message\+Data\+Types.\+h.
+
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+Common/\+Inc/\mbox{\hyperlink{_message_data_types_8h}{Message\+Data\+Types.\+h}}\end{DoxyCompactItemize}

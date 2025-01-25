@@ -1,0 +1,295 @@
+\hypertarget{main_8cpp}{}\doxysection{Application/\+User/\+Core/main.cpp File Reference}
+\label{main_8cpp}\index{Application/User/Core/main.cpp@{Application/User/Core/main.cpp}}
+
+
+\+: Main file for the C\+M4 core in the \char`\"{}\+Do\+I\+P Diagnostics Tool\char`\"{} project.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmsis\+\_\+os2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Message\+Data\+Types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cm\+\_\+ipc.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a66761607ebca2d7b18eb6adfbd0891a7}\label{main_8cpp_a66761607ebca2d7b18eb6adfbd0891a7}} 
+\#define {\bfseries H\+S\+E\+M\+\_\+\+I\+D\+\_\+0}~(0U) /$\ast$ HW semaphore 0$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_af70745b3ae51c45a137c51462bcf7abe}{Start\+Task\+\_\+\+E\+DaemonN}} (void $\ast$argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the Task\+\_\+\+E\+DaemonN thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8cpp_a2c1256c4f5ec0a5f5c5fd307ebd294e6}\label{main_8cpp_a2c1256c4f5ec0a5f5c5fd307ebd294e6}} 
+void {\bfseries Start\+Task\+\_\+\+Event\+Mgr\+M4} (void $\ast$argument)
+\item 
+\mbox{\Hypertarget{main_8cpp_ab71d8ea51ba075777803b4a0607e7fa5}\label{main_8cpp_ab71d8ea51ba075777803b4a0607e7fa5}} 
+void {\bfseries Start\+Task\+\_\+\+Do\+I\+P\+Daemon\+Task} (void $\ast$argument)
+\item 
+\mbox{\Hypertarget{main_8cpp_aa50035970ad4247fb585f2aa5f2d67c6}\label{main_8cpp_aa50035970ad4247fb585f2aa5f2d67c6}} 
+void {\bfseries Start\+Task\+\_\+\+C\+Temp} (void $\ast$argument)
+\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a57d1167735baafab8e3288526c424929}{M\+X\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+U\+A\+R\+T\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+R\+T1 Initialization Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_abc513dd972081ae765b6949a62872eb7}{\+\_\+\+\_\+io\+\_\+putchar}} (int ch)
+\begin{DoxyCompactList}\small\item\em Retargets the C library printf function to the U\+S\+A\+RT. None. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback}} (T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a818789480a74b70bbcaf6d73e8e763ed}\label{main_8cpp_a818789480a74b70bbcaf6d73e8e763ed}} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c4}
+\item 
+\mbox{\Hypertarget{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}} 
+U\+A\+R\+T\+\_\+\+Handle\+Type\+Def {\bfseries huart1}
+\item 
+\mbox{\Hypertarget{main_8cpp_a166d3c09d3ed251ad1ce1819be934be1}\label{main_8cpp_a166d3c09d3ed251ad1ce1819be934be1}} 
+os\+Thread\+Id\+\_\+t {\bfseries Task\+\_\+\+E\+Daemon\+N\+Handle}
+\item 
+const os\+Thread\+Attr\+\_\+t {\bfseries Task\+\_\+\+E\+Daemon\+N\+\_\+attributes}
+\item 
+\mbox{\Hypertarget{main_8cpp_a9a2c968e1f77e3245aed3155097e4148}\label{main_8cpp_a9a2c968e1f77e3245aed3155097e4148}} 
+os\+Thread\+Id\+\_\+t {\bfseries Task\+\_\+\+Event\+Mgr\+M4\+Handle}
+\item 
+const os\+Thread\+Attr\+\_\+t {\bfseries Task\+\_\+\+Event\+Mgr\+M4\+\_\+attributes}
+\item 
+\mbox{\Hypertarget{main_8cpp_a9d6725638000341111e87eccbd891b37}\label{main_8cpp_a9d6725638000341111e87eccbd891b37}} 
+os\+Thread\+Id\+\_\+t {\bfseries Task\+\_\+\+D\+P\+Daemon\+Handle}
+\item 
+const os\+Thread\+Attr\+\_\+t {\bfseries Task\+\_\+\+D\+P\+Daemon\+\_\+attributes}
+\item 
+\mbox{\Hypertarget{main_8cpp_ae530f79618dfecec7870c735bd93e820}\label{main_8cpp_ae530f79618dfecec7870c735bd93e820}} 
+os\+Thread\+Id\+\_\+t {\bfseries Task\+\_\+\+C\+Temp\+Handle}
+\item 
+const os\+Thread\+Attr\+\_\+t {\bfseries Task\+\_\+\+C\+Temp\+\_\+attributes}
+\item 
+\mbox{\Hypertarget{main_8cpp_a1558ef921d30a950dcce0fac2f7ec887}\label{main_8cpp_a1558ef921d30a950dcce0fac2f7ec887}} 
+os\+Mutex\+Id\+\_\+t {\bfseries print\+Mutex\+Handle}
+\item 
+const os\+Mutex\+Attr\+\_\+t {\bfseries print\+Mutex\+\_\+attributes}
+\item 
+\mbox{\Hypertarget{main_8cpp_a3a701770f814f303b36faddc9e2f4593}\label{main_8cpp_a3a701770f814f303b36faddc9e2f4593}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Event\+Manager\+C\+M4}
+\item 
+\mbox{\Hypertarget{main_8cpp_a60b66b9685f2b9685f00539eb8a39418}\label{main_8cpp_a60b66b9685f2b9685f00539eb8a39418}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Native\+Daemon}
+\item 
+\mbox{\Hypertarget{main_8cpp_ab2688f3f3533abedde9243f6f55744a1}\label{main_8cpp_ab2688f3f3533abedde9243f6f55744a1}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Do\+I\+P\+Daemon\+Task}
+\item 
+\mbox{\Hypertarget{main_8cpp_a2baf83e74047abe0c1f8c93deaeb4925}\label{main_8cpp_a2baf83e74047abe0c1f8c93deaeb4925}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Temperature}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main file for the C\+M4 core in the \char`\"{}\+Do\+I\+P Diagnostics Tool\char`\"{} project. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasiński 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+\+: 2024
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This is the main file of the project \char`\"{}\+Do\+I\+P Diagnoser\char`\"{}. It consists of two programs running on C\+M4 and C\+M7 core separately. This core, i.\+e. C\+M4, is reponsible for handling ethernet port communication with T\+C\+P/\+IP stack using Lw\+IP library to communicate with a car\textquotesingle{}s E\+CU in order to fetch diagnostic data through Do\+IP protocol. It also handles measuring current air temperature using M\+C\+P9808 I2C Grove sensor.
+
+Whole projects uses Free\+R\+T\+OS as an operating system. I\+PC implementation is based on Free\+R\+T\+OS message buffers (x\+Message\+Buffer).
+
+Most of the user implementation is written in C++, with elements in C. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_abc513dd972081ae765b6949a62872eb7}\label{main_8cpp_abc513dd972081ae765b6949a62872eb7}} 
+\index{main.cpp@{main.cpp}!\_\_io\_putchar@{\_\_io\_putchar}}
+\index{\_\_io\_putchar@{\_\_io\_putchar}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{\_\_io\_putchar()}{\_\_io\_putchar()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+io\+\_\+putchar (\begin{DoxyParamCaption}\item[{int}]{ch }\end{DoxyParamCaption})}
+
+
+
+Retargets the C library printf function to the U\+S\+A\+RT. None. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8cpp_a1730ffe1e560465665eb47d9264826f9}\label{main_8cpp_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.cpp@{main.cpp}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}\label{main_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}} 
+\index{main.cpp@{main.cpp}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{T\+I\+M\+\_\+\+Handle\+Type\+Def $\ast$}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when T\+I\+M6 interrupt took place, inside H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+I\+R\+Q\+Handler(). It makes a direct call to H\+A\+L\+\_\+\+Inc\+Tick() to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & \+: T\+IM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8cpp_a57d1167735baafab8e3288526c424929}\label{main_8cpp_a57d1167735baafab8e3288526c424929}} 
+\index{main.cpp@{main.cpp}!MX\_USART1\_UART\_Init@{MX\_USART1\_UART\_Init}}
+\index{MX\_USART1\_UART\_Init@{MX\_USART1\_UART\_Init}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MX\_USART1\_UART\_Init()}{MX\_USART1\_UART\_Init()}}
+{\footnotesize\ttfamily void M\+X\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+U\+A\+R\+T\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+S\+A\+R\+T1 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8cpp_af70745b3ae51c45a137c51462bcf7abe}\label{main_8cpp_af70745b3ae51c45a137c51462bcf7abe}} 
+\index{main.cpp@{main.cpp}!StartTask\_EDaemonN@{StartTask\_EDaemonN}}
+\index{StartTask\_EDaemonN@{StartTask\_EDaemonN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{StartTask\_EDaemonN()}{StartTask\_EDaemonN()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+weak void Start\+Task\+\_\+\+E\+DaemonN (\begin{DoxyParamCaption}\item[{void $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the Task\+\_\+\+E\+DaemonN thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_ab5adafccd001f82c000dd3c2a4b2cc51}\label{main_8cpp_ab5adafccd001f82c000dd3c2a4b2cc51}} 
+\index{main.cpp@{main.cpp}!printMutex\_attributes@{printMutex\_attributes}}
+\index{printMutex\_attributes@{printMutex\_attributes}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printMutex\_attributes}{printMutex\_attributes}}
+{\footnotesize\ttfamily const os\+Mutex\+Attr\+\_\+t print\+Mutex\+\_\+attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  .name = \textcolor{stringliteral}{"printMutex"}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8cpp_a2d1e694fa5a1c9e2d2616f26745e9d01}\label{main_8cpp_a2d1e694fa5a1c9e2d2616f26745e9d01}} 
+\index{main.cpp@{main.cpp}!Task\_CTemp\_attributes@{Task\_CTemp\_attributes}}
+\index{Task\_CTemp\_attributes@{Task\_CTemp\_attributes}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Task\_CTemp\_attributes}{Task\_CTemp\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t Task\+\_\+\+C\+Temp\+\_\+attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  .name = \textcolor{stringliteral}{"Task\_CTemp"},}
+\DoxyCodeLine{  .stack\_size = 1028 * 4,}
+\DoxyCodeLine{  .priority = (osPriority\_t) osPriorityLow,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8cpp_a2493efab9388228ecd0a08236f07d8db}\label{main_8cpp_a2493efab9388228ecd0a08236f07d8db}} 
+\index{main.cpp@{main.cpp}!Task\_DPDaemon\_attributes@{Task\_DPDaemon\_attributes}}
+\index{Task\_DPDaemon\_attributes@{Task\_DPDaemon\_attributes}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Task\_DPDaemon\_attributes}{Task\_DPDaemon\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t Task\+\_\+\+D\+P\+Daemon\+\_\+attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  .name = \textcolor{stringliteral}{"Task\_DPDaemon"},}
+\DoxyCodeLine{  .stack\_size = 1028 * 4,}
+\DoxyCodeLine{  .priority = (osPriority\_t) osPriorityNormal,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8cpp_ae65b1fe2627d78e929e7cd18c204ad4e}\label{main_8cpp_ae65b1fe2627d78e929e7cd18c204ad4e}} 
+\index{main.cpp@{main.cpp}!Task\_EDaemonN\_attributes@{Task\_EDaemonN\_attributes}}
+\index{Task\_EDaemonN\_attributes@{Task\_EDaemonN\_attributes}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Task\_EDaemonN\_attributes}{Task\_EDaemonN\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t Task\+\_\+\+E\+Daemon\+N\+\_\+attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  .name = \textcolor{stringliteral}{"Task\_EDaemonN"},}
+\DoxyCodeLine{  .stack\_size = 1028 * 4,}
+\DoxyCodeLine{  .priority = (osPriority\_t) osPriorityBelowNormal,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8cpp_a0465b5ca926354e264e36342eacc371b}\label{main_8cpp_a0465b5ca926354e264e36342eacc371b}} 
+\index{main.cpp@{main.cpp}!Task\_EventMgrM4\_attributes@{Task\_EventMgrM4\_attributes}}
+\index{Task\_EventMgrM4\_attributes@{Task\_EventMgrM4\_attributes}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Task\_EventMgrM4\_attributes}{Task\_EventMgrM4\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t Task\+\_\+\+Event\+Mgr\+M4\+\_\+attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  .name = \textcolor{stringliteral}{"Task\_EventMgrM4"},}
+\DoxyCodeLine{  .stack\_size = 1028 * 4,}
+\DoxyCodeLine{  .priority = (osPriority\_t) osPriorityBelowNormal,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

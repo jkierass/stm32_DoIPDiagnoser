@@ -1,0 +1,88 @@
+\hypertarget{class_event_manager_c_m4_task}{}\doxysection{Event\+Manager\+C\+M4\+Task Class Reference}
+\label{class_event_manager_c_m4_task}\index{EventManagerCM4Task@{EventManagerCM4Task}}
+
+
+Class for managing events on C\+M4 side.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Manager\+C\+M4\+Task.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}\label{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}} 
+enum \mbox{\hyperlink{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}{E\+Event\+Queue}} \{ {\bfseries E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+D\+A\+E\+M\+O\+N\+\_\+\+N\+A\+T\+I\+VE} = E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+E\+M\+O\+N\+\_\+\+N\+A\+T\+I\+VE, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+N\+A\+G\+ER} = E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+N\+A\+G\+ER
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for event queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_a767b04547a57e59a27254c8946c4573d}\label{class_event_manager_c_m4_task_a767b04547a57e59a27254c8946c4573d}} 
+\mbox{\hyperlink{class_event_manager_c_m4_task_a767b04547a57e59a27254c8946c4573d}{Event\+Manager\+C\+M4\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Event Manager C\+M4 Task object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_manager_c_m4_task_a595653fdba71f691b6058cdef2c7f222}{add\+Queue}} (\mbox{\hyperlink{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}{E\+Event\+Queue}} event\+Client, Queue\+Handle\+\_\+t queue\+Handle)
+\begin{DoxyCompactList}\small\item\em Add queue to the event manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_manager_c_m4_task_ae8e3e0baf6c30328f1d1a1ba95bf723a}{remove\+Queue}} (\mbox{\hyperlink{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}{E\+Event\+Queue}} event\+Client)
+\begin{DoxyCompactList}\small\item\em Remove queue from the event manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_ab6b6e29780a63b4d2d21e4c6f0989460}\label{class_event_manager_c_m4_task_ab6b6e29780a63b4d2d21e4c6f0989460}} 
+void \mbox{\hyperlink{class_event_manager_c_m4_task_ab6b6e29780a63b4d2d21e4c6f0989460}{process}} ()
+\begin{DoxyCompactList}\small\item\em Process the task. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_a219e30d5055c46aa63ba4124999869d2}\label{class_event_manager_c_m4_task_a219e30d5055c46aa63ba4124999869d2}} 
+{\bfseries Event\+Manager\+C\+M4\+Task} (\mbox{\hyperlink{class_event_manager_c_m4_task}{Event\+Manager\+C\+M4\+Task}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_a2601a13ce66634927e269afd0f969dfb}\label{class_event_manager_c_m4_task_a2601a13ce66634927e269afd0f969dfb}} 
+\mbox{\hyperlink{class_event_manager_c_m4_task}{Event\+Manager\+C\+M4\+Task}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event_manager_c_m4_task}{Event\+Manager\+C\+M4\+Task}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_afe9f09980f8cc5da4a1e485689a04982}\label{class_event_manager_c_m4_task_afe9f09980f8cc5da4a1e485689a04982}} 
+{\bfseries Event\+Manager\+C\+M4\+Task} (\mbox{\hyperlink{class_event_manager_c_m4_task}{Event\+Manager\+C\+M4\+Task}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{class_event_manager_c_m4_task_a88592adde1b67758c995b86cf213e64b}\label{class_event_manager_c_m4_task_a88592adde1b67758c995b86cf213e64b}} 
+\mbox{\hyperlink{class_event_manager_c_m4_task}{Event\+Manager\+C\+M4\+Task}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event_manager_c_m4_task}{Event\+Manager\+C\+M4\+Task}} \&\&)=delete
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for managing events on C\+M4 side. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_event_manager_c_m4_task_a595653fdba71f691b6058cdef2c7f222}\label{class_event_manager_c_m4_task_a595653fdba71f691b6058cdef2c7f222}} 
+\index{EventManagerCM4Task@{EventManagerCM4Task}!addQueue@{addQueue}}
+\index{addQueue@{addQueue}!EventManagerCM4Task@{EventManagerCM4Task}}
+\doxysubsubsection{\texorpdfstring{addQueue()}{addQueue()}}
+{\footnotesize\ttfamily void Event\+Manager\+C\+M4\+Task\+::add\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}{E\+Event\+Queue}}}]{event\+Client,  }\item[{Queue\+Handle\+\_\+t}]{queue\+Handle }\end{DoxyParamCaption})}
+
+
+
+Add queue to the event manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Client} & event client \\
+\hline
+{\em queue\+Handle} & queue handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_event_manager_c_m4_task_ae8e3e0baf6c30328f1d1a1ba95bf723a}\label{class_event_manager_c_m4_task_ae8e3e0baf6c30328f1d1a1ba95bf723a}} 
+\index{EventManagerCM4Task@{EventManagerCM4Task}!removeQueue@{removeQueue}}
+\index{removeQueue@{removeQueue}!EventManagerCM4Task@{EventManagerCM4Task}}
+\doxysubsubsection{\texorpdfstring{removeQueue()}{removeQueue()}}
+{\footnotesize\ttfamily void Event\+Manager\+C\+M4\+Task\+::remove\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_manager_c_m4_task_a7c6aee66d26b2f196506fb0b74f96f16}{E\+Event\+Queue}}}]{event\+Client }\end{DoxyParamCaption})}
+
+
+
+Remove queue from the event manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Client} & event client \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/\+User/\+Event\+Manager\+C\+M4/inc/\mbox{\hyperlink{_event_manager_c_m4_task_8h}{Event\+Manager\+C\+M4\+Task.\+h}}\item 
+Application/\+User/\+Event\+Manager\+C\+M4/src/\mbox{\hyperlink{_event_manager_c_m4_task_8cpp}{Event\+Manager\+C\+M4\+Task.\+cpp}}\end{DoxyCompactItemize}

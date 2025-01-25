@@ -1,0 +1,130 @@
+\hypertarget{class_diagnose___extra_visual_presenter}{}\doxysection{Diagnose\+\_\+\+Extra\+Visual\+Presenter Class Reference}
+\label{class_diagnose___extra_visual_presenter}\index{Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}}
+
+
+Presenter for Diagnose Extra Visual screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+hpp$>$}
+
+
+
+Inherits Presenter, and Model\+Listener.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_diagnose___extra_visual_presenter_afbc0f76a15e7665c826ff3f07fbc227a}{Diagnose\+\_\+\+Extra\+Visual\+Presenter}} (\mbox{\hyperlink{class_diagnose___extra_visual_view}{Diagnose\+\_\+\+Extra\+Visual\+View}} \&v)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_diagnose___extra_visual_presenter}{Diagnose\+\_\+\+Extra\+Visual\+Presenter}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_presenter_a548aa709c66cdcbb590fb16dc55747c0}\label{class_diagnose___extra_visual_presenter_a548aa709c66cdcbb590fb16dc55747c0}} 
+virtual void \mbox{\hyperlink{class_diagnose___extra_visual_presenter_a548aa709c66cdcbb590fb16dc55747c0}{activate}} ()
+\begin{DoxyCompactList}\small\item\em The activate function is called automatically when this screen is \char`\"{}switched in\char`\"{} (ie. made active). Initialization logic can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_presenter_ace6f2b70a757433fbf542f675376b4e4}\label{class_diagnose___extra_visual_presenter_ace6f2b70a757433fbf542f675376b4e4}} 
+virtual void \mbox{\hyperlink{class_diagnose___extra_visual_presenter_ace6f2b70a757433fbf542f675376b4e4}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em The deactivate function is called automatically when this screen is \char`\"{}switched out\char`\"{} (ie. made inactive). Teardown functionality can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_presenter_a2eedb14703319be806eb4c534b12c8df}\label{class_diagnose___extra_visual_presenter_a2eedb14703319be806eb4c534b12c8df}} 
+virtual \mbox{\hyperlink{class_diagnose___extra_visual_presenter_a2eedb14703319be806eb4c534b12c8df}{$\sim$\+Diagnose\+\_\+\+Extra\+Visual\+Presenter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_diagnose___extra_visual_presenter}{Diagnose\+\_\+\+Extra\+Visual\+Presenter}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_presenter_a9de8b12ae2fd0cf01f876077f2d3704e}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diagnose___extra_visual_presenter_a600ef79e8abd33f3f927f8b715b88aa2}{send\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} message, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Send event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Presenter for Diagnose Extra Visual screen. 
+
+Definition at line 14 of file Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_diagnose___extra_visual_presenter_afbc0f76a15e7665c826ff3f07fbc227a}\label{class_diagnose___extra_visual_presenter_afbc0f76a15e7665c826ff3f07fbc227a}} 
+\index{Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}!Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}}
+\index{Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}!Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}}
+\doxysubsubsection{\texorpdfstring{Diagnose\_ExtraVisualPresenter()}{Diagnose\_ExtraVisualPresenter()}}
+{\footnotesize\ttfamily Diagnose\+\_\+\+Extra\+Visual\+Presenter\+::\+Diagnose\+\_\+\+Extra\+Visual\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_diagnose___extra_visual_view}{Diagnose\+\_\+\+Extra\+Visual\+View}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_diagnose___extra_visual_presenter}{Diagnose\+\_\+\+Extra\+Visual\+Presenter}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+cpp.
+
+
+
+References Diagnose\+\_\+\+Extra\+Visual\+Presenter().
+
+
+
+Referenced by Diagnose\+\_\+\+Extra\+Visual\+Presenter().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose___extra_visual_presenter_a9de8b12ae2fd0cf01f876077f2d3704e}\label{class_diagnose___extra_visual_presenter_a9de8b12ae2fd0cf01f876077f2d3704e}} 
+\index{Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+Presenter\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_presenter_a600ef79e8abd33f3f927f8b715b88aa2}\label{class_diagnose___extra_visual_presenter_a600ef79e8abd33f3f927f8b715b88aa2}} 
+\index{Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}!sendEvent@{sendEvent}}
+\index{sendEvent@{sendEvent}!Diagnose\_ExtraVisualPresenter@{Diagnose\_ExtraVisualPresenter}}
+\doxysubsubsection{\texorpdfstring{sendEvent()}{sendEvent()}}
+{\footnotesize\ttfamily bool Diagnose\+\_\+\+Extra\+Visual\+Presenter\+::send\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{message,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Send event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em message} & message data \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+extravisual\+\_\+screen/Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+extravisual\+\_\+screen/Diagnose\+\_\+\+Extra\+Visual\+Presenter.\+cpp\end{DoxyCompactItemize}

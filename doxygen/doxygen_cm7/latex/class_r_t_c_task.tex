@@ -1,0 +1,70 @@
+\hypertarget{class_r_t_c_task}{}\doxysection{R\+T\+C\+Task Class Reference}
+\label{class_r_t_c_task}\index{RTCTask@{RTCTask}}
+
+
+Class for handling R\+TC task.  
+
+
+
+
+{\ttfamily \#include $<$R\+T\+C\+Task.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_r_t_c_task_a8821ec067fb0b74d191505a168ee286f}\label{class_r_t_c_task_a8821ec067fb0b74d191505a168ee286f}} 
+\mbox{\hyperlink{class_r_t_c_task_a8821ec067fb0b74d191505a168ee286f}{R\+T\+C\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_r_t_c_task}{R\+T\+C\+Task}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_t_c_task_a0700119fc1ec22f1e921c76522dc46e9}\label{class_r_t_c_task_a0700119fc1ec22f1e921c76522dc46e9}} 
+void \mbox{\hyperlink{class_r_t_c_task_a0700119fc1ec22f1e921c76522dc46e9}{process\+Incoming\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Process incoming events to the R\+TC task. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_r_t_c_task_a2f89846d331c7a5b1ea7448037df696e}\label{class_r_t_c_task_a2f89846d331c7a5b1ea7448037df696e}} 
+void \mbox{\hyperlink{class_r_t_c_task_a2f89846d331c7a5b1ea7448037df696e}{process\+Date\+And\+Time\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Process date and time update (change current time and date if necessary) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_t_c_task_a6d1047d616921571653ce99261539b34}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for handling R\+TC task. 
+
+Definition at line 16 of file R\+T\+C\+Task.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_r_t_c_task_a6d1047d616921571653ce99261539b34}\label{class_r_t_c_task_a6d1047d616921571653ce99261539b34}} 
+\index{RTCTask@{RTCTask}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!RTCTask@{RTCTask}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void R\+T\+C\+Task\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file R\+T\+C\+Task.\+cpp.
+
+
+
+Referenced by process\+Incoming\+Events().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/\+User/\+R\+T\+C/inc/\mbox{\hyperlink{_r_t_c_task_8h}{R\+T\+C\+Task.\+h}}\item 
+Application/\+User/\+R\+T\+C/src/\mbox{\hyperlink{_r_t_c_task_8cpp}{R\+T\+C\+Task.\+cpp}}\end{DoxyCompactItemize}

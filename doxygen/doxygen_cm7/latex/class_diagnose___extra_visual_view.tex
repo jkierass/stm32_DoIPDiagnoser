@@ -1,0 +1,294 @@
+\hypertarget{class_diagnose___extra_visual_view}{}\doxysection{Diagnose\+\_\+\+Extra\+Visual\+View Class Reference}
+\label{class_diagnose___extra_visual_view}\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+
+
+View for Diagnose Extra Visual screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+\_\+\+Extra\+Visual\+View.\+hpp$>$}
+
+
+
+Inherits Diagnose\+\_\+\+Extra\+Visual\+View\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a1b3a5c3749e5324ef633d6d0de1cf5c8}\label{class_diagnose___extra_visual_view_a1b3a5c3749e5324ef633d6d0de1cf5c8}} 
+\mbox{\hyperlink{class_diagnose___extra_visual_view_a1b3a5c3749e5324ef633d6d0de1cf5c8}{Diagnose\+\_\+\+Extra\+Visual\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Diagnose Extra Visual View object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_ad33dd693bce96712ee371e3c2653014c}\label{class_diagnose___extra_visual_view_ad33dd693bce96712ee371e3c2653014c}} 
+virtual \mbox{\hyperlink{class_diagnose___extra_visual_view_ad33dd693bce96712ee371e3c2653014c}{$\sim$\+Diagnose\+\_\+\+Extra\+Visual\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Diagnose Extra Visual View object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a44538e327f1e27fcaef7528261ef8dd2}\label{class_diagnose___extra_visual_view_a44538e327f1e27fcaef7528261ef8dd2}} 
+virtual void \mbox{\hyperlink{class_diagnose___extra_visual_view_a44538e327f1e27fcaef7528261ef8dd2}{setup\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a66e5358b7e65ed523a6e569e067ad696}\label{class_diagnose___extra_visual_view_a66e5358b7e65ed523a6e569e067ad696}} 
+virtual void \mbox{\hyperlink{class_diagnose___extra_visual_view_a66e5358b7e65ed523a6e569e067ad696}{tear\+Down\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Tear down the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_ab2a22671a58a22290163c20a1f5c6cd0}{Update\+Parameter\+Value}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event\+Type, const \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Update the diagnostic parameter value on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_aa6e7d45a0e76f868d0dbbf9e6046839e}{set\+Temperature}} (short int temperature)
+\begin{DoxyCompactList}\small\item\em Set the temperature on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a839ffbffb785348db59cce61be3d19b1}{set\+Date}} (uint8\+\_\+t day, uint8\+\_\+t month, unsigned int year)
+\begin{DoxyCompactList}\small\item\em Set the date on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_af3ec7101091bb8884a883db7507ccc8f}{set\+Time}} (uint8\+\_\+t hour, uint8\+\_\+t minute)
+\begin{DoxyCompactList}\small\item\em Set the time on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a774cf5824162df556d31c482ed79ab19}{show\+Popup}} (uint8\+\_\+t message\mbox{[}$\,$\mbox{]}, size\+\_\+t msg\+Size)
+\begin{DoxyCompactList}\small\item\em Show popup with message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_aa0fa51c0abe1204f9cd9897bd6199e6e}\label{class_diagnose___extra_visual_view_aa0fa51c0abe1204f9cd9897bd6199e6e}} 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_aa0fa51c0abe1204f9cd9897bd6199e6e}{Button\+Uart\+Clicked}} () override
+\begin{DoxyCompactList}\small\item\em Handle button U\+A\+RT clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a6b34fd505c3d5281513621feb05e5787}{graph\+Oil\+\_\+\+Clicked}} (Abstract\+Data\+Graph\+::\+Graph\+Click\+Event value) override
+\begin{DoxyCompactList}\small\item\em Handle graph oil clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a2929b07d0fc0f993a4ee19af36a7faeb}{graph\+Coolant\+\_\+\+Clicked}} (Abstract\+Data\+Graph\+::\+Graph\+Click\+Event value) override
+\begin{DoxyCompactList}\small\item\em Handle graph coolant clicked. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a5b333bbfb18891a7c9dc0eb36268e20c}{graph\+Oil\+\_\+\+Dragged}} (Abstract\+Data\+Graph\+::\+Graph\+Drag\+Event value) override
+\begin{DoxyCompactList}\small\item\em Handle graph oil dragged. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a7a1fc083f8c7bdefde966a80546ecf36}{graph\+Coolant\+\_\+\+Dragged}} (Abstract\+Data\+Graph\+::\+Graph\+Drag\+Event value) override
+\begin{DoxyCompactList}\small\item\em Handle graph coolant dragged. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a8161f6c927f613d3bd33490cbfabb2b0}{set\+Request\+Cycle\+Time}} (uint16\+\_\+t cycle\+Ms)
+\begin{DoxyCompactList}\small\item\em Set request cycle time value on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a79f801264460d610e3de24c35612ad33}\label{class_diagnose___extra_visual_view_a79f801264460d610e3de24c35612ad33}} 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a79f801264460d610e3de24c35612ad33}{update\+Info\+Widget\+Posision\+\_\+\+Oil}} ()
+\begin{DoxyCompactList}\small\item\em Update the position of value snippet on the oil graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a2309b72ae8cc83f0d7f1da0e9408c24e}\label{class_diagnose___extra_visual_view_a2309b72ae8cc83f0d7f1da0e9408c24e}} 
+void \mbox{\hyperlink{class_diagnose___extra_visual_view_a2309b72ae8cc83f0d7f1da0e9408c24e}{update\+Info\+Widget\+Posision\+\_\+\+Coolant}} ()
+\begin{DoxyCompactList}\small\item\em Update the position of value snippet on the coolant graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for Diagnose Extra Visual screen. 
+
+Definition at line 10 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a2929b07d0fc0f993a4ee19af36a7faeb}\label{class_diagnose___extra_visual_view_a2929b07d0fc0f993a4ee19af36a7faeb}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!graphCoolant\_Clicked@{graphCoolant\_Clicked}}
+\index{graphCoolant\_Clicked@{graphCoolant\_Clicked}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{graphCoolant\_Clicked()}{graphCoolant\_Clicked()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::graph\+Coolant\+\_\+\+Clicked (\begin{DoxyParamCaption}\item[{Abstract\+Data\+Graph\+::\+Graph\+Click\+Event}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle graph coolant clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & graph click event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+
+
+References update\+Info\+Widget\+Posision\+\_\+\+Coolant().
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a7a1fc083f8c7bdefde966a80546ecf36}\label{class_diagnose___extra_visual_view_a7a1fc083f8c7bdefde966a80546ecf36}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!graphCoolant\_Dragged@{graphCoolant\_Dragged}}
+\index{graphCoolant\_Dragged@{graphCoolant\_Dragged}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{graphCoolant\_Dragged()}{graphCoolant\_Dragged()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::graph\+Coolant\+\_\+\+Dragged (\begin{DoxyParamCaption}\item[{Abstract\+Data\+Graph\+::\+Graph\+Drag\+Event}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle graph coolant dragged. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & graph drag event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+
+
+References update\+Info\+Widget\+Posision\+\_\+\+Coolant().
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a6b34fd505c3d5281513621feb05e5787}\label{class_diagnose___extra_visual_view_a6b34fd505c3d5281513621feb05e5787}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!graphOil\_Clicked@{graphOil\_Clicked}}
+\index{graphOil\_Clicked@{graphOil\_Clicked}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{graphOil\_Clicked()}{graphOil\_Clicked()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::graph\+Oil\+\_\+\+Clicked (\begin{DoxyParamCaption}\item[{Abstract\+Data\+Graph\+::\+Graph\+Click\+Event}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle graph oil clicked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & graph click event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+
+
+References update\+Info\+Widget\+Posision\+\_\+\+Oil().
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a5b333bbfb18891a7c9dc0eb36268e20c}\label{class_diagnose___extra_visual_view_a5b333bbfb18891a7c9dc0eb36268e20c}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!graphOil\_Dragged@{graphOil\_Dragged}}
+\index{graphOil\_Dragged@{graphOil\_Dragged}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{graphOil\_Dragged()}{graphOil\_Dragged()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::graph\+Oil\+\_\+\+Dragged (\begin{DoxyParamCaption}\item[{Abstract\+Data\+Graph\+::\+Graph\+Drag\+Event}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle graph oil dragged. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & graph drag event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 72 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+
+
+References update\+Info\+Widget\+Posision\+\_\+\+Oil().
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a839ffbffb785348db59cce61be3d19b1}\label{class_diagnose___extra_visual_view_a839ffbffb785348db59cce61be3d19b1}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!setDate@{setDate}}
+\index{setDate@{setDate}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::set\+Date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day,  }\item[{uint8\+\_\+t}]{month,  }\item[{unsigned int}]{year }\end{DoxyParamCaption})}
+
+
+
+Set the date on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & day \\
+\hline
+{\em month} & month \\
+\hline
+{\em year} & year \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 124 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a8161f6c927f613d3bd33490cbfabb2b0}\label{class_diagnose___extra_visual_view_a8161f6c927f613d3bd33490cbfabb2b0}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!setRequestCycleTime@{setRequestCycleTime}}
+\index{setRequestCycleTime@{setRequestCycleTime}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{setRequestCycleTime()}{setRequestCycleTime()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::set\+Request\+Cycle\+Time (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{cycle\+Ms }\end{DoxyParamCaption})}
+
+
+
+Set request cycle time value on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycle\+Ms} & cycle duration is ms \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_aa6e7d45a0e76f868d0dbbf9e6046839e}\label{class_diagnose___extra_visual_view_aa6e7d45a0e76f868d0dbbf9e6046839e}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::set\+Temperature (\begin{DoxyParamCaption}\item[{short int}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Set the temperature on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & temperature value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 118 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_af3ec7101091bb8884a883db7507ccc8f}\label{class_diagnose___extra_visual_view_af3ec7101091bb8884a883db7507ccc8f}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!setTime@{setTime}}
+\index{setTime@{setTime}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{hour,  }\item[{uint8\+\_\+t}]{minute }\end{DoxyParamCaption})}
+
+
+
+Set the time on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & hour \\
+\hline
+{\em minute} & minute \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_a774cf5824162df556d31c482ed79ab19}\label{class_diagnose___extra_visual_view_a774cf5824162df556d31c482ed79ab19}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!showPopup@{showPopup}}
+\index{showPopup@{showPopup}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{showPopup()}{showPopup()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::show\+Popup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{msg\+Size }\end{DoxyParamCaption})}
+
+
+
+Show popup with message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message to show \\
+\hline
+{\em msg\+Size} & message size \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 136 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___extra_visual_view_ab2a22671a58a22290163c20a1f5c6cd0}\label{class_diagnose___extra_visual_view_ab2a22671a58a22290163c20a1f5c6cd0}} 
+\index{Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}!UpdateParameterValue@{UpdateParameterValue}}
+\index{UpdateParameterValue@{UpdateParameterValue}!Diagnose\_ExtraVisualView@{Diagnose\_ExtraVisualView}}
+\doxysubsubsection{\texorpdfstring{UpdateParameterValue()}{UpdateParameterValue()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+Extra\+Visual\+View\+::\+Update\+Parameter\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event\+Type,  }\item[{const \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Update the diagnostic parameter value on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Type} & event type \\
+\hline
+{\em data} & message data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+extravisual\+\_\+screen/Diagnose\+\_\+\+Extra\+Visual\+View.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+extravisual\+\_\+screen/Diagnose\+\_\+\+Extra\+Visual\+View.\+cpp\end{DoxyCompactItemize}

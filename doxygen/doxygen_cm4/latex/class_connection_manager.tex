@@ -1,0 +1,197 @@
+\hypertarget{class_connection_manager}{}\doxysection{Connection\+Manager Class Reference}
+\label{class_connection_manager}\index{ConnectionManager@{ConnectionManager}}
+
+
+Singleton class for handling connection with E\+CU.  
+
+
+
+
+{\ttfamily \#include $<$Connection\+Manager.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_connection_manager_a7f8899e9980b846a45327dff1ee9db23}\label{class_connection_manager_a7f8899e9980b846a45327dff1ee9db23}} 
+enum \mbox{\hyperlink{class_connection_manager_a7f8899e9980b846a45327dff1ee9db23}{E\+Connection\+Event}} \{ \newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+T\+C\+P\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+T\+C\+P\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+N\+O\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+\_\+\+R\+E\+Q\+U\+E\+ST}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+T\+C\+P\+\_\+\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+\_\+\+R\+E\+C\+E\+I\+V\+ED}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for connection events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_connection_manager_a798e2830e5159a4b2dc422cd5b227535}{Handle\+Tcp\+Recv\+Cb}} (void $\ast$arg, struct tcp\+\_\+pcb $\ast$tpcb, struct pbuf $\ast$p, err\+\_\+t err)
+\begin{DoxyCompactList}\small\item\em Handle the callback from Lw\+IP for receiving data over T\+CP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_connection_manager_a535805c1b072711774b898420a0aec5b}{Handle\+Tcp\+Connect\+Cb}} (void $\ast$arg, struct tcp\+\_\+pcb $\ast$tpcb, err\+\_\+t err)
+\begin{DoxyCompactList}\small\item\em Handle the callback from Lw\+IP for connecting T\+CP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_connection_manager_a2a278f8d6a42b7508d31e01e3335ce4a}{Handle\+Tcp\+Err\+Cb}} (void $\ast$arg, err\+\_\+t err)
+\begin{DoxyCompactList}\small\item\em Handle the callback from Lw\+IP for error in T\+CP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_connection_manager_adb2af49db59b8cfb7d6cb7ee5777d415}{Handle\+Udp\+Recv\+Cb}} (void $\ast$arg, struct udp\+\_\+pcb $\ast$pcb, struct pbuf $\ast$p, const ip\+\_\+addr\+\_\+t $\ast$addr, u16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Handle the callback from Lw\+IP for receiving data over U\+DP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_connection_manager_a9d935ab6916be169ab643b5c43634938}{send\+Request\+For\+Data}} (\mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{A\+P\+I\+Do\+I\+P\+::\+E\+Do\+I\+P\+Request}} request)
+\begin{DoxyCompactList}\small\item\em Send request for U\+DP data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_connection_manager_a911e40d3ca5eb1242febe7453743771b}\label{class_connection_manager_a911e40d3ca5eb1242febe7453743771b}} 
+void \mbox{\hyperlink{class_connection_manager_a911e40d3ca5eb1242febe7453743771b}{udp\+Disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown udp connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_connection_manager_a1f5ad3183ff8350a3d312b8fff5eeb8f}\label{class_connection_manager_a1f5ad3183ff8350a3d312b8fff5eeb8f}} 
+void \mbox{\hyperlink{class_connection_manager_a1f5ad3183ff8350a3d312b8fff5eeb8f}{udp\+Connect}} ()
+\begin{DoxyCompactList}\small\item\em Setup udp connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_connection_manager_a5316e680b03ddc0b49b9fa0d2438dacb}\label{class_connection_manager_a5316e680b03ddc0b49b9fa0d2438dacb}} 
+bool \mbox{\hyperlink{class_connection_manager_a5316e680b03ddc0b49b9fa0d2438dacb}{tcp\+Connect}} ()
+\begin{DoxyCompactList}\small\item\em Setup tcp connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_connection_manager_ac46a8c2cdfb736067d076d20b5c2ba6c}\label{class_connection_manager_ac46a8c2cdfb736067d076d20b5c2ba6c}} 
+void \mbox{\hyperlink{class_connection_manager_ac46a8c2cdfb736067d076d20b5c2ba6c}{tcp\+Disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown tcp connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_connection_manager_a4aa45293f1a401614f1fcf6d4ef5f080}\label{class_connection_manager_a4aa45293f1a401614f1fcf6d4ef5f080}} 
+void \mbox{\hyperlink{class_connection_manager_a4aa45293f1a401614f1fcf6d4ef5f080}{process\+Udp\+Dicovery}} ()
+\begin{DoxyCompactList}\small\item\em Process U\+DP discovery (Do\+IP) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_connection_manager_a2c69a7761108a63c2e597201299243fa}{set\+Sending\+Data\+By\+U\+A\+RT}} (bool onoff)
+\begin{DoxyCompactList}\small\item\em Set flag for sending data by U\+A\+RT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_connection_manager}{Connection\+Manager}} \& \mbox{\hyperlink{class_connection_manager_af3c069c32b685944c3a3b91574639244}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the instance of the \mbox{\hyperlink{class_connection_manager}{Connection\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class for handling connection with E\+CU. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_connection_manager_a535805c1b072711774b898420a0aec5b}\label{class_connection_manager_a535805c1b072711774b898420a0aec5b}} 
+\index{ConnectionManager@{ConnectionManager}!HandleTcpConnectCb@{HandleTcpConnectCb}}
+\index{HandleTcpConnectCb@{HandleTcpConnectCb}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{HandleTcpConnectCb()}{HandleTcpConnectCb()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::\+Handle\+Tcp\+Connect\+Cb (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{struct tcp\+\_\+pcb $\ast$}]{tpcb,  }\item[{err\+\_\+t}]{err }\end{DoxyParamCaption})}
+
+
+
+Handle the callback from Lw\+IP for connecting T\+CP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & argument \\
+\hline
+{\em tpcb} & pointer to the T\+CP connection control block \\
+\hline
+{\em err} & error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_connection_manager_a2a278f8d6a42b7508d31e01e3335ce4a}\label{class_connection_manager_a2a278f8d6a42b7508d31e01e3335ce4a}} 
+\index{ConnectionManager@{ConnectionManager}!HandleTcpErrCb@{HandleTcpErrCb}}
+\index{HandleTcpErrCb@{HandleTcpErrCb}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{HandleTcpErrCb()}{HandleTcpErrCb()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::\+Handle\+Tcp\+Err\+Cb (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{err\+\_\+t}]{err }\end{DoxyParamCaption})}
+
+
+
+Handle the callback from Lw\+IP for error in T\+CP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & argument \\
+\hline
+{\em err} & error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_connection_manager_a798e2830e5159a4b2dc422cd5b227535}\label{class_connection_manager_a798e2830e5159a4b2dc422cd5b227535}} 
+\index{ConnectionManager@{ConnectionManager}!HandleTcpRecvCb@{HandleTcpRecvCb}}
+\index{HandleTcpRecvCb@{HandleTcpRecvCb}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{HandleTcpRecvCb()}{HandleTcpRecvCb()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::\+Handle\+Tcp\+Recv\+Cb (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{struct tcp\+\_\+pcb $\ast$}]{tpcb,  }\item[{struct pbuf $\ast$}]{p,  }\item[{err\+\_\+t}]{err }\end{DoxyParamCaption})}
+
+
+
+Handle the callback from Lw\+IP for receiving data over T\+CP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & argument \\
+\hline
+{\em tpcb} & pointer to the T\+CP connection control block \\
+\hline
+{\em p} & pointer to the received data \\
+\hline
+{\em err} & error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_connection_manager_adb2af49db59b8cfb7d6cb7ee5777d415}\label{class_connection_manager_adb2af49db59b8cfb7d6cb7ee5777d415}} 
+\index{ConnectionManager@{ConnectionManager}!HandleUdpRecvCb@{HandleUdpRecvCb}}
+\index{HandleUdpRecvCb@{HandleUdpRecvCb}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{HandleUdpRecvCb()}{HandleUdpRecvCb()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::\+Handle\+Udp\+Recv\+Cb (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg,  }\item[{struct udp\+\_\+pcb $\ast$}]{pcb,  }\item[{struct pbuf $\ast$}]{p,  }\item[{const ip\+\_\+addr\+\_\+t $\ast$}]{addr,  }\item[{u16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+Handle the callback from Lw\+IP for receiving data over U\+DP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & argument \\
+\hline
+{\em pcb} & pointer to the U\+DP connection control block \\
+\hline
+{\em p} & pointer to the received data \\
+\hline
+{\em addr} & pointer to the IP address \\
+\hline
+{\em port} & port number \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_connection_manager_af3c069c32b685944c3a3b91574639244}\label{class_connection_manager_af3c069c32b685944c3a3b91574639244}} 
+\index{ConnectionManager@{ConnectionManager}!instance@{instance}}
+\index{instance@{instance}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_connection_manager}{Connection\+Manager}}\& Connection\+Manager\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the instance of the \mbox{\hyperlink{class_connection_manager}{Connection\+Manager}}. 
+
+\begin{DoxyReturn}{Returns}
+instance of the \mbox{\hyperlink{class_connection_manager}{Connection\+Manager}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_connection_manager_a9d935ab6916be169ab643b5c43634938}\label{class_connection_manager_a9d935ab6916be169ab643b5c43634938}} 
+\index{ConnectionManager@{ConnectionManager}!sendRequestForData@{sendRequestForData}}
+\index{sendRequestForData@{sendRequestForData}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{sendRequestForData()}{sendRequestForData()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::send\+Request\+For\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{A\+P\+I\+Do\+I\+P\+::\+E\+Do\+I\+P\+Request}}}]{request }\end{DoxyParamCaption})}
+
+
+
+Send request for U\+DP data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & request type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_connection_manager_a2c69a7761108a63c2e597201299243fa}\label{class_connection_manager_a2c69a7761108a63c2e597201299243fa}} 
+\index{ConnectionManager@{ConnectionManager}!setSendingDataByUART@{setSendingDataByUART}}
+\index{setSendingDataByUART@{setSendingDataByUART}!ConnectionManager@{ConnectionManager}}
+\doxysubsubsection{\texorpdfstring{setSendingDataByUART()}{setSendingDataByUART()}}
+{\footnotesize\ttfamily void Connection\+Manager\+::set\+Sending\+Data\+By\+U\+A\+RT (\begin{DoxyParamCaption}\item[{bool}]{onoff }\end{DoxyParamCaption})}
+
+
+
+Set flag for sending data by U\+A\+RT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em onoff} & true to start, false to stop \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/\+User/\+Do\+I\+P/inc/\mbox{\hyperlink{_connection_manager_8h}{Connection\+Manager.\+h}}\item 
+Application/\+User/\+Do\+I\+P/src/\mbox{\hyperlink{_connection_manager_8cpp}{Connection\+Manager.\+cpp}}\end{DoxyCompactItemize}

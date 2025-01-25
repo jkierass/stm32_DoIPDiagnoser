@@ -1,0 +1,33 @@
+\hypertarget{_message_data_types_8h}{}\doxysection{C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+Common/\+Inc/\+Message\+Data\+Types.h File Reference}
+\label{_message_data_types_8h}\index{C:/Users/jakub/Desktop/Praca\_inz/stm32\_workspace/stm32\_doipdiagnoser/Common/Inc/MessageDataTypes.h@{C:/Users/jakub/Desktop/Praca\_inz/stm32\_workspace/stm32\_doipdiagnoser/Common/Inc/MessageDataTypes.h}}
+
+
+\+: Header for message data types used for communication in the system.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}
+\begin{DoxyCompactList}\small\item\em Union structure holding event\textquotesingle{}s data. Each event should have its own declared variable variant in this union. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_message}{S\+Message}}
+\begin{DoxyCompactList}\small\item\em Structure reperesenting a message/event of fixed 29 bytes size that is used for asynchronous communication through the entire system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}\label{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}} 
+enum \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} 
+\begin{DoxyCompactList}\small\item\em Information of where the event should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}\label{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}} 
+enum \mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} 
+\begin{DoxyCompactList}\small\item\em Subscribable events. Async requests are processed just like events, but are declared in pairs, where A\+S\+Y\+N\+C\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+$\ast$ is an event sent by requester, and A\+S\+Y\+N\+C\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+$\ast$ is an event sent by the worker thread upon the task completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for message data types used for communication in the system. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}

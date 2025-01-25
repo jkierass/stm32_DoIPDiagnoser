@@ -1,0 +1,240 @@
+\hypertarget{_u_d_s_data_type_8h}{}\doxysection{Application/\+User/\+Do\+I\+P/inc/\+U\+D\+S\+Data\+Type.h File Reference}
+\label{_u_d_s_data_type_8h}\index{Application/User/DoIP/inc/UDSDataType.h@{Application/User/DoIP/inc/UDSDataType.h}}
+
+
+\+: Header for data types used in U\+DS communication.  
+
+
+{\ttfamily \#include $<$cstdint$>$}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}\label{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}} 
+enum \mbox{\hyperlink{_u_d_s_data_type_8h_a2a76693b83d9ed50423b667d6da2cb90}{E\+E\+C\+U\+Address}} \+: uint8\+\_\+t \{ {\bfseries E\+C\+U\+\_\+\+M\+A\+S\+T\+E\+R\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+D\+DR} = 0x10, 
+{\bfseries E\+C\+U\+\_\+\+D\+M\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+D\+DR} = 0x12, 
+{\bfseries E\+C\+U\+\_\+\+K\+O\+M\+B\+I\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+D\+DR} = 0x60, 
+{\bfseries E\+C\+U\+\_\+\+I\+H\+K\+A\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+D\+DR} = 0x78
+ \}
+\begin{DoxyCompactList}\small\item\em E\+CU addresses used in U\+DS frames. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_a6664fea766d950f4212daa604cd0ca0f}\label{_u_d_s_data_type_8h_a6664fea766d950f4212daa604cd0ca0f}} 
+enum \mbox{\hyperlink{_u_d_s_data_type_8h_a6664fea766d950f4212daa604cd0ca0f}{E\+U\+D\+S\+Request\+S\+ID}} \+: uint8\+\_\+t \{ \newline
+{\bfseries D\+I\+A\+G\+N\+O\+S\+T\+I\+C\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x10, 
+{\bfseries E\+C\+U\+\_\+\+R\+E\+S\+ET} = 0x11, 
+{\bfseries C\+L\+E\+A\+R\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+I\+C\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON} = 0x14, 
+{\bfseries R\+E\+A\+D\+\_\+\+D\+T\+C\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON} = 0x19, 
+\newline
+{\bfseries R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x22, 
+{\bfseries R\+E\+A\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+Y\+\_\+\+A\+D\+D\+R\+E\+SS} = 0x23, 
+{\bfseries R\+E\+A\+D\+\_\+\+S\+C\+A\+L\+I\+N\+G\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x24, 
+{\bfseries S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+A\+C\+C\+E\+SS} = 0x27, 
+\newline
+{\bfseries C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x28, 
+{\bfseries A\+U\+T\+H\+E\+N\+T\+I\+C\+A\+T\+I\+ON} = 0x29, 
+{\bfseries R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC} = 0x2A, 
+{\bfseries D\+Y\+N\+A\+M\+I\+C\+A\+L\+L\+Y\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x2C, 
+\newline
+{\bfseries W\+R\+I\+T\+E\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x2E, 
+{\bfseries I\+N\+P\+U\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x2F, 
+{\bfseries W\+R\+I\+T\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+Y\+\_\+\+A\+D\+D\+R\+E\+SS} = 0x3D, 
+{\bfseries T\+E\+S\+T\+E\+R\+\_\+\+P\+R\+E\+S\+E\+NT} = 0x3E, 
+\newline
+{\bfseries R\+O\+U\+T\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x31, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+W\+N\+L\+O\+AD} = 0x34, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+U\+P\+L\+O\+AD} = 0x35, 
+{\bfseries T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+D\+A\+TA} = 0x36, 
+\newline
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+X\+IT} = 0x37, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER} = 0x38, 
+{\bfseries A\+C\+C\+E\+S\+S\+\_\+\+T\+I\+M\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS} = 0x83, 
+{\bfseries S\+E\+C\+U\+R\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON} = 0x84, 
+\newline
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+D\+T\+C\+\_\+\+S\+E\+T\+T\+I\+N\+GS} = 0x85, 
+{\bfseries R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+O\+N\+\_\+\+E\+V\+E\+NT} = 0x86, 
+{\bfseries L\+I\+N\+K\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x87
+ \}
+\begin{DoxyCompactList}\small\item\em U\+DS Service Identifiers used by client (diagnostic tool) based on I\+SO 14229. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_a73149b13184ea73376aef59db961ddb2}\label{_u_d_s_data_type_8h_a73149b13184ea73376aef59db961ddb2}} 
+enum \mbox{\hyperlink{_u_d_s_data_type_8h_a73149b13184ea73376aef59db961ddb2}{E\+U\+D\+S\+Response\+S\+ID}} \+: uint8\+\_\+t \{ \newline
+{\bfseries D\+I\+A\+G\+N\+O\+S\+T\+I\+C\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x50, 
+{\bfseries E\+C\+U\+\_\+\+R\+E\+S\+ET} = 0x51, 
+{\bfseries C\+L\+E\+A\+R\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+I\+C\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON} = 0x54, 
+{\bfseries R\+E\+A\+D\+\_\+\+D\+T\+C\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON} = 0x59, 
+\newline
+{\bfseries R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x62, 
+{\bfseries R\+E\+A\+D\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+Y\+\_\+\+A\+D\+D\+R\+E\+SS} = 0x63, 
+{\bfseries R\+E\+A\+D\+\_\+\+S\+C\+A\+L\+I\+N\+G\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x64, 
+{\bfseries S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+A\+C\+C\+E\+SS} = 0x67, 
+\newline
+{\bfseries C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x68, 
+{\bfseries A\+U\+T\+H\+E\+N\+T\+I\+C\+A\+T\+I\+ON} = 0x69, 
+{\bfseries R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+P\+E\+R\+I\+O\+D\+IC} = 0x6A, 
+{\bfseries D\+Y\+N\+A\+M\+I\+C\+A\+L\+L\+Y\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x6C, 
+\newline
+{\bfseries W\+R\+I\+T\+E\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x6E, 
+{\bfseries I\+N\+P\+U\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+C\+O\+N\+T\+R\+O\+L\+\_\+\+B\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x6F, 
+{\bfseries R\+O\+U\+T\+I\+N\+E\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x71, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+O\+W\+N\+L\+O\+AD} = 0x74, 
+\newline
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+U\+P\+L\+O\+AD} = 0x75, 
+{\bfseries T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+D\+A\+TA} = 0x76, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+T\+R\+A\+N\+S\+F\+E\+R\+\_\+\+E\+X\+IT} = 0x77, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+R\+A\+N\+S\+F\+ER} = 0x78, 
+\newline
+{\bfseries W\+R\+I\+T\+E\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+B\+Y\+\_\+\+A\+D\+D\+R\+E\+SS} = 0x7D, 
+{\bfseries T\+E\+S\+T\+E\+R\+\_\+\+P\+R\+E\+S\+E\+NT} = 0x7E, 
+{\bfseries N\+E\+G\+A\+T\+I\+V\+E\+\_\+\+R\+E\+S\+P\+O\+N\+SE} = 0x7F, 
+{\bfseries A\+C\+C\+E\+S\+S\+\_\+\+T\+I\+M\+I\+N\+G\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+RS} = 0x\+C3, 
+\newline
+{\bfseries S\+E\+C\+U\+R\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+A\+N\+S\+M\+I\+S\+S\+I\+ON} = 0x\+C4, 
+{\bfseries C\+O\+N\+T\+R\+O\+L\+\_\+\+D\+T\+C\+\_\+\+S\+E\+T\+T\+I\+N\+GS} = 0x\+C5, 
+{\bfseries R\+E\+S\+P\+O\+N\+S\+E\+\_\+\+O\+N\+\_\+\+E\+V\+E\+NT} = 0x\+C6, 
+{\bfseries L\+I\+N\+K\+\_\+\+C\+O\+N\+T\+R\+OL} = 0x\+C7
+ \}
+\begin{DoxyCompactList}\small\item\em U\+DS Service Identifiers used by server (E\+CU) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_aa195b6fd6f36ee3b12ebc0b49a0822f4}\label{_u_d_s_data_type_8h_aa195b6fd6f36ee3b12ebc0b49a0822f4}} 
+enum \mbox{\hyperlink{_u_d_s_data_type_8h_aa195b6fd6f36ee3b12ebc0b49a0822f4}{E\+U\+D\+S\+D\+ID}} \+: uint16\+\_\+t \{ \newline
+{\bfseries I\+S\+O\+\_\+\+S\+A\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+0} = 0x0000, 
+{\bfseries I\+S\+O\+\_\+\+S\+A\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+E\+N\+D\+\_\+0} = 0x00\+FF, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+0} = 0x0100, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+0} = 0x\+A5\+FF, 
+\newline
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+0} = 0x\+A600, 
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+E\+N\+D\+\_\+0} = 0x\+A7\+FF, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+1} = 0x\+A800, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+1} = 0x\+A\+C\+FF, 
+\newline
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+1} = 0x\+A\+D00, 
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+E\+N\+D\+\_\+1} = 0x\+A\+F\+FF, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+2} = 0x\+B000, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+2} = 0x\+B1\+FF, 
+\newline
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+2} = 0x\+B200, 
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+E\+N\+D\+\_\+2} = 0x\+B\+F\+FF, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+3} = 0x\+C000, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+3} = 0x\+C2\+FF, 
+\newline
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+3} = 0x\+C300, 
+{\bfseries R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+L\+E\+G\+I\+S\+L\+A\+T\+I\+V\+E\+\_\+\+E\+N\+D\+\_\+3} = 0x\+C\+E\+FF, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+4} = 0x\+C\+F00, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+R\+PM} = 0x\+D106, 
+\newline
+{\bfseries K\+O\+M\+B\+I\+\_\+\+D\+I\+S\+T\+A\+N\+CE} = 0x\+D10D, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+F\+U\+EL} = 0x\+D11F, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+S\+P\+E\+ED} = 0x\+D107, 
+{\bfseries K\+O\+M\+B\+I\+\_\+\+T\+E\+MP} = 0x\+D112, 
+\newline
+{\bfseries I\+H\+K\+A\+\_\+\+E\+V\+A\+P\+O\+R\+A\+T\+OR} = 0x\+D95C, 
+{\bfseries I\+H\+K\+A\+\_\+\+T\+E\+M\+P\+\_\+\+S\+E\+L\+E\+C\+T\+OR} = 0x\+D977, 
+{\bfseries I\+H\+K\+A\+\_\+\+V\+E\+N\+T\+I\+L\+L\+A\+T\+I\+O\+N\+\_\+\+T\+E\+MP} = 0x\+D957, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+4} = 0x\+E\+F\+FF, 
+\newline
+{\bfseries N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+T\+R\+A\+C\+T\+O\+R\+\_\+\+T\+R\+A\+I\+L\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F000, 
+{\bfseries N\+E\+T\+W\+O\+R\+K\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+O\+N\+\_\+\+T\+R\+A\+C\+T\+O\+R\+\_\+\+T\+R\+A\+I\+L\+E\+R\+\_\+\+E\+ND} = 0x\+F00F, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+5} = 0x\+F010, 
+{\bfseries V\+E\+H\+I\+C\+L\+E\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+5} = 0x\+F0\+FF, 
+\newline
+{\bfseries I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+0} = 0x\+F100, 
+{\bfseries I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+0} = 0x\+F17F, 
+{\bfseries B\+O\+O\+T\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+ON} = 0x\+F180, 
+{\bfseries A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+ON} = 0x\+F181, 
+\newline
+{\bfseries A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+ON} = 0x\+F182, 
+{\bfseries B\+O\+O\+T\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT} = 0x\+F183, 
+{\bfseries A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT} = 0x\+F184, 
+{\bfseries A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+F\+I\+N\+G\+E\+R\+P\+R\+I\+NT} = 0x\+F185, 
+\newline
+{\bfseries A\+C\+T\+I\+V\+E\+\_\+\+D\+I\+A\+G\+N\+O\+S\+T\+I\+C\+\_\+\+S\+E\+S\+S\+I\+ON} = 0x\+F186, 
+{\bfseries S\+P\+A\+R\+E\+\_\+\+P\+A\+R\+T\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F187, 
+{\bfseries E\+C\+U\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F188, 
+{\bfseries E\+C\+U\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F189, 
+\newline
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x\+F18A, 
+{\bfseries E\+C\+U\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+I\+N\+G\+\_\+\+D\+A\+TE} = 0x\+F18B, 
+{\bfseries E\+C\+U\+\_\+\+S\+E\+R\+I\+A\+L\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F18C, 
+{\bfseries S\+U\+P\+P\+O\+R\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+A\+L\+\_\+\+U\+N\+I\+TS} = 0x\+F18D, 
+\newline
+{\bfseries K\+I\+T\+\_\+\+A\+S\+S\+E\+M\+B\+L\+Y\+\_\+\+P\+A\+R\+T\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F18E, 
+{\bfseries V\+IN} = 0x\+F190, 
+{\bfseries E\+C\+U\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F191, 
+{\bfseries S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F192, 
+\newline
+{\bfseries S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON} = 0x\+F193, 
+{\bfseries S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F194, 
+{\bfseries S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+\_\+\+V\+E\+R\+S\+I\+ON} = 0x\+F195, 
+{\bfseries E\+X\+H\+A\+U\+S\+T\+\_\+\+R\+E\+G\+U\+L\+A\+T\+I\+O\+N\+\_\+\+N\+U\+M\+B\+ER} = 0x\+F196, 
+\newline
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+N\+A\+M\+E\+\_\+\+O\+R\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+T\+Y\+PE} = 0x\+F197, 
+{\bfseries R\+E\+P\+A\+I\+R\+\_\+\+S\+H\+O\+P\+\_\+\+O\+R\+\_\+\+T\+E\+S\+T\+E\+R\+\_\+\+S\+E\+R\+I\+AL} = 0x\+F198, 
+{\bfseries P\+R\+O\+G\+R\+A\+M\+M\+I\+N\+G\+\_\+\+D\+A\+TE} = 0x\+F199, 
+{\bfseries C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+S\+H\+O\+P\+\_\+\+O\+R\+\_\+\+E\+Q\+U\+I\+P\+M\+E\+NT} = 0x\+F19A, 
+\newline
+{\bfseries C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+D\+A\+TE} = 0x\+F19B, 
+{\bfseries C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+P\+M\+E\+N\+T\+\_\+\+S\+O\+F\+T\+W\+A\+RE} = 0x\+F19C, 
+{\bfseries E\+C\+U\+\_\+\+I\+N\+S\+T\+A\+L\+L\+A\+T\+I\+O\+N\+\_\+\+D\+A\+TE} = 0x\+F19D, 
+{\bfseries O\+D\+X\+\_\+\+F\+I\+LE} = 0x\+F19E, 
+\newline
+{\bfseries E\+N\+T\+I\+T\+Y\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER} = 0x\+F19F, 
+{\bfseries I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+R\+T\+\_\+1} = 0x\+F1\+A0, 
+{\bfseries I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+M\+A\+N\+U\+F\+A\+C\+T\+U\+R\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+N\+D\+\_\+1} = 0x\+F1\+EF, 
+{\bfseries I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+RT} = 0x\+F1\+F0, 
+\newline
+{\bfseries I\+D\+E\+N\+T\+I\+F\+I\+C\+A\+T\+I\+O\+N\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+ND} = 0x\+F1\+FF, 
+{\bfseries P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F200, 
+{\bfseries P\+E\+R\+I\+O\+D\+I\+C\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F2\+FF, 
+{\bfseries D\+Y\+N\+A\+M\+I\+C\+A\+L\+L\+Y\+\_\+\+D\+E\+F\+I\+N\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F300, 
+\newline
+{\bfseries D\+Y\+N\+A\+M\+I\+C\+A\+L\+L\+Y\+\_\+\+D\+E\+F\+I\+N\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+0} = 0x\+F300, 
+{\bfseries D\+Y\+N\+A\+M\+I\+C\+A\+L\+L\+Y\+\_\+\+D\+E\+F\+I\+N\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F3\+FF, 
+{\bfseries O\+B\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F400, 
+{\bfseries O\+B\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F4\+FF, 
+\newline
+{\bfseries O\+B\+D\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F600, 
+{\bfseries O\+B\+D\+\_\+\+M\+O\+N\+I\+T\+O\+R\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F6\+FF, 
+{\bfseries T\+A\+C\+H\+O\+G\+R\+A\+P\+H\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F900, 
+{\bfseries T\+A\+C\+H\+O\+G\+R\+A\+P\+H\+\_\+\+D\+A\+T\+A\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F9\+FF, 
+\newline
+{\bfseries A\+I\+R\+B\+A\+G\+\_\+\+D\+E\+P\+L\+O\+Y\+M\+E\+N\+T\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F\+A00, 
+{\bfseries A\+I\+R\+B\+A\+G\+\_\+\+D\+E\+P\+L\+O\+Y\+M\+E\+N\+T\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F\+A0F, 
+{\bfseries S\+A\+F\+E\+T\+Y\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+S\+T\+A\+RT} = 0x\+F\+A19, 
+{\bfseries S\+A\+F\+E\+T\+Y\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+E\+ND} = 0x\+F\+A\+FF, 
+\newline
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+S\+T\+A\+RT} = 0x\+F\+D00, 
+{\bfseries S\+Y\+S\+T\+E\+M\+\_\+\+S\+U\+P\+P\+L\+I\+E\+R\+\_\+\+S\+P\+E\+C\+I\+F\+I\+C\+\_\+\+E\+ND} = 0x\+F\+E\+FF, 
+{\bfseries U\+D\+S\+\_\+\+V\+E\+R\+S\+I\+ON} = 0x\+F\+F00, 
+{\bfseries I\+S\+O\+\_\+\+S\+A\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+1} = 0x\+F\+F01, 
+\newline
+{\bfseries I\+S\+O\+\_\+\+S\+A\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+E\+N\+D\+\_\+1} = 0x\+F\+F\+FF
+ \}
+\begin{DoxyCompactList}\small\item\em U\+DS Data Identifiers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_a1e68f353cba0383d545b5a479ef44556}\label{_u_d_s_data_type_8h_a1e68f353cba0383d545b5a479ef44556}} 
+enum \mbox{\hyperlink{_u_d_s_data_type_8h_a1e68f353cba0383d545b5a479ef44556}{E\+Dynamic\+Data\+Indentifier\+Request\+Code}} \+: uint32\+\_\+t \{ \newline
+{\bfseries E\+N\+G\+I\+N\+E\+\_\+\+S\+P\+E\+ED} = 0x48070102, 
+{\bfseries C\+O\+O\+L\+A\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = 0x43000101, 
+{\bfseries E\+N\+G\+I\+N\+E\+\_\+\+O\+I\+L\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = 0x44020102, 
+{\bfseries B\+A\+T\+T\+E\+R\+Y\+\_\+\+V\+O\+L\+T\+A\+GE} = 0x46090101, 
+\newline
+{\bfseries A\+M\+B\+I\+E\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = 0x42040101, 
+{\bfseries A\+I\+R\+\_\+\+M\+A\+SS} = 0x42080102, 
+{\bfseries R\+A\+I\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE} = 0x481\+A0102, 
+{\bfseries A\+C\+C\+E\+L\+E\+R\+A\+T\+O\+R\+\_\+\+P\+E\+D\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+ON} = 0x4\+A290101
+ \}
+\begin{DoxyCompactList}\small\item\em Identifiers used in B\+MW to request an assign of diagnostic param to Dynamically Defined Data Identifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_a1d1cbe9e74d6da07443c4abdee2e9cb9}\label{_u_d_s_data_type_8h_a1d1cbe9e74d6da07443c4abdee2e9cb9}} 
+enum \mbox{\hyperlink{_u_d_s_data_type_8h_a1d1cbe9e74d6da07443c4abdee2e9cb9}{Dynamically\+Assign\+Data\+Sub\+S\+ID}} \+: uint8\+\_\+t \{ {\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+F\+I\+R\+ST} = 0x03, 
+{\bfseries R\+E\+Q\+U\+E\+S\+T\+\_\+\+A\+S\+S\+I\+GN} = 0x01
+ \}
+\begin{DoxyCompactList}\small\item\em Sub-\/\+S\+I\+Ds used in Dynamically Define Data Identifier service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_u_d_s_data_type_8h_a7b24596f3a9e8219d1ac87d36d937401}\label{_u_d_s_data_type_8h_a7b24596f3a9e8219d1ac87d36d937401}} 
+constexpr uint8\+\_\+t {\bfseries D\+I\+A\+G\+N\+O\+S\+T\+I\+C\+\_\+\+T\+O\+O\+L\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+A\+D\+DR} = 0x\+F4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for data types used in U\+DS communication. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}

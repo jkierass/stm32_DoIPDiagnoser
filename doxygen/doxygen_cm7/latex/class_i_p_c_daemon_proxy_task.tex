@@ -1,0 +1,67 @@
+\hypertarget{class_i_p_c_daemon_proxy_task}{}\doxysection{I\+P\+C\+Daemon\+Proxy\+Task Class Reference}
+\label{class_i_p_c_daemon_proxy_task}\index{IPCDaemonProxyTask@{IPCDaemonProxyTask}}
+
+
+Class for handling I\+PC communication task.  
+
+
+
+
+{\ttfamily \#include $<$I\+P\+C\+Daemon\+Proxy\+Task.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_proxy_task_a31ddb2e5c01146c8ab4a9b61f5094f5f}\label{class_i_p_c_daemon_proxy_task_a31ddb2e5c01146c8ab4a9b61f5094f5f}} 
+\mbox{\hyperlink{class_i_p_c_daemon_proxy_task_a31ddb2e5c01146c8ab4a9b61f5094f5f}{I\+P\+C\+Daemon\+Proxy\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_i_p_c_daemon_proxy_task}{I\+P\+C\+Daemon\+Proxy\+Task}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_proxy_task_a1ef748aec25f4169979520b264018700}\label{class_i_p_c_daemon_proxy_task_a1ef748aec25f4169979520b264018700}} 
+void \mbox{\hyperlink{class_i_p_c_daemon_proxy_task_a1ef748aec25f4169979520b264018700}{process}} ()
+\begin{DoxyCompactList}\small\item\em Process the I\+PC task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_p_c_daemon_proxy_task_a9a906dc01833f910e3ab29bb9152f199}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for handling I\+PC communication task. 
+
+Definition at line 17 of file I\+P\+C\+Daemon\+Proxy\+Task.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_p_c_daemon_proxy_task_a9a906dc01833f910e3ab29bb9152f199}\label{class_i_p_c_daemon_proxy_task_a9a906dc01833f910e3ab29bb9152f199}} 
+\index{IPCDaemonProxyTask@{IPCDaemonProxyTask}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!IPCDaemonProxyTask@{IPCDaemonProxyTask}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void I\+P\+C\+Daemon\+Proxy\+Task\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file I\+P\+C\+Daemon\+Proxy\+Task.\+cpp.
+
+
+
+Referenced by process().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/\+User/\+I\+P\+C\+Daemon\+Proxy/inc/I\+P\+C\+Daemon\+Proxy\+Task.\+h\item 
+Application/\+User/\+I\+P\+C\+Daemon\+Proxy/src/I\+P\+C\+Daemon\+Proxy\+Task.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\hypertarget{class_i_p_c_daemon_native_task}{}\doxysection{I\+P\+C\+Daemon\+Native\+Task Class Reference}
+\label{class_i_p_c_daemon_native_task}\index{IPCDaemonNativeTask@{IPCDaemonNativeTask}}
+
+
+Class for handling I\+PC communication task.  
+
+
+
+
+{\ttfamily \#include $<$I\+P\+C\+Daemon\+Native\+Task.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_a2e0e8bb0621aa654f194e9ccccdb2026}\label{class_i_p_c_daemon_native_task_a2e0e8bb0621aa654f194e9ccccdb2026}} 
+\mbox{\hyperlink{class_i_p_c_daemon_native_task_a2e0e8bb0621aa654f194e9ccccdb2026}{I\+P\+C\+Daemon\+Native\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_a808abf8e35ab429c5b611d4217c87242}\label{class_i_p_c_daemon_native_task_a808abf8e35ab429c5b611d4217c87242}} 
+void \mbox{\hyperlink{class_i_p_c_daemon_native_task_a808abf8e35ab429c5b611d4217c87242}{process}} ()
+\begin{DoxyCompactList}\small\item\em Process the I\+PC task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_p_c_daemon_native_task_ad7f6e884828e7cae004c15369a61fbe2}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_a67e933a7845e365d486e2062f1718ce5}\label{class_i_p_c_daemon_native_task_a67e933a7845e365d486e2062f1718ce5}} 
+{\bfseries I\+P\+C\+Daemon\+Native\+Task} (\mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_a0b15be91865579f1894a5ec68d643f57}\label{class_i_p_c_daemon_native_task_a0b15be91865579f1894a5ec68d643f57}} 
+\mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} \& {\bfseries operator=} (\mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} const \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_ac8e4b5c8925179a523704d2e53b41154}\label{class_i_p_c_daemon_native_task_ac8e4b5c8925179a523704d2e53b41154}} 
+{\bfseries I\+P\+C\+Daemon\+Native\+Task} (\mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_a97f19c05b46e374cfe3d05a6ce91bc46}\label{class_i_p_c_daemon_native_task_a97f19c05b46e374cfe3d05a6ce91bc46}} 
+\mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} \& {\bfseries operator=} (\mbox{\hyperlink{class_i_p_c_daemon_native_task}{I\+P\+C\+Daemon\+Native\+Task}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_af5d46518ac8d09cfb48b0be2833c17ec}\label{class_i_p_c_daemon_native_task_af5d46518ac8d09cfb48b0be2833c17ec}} 
+void \mbox{\hyperlink{class_i_p_c_daemon_native_task_af5d46518ac8d09cfb48b0be2833c17ec}{process\+Ipc\+Receive}} ()
+\begin{DoxyCompactList}\small\item\em Handle receiving I\+PC messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for handling I\+PC communication task. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_p_c_daemon_native_task_ad7f6e884828e7cae004c15369a61fbe2}\label{class_i_p_c_daemon_native_task_ad7f6e884828e7cae004c15369a61fbe2}} 
+\index{IPCDaemonNativeTask@{IPCDaemonNativeTask}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!IPCDaemonNativeTask@{IPCDaemonNativeTask}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void I\+P\+C\+Daemon\+Native\+Task\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Application/\+User/\+I\+P\+C\+Daemon\+Native/inc/\mbox{\hyperlink{_i_p_c_daemon_native_task_8h}{I\+P\+C\+Daemon\+Native\+Task.\+h}}\item 
+Application/\+User/\+I\+P\+C\+Daemon\+Native/src/\mbox{\hyperlink{_i_p_c_daemon_native_task_8cpp}{I\+P\+C\+Daemon\+Native\+Task.\+cpp}}\end{DoxyCompactItemize}

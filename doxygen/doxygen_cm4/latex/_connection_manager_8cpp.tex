@@ -1,0 +1,81 @@
+\hypertarget{_connection_manager_8cpp}{}\doxysection{Application/\+User/\+Do\+I\+P/src/\+Connection\+Manager.cpp File Reference}
+\label{_connection_manager_8cpp}\index{Application/User/DoIP/src/ConnectionManager.cpp@{Application/User/DoIP/src/ConnectionManager.cpp}}
+
+
+\+: Implementation of class for handling connection with E\+CU.  
+
+
+{\ttfamily \#include \char`\"{}Connection\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ethernetif.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmsis\+\_\+os.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}projdefs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/etharp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_connection_manager_8cpp_a19165336323fb016ce841c7255fa37d8}\label{_connection_manager_8cpp_a19165336323fb016ce841c7255fa37d8}} 
+err\+\_\+t {\bfseries tcp\+Recv\+Cb} (void $\ast$arg, struct tcp\+\_\+pcb $\ast$tpcb, struct pbuf $\ast$p, err\+\_\+t err)
+\item 
+\mbox{\Hypertarget{_connection_manager_8cpp_a5298f475fc07ab733042d3ec471ad036}\label{_connection_manager_8cpp_a5298f475fc07ab733042d3ec471ad036}} 
+err\+\_\+t {\bfseries tcp\+Connect\+Cb} (void $\ast$arg, struct tcp\+\_\+pcb $\ast$tpcb, err\+\_\+t err)
+\item 
+\mbox{\Hypertarget{_connection_manager_8cpp_aaf9b25893c8bcd7134920ee05848102d}\label{_connection_manager_8cpp_aaf9b25893c8bcd7134920ee05848102d}} 
+void {\bfseries tcp\+Err\+Cb} (void $\ast$arg, err\+\_\+t err)
+\item 
+\mbox{\Hypertarget{_connection_manager_8cpp_ae9238c5967b9b3185388697b7196a657}\label{_connection_manager_8cpp_ae9238c5967b9b3185388697b7196a657}} 
+void {\bfseries udp\+Recv\+Cb} (void $\ast$arg, struct udp\+\_\+pcb $\ast$pcb, struct pbuf $\ast$p, const ip\+\_\+addr\+\_\+t $\ast$addr, u16\+\_\+t port)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_connection_manager_8cpp_a3a701770f814f303b36faddc9e2f4593}\label{_connection_manager_8cpp_a3a701770f814f303b36faddc9e2f4593}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Event\+Manager\+C\+M4}
+\item 
+\mbox{\Hypertarget{_connection_manager_8cpp_a227a6d51729a79ff815a3e381f8f84e3}\label{_connection_manager_8cpp_a227a6d51729a79ff815a3e381f8f84e3}} 
+Queue\+Handle\+\_\+t {\bfseries connection\+Events\+Queue}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{E\+Do\+I\+P\+Request}}, const char $\ast$ $>$ {\bfseries E\+Do\+I\+P\+Request\+\_\+\+To\+C\+String\+Map}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Implementation of class for handling connection with E\+CU. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_connection_manager_8cpp_ac1f3bc6c0d0e5b78952aacec3f2433f5}\label{_connection_manager_8cpp_ac1f3bc6c0d0e5b78952aacec3f2433f5}} 
+\index{ConnectionManager.cpp@{ConnectionManager.cpp}!EDoIPRequest\_ToCStringMap@{EDoIPRequest\_ToCStringMap}}
+\index{EDoIPRequest\_ToCStringMap@{EDoIPRequest\_ToCStringMap}!ConnectionManager.cpp@{ConnectionManager.cpp}}
+\doxysubsubsection{\texorpdfstring{EDoIPRequest\_ToCStringMap}{EDoIPRequest\_ToCStringMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespace_a_p_i_do_i_p_a728ece0778227c342024a37ef302121f}{E\+Do\+I\+P\+Request}}, const char$\ast$$>$ E\+Do\+I\+P\+Request\+\_\+\+To\+C\+String\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \{DME\_ENGINE\_OIL\_TEMPERATURE, \textcolor{stringliteral}{"DME\_ENG\_OIL\_TEMP"}\},}
+\DoxyCodeLine{    \{DME\_ENGINE\_ROTATIONAL\_SPEED, \textcolor{stringliteral}{"DME\_ENG\_ROT\_SPEED"}\},}
+\DoxyCodeLine{    \{DME\_COOLANT\_TEMPERATURE, \textcolor{stringliteral}{"DME\_COOL\_TEMP"}\},}
+\DoxyCodeLine{    \{DME\_BATTERY\_VOLTAGE, \textcolor{stringliteral}{"DME\_BAT\_VOL"}\},}
+\DoxyCodeLine{    \{DME\_AMBIENT\_TEMPERATURE, \textcolor{stringliteral}{"DME\_AMB\_TEMP"}\},}
+\DoxyCodeLine{    \{DME\_AIR\_MASS, \textcolor{stringliteral}{"DME\_AIR\_MASS"}\},}
+\DoxyCodeLine{    \{DME\_RAIL\_PRESSURE, \textcolor{stringliteral}{"DME\_RAIL\_PRES"}\},}
+\DoxyCodeLine{    \{DME\_ACCELERATOR\_PEDAL\_POSITION, \textcolor{stringliteral}{"DME\_ACC\_PEDAL\_POS"}\},}
+\DoxyCodeLine{    \{KOMBI\_TOTAL\_DISTANCE, \textcolor{stringliteral}{"KOMBI\_DIST"}\},}
+\DoxyCodeLine{    \{KOMBI\_SPEED, \textcolor{stringliteral}{"KOMBI\_SPEED"}\},}
+\DoxyCodeLine{    \{KOMBI\_OUTSIDE\_TEMP\_SENSOR, \textcolor{stringliteral}{"KOMBI\_OUT\_TEMP"}\},}
+\DoxyCodeLine{    \{KOMBI\_ENGINE\_SPEED\_ON\_DISP, \textcolor{stringliteral}{"KOMBI\_ENG\_SPEED\_DISP"}\},}
+\DoxyCodeLine{    \{KOMBI\_FUEL\_LEVEL, \textcolor{stringliteral}{"KOMBI\_FUEL\_LEVEL"}\},}
+\DoxyCodeLine{    \{IHKA\_EVAPORATOR\_TEMPERATURE\_SENSOR, \textcolor{stringliteral}{"IHKA\_EVAP\_TEMP"}\},}
+\DoxyCodeLine{    \{IHKA\_TEMPERATURE\_SELECTOR, \textcolor{stringliteral}{"IHKA\_TEMP\_SEL"}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

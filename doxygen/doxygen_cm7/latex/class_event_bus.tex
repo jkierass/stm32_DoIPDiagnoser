@@ -1,0 +1,127 @@
+\hypertarget{class_event_bus}{}\doxysection{Event\+Bus Class Reference}
+\label{class_event_bus}\index{EventBus@{EventBus}}
+
+
+Wrapper class for free\+R\+T\+OS message queues, that allows for processing events (messages in the queue) on demand from IN queue and sending messages through O\+UT queue.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Bus.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_event_bus_af2b1706a8eac398ebe6a00be28b75349}\label{class_event_bus_af2b1706a8eac398ebe6a00be28b75349}} 
+typedef std\+::function$<$ void(\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}})$>$ \mbox{\hyperlink{class_event_bus_af2b1706a8eac398ebe6a00be28b75349}{On\+Event\+Function}}
+\begin{DoxyCompactList}\small\item\em Callable object type that takes event type and message data as arguments. It is used for injecting a handle to process incoming events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_bus_a2ba27e0caaab30865cbd3b533d28ec36}{Event\+Bus}} (Queue\+Handle\+\_\+t queue\+Self, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} sender\+Self)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_event_bus}{Event\+Bus}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_event_bus_a26d89aa6e32e6d43a56dda8b485ae2d6}{send}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} message, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Send event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_bus_aa20951d2660a8ec861d2c3c984b3fdd5}{receive}} (\mbox{\hyperlink{class_event_bus_af2b1706a8eac398ebe6a00be28b75349}{On\+Event\+Function}} on\+Event\+Function)
+\begin{DoxyCompactList}\small\item\em Receive all incoming events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper class for free\+R\+T\+OS message queues, that allows for processing events (messages in the queue) on demand from IN queue and sending messages through O\+UT queue. 
+
+Definition at line 22 of file Event\+Bus.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_event_bus_a2ba27e0caaab30865cbd3b533d28ec36}\label{class_event_bus_a2ba27e0caaab30865cbd3b533d28ec36}} 
+\index{EventBus@{EventBus}!EventBus@{EventBus}}
+\index{EventBus@{EventBus}!EventBus@{EventBus}}
+\doxysubsubsection{\texorpdfstring{EventBus()}{EventBus()}}
+{\footnotesize\ttfamily Event\+Bus\+::\+Event\+Bus (\begin{DoxyParamCaption}\item[{Queue\+Handle\+\_\+t}]{queue\+Self,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{sender\+Self }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_event_bus}{Event\+Bus}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue\+Self} & self queue handle \\
+\hline
+{\em sender\+Self} & self sender \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file Event\+Bus.\+cpp.
+
+
+
+References Event\+Bus().
+
+
+
+Referenced by Event\+Bus().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_event_bus_aa20951d2660a8ec861d2c3c984b3fdd5}\label{class_event_bus_aa20951d2660a8ec861d2c3c984b3fdd5}} 
+\index{EventBus@{EventBus}!receive@{receive}}
+\index{receive@{receive}!EventBus@{EventBus}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily void Event\+Bus\+::receive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_event_bus_af2b1706a8eac398ebe6a00be28b75349}{On\+Event\+Function}}}]{on\+Event\+Function }\end{DoxyParamCaption})}
+
+
+
+Receive all incoming events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Event\+Function} & on event function (will be called for every incoming event) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Event\+Bus.\+cpp.
+
+
+
+Referenced by Calculator\+Task\+::process(), I\+P\+C\+Daemon\+Proxy\+Task\+::process(), and R\+T\+C\+Task\+::process\+Incoming\+Events().
+
+\mbox{\Hypertarget{class_event_bus_a26d89aa6e32e6d43a56dda8b485ae2d6}\label{class_event_bus_a26d89aa6e32e6d43a56dda8b485ae2d6}} 
+\index{EventBus@{EventBus}!send@{send}}
+\index{send@{send}!EventBus@{EventBus}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Event\+Bus\+::send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{message,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Send event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em message} & message data \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file Event\+Bus.\+cpp.
+
+
+
+Referenced by Model\+::send\+Event().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+Common/\+Inc/\mbox{\hyperlink{_event_bus_8h}{Event\+Bus.\+h}}\item 
+Application/\+User/\+Event\+Manager\+C\+M7/src/\mbox{\hyperlink{_event_bus_8cpp}{Event\+Bus.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\hypertarget{class_calculator_view}{}\doxysection{Calculator\+View Class Reference}
+\label{class_calculator_view}\index{CalculatorView@{CalculatorView}}
+
+
+View for \mbox{\hyperlink{class_calculator}{Calculator}} screen.  
+
+
+
+
+{\ttfamily \#include $<$Calculator\+View.\+hpp$>$}
+
+
+
+Inherits Calculator\+View\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculator_view_ae7d86dab97cb28d40152e771c98a115f}\label{class_calculator_view_ae7d86dab97cb28d40152e771c98a115f}} 
+\mbox{\hyperlink{class_calculator_view_ae7d86dab97cb28d40152e771c98a115f}{Calculator\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_calculator_view}{Calculator\+View}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_view_a686f1b0249c06438de4bac30a8844938}\label{class_calculator_view_a686f1b0249c06438de4bac30a8844938}} 
+virtual \mbox{\hyperlink{class_calculator_view_a686f1b0249c06438de4bac30a8844938}{$\sim$\+Calculator\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_calculator_view}{Calculator\+View}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_view_a10bcdddc7a6ea2304b04932a69fe8c7a}\label{class_calculator_view_a10bcdddc7a6ea2304b04932a69fe8c7a}} 
+virtual void \mbox{\hyperlink{class_calculator_view_a10bcdddc7a6ea2304b04932a69fe8c7a}{setup\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_view_a81f7755e857804bfb4f967a0ef46c3a7}\label{class_calculator_view_a81f7755e857804bfb4f967a0ef46c3a7}} 
+virtual void \mbox{\hyperlink{class_calculator_view_a81f7755e857804bfb4f967a0ef46c3a7}{tear\+Down\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Tear down the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_view_ab758708c21b176e501fdc539e2c6eea2}{set\+Calculation\+Result}} (unsigned char result\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set the calculation result on screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_calculator_view_a526419224fa9db949cf53949d89211eb}{add\+Char}} (char character)
+\begin{DoxyCompactList}\small\item\em Add character to the calculator buffor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_calculator_view_a811c9ce3a896971753bdfd66cebb5a00}{remove\+Last\+Char}} ()
+\begin{DoxyCompactList}\small\item\em Remove last character from the calculator buffor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_view_a03b602882b374eebfc76022cd1b90b6d}\label{class_calculator_view_a03b602882b374eebfc76022cd1b90b6d}} 
+void \mbox{\hyperlink{class_calculator_view_a03b602882b374eebfc76022cd1b90b6d}{clear\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Clear the calculator buffor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for \mbox{\hyperlink{class_calculator}{Calculator}} screen. 
+
+Definition at line 10 of file Calculator\+View.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_calculator_view_a526419224fa9db949cf53949d89211eb}\label{class_calculator_view_a526419224fa9db949cf53949d89211eb}} 
+\index{CalculatorView@{CalculatorView}!addChar@{addChar}}
+\index{addChar@{addChar}!CalculatorView@{CalculatorView}}
+\doxysubsubsection{\texorpdfstring{addChar()}{addChar()}}
+{\footnotesize\ttfamily bool Calculator\+View\+::add\+Char (\begin{DoxyParamCaption}\item[{char}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Add character to the calculator buffor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & character to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Calculator\+View.\+cpp.
+
+
+
+References clear\+Text().
+
+\mbox{\Hypertarget{class_calculator_view_a811c9ce3a896971753bdfd66cebb5a00}\label{class_calculator_view_a811c9ce3a896971753bdfd66cebb5a00}} 
+\index{CalculatorView@{CalculatorView}!removeLastChar@{removeLastChar}}
+\index{removeLastChar@{removeLastChar}!CalculatorView@{CalculatorView}}
+\doxysubsubsection{\texorpdfstring{removeLastChar()}{removeLastChar()}}
+{\footnotesize\ttfamily bool Calculator\+View\+::remove\+Last\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Remove last character from the calculator buffor. 
+
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file Calculator\+View.\+cpp.
+
+
+
+References clear\+Text().
+
+\mbox{\Hypertarget{class_calculator_view_ab758708c21b176e501fdc539e2c6eea2}\label{class_calculator_view_ab758708c21b176e501fdc539e2c6eea2}} 
+\index{CalculatorView@{CalculatorView}!setCalculationResult@{setCalculationResult}}
+\index{setCalculationResult@{setCalculationResult}!CalculatorView@{CalculatorView}}
+\doxysubsubsection{\texorpdfstring{setCalculationResult()}{setCalculationResult()}}
+{\footnotesize\ttfamily void Calculator\+View\+::set\+Calculation\+Result (\begin{DoxyParamCaption}\item[{unsigned char}]{result\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Set the calculation result on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & result string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Calculator\+View.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/calculator\+\_\+screen/Calculator\+View.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/calculator\+\_\+screen/Calculator\+View.\+cpp\end{DoxyCompactItemize}

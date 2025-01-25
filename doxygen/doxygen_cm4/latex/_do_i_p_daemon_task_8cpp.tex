@@ -1,0 +1,40 @@
+\hypertarget{_do_i_p_daemon_task_8cpp}{}\doxysection{Application/\+User/\+Do\+I\+P/src/\+Do\+I\+P\+Daemon\+Task.cpp File Reference}
+\label{_do_i_p_daemon_task_8cpp}\index{Application/User/DoIP/src/DoIPDaemonTask.cpp@{Application/User/DoIP/src/DoIPDaemonTask.cpp}}
+
+
+\+: Implementation of class for handling Do\+IP communication state machine.  
+
+
+{\ttfamily \#include \char`\"{}Do\+I\+P\+Daemon\+Task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}projdefs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Logger.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_do_i_p_daemon_task_8cpp_a84c730c7493c84e2dba62e236a0c5ede}\label{_do_i_p_daemon_task_8cpp_a84c730c7493c84e2dba62e236a0c5ede}} 
+using {\bfseries CM} = \mbox{\hyperlink{class_connection_manager}{Connection\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_do_i_p_daemon_task_8cpp_ab71d8ea51ba075777803b4a0607e7fa5}\label{_do_i_p_daemon_task_8cpp_ab71d8ea51ba075777803b4a0607e7fa5}} 
+void {\bfseries Start\+Task\+\_\+\+Do\+I\+P\+Daemon\+Task} (void $\ast$argument)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_do_i_p_daemon_task_8cpp_ab2688f3f3533abedde9243f6f55744a1}\label{_do_i_p_daemon_task_8cpp_ab2688f3f3533abedde9243f6f55744a1}} 
+Queue\+Handle\+\_\+t {\bfseries queue\+To\+Do\+I\+P\+Daemon\+Task}
+\item 
+\mbox{\Hypertarget{_do_i_p_daemon_task_8cpp_a227a6d51729a79ff815a3e381f8f84e3}\label{_do_i_p_daemon_task_8cpp_a227a6d51729a79ff815a3e381f8f84e3}} 
+Queue\+Handle\+\_\+t {\bfseries connection\+Events\+Queue} = x\+Queue\+Create(16, sizeof(\mbox{\hyperlink{struct_s_message}{S\+Message}}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Implementation of class for handling Do\+IP communication state machine. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}

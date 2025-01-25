@@ -1,0 +1,138 @@
+\hypertarget{class_diagnose_view}{}\doxysection{Diagnose\+View Class Reference}
+\label{class_diagnose_view}\index{DiagnoseView@{DiagnoseView}}
+
+
+View for Diagnose screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+View.\+hpp$>$}
+
+
+
+Inherits Diagnose\+View\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diagnose_view_a2d01032d2c66900a78c4ffc689573d6d}\label{class_diagnose_view_a2d01032d2c66900a78c4ffc689573d6d}} 
+\mbox{\hyperlink{class_diagnose_view_a2d01032d2c66900a78c4ffc689573d6d}{Diagnose\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_diagnose_view}{Diagnose\+View}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose_view_a7c1a1ad58e0a973cb280537c0badc83f}\label{class_diagnose_view_a7c1a1ad58e0a973cb280537c0badc83f}} 
+virtual \mbox{\hyperlink{class_diagnose_view_a7c1a1ad58e0a973cb280537c0badc83f}{$\sim$\+Diagnose\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_diagnose_view}{Diagnose\+View}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose_view_ad29b15a7c5db7b5b903de133a8f9b752}\label{class_diagnose_view_ad29b15a7c5db7b5b903de133a8f9b752}} 
+virtual void \mbox{\hyperlink{class_diagnose_view_ad29b15a7c5db7b5b903de133a8f9b752}{setup\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose_view_ab8a5db1764cbe41f4acd4393800f318b}\label{class_diagnose_view_ab8a5db1764cbe41f4acd4393800f318b}} 
+virtual void \mbox{\hyperlink{class_diagnose_view_ab8a5db1764cbe41f4acd4393800f318b}{tear\+Down\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Tear down the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose_view_a9ac636c398d4dc540e2f23298c4d6884}{set\+Temperature}} (short int temperature)
+\begin{DoxyCompactList}\small\item\em Set the temperature on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose_view_a62e7025d3d62bcac39d28a0411e02419}{set\+Date}} (uint8\+\_\+t day, uint8\+\_\+t month, unsigned int year)
+\begin{DoxyCompactList}\small\item\em Set the date on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose_view_a75e6234c974cda869913b2d395354dcb}{set\+Time}} (uint8\+\_\+t hour, uint8\+\_\+t minute)
+\begin{DoxyCompactList}\small\item\em Set the time on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose_view_a77f62348ce56d48279578dfcb9ed0524}{show\+Popup}} (uint8\+\_\+t message\mbox{[}$\,$\mbox{]}, size\+\_\+t msg\+Size)
+\begin{DoxyCompactList}\small\item\em Show popup message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for Diagnose screen. 
+
+Definition at line 10 of file Diagnose\+View.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose_view_a62e7025d3d62bcac39d28a0411e02419}\label{class_diagnose_view_a62e7025d3d62bcac39d28a0411e02419}} 
+\index{DiagnoseView@{DiagnoseView}!setDate@{setDate}}
+\index{setDate@{setDate}!DiagnoseView@{DiagnoseView}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Diagnose\+View\+::set\+Date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day,  }\item[{uint8\+\_\+t}]{month,  }\item[{unsigned int}]{year }\end{DoxyParamCaption})}
+
+
+
+Set the date on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & day \\
+\hline
+{\em month} & month \\
+\hline
+{\em year} & year \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Diagnose\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose_view_a9ac636c398d4dc540e2f23298c4d6884}\label{class_diagnose_view_a9ac636c398d4dc540e2f23298c4d6884}} 
+\index{DiagnoseView@{DiagnoseView}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!DiagnoseView@{DiagnoseView}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Diagnose\+View\+::set\+Temperature (\begin{DoxyParamCaption}\item[{short int}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Set the temperature on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & temperature value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Diagnose\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose_view_a75e6234c974cda869913b2d395354dcb}\label{class_diagnose_view_a75e6234c974cda869913b2d395354dcb}} 
+\index{DiagnoseView@{DiagnoseView}!setTime@{setTime}}
+\index{setTime@{setTime}!DiagnoseView@{DiagnoseView}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Diagnose\+View\+::set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{hour,  }\item[{uint8\+\_\+t}]{minute }\end{DoxyParamCaption})}
+
+
+
+Set the time on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & hour \\
+\hline
+{\em minute} & minute \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Diagnose\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose_view_a77f62348ce56d48279578dfcb9ed0524}\label{class_diagnose_view_a77f62348ce56d48279578dfcb9ed0524}} 
+\index{DiagnoseView@{DiagnoseView}!showPopup@{showPopup}}
+\index{showPopup@{showPopup}!DiagnoseView@{DiagnoseView}}
+\doxysubsubsection{\texorpdfstring{showPopup()}{showPopup()}}
+{\footnotesize\ttfamily void Diagnose\+View\+::show\+Popup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{msg\+Size }\end{DoxyParamCaption})}
+
+
+
+Show popup message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message to show \\
+\hline
+{\em msg\+Size} & message size \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Diagnose\+View.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+screen/Diagnose\+View.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+screen/Diagnose\+View.\+cpp\end{DoxyCompactItemize}

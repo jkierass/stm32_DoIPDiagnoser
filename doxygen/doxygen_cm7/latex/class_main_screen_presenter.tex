@@ -1,0 +1,102 @@
+\hypertarget{class_main_screen_presenter}{}\doxysection{Main\+Screen\+Presenter Class Reference}
+\label{class_main_screen_presenter}\index{MainScreenPresenter@{MainScreenPresenter}}
+
+
+Presenter for Main screen.  
+
+
+
+
+{\ttfamily \#include $<$Main\+Screen\+Presenter.\+hpp$>$}
+
+
+
+Inherits Presenter, and Model\+Listener.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_screen_presenter_a050782caa265b214e59e6dd4fefe1b3e}{Main\+Screen\+Presenter}} (\mbox{\hyperlink{class_main_screen_view}{Main\+Screen\+View}} \&v)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_main_screen_presenter}{Main\+Screen\+Presenter}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_screen_presenter_aaf978048129fd13859385f6e9129610b}\label{class_main_screen_presenter_aaf978048129fd13859385f6e9129610b}} 
+virtual void \mbox{\hyperlink{class_main_screen_presenter_aaf978048129fd13859385f6e9129610b}{activate}} ()
+\begin{DoxyCompactList}\small\item\em The activate function is called automatically when this screen is \char`\"{}switched in\char`\"{} (ie. made active). Initialization logic can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_screen_presenter_a0b5c51c757228b72b7d4e5578d982f51}\label{class_main_screen_presenter_a0b5c51c757228b72b7d4e5578d982f51}} 
+virtual void \mbox{\hyperlink{class_main_screen_presenter_a0b5c51c757228b72b7d4e5578d982f51}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em The deactivate function is called automatically when this screen is \char`\"{}switched out\char`\"{} (ie. made inactive). Teardown functionality can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_screen_presenter_a6cc9a54bf801f5b9b748a64d34621f23}\label{class_main_screen_presenter_a6cc9a54bf801f5b9b748a64d34621f23}} 
+virtual \mbox{\hyperlink{class_main_screen_presenter_a6cc9a54bf801f5b9b748a64d34621f23}{$\sim$\+Main\+Screen\+Presenter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_main_screen_presenter}{Main\+Screen\+Presenter}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_screen_presenter_ab455df6a30a566d8a4b07a20b17da874}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Presenter for Main screen. 
+
+Definition at line 14 of file Main\+Screen\+Presenter.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_screen_presenter_a050782caa265b214e59e6dd4fefe1b3e}\label{class_main_screen_presenter_a050782caa265b214e59e6dd4fefe1b3e}} 
+\index{MainScreenPresenter@{MainScreenPresenter}!MainScreenPresenter@{MainScreenPresenter}}
+\index{MainScreenPresenter@{MainScreenPresenter}!MainScreenPresenter@{MainScreenPresenter}}
+\doxysubsubsection{\texorpdfstring{MainScreenPresenter()}{MainScreenPresenter()}}
+{\footnotesize\ttfamily Main\+Screen\+Presenter\+::\+Main\+Screen\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_main_screen_view}{Main\+Screen\+View}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_main_screen_presenter}{Main\+Screen\+Presenter}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Main\+Screen\+Presenter.\+cpp.
+
+
+
+References Main\+Screen\+Presenter().
+
+
+
+Referenced by Main\+Screen\+Presenter().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_screen_presenter_ab455df6a30a566d8a4b07a20b17da874}\label{class_main_screen_presenter_ab455df6a30a566d8a4b07a20b17da874}} 
+\index{MainScreenPresenter@{MainScreenPresenter}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!MainScreenPresenter@{MainScreenPresenter}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Main\+Screen\+Presenter\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Main\+Screen\+Presenter.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/mainscreen\+\_\+screen/Main\+Screen\+Presenter.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/mainscreen\+\_\+screen/Main\+Screen\+Presenter.\+cpp\end{DoxyCompactItemize}

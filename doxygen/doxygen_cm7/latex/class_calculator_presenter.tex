@@ -1,0 +1,130 @@
+\hypertarget{class_calculator_presenter}{}\doxysection{Calculator\+Presenter Class Reference}
+\label{class_calculator_presenter}\index{CalculatorPresenter@{CalculatorPresenter}}
+
+
+Presenter for \mbox{\hyperlink{class_calculator}{Calculator}} screen.  
+
+
+
+
+{\ttfamily \#include $<$Calculator\+Presenter.\+hpp$>$}
+
+
+
+Inherits Presenter, and Model\+Listener.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_calculator_presenter_ac12f0c990e8a58b3e0622f407591818e}{Calculator\+Presenter}} (\mbox{\hyperlink{class_calculator_view}{Calculator\+View}} \&v)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_calculator_presenter}{Calculator\+Presenter}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_presenter_ae62be676fa558d03152655c7a0ac4116}\label{class_calculator_presenter_ae62be676fa558d03152655c7a0ac4116}} 
+virtual void \mbox{\hyperlink{class_calculator_presenter_ae62be676fa558d03152655c7a0ac4116}{activate}} ()
+\begin{DoxyCompactList}\small\item\em The activate function is called automatically when this screen is \char`\"{}switched in\char`\"{} (ie. made active). Initialization logic can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_presenter_aaea388b3fd54fb3b7b11595a972305dd}\label{class_calculator_presenter_aaea388b3fd54fb3b7b11595a972305dd}} 
+virtual void \mbox{\hyperlink{class_calculator_presenter_aaea388b3fd54fb3b7b11595a972305dd}{deactivate}} ()
+\begin{DoxyCompactList}\small\item\em The deactivate function is called automatically when this screen is \char`\"{}switched out\char`\"{} (ie. made inactive). Teardown functionality can be placed here. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculator_presenter_a1ddeacda684513abafb3a92afbc8aec3}\label{class_calculator_presenter_a1ddeacda684513abafb3a92afbc8aec3}} 
+virtual \mbox{\hyperlink{class_calculator_presenter_a1ddeacda684513abafb3a92afbc8aec3}{$\sim$\+Calculator\+Presenter}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_calculator_presenter}{Calculator\+Presenter}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_calculator_presenter_a0ca9156608477306071dde1bbbad032d}{On\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} msg, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Sender, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver) override
+\begin{DoxyCompactList}\small\item\em Handle the event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_calculator_presenter_a345e144542685431467b29f995984d55}{send\+Event}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event, \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} message, \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} event\+Receiver)
+\begin{DoxyCompactList}\small\item\em Send event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Presenter for \mbox{\hyperlink{class_calculator}{Calculator}} screen. 
+
+Definition at line 16 of file Calculator\+Presenter.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_calculator_presenter_ac12f0c990e8a58b3e0622f407591818e}\label{class_calculator_presenter_ac12f0c990e8a58b3e0622f407591818e}} 
+\index{CalculatorPresenter@{CalculatorPresenter}!CalculatorPresenter@{CalculatorPresenter}}
+\index{CalculatorPresenter@{CalculatorPresenter}!CalculatorPresenter@{CalculatorPresenter}}
+\doxysubsubsection{\texorpdfstring{CalculatorPresenter()}{CalculatorPresenter()}}
+{\footnotesize\ttfamily Calculator\+Presenter\+::\+Calculator\+Presenter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_calculator_view}{Calculator\+View}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_calculator_presenter}{Calculator\+Presenter}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & view \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Calculator\+Presenter.\+cpp.
+
+
+
+References Calculator\+Presenter().
+
+
+
+Referenced by Calculator\+Presenter().
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_calculator_presenter_a0ca9156608477306071dde1bbbad032d}\label{class_calculator_presenter_a0ca9156608477306071dde1bbbad032d}} 
+\index{CalculatorPresenter@{CalculatorPresenter}!OnEvent@{OnEvent}}
+\index{OnEvent@{OnEvent}!CalculatorPresenter@{CalculatorPresenter}}
+\doxysubsubsection{\texorpdfstring{OnEvent()}{OnEvent()}}
+{\footnotesize\ttfamily void Calculator\+Presenter\+::\+On\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{msg,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Sender,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Handle the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em msg} & message data \\
+\hline
+{\em event\+Sender} & event sender \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Calculator\+Presenter.\+cpp.
+
+\mbox{\Hypertarget{class_calculator_presenter_a345e144542685431467b29f995984d55}\label{class_calculator_presenter_a345e144542685431467b29f995984d55}} 
+\index{CalculatorPresenter@{CalculatorPresenter}!sendEvent@{sendEvent}}
+\index{sendEvent@{sendEvent}!CalculatorPresenter@{CalculatorPresenter}}
+\doxysubsubsection{\texorpdfstring{sendEvent()}{sendEvent()}}
+{\footnotesize\ttfamily bool Calculator\+Presenter\+::send\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event,  }\item[{\mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}}]{message,  }\item[{\mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}}}]{event\+Receiver }\end{DoxyParamCaption})}
+
+
+
+Send event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & event type \\
+\hline
+{\em message} & message data \\
+\hline
+{\em event\+Receiver} & event receiver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Calculator\+Presenter.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/calculator\+\_\+screen/Calculator\+Presenter.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/calculator\+\_\+screen/Calculator\+Presenter.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{_logger_8h}{}\doxysection{Application/\+User/\+Core/\+Logger/inc/\+Logger.h File Reference}
+\label{_logger_8h}\index{Application/User/Core/Logger/inc/Logger.h@{Application/User/Core/Logger/inc/Logger.h}}
+
+
+\+: Header for class used for printing messages.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cmsis\+\_\+os2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_log_printer}{Log\+Printer}}
+\begin{DoxyCompactList}\small\item\em Class for printing messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_logger_8h_a7d2ae674cad5299a52b0e7dceac10087}\label{_logger_8h_a7d2ae674cad5299a52b0e7dceac10087}} 
+\#define {\bfseries D\+E\+B\+U\+G\+\_\+\+E\+N\+A\+B\+L\+ED}~0
+\item 
+\#define {\bfseries L\+O\+G\+\_\+\+D\+E\+B\+UG}(fmt, ...)
+\item 
+\#define {\bfseries S\+E\+N\+D\+\_\+\+D\+A\+T\+A\+\_\+\+U\+A\+RT}(fmt, ...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for class used for printing messages. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_logger_8h_ac06cfc686322558f590c50eab8622ebd}\label{_logger_8h_ac06cfc686322558f590c50eab8622ebd}} 
+\index{Logger.h@{Logger.h}!LOG\_DEBUG@{LOG\_DEBUG}}
+\index{LOG\_DEBUG@{LOG\_DEBUG}!Logger.h@{Logger.h}}
+\doxysubsubsection{\texorpdfstring{LOG\_DEBUG}{LOG\_DEBUG}}
+{\footnotesize\ttfamily \#define L\+O\+G\+\_\+\+D\+E\+B\+UG(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{\(\backslash\)}
+\DoxyCodeLine{                if (DEBUG\_ENABLED)\(\backslash\)}
+\DoxyCodeLine{                \{\mbox{\hyperlink{class_log_printer_a0e2e9c2889b085d897d128fe9c29777d}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{class_log_printer_a0e2e9c2889b085d897d128fe9c29777d}{                    LogPrinter::instance}}().\mbox{\hyperlink{class_log_printer_a1f86ac563b9cad9c2f9ea248cc1896cc}{printDebug}}(fmt, \#\#\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                \}\(\backslash\)}
+\DoxyCodeLine{            \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_logger_8h_a170c0256200908cb83eb43a6556371bd}\label{_logger_8h_a170c0256200908cb83eb43a6556371bd}} 
+\index{Logger.h@{Logger.h}!SEND\_DATA\_UART@{SEND\_DATA\_UART}}
+\index{SEND\_DATA\_UART@{SEND\_DATA\_UART}!Logger.h@{Logger.h}}
+\doxysubsubsection{\texorpdfstring{SEND\_DATA\_UART}{SEND\_DATA\_UART}}
+{\footnotesize\ttfamily \#define S\+E\+N\+D\+\_\+\+D\+A\+T\+A\+\_\+\+U\+A\+RT(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do} \{\(\backslash\)}
+\DoxyCodeLine{                if (DEBUG\_ENABLED)\(\backslash\)}
+\DoxyCodeLine{                \{\mbox{\hyperlink{class_log_printer_a0e2e9c2889b085d897d128fe9c29777d}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{class_log_printer_a0e2e9c2889b085d897d128fe9c29777d}{                    LogPrinter::instance}}().\mbox{\hyperlink{class_log_printer_a70cf9d32438d3ad19bd22547c45a155e}{printUART}}(fmt, \#\#\_\_VA\_ARGS\_\_);\(\backslash\)}
+\DoxyCodeLine{                \}\(\backslash\)}
+\DoxyCodeLine{            \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}

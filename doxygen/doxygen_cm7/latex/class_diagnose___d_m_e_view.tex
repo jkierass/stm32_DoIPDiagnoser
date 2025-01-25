@@ -1,0 +1,182 @@
+\hypertarget{class_diagnose___d_m_e_view}{}\doxysection{Diagnose\+\_\+\+D\+M\+E\+View Class Reference}
+\label{class_diagnose___d_m_e_view}\index{Diagnose\_DMEView@{Diagnose\_DMEView}}
+
+
+View for Diagnose D\+ME screen.  
+
+
+
+
+{\ttfamily \#include $<$Diagnose\+\_\+\+D\+M\+E\+View.\+hpp$>$}
+
+
+
+Inherits Diagnose\+\_\+\+D\+M\+E\+View\+Base.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_a909f2ed2f7c7230cc6b8a35e91a53ce5}\label{class_diagnose___d_m_e_view_a909f2ed2f7c7230cc6b8a35e91a53ce5}} 
+\mbox{\hyperlink{class_diagnose___d_m_e_view_a909f2ed2f7c7230cc6b8a35e91a53ce5}{Diagnose\+\_\+\+D\+M\+E\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Diagnose D\+M\+E\+View object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_ad54903ce80b10807e0cb013a1caebc23}\label{class_diagnose___d_m_e_view_ad54903ce80b10807e0cb013a1caebc23}} 
+virtual void \mbox{\hyperlink{class_diagnose___d_m_e_view_ad54903ce80b10807e0cb013a1caebc23}{setup\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_a0801628ba5d1ed3b39cf91369430025f}\label{class_diagnose___d_m_e_view_a0801628ba5d1ed3b39cf91369430025f}} 
+virtual void \mbox{\hyperlink{class_diagnose___d_m_e_view_a0801628ba5d1ed3b39cf91369430025f}{tear\+Down\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Tear down the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_a8c6a049dcdb61fe9c877697b8cc150dc}{Update\+Parameter\+Value}} (\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} event\+Type, const \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} \&data)
+\begin{DoxyCompactList}\small\item\em Update the diagnostic parameter value on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_a995209297da992c7b7962fafec198318}{set\+Temperature}} (short int temperature)
+\begin{DoxyCompactList}\small\item\em Set the temperature on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_aad667d940e9fccd8f7eb238ef62bd3b5}{set\+Date}} (uint8\+\_\+t day, uint8\+\_\+t month, unsigned int year)
+\begin{DoxyCompactList}\small\item\em Set the date on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_a2389894d7e7e94e11d4bed9f744923c4}{set\+Time}} (uint8\+\_\+t hour, uint8\+\_\+t minute)
+\begin{DoxyCompactList}\small\item\em Set the time on screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_aa0eb017d9cdfe4f913418f7fa887b695}{set\+Request\+Cycle\+Time}} (uint16\+\_\+t cycle\+Ms)
+\begin{DoxyCompactList}\small\item\em Set request cycle time value on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_af6dfbc0e29b011e36c79c75a4f9e4f34}{show\+Popup}} (uint8\+\_\+t message\mbox{[}$\,$\mbox{]}, size\+\_\+t msg\+Size)
+\begin{DoxyCompactList}\small\item\em Show the popup on screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_a315622d1b80866fcaf84d3e1715a3268}\label{class_diagnose___d_m_e_view_a315622d1b80866fcaf84d3e1715a3268}} 
+void \mbox{\hyperlink{class_diagnose___d_m_e_view_a315622d1b80866fcaf84d3e1715a3268}{Button\+Uart\+Clicked}} () override
+\begin{DoxyCompactList}\small\item\em Handle clicking U\+A\+RT button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View for Diagnose D\+ME screen. 
+
+Definition at line 10 of file Diagnose\+\_\+\+D\+M\+E\+View.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_aad667d940e9fccd8f7eb238ef62bd3b5}\label{class_diagnose___d_m_e_view_aad667d940e9fccd8f7eb238ef62bd3b5}} 
+\index{Diagnose\_DMEView@{Diagnose\_DMEView}!setDate@{setDate}}
+\index{setDate@{setDate}!Diagnose\_DMEView@{Diagnose\_DMEView}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+D\+M\+E\+View\+::set\+Date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{day,  }\item[{uint8\+\_\+t}]{month,  }\item[{unsigned int}]{year }\end{DoxyParamCaption})}
+
+
+
+Set the date on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & day \\
+\hline
+{\em month} & month \\
+\hline
+{\em year} & year \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 81 of file Diagnose\+\_\+\+D\+M\+E\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_aa0eb017d9cdfe4f913418f7fa887b695}\label{class_diagnose___d_m_e_view_aa0eb017d9cdfe4f913418f7fa887b695}} 
+\index{Diagnose\_DMEView@{Diagnose\_DMEView}!setRequestCycleTime@{setRequestCycleTime}}
+\index{setRequestCycleTime@{setRequestCycleTime}!Diagnose\_DMEView@{Diagnose\_DMEView}}
+\doxysubsubsection{\texorpdfstring{setRequestCycleTime()}{setRequestCycleTime()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+D\+M\+E\+View\+::set\+Request\+Cycle\+Time (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{cycle\+Ms }\end{DoxyParamCaption})}
+
+
+
+Set request cycle time value on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycle\+Ms} & cycle duration is ms \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file Diagnose\+\_\+\+D\+M\+E\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_a995209297da992c7b7962fafec198318}\label{class_diagnose___d_m_e_view_a995209297da992c7b7962fafec198318}} 
+\index{Diagnose\_DMEView@{Diagnose\_DMEView}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!Diagnose\_DMEView@{Diagnose\_DMEView}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+D\+M\+E\+View\+::set\+Temperature (\begin{DoxyParamCaption}\item[{short int}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Set the temperature on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & temperature value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file Diagnose\+\_\+\+D\+M\+E\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_a2389894d7e7e94e11d4bed9f744923c4}\label{class_diagnose___d_m_e_view_a2389894d7e7e94e11d4bed9f744923c4}} 
+\index{Diagnose\_DMEView@{Diagnose\_DMEView}!setTime@{setTime}}
+\index{setTime@{setTime}!Diagnose\_DMEView@{Diagnose\_DMEView}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+D\+M\+E\+View\+::set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{hour,  }\item[{uint8\+\_\+t}]{minute }\end{DoxyParamCaption})}
+
+
+
+Set the time on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & hour \\
+\hline
+{\em minute} & minute \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file Diagnose\+\_\+\+D\+M\+E\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_af6dfbc0e29b011e36c79c75a4f9e4f34}\label{class_diagnose___d_m_e_view_af6dfbc0e29b011e36c79c75a4f9e4f34}} 
+\index{Diagnose\_DMEView@{Diagnose\_DMEView}!showPopup@{showPopup}}
+\index{showPopup@{showPopup}!Diagnose\_DMEView@{Diagnose\_DMEView}}
+\doxysubsubsection{\texorpdfstring{showPopup()}{showPopup()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+D\+M\+E\+View\+::show\+Popup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t}]{msg\+Size }\end{DoxyParamCaption})}
+
+
+
+Show the popup on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & message to show \\
+\hline
+{\em msg\+Size} & size of the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 93 of file Diagnose\+\_\+\+D\+M\+E\+View.\+cpp.
+
+\mbox{\Hypertarget{class_diagnose___d_m_e_view_a8c6a049dcdb61fe9c877697b8cc150dc}\label{class_diagnose___d_m_e_view_a8c6a049dcdb61fe9c877697b8cc150dc}} 
+\index{Diagnose\_DMEView@{Diagnose\_DMEView}!UpdateParameterValue@{UpdateParameterValue}}
+\index{UpdateParameterValue@{UpdateParameterValue}!Diagnose\_DMEView@{Diagnose\_DMEView}}
+\doxysubsubsection{\texorpdfstring{UpdateParameterValue()}{UpdateParameterValue()}}
+{\footnotesize\ttfamily void Diagnose\+\_\+\+D\+M\+E\+View\+::\+Update\+Parameter\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}}}]{event\+Type,  }\item[{const \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Update the diagnostic parameter value on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Type} & event type \\
+\hline
+{\em data} & message data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Diagnose\+\_\+\+D\+M\+E\+View.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/include/gui/diagnose\+\_\+dme\+\_\+screen/Diagnose\+\_\+\+D\+M\+E\+View.\+hpp\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+C\+M7/\+Touch\+G\+F\+X/gui/src/diagnose\+\_\+dme\+\_\+screen/Diagnose\+\_\+\+D\+M\+E\+View.\+cpp\end{DoxyCompactItemize}

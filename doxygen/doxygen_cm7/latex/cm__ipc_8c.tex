@@ -1,0 +1,112 @@
+\hypertarget{cm__ipc_8c}{}\doxysection{Application/\+User/\+Core/cm\+\_\+ipc.c File Reference}
+\label{cm__ipc_8c}\index{Application/User/Core/cm\_ipc.c@{Application/User/Core/cm\_ipc.c}}
+
+
+Cortex-\/M I\+PC implementation module.  
+
+
+{\ttfamily \#include \char`\"{}stm32h7xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}cm\+\_\+ipc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cm__ipc_8c_a6dc0ad2cc5c0b50f286c6e1cb2b3fe0f}{H\+A\+L\+\_\+\+H\+S\+E\+M\+\_\+\+Free\+Callback}} (uint32\+\_\+t Sem\+Mask)
+\begin{DoxyCompactList}\small\item\em Semaphore Released Callback. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cm__ipc_8c_a8caf38e638f3674b01f8980e0b839219}\label{cm__ipc_8c_a8caf38e638f3674b01f8980e0b839219}} 
+int \mbox{\hyperlink{cm__ipc_8c_a8caf38e638f3674b01f8980e0b839219}{ipc\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize I\+PC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cm__ipc_8c_aa39d09c3aef969e35e39fab29423b3d2}\label{cm__ipc_8c_aa39d09c3aef969e35e39fab29423b3d2}} 
+int \mbox{\hyperlink{cm__ipc_8c_aa39d09c3aef969e35e39fab29423b3d2}{ipc\+\_\+start}} (void)
+\begin{DoxyCompactList}\small\item\em Start I\+PC. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{cm__ipc_8c_a2443ed464a3240e211e1556199ab0bcc}{ipc\+\_\+sendmsg}} (ipc\+\_\+msg $\ast$msg, uint32\+\_\+t size, int32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Send message through I\+PC. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{cm__ipc_8c_a914268ed40cb2fd5fb6da789c3eadb9e}{ipc\+\_\+recvmsg}} (ipc\+\_\+msg $\ast$msg, uint32\+\_\+t size, int32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Receive message through I\+PC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cortex-\/M I\+PC implementation module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2019 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license S\+L\+A0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+S\+L\+A0044 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cm__ipc_8c_a6dc0ad2cc5c0b50f286c6e1cb2b3fe0f}\label{cm__ipc_8c_a6dc0ad2cc5c0b50f286c6e1cb2b3fe0f}} 
+\index{cm\_ipc.c@{cm\_ipc.c}!HAL\_HSEM\_FreeCallback@{HAL\_HSEM\_FreeCallback}}
+\index{HAL\_HSEM\_FreeCallback@{HAL\_HSEM\_FreeCallback}!cm\_ipc.c@{cm\_ipc.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_HSEM\_FreeCallback()}{HAL\_HSEM\_FreeCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+H\+S\+E\+M\+\_\+\+Free\+Callback (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Sem\+Mask }\end{DoxyParamCaption})}
+
+
+
+Semaphore Released Callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sem\+Mask} & Mask of Released semaphores \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 71 of file cm\+\_\+ipc.\+c.
+
+\mbox{\Hypertarget{cm__ipc_8c_a914268ed40cb2fd5fb6da789c3eadb9e}\label{cm__ipc_8c_a914268ed40cb2fd5fb6da789c3eadb9e}} 
+\index{cm\_ipc.c@{cm\_ipc.c}!ipc\_recvmsg@{ipc\_recvmsg}}
+\index{ipc\_recvmsg@{ipc\_recvmsg}!cm\_ipc.c@{cm\_ipc.c}}
+\doxysubsubsection{\texorpdfstring{ipc\_recvmsg()}{ipc\_recvmsg()}}
+{\footnotesize\ttfamily size\+\_\+t ipc\+\_\+recvmsg (\begin{DoxyParamCaption}\item[{ipc\+\_\+msg $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{size,  }\item[{int32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Receive message through I\+PC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & message to receive \\
+\hline
+{\em size} & size of the message \\
+\hline
+{\em timeout} & timeout \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file cm\+\_\+ipc.\+c.
+
+\mbox{\Hypertarget{cm__ipc_8c_a2443ed464a3240e211e1556199ab0bcc}\label{cm__ipc_8c_a2443ed464a3240e211e1556199ab0bcc}} 
+\index{cm\_ipc.c@{cm\_ipc.c}!ipc\_sendmsg@{ipc\_sendmsg}}
+\index{ipc\_sendmsg@{ipc\_sendmsg}!cm\_ipc.c@{cm\_ipc.c}}
+\doxysubsubsection{\texorpdfstring{ipc\_sendmsg()}{ipc\_sendmsg()}}
+{\footnotesize\ttfamily size\+\_\+t ipc\+\_\+sendmsg (\begin{DoxyParamCaption}\item[{ipc\+\_\+msg $\ast$}]{msg,  }\item[{uint32\+\_\+t}]{size,  }\item[{int32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Send message through I\+PC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & message to send \\
+\hline
+{\em size} & size of the message \\
+\hline
+{\em timeout} & timeout \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 170 of file cm\+\_\+ipc.\+c.
+

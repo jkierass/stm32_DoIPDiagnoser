@@ -1,0 +1,95 @@
+\hypertarget{_message_data_types_8h}{}\doxysection{C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+Common/\+Inc/\+Message\+Data\+Types.h File Reference}
+\label{_message_data_types_8h}\index{C:/Users/jakub/Desktop/Praca\_inz/stm32\_workspace/stm32\_doipdiagnoser/Common/Inc/MessageDataTypes.h@{C:/Users/jakub/Desktop/Praca\_inz/stm32\_workspace/stm32\_doipdiagnoser/Common/Inc/MessageDataTypes.h}}
+
+
+\+: Header for message data types used for communication in the system.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{union_u_message_data}{U\+Message\+Data}}
+\begin{DoxyCompactList}\small\item\em Union structure holding event\textquotesingle{}s data. Each event should have its own declared variable variant in this union. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_message}{S\+Message}}
+\begin{DoxyCompactList}\small\item\em Structure reperesenting a message/event of fixed 29 bytes size that is used for asynchronous communication through the entire system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}\label{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}} 
+enum \mbox{\hyperlink{_message_data_types_8h_a1f1a250bdc72d9729cbc47a2757e08e9}{E\+Event\+Client}} \{ \newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+F\+R\+O\+N\+T\+E\+ND}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+OR}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+R\+TC}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+M\+A\+N\+A\+G\+ER}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+L\+W\+I\+P\+\_\+\+L\+I\+N\+K\+\_\+\+S\+T\+A\+T\+E\+\_\+\+M\+A\+N\+A\+G\+ER}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+T\+H\+E\+R\+M\+O\+M\+E\+T\+ER}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+E\+M\+O\+N\+\_\+\+P\+R\+O\+XY}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+D\+A\+E\+M\+O\+N\+\_\+\+N\+A\+T\+I\+VE}
+ \}
+\begin{DoxyCompactList}\small\item\em Information of where the event should be sent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}\label{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}} 
+enum \mbox{\hyperlink{_message_data_types_8h_abfcf510bafec7c6429906a6ecaac656d}{E\+Event\+Type}} \{ \newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+T\+A\+RT} = 0, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+D\+M\+E\+\_\+\+E\+C\+U\+\_\+\+S\+T\+A\+RT} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+S\+T\+A\+RT, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+O\+I\+L\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+D\+M\+E\+\_\+\+E\+C\+U\+\_\+\+S\+T\+A\+RT, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+R\+O\+T\+A\+T\+I\+O\+N\+A\+L\+\_\+\+S\+P\+E\+ED}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+C\+O\+O\+L\+A\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+\_\+\+V\+O\+L\+T\+A\+GE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+M\+B\+I\+E\+N\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+I\+R\+\_\+\+M\+A\+SS}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+R\+A\+I\+L\+\_\+\+P\+R\+E\+S\+S\+U\+RE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+O\+R\+\_\+\+P\+E\+D\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+ON}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+D\+M\+E\+\_\+\+E\+C\+U\+\_\+\+E\+ND} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+M\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+O\+R\+\_\+\+P\+E\+D\+A\+L\+\_\+\+P\+O\+S\+I\+T\+I\+ON, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+K\+O\+M\+B\+I\+\_\+\+E\+C\+U\+\_\+\+S\+T\+A\+RT}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+T\+O\+T\+A\+L\+\_\+\+D\+I\+S\+T\+A\+N\+CE} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+K\+O\+M\+B\+I\+\_\+\+E\+C\+U\+\_\+\+S\+T\+A\+RT, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+S\+P\+E\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+O\+U\+T\+S\+I\+D\+E\+\_\+\+T\+E\+M\+P\+\_\+\+S\+E\+N\+S\+OR}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+E\+N\+G\+I\+N\+E\+\_\+\+S\+P\+E\+E\+D\+\_\+\+O\+N\+\_\+\+D\+I\+SP}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+F\+U\+EL}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+K\+O\+M\+B\+I\+\_\+\+E\+C\+U\+\_\+\+E\+ND} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+K\+O\+M\+B\+I\+\_\+\+F\+U\+EL, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+H\+K\+A\+\_\+\+E\+C\+U\+\_\+\+S\+T\+A\+RT}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+I\+H\+K\+A\+\_\+\+E\+V\+A\+P\+O\+R\+A\+T\+O\+R\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+N\+S\+OR} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+H\+K\+A\+\_\+\+E\+C\+U\+\_\+\+S\+T\+A\+RT, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+I\+H\+K\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+L\+E\+C\+T\+OR}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+I\+H\+K\+A\+\_\+\+E\+C\+U\+\_\+\+E\+ND} = E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+I\+H\+K\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E\+\_\+\+S\+E\+L\+E\+C\+T\+OR, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+E\+ND} = 127, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+E\+C\+U\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+S\+ED}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+S\+U\+B\+S\+C\+R\+I\+BE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+N\+S\+U\+B\+S\+C\+R\+I\+BE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+E\+T\+H\+E\+R\+N\+E\+T\+\_\+\+P\+L\+U\+G\+G\+ED}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+Y\+C\+L\+E\+\_\+\+S\+U\+S\+B\+C\+R\+I\+BE}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+Y\+C\+L\+E\+\_\+\+U\+N\+S\+U\+S\+B\+C\+R\+I\+BE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+L\+A\+S\+T\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+Y\+C\+L\+E\+\_\+\+T\+O\+O\+K\+\_\+\+MS}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+D\+A\+T\+A\+\_\+\+U\+A\+RT}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+S\+T\+O\+P\+\_\+\+S\+E\+N\+D\+I\+N\+G\+\_\+\+D\+A\+T\+A\+\_\+\+U\+A\+RT}, 
+\newline
+{\bfseries A\+S\+Y\+N\+C\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+C\+A\+L\+C\+U\+L\+A\+TE}, 
+{\bfseries A\+S\+Y\+N\+C\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+C\+A\+L\+C\+U\+L\+A\+TE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+R\+O\+O\+M\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+A\+TE}, 
+\newline
+{\bfseries E\+V\+E\+N\+T\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+I\+ME}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+D\+A\+TE}, 
+{\bfseries E\+V\+E\+N\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+U\+P\+D\+A\+T\+E\+\_\+\+T\+I\+ME}, 
+{\bfseries A\+S\+Y\+N\+C\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+E\+\_\+\+A\+N\+D\+\_\+\+T\+I\+ME}, 
+\newline
+{\bfseries A\+S\+Y\+N\+C\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+S\+E\+T\+\_\+\+D\+A\+T\+E\+\_\+\+A\+N\+D\+\_\+\+T\+I\+ME}
+ \}
+\begin{DoxyCompactList}\small\item\em Subscribable events. Async requests are processed just like events, but are declared in pairs, where A\+S\+Y\+N\+C\+\_\+\+R\+E\+Q\+U\+E\+S\+T\+\_\+$\ast$ is an event sent by requester, and A\+S\+Y\+N\+C\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+$\ast$ is an event sent by the worker thread upon the task completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for message data types used for communication in the system. 
+
+\begin{DoxyAuthor}{Author}
+\+: Jakub Kierasinski 
+\end{DoxyAuthor}

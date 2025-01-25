@@ -1,0 +1,137 @@
+\hypertarget{union_u_message_data}{}\doxysection{U\+Message\+Data Union Reference}
+\label{union_u_message_data}\index{UMessageData@{UMessageData}}
+
+
+Union structure holding event\textquotesingle{}s data. Each event should have its own declared variable variant in this union.  
+
+
+
+
+{\ttfamily \#include $<$Message\+Data\+Types.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a839d563879885ae23518f9d6c92f6b27}{event\+\_\+subscriptions}} \mbox{[}17\mbox{]}
+\item 
+\mbox{\Hypertarget{union_u_message_data_aa2b97386dcf710d3b70b1834b9adcff7}\label{union_u_message_data_aa2b97386dcf710d3b70b1834b9adcff7}} 
+unsigned char {\bfseries calculation\+\_\+request} \mbox{[}16\mbox{]}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a07e537ecb4d150bf5b5ef54869c71c17}\label{union_u_message_data_a07e537ecb4d150bf5b5ef54869c71c17}} 
+unsigned char {\bfseries calculation\+\_\+result} \mbox{[}16\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a2cceea75c2b469dc8a618b8a574e443a}{updated\+\_\+date}} \mbox{[}3\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a536da5e625b528144f49c3894943bb1f}{updated\+\_\+time}} \mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{union_u_message_data_a4027ed162901d235c13a56de970c9205}{new\+\_\+date\+\_\+and\+\_\+time}} \mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a1efc2e547894fd6ff6c86a2b87c9c3b5}\label{union_u_message_data_a1efc2e547894fd6ff6c86a2b87c9c3b5}} 
+bool {\bfseries ret\+\_\+set\+\_\+date\+\_\+and\+\_\+time}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a3820c38bcdb657abac323b45fb0878f1}\label{union_u_message_data_a3820c38bcdb657abac323b45fb0878f1}} 
+uint16\+\_\+t {\bfseries dme\+\_\+engine\+\_\+rotational\+\_\+speed}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a34e459d93d879994dd187f4596412c78}\label{union_u_message_data_a34e459d93d879994dd187f4596412c78}} 
+float {\bfseries dme\+\_\+coolant\+\_\+temperature}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a8561c4d977dc33fafc30d9bb6ab3035e}\label{union_u_message_data_a8561c4d977dc33fafc30d9bb6ab3035e}} 
+float {\bfseries dme\+\_\+engine\+\_\+oil\+\_\+temperature}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a4f41bf8fa6320a94f539d851a015753b}\label{union_u_message_data_a4f41bf8fa6320a94f539d851a015753b}} 
+float {\bfseries dme\+\_\+battery\+\_\+voltage}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a88d897da62e8fff5b7883dd363b9c17b}\label{union_u_message_data_a88d897da62e8fff5b7883dd363b9c17b}} 
+float {\bfseries dme\+\_\+ambient\+\_\+temperature}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a6ca02bf4e1c8f79908f9053ac76d6a15}\label{union_u_message_data_a6ca02bf4e1c8f79908f9053ac76d6a15}} 
+float {\bfseries dme\+\_\+air\+\_\+mass}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a6f93571151c955c4e41c5c78737a7dc0}\label{union_u_message_data_a6f93571151c955c4e41c5c78737a7dc0}} 
+float {\bfseries dme\+\_\+rail\+\_\+pressure}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a3c9595ae882da3d739d11d2762b43cfb}\label{union_u_message_data_a3c9595ae882da3d739d11d2762b43cfb}} 
+float {\bfseries dme\+\_\+accelerator\+\_\+pedal\+\_\+position}
+\item 
+\mbox{\Hypertarget{union_u_message_data_ad877cf112f2c60988fcf6d56c43b5110}\label{union_u_message_data_ad877cf112f2c60988fcf6d56c43b5110}} 
+uint32\+\_\+t {\bfseries kombi\+\_\+total\+\_\+distance}
+\item 
+\mbox{\Hypertarget{union_u_message_data_ad26b0c00e2da84b8344484b110013fea}\label{union_u_message_data_ad26b0c00e2da84b8344484b110013fea}} 
+float {\bfseries kombi\+\_\+speed}
+\item 
+\mbox{\Hypertarget{union_u_message_data_aba6cf098d8fbf0ae1fd7a65af36ee3d3}\label{union_u_message_data_aba6cf098d8fbf0ae1fd7a65af36ee3d3}} 
+float {\bfseries kombi\+\_\+outside\+\_\+temp\+\_\+sensor}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a24064ec918752c19be15fe3539148c57}\label{union_u_message_data_a24064ec918752c19be15fe3539148c57}} 
+uint16\+\_\+t {\bfseries kombi\+\_\+engine\+\_\+speed\+\_\+on\+\_\+disp}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a8a526ac55630fbaac642a7fb863b600d}\label{union_u_message_data_a8a526ac55630fbaac642a7fb863b600d}} 
+uint32\+\_\+t {\bfseries kombi\+\_\+fuel\+\_\+level} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a6eafd74b2702e727f8d52c024bd4af8d}\label{union_u_message_data_a6eafd74b2702e727f8d52c024bd4af8d}} 
+float {\bfseries ihka\+\_\+evaporator\+\_\+temperature\+\_\+sensor}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a02da082d23ba7e52371043057b08096a}\label{union_u_message_data_a02da082d23ba7e52371043057b08096a}} 
+uint8\+\_\+t {\bfseries ihka\+\_\+temperature\+\_\+selector} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{union_u_message_data_aee224871a992ed8bcc95d154dcc246f9}\label{union_u_message_data_aee224871a992ed8bcc95d154dcc246f9}} 
+char {\bfseries ecu\+\_\+connected\+\_\+vin} \mbox{[}17\mbox{]}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a29d573858d9dfab669e7ac6db5558445}\label{union_u_message_data_a29d573858d9dfab669e7ac6db5558445}} 
+bool {\bfseries ethernet\+\_\+plugged}
+\item 
+\mbox{\Hypertarget{union_u_message_data_a087d2e49b6cf3f29674ef453d7c6654e}\label{union_u_message_data_a087d2e49b6cf3f29674ef453d7c6654e}} 
+uint16\+\_\+t {\bfseries last\+\_\+request\+\_\+cycle\+\_\+ms}
+\item 
+\mbox{\Hypertarget{union_u_message_data_aeb3da6d3261a8e546ddfd1e306dd84b8}\label{union_u_message_data_aeb3da6d3261a8e546ddfd1e306dd84b8}} 
+short int {\bfseries room\+\_\+temperature}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Union structure holding event\textquotesingle{}s data. Each event should have its own declared variable variant in this union. 
+
+\begin{DoxyNote}{Note}
+Types should not be bigger that 17 bytes. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{union_u_message_data_a839d563879885ae23518f9d6c92f6b27}\label{union_u_message_data_a839d563879885ae23518f9d6c92f6b27}} 
+\index{UMessageData@{UMessageData}!event\_subscriptions@{event\_subscriptions}}
+\index{event\_subscriptions@{event\_subscriptions}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{event\_subscriptions}{event\_subscriptions}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::event\+\_\+subscriptions\mbox{[}17\mbox{]}}
+
+1st \mbox{[}index 0\mbox{]} byte is a number from 1 to 15 indicating for how many events clients is subscribing 2nd-\/16th \mbox{[}indexes 1-\/16\mbox{]} bytes are E\+Event\+Type enum values from E\+V\+E\+N\+T\+\_\+\+D\+A\+T\+A\+\_\+\+U\+P\+D\+A\+TE range (0-\/63) that client want to subscribe for \mbox{\Hypertarget{union_u_message_data_a4027ed162901d235c13a56de970c9205}\label{union_u_message_data_a4027ed162901d235c13a56de970c9205}} 
+\index{UMessageData@{UMessageData}!new\_date\_and\_time@{new\_date\_and\_time}}
+\index{new\_date\_and\_time@{new\_date\_and\_time}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{new\_date\_and\_time}{new\_date\_and\_time}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::new\+\_\+date\+\_\+and\+\_\+time\mbox{[}5\mbox{]}}
+
+\mbox{[}HM\mbox{]}\mbox{[}D\+MY\mbox{]} \begin{DoxyNote}{Note}
+Y -\/ year, minimal possible value to set is 0 which corresponds to 2000. Value of this field should be last 2 numbers from real year value (for example if 2024 then it should be 24 etc.) 
+\end{DoxyNote}
+\mbox{\Hypertarget{union_u_message_data_a2cceea75c2b469dc8a618b8a574e443a}\label{union_u_message_data_a2cceea75c2b469dc8a618b8a574e443a}} 
+\index{UMessageData@{UMessageData}!updated\_date@{updated\_date}}
+\index{updated\_date@{updated\_date}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{updated\_date}{updated\_date}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::updated\+\_\+date\mbox{[}3\mbox{]}}
+
+\mbox{[}D\+MY\mbox{]} \begin{DoxyNote}{Note}
+Y -\/ year, minimal possible value to set is 0 which corresponds to 2000. Value of this field should be last 2 numbers from real year value (for example if 2024 then it should be 24 etc.) 
+\end{DoxyNote}
+\mbox{\Hypertarget{union_u_message_data_a536da5e625b528144f49c3894943bb1f}\label{union_u_message_data_a536da5e625b528144f49c3894943bb1f}} 
+\index{UMessageData@{UMessageData}!updated\_time@{updated\_time}}
+\index{updated\_time@{updated\_time}!UMessageData@{UMessageData}}
+\doxysubsubsection{\texorpdfstring{updated\_time}{updated\_time}}
+{\footnotesize\ttfamily uint8\+\_\+t U\+Message\+Data\+::updated\+\_\+time\mbox{[}2\mbox{]}}
+
+\mbox{[}HM\mbox{]} \begin{DoxyNote}{Note}
+Y -\/ year, minimal possible value to set is 0 which corresponds to 2000. Value of this field should be last 2 numbers from real year value (for example if 2024 then it should be 24 etc.) 
+\end{DoxyNote}
+
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jakub/\+Desktop/\+Praca\+\_\+inz/stm32\+\_\+workspace/stm32\+\_\+doipdiagnoser/\+Common/\+Inc/\mbox{\hyperlink{_message_data_types_8h}{Message\+Data\+Types.\+h}}\end{DoxyCompactItemize}
